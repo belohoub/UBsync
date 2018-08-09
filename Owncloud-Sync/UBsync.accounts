@@ -1,0 +1,9 @@
+{
+  "services": [
+    {
+      "provider": "nextcloud",
+      "name" : "Nextcloud"
+    }
+  ],
+  "translations": "Owncloud-Sync"
+}
