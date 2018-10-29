@@ -44,6 +44,7 @@ MainView {
 
         property string password
         property string username
+        property string hiddenfiles
         property string serverURL
         property bool credentialsVerfied: false
         property int timer: 0
@@ -55,6 +56,7 @@ MainView {
             password = ""
             username = ""
             serverURL = ""
+            hiddenfiles = ""
             credentialsVerfied = false
             timer = 0
             mobileData = false

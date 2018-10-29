@@ -33,12 +33,13 @@ OTHER_FILES = qmldir
 }
 
 qmldir.files = qmldir
-installPath = $${UBUNTU_CLICK_PLUGIN_PATH}/OwncloudSync
+installPath = $$OUT_PWD/OwncloudSync
 qmldir.path = $$installPath
 target.path = $$installPath
 INSTALLS += target qmldir
 
-unix:!macx: LIBS += -L$$OUT_PWD/../qwebdavlib/ -lqwebdav
-
 INCLUDEPATH += $$PWD/../qwebdavlib
 DEPENDPATH += $$PWD/../qwebdavlib
+
+#LIBS += -L$$OUT_PWD/../qwebdavlib/ -lqwebdav
+LIBS += -L$$OUT_PWD/../qwebdavlib/ -lqwebdav

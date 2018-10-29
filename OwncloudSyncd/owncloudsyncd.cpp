@@ -41,6 +41,7 @@ OwncloudSyncd::OwncloudSyncd()
     m_password = settings.value("password").toString();
     m_serverURL = settings.value("serverURL").toString();
     m_mobileData = settings.value("mobileData").toBool();
+    m_hidden = settings.value("hiddenfiles").toString();
     //m_syncInterval = settings.value("timer").toInt() * 60 * 1000 ;
     m_syncInterval = settings.value("timer").toInt() * 3600 * 1000 ;
     m_lastSync = settings.value("lastSync").toInt();
@@ -346,8 +347,7 @@ void OwncloudSyncd::syncDir(const QString& localPath){
     QString owncloudcmd = getOwncloudCmd();
 
     QStringList arguments;
-    arguments << "--user" << m_username << "--password" << m_password << "--silent" << "--non-interactive" << localPath << remotePath;
-
+    arguments << "--user" << m_username << "--password" << m_password << "--silent" << "--non-interactive" << m_hidden<< localPath << remotePath;
     QProcess *owncloudsync = new QProcess();
     //Retrieve all debug from process
     owncloudsync->setProcessChannelMode(QProcess::ForwardedChannels);

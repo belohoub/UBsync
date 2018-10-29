@@ -60,6 +60,7 @@ private:
     QString m_username;
     QString m_password;
     QString m_serverURL;
+    QString m_hidden;
     bool m_mobileData;
     int m_syncInterval;
     qint64 m_lastSync;

@@ -48,16 +48,16 @@ Page {
 
     Flickable {
         id: accountSettingsFlickable
-        
+
         anchors.fill: parent
         contentHeight: accountSettingsColumn.height
-        
+
         Column {
             id: accountSettingsColumn
-            
+
             spacing: units.gu(1.5)
             anchors { top: parent.top; left: parent.left; right: parent.right; margins: units.gu(2) }
-            
+
             Label {
                 id: username
                 //font.bold: true
@@ -69,24 +69,43 @@ Page {
                 //font.bold: true
                 text: i18n.tr("Host") + ": " +  accountSettingsPage.host
             }
-            
-            
+
             Item {
                 width: parent.width
                 height: mobileDataLabel.implicitHeight + units.gu(1)
-                
+
                 Label{
                     id: mobileDataLabel
                     text: i18n.tr("Sync on Mobile Data")
                     anchors { left: parent.left; right: mobileData.left; verticalCenter: parent.verticalCenter }
                 }
-                
+
                 Switch{
                     id: mobileData
                     checked: owncloud.settings.mobileData
-                    anchors { right: parent.right; verticalCenter: parent.verticalCenter }                   
+                    anchors { right: parent.right; verticalCenter: parent.verticalCenter }
                     onCheckedChanged: {
                         owncloud.settings.mobileData = checked
+                        inputChanged();
+                    }
+                }
+            }
+            Item {
+                width: parent.width
+                height: hiddenLabel.implicitHeight + units.gu(1)
+
+                Label{
+                    id: hiddenLabel
+                    text: i18n.tr("Sync hidden files")
+                    anchors { left: parent.left; right: hiddenfiles.left; verticalCenter: parent.verticalCenter }
+                }
+
+                Switch{
+                    id: hiddenfiles
+                    checked: owncloud.settings.hiddenfiles
+                    anchors { right: parent.right; verticalCenter: parent.verticalCenter }
+                    onCheckedChanged: {
+                        owncloud.settings.hiddenfiles = hiddenfiles.checked ? "-h" : ""
                         inputChanged();
                     }
                 }

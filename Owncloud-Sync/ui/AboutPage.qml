@@ -56,7 +56,7 @@ Page {
                     width: parent.width
                     horizontalAlignment: Text.AlignHCenter
                     // TRANSLATORS: Owncloud Sync version number e.g Version 0.1
-                    text: i18n.tr("App Version %1").arg("0.3")
+                    text: i18n.tr("App Version %1").arg("0.4")
                 }
                 Label{
                     width: parent.width
@@ -67,7 +67,7 @@ Page {
                 Label {
                     width: parent.width
                     horizontalAlignment: Text.AlignHCenter
-                    text: i18n.tr("Maintained by %1").arg("Ern_st")
+                    text: i18n.tr("Maintained by %1").arg("Dan & Ern_st")
                 }
 
                 Label {
@@ -79,7 +79,7 @@ Page {
                     width: parent.width
                     horizontalAlignment: Text.AlignHCenter
                     wrapMode: Text.WordWrap
-                    text: i18n.tr("If you are willing to help please look at %1").arg("<a href=\"https://bugs.launchpad.net/owncloud-sync\">the legacy bug list</a>")
+                    text: i18n.tr("If you are willing to help please look at %1").arg("<a href=\"https://bugs.launchpad.net/owncloud-sync\">the bug list</a>")
                     onLinkActivated: Qt.openUrlExternally(link)
                  }
             }
@@ -97,11 +97,12 @@ Page {
                     horizontalAlignment: Text.AlignHCenter
                     text: "Thanks to"
                 }
+
                 Label {
                     width: parent.width
                     wrapMode: Text.WordWrap
                     horizontalAlignment: Text.AlignHCenter
-                    text: "%1 application".arg("<a href=\"https://launchpad.net/owncloud-sync\">Owncloud-Sync</a>")
+                    text: "Owncloud client: %1".arg("<a href=\"https://doc.owncloud.org/desktop/2.3/owncloudcmd.1.html\">Owncloudcmd</a>")
                     onLinkActivated: Qt.openUrlExternally(link)
                 }
                 Label {
@@ -140,7 +141,15 @@ Page {
                 wrapMode: Text.WordWrap
                 textSize: Label.Small
                 horizontalAlignment: Text.AlignHCenter
-                text: i18n.tr("Source code available on %1").arg("<a href=\"https://framagit.org/ernesst/UBsync\">framagit.org</a>")
+                text: "Fork from %1".arg("<a href=\"https://launchpad.net/owncloud-sync\">Owncloud-Sync</a>")
+                onLinkActivated: Qt.openUrlExternally(link)
+            }
+            Label {
+                width: parent.width
+                wrapMode: Text.WordWrap
+                textSize: Label.Small
+                horizontalAlignment: Text.AlignHCenter
+                text: i18n.tr("Source code available on %1").arg("<a href=\"https://code.launchpad.net/~ocs-team/owncloud-sync/UBsync\">Owncloud-sync/UBsync</a>")
                 onLinkActivated: Qt.openUrlExternally(link)
             }
             Button{
@@ -152,4 +161,3 @@ Page {
         }
     }
 }
-
