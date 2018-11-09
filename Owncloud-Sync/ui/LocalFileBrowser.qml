@@ -15,7 +15,7 @@ FileBrowser{
     FolderListModel {
         id: folderListModel
         showFiles: false
-        //showHidden: true
+        showHidden: true
         folder: caller.text ? caller.text : fileBrowser.rootPath
 
 

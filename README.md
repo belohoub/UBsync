@@ -2,7 +2,13 @@
 
 <img src="https://framagit.org/ernesst/UBsync/raw/master/Owncloud-Sync/UBsync.png" width="196">
 
-UBsync is a forked of [ownCloud-sync](https://launchpad.net/owncloud-sync) application for **Ubuntu touch 16.04**,  supported by [Ubports](https://www.ubports.com).
+UBsync is a forked of [ownCloud-sync](https://launchpad.net/owncloud-sync) dedicated to Nextcloud application for **Ubuntu touch 16.04**,  supported by [Ubports](https://www.ubports.com).
+
+# 0.4 Changelog
+1. Migrate the source to https://launchpad.net/owncloud-sync
+1. Allo to synchronize hidden folder on the phone
+1. Add hidden file synchronization
+1. Update about.qml
 
 # 0.3 Changelog
 1. Compiled for Xenial,

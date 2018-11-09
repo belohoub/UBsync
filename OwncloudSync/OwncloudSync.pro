@@ -33,7 +33,7 @@ OTHER_FILES = qmldir
 }
 
 qmldir.files = qmldir
-installPath = $$OUT_PWD/OwncloudSync
+installPath = $${UBUNTU_CLICK_PLUGIN_PATH}/OwncloudSync
 qmldir.path = $$installPath
 target.path = $$installPath
 INSTALLS += target qmldir

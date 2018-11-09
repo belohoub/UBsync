@@ -345,9 +345,19 @@ void OwncloudSyncd::syncDir(const QString& localPath){
     qDebug() << "Starting Owncloud Sync from " << localPath << " to " << remotePath;
 
     QString owncloudcmd = getOwncloudCmd();
-
     QStringList arguments;
-    arguments << "--user" << m_username << "--password" << m_password << "--silent" << "--non-interactive" << m_hidden<< localPath << remotePath;
+    if(m_hidden.contains("-h")){
+           arguments << "--user" << m_username << "--password" << m_password << "--silent" << "--non-interactive" << m_hidden << localPath << remotePath;
+           qDebug() << "Hidden files synchronisation set";
+           //qDebug() <<  "--user" << m_username << "--password" << m_password << "--silent" << "--non-interactive" << m_hidden << localPath << remotePath;
+        }else{
+           arguments << "--user" << m_username << "--password" << m_password << "--silent" << "--non-interactive" << localPath << remotePath;
+           //qDebug() <<  "--user" << m_username << "--password" << m_password << "--silent" << "--non-interactive" << localPath << remotePath;
+        }
+    //QStringList arguments;
+    //arguments << "--user" << m_username << "--password" << m_password << "--silent" << "--non-interactive" << m_hidden << localPath << remotePath;
+    //qDebug() <<  "--user" << m_username << "--password" << m_password << "--silent" << "--non-interactive" << m_hidden << localPath << remotePath;
+
     QProcess *owncloudsync = new QProcess();
     //Retrieve all debug from process
     owncloudsync->setProcessChannelMode(QProcess::ForwardedChannels);

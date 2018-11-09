@@ -17,7 +17,7 @@ FileBrowser{
 
         showDirs:  true
         showFiles: false
-        showHidden: false
+        showHidden: true
 
         username: owncloud.settings.username
         password: owncloud.settings.password
