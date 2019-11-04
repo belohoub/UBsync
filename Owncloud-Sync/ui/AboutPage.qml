@@ -56,13 +56,13 @@ Page {
                     width: parent.width
                     horizontalAlignment: Text.AlignHCenter
                     // TRANSLATORS: Owncloud Sync version number e.g Version 0.1
-                    text: i18n.tr("App Version %1").arg("0.4")
+                    text: i18n.tr("App Version %1").arg("0.5")
                 }
                 Label{
                     width: parent.width
                     horizontalAlignment: Text.AlignHCenter
                     // TRANSLATORS: Nextcloudcmd binary version number e.g Version 1.8.1
-                    text: i18n.tr("Nextcloudcmd Version %1").arg(owncloud.settings.owncloudcmdVersion)
+                    text: i18n.tr("Client : %1").arg(owncloud.settings.owncloudcmdVersion)
                 }
                 Label {
                     width: parent.width
@@ -126,6 +126,13 @@ Page {
                     wrapMode: Text.WordWrap
                     horizontalAlignment: Text.AlignHCenter
                     text: "Joan CiberSheep for the %1 logo".arg("<a href=\"https://github.com/snwh/suru-icon-theme\">Suru Theme</a>")
+                    onLinkActivated: Qt.openUrlExternally(link)
+                }
+                Label {
+                    width: parent.width
+                    wrapMode: Text.WordWrap
+                    horizontalAlignment: Text.AlignHCenter
+                    text: "Lukas to enable the application with %1".arg("<a href=\"http://clickable.bhdouglass.com/en/latest/index.html\">Clickable</a>")
                     onLinkActivated: Qt.openUrlExternally(link)
                 }
             }

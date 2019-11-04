@@ -79,7 +79,7 @@ Page {
                     onClicked: daemonController.getOwncloudcmdVersion()
 
                     ListItemLayout {
-                        title.text: i18n.tr("Nextcloudcmd Version: %1").arg(owncloud.settings.owncloudcmdVersion)
+                        title.text: i18n.tr("Client : %1").arg(owncloud.settings.owncloudcmdVersion)
                         anchors{verticalCenter: parent.verticalCenter}
                     }
                 }
@@ -135,4 +135,3 @@ Page {
         anchors{left: parent.left; right:parent.right; bottom: parent.bottom;}
     }
 }
-

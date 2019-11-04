@@ -97,8 +97,8 @@ QString OwncloudSyncd::getVersionNumber(){
 
     QString output(owncloudcmdVersion->readAllStandardOutput());
 
-    if(output.contains("nextcloudcmd version ")){
-        output.remove("nextcloudcmd version ");
+    if(output.contains("version")){
+        output.resize (26);
         output = output.simplified();
     }else{
         output = tr("unspecified");

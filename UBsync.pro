@@ -11,13 +11,15 @@ SUBDIRS += qwebdavlib \
            OwncloudSync \
            OwncloudSyncd
 
+# what subproject depends on others
+OwncloudSync.depends = qwebdavlib
 # specify the manifest file, this file is required for click
 # packaging and for the IDE to create runconfigurations
 UBUNTU_MANIFEST_FILE=manifest.json.in
 
 # specify translation domain, this must be equal with the
 # app name in the manifest file
-UBUNTU_TRANSLATION_DOMAIN="owncloud-sync"
+UBUNTU_TRANSLATION_DOMAIN="ubsync"
 
 # specify the source files that should be included into
 # the translation file, from those files a translation

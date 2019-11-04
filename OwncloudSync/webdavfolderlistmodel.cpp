@@ -53,6 +53,10 @@ void webdavfolderlistmodel::setWebdavCredentials()
         QString url = sUrl.host();
         qDebug() << "webdav::setConnectionSettings" << "url:" << url;
 
+        int port = sUrl.port();
+        if(port == -1) port = 0;
+        qDebug() << "webdav::setConnectionSettings" << "port:" << port;
+
         QString path = sUrl.path();
         path.append("/remote.php/webdav/");
         qDebug() << "webdav::setConnectionSettings" << "path:" << path;
@@ -66,8 +70,10 @@ void webdavfolderlistmodel::setWebdavCredentials()
             connectionType = QWebdav::HTTP;
         }
 
-        m_webdav.setConnectionSettings(connectionType, url, path, m_username, m_password);
-
+        //m_webdav.setConnectionSettings(connectionType, url, path, m_username, m_password);
+        m_webdav.setConnectionSettings(connectionType, url, path, m_username, m_password, port);
+        // qDebug() << "webdav::setConnectionSettings" << "username:" << m_username;
+        // qDebug() << "webdav::setConnectionSettings" << "password:" << m_password;
     }
 }
 
@@ -215,5 +221,3 @@ void webdavfolderlistmodel::replySkipRead()
 
     qDebug() << "webdavfolderlistmodel::replySkipRead()   skipped " << ba.size() << " reply->url() == " << reply->url().toString(QUrl::RemoveUserInfo);
 }
-
-

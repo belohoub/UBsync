@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-30 02:18+0000\n"
+"POT-Creation-Date: 2019-07-22 00:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,259 +17,259 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/components/FileBrowser.qml:69
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/components/FileBrowser.qml:69
 msgid "No Folders"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/components/FileBrowser.qml:82
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/components/FileBrowser.qml:82
 msgid "Press Tick To Select"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/components/FileBrowser.qml:129
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/components/FileBrowser.qml:129
 msgid "Create New Folder"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/components/FileBrowser.qml:133
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/components/FileBrowser.qml:133
 msgid "New Folder"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/components/FileBrowser.qml:140
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/AccountSettingsPage.qml:268
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/components/FileBrowser.qml:140
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/AccountSettingsPage.qml:268
 msgid "Cancel"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/components/FileBrowser.qml:145
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/components/FileBrowser.qml:145
 msgid "OK"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/AboutPage.qml:11
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/AboutPage.qml:11
 msgid "About"
 msgstr ""
 
 #. TRANSLATORS: Owncloud Sync version number e.g Version 0.1
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/AboutPage.qml:59
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/AboutPage.qml:59
 #, qt-format
 msgid "App Version %1"
 msgstr ""
 
 #. TRANSLATORS: Nextcloudcmd binary version number e.g Version 1.8.1
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/AboutPage.qml:65
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/AboutPage.qml:65
 #, qt-format
 msgid "Nextcloudcmd Version %1"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/AboutPage.qml:70
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/AboutPage.qml:70
 #, qt-format
 msgid "Maintained by %1"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/AboutPage.qml:76
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/AboutPage.qml:76
 msgid " "
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/AboutPage.qml:82
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/AboutPage.qml:82
 #, qt-format
 msgid "If you are willing to help please look at %1"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/AboutPage.qml:137
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/AboutPage.qml:144
 msgid "Released under the terms of the GNU GPL v3"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/AboutPage.qml:152
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/AboutPage.qml:159
 #, qt-format
 msgid "Source code available on %1"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/AboutPage.qml:156
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/AboutPage.qml:163
 msgid "Share Debug Logs"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/Accounts.qml:11
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/Accounts.qml:11
 #, qt-format
 msgid "%1's Nextcloud"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/Accounts.qml:11
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/Accounts.qml:11
 msgid "Nextcloud"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/Accounts.qml:41
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/Accounts.qml:41
 msgid "Account Settings"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/Accounts.qml:57
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/Accounts.qml:57
 msgid "Sync Folders"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/Accounts.qml:73
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/SyncServicePage.qml:10
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/Accounts.qml:73
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/SyncServicePage.qml:10
 msgid "Sync Service"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/AccountSettingsPage.qml:22
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/AccountSettingsPage.qml:22
 msgid "General Settings"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/AccountSettingsPage.qml:64
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/AccountSettingsPage.qml:64
 msgid "User"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/AccountSettingsPage.qml:70
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/AccountSettingsPage.qml:70
 msgid "Host"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/AccountSettingsPage.qml:79
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/AccountSettingsPage.qml:79
 msgid "Sync on Mobile Data"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/AccountSettingsPage.qml:99
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/AccountSettingsPage.qml:99
 msgid "Sync hidden files"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/AccountSettingsPage.qml:116
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/AccountSettingsPage.qml:116
 msgid "Sync Frequency"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/AccountSettingsPage.qml:125
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/AccountSettingsPage.qml:125
 msgid "No Sync"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/AccountSettingsPage.qml:125
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/AccountSettingsPage.qml:125
 msgid "hours"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/AccountSettingsPage.qml:237
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/AccountSettingsPage.qml:237
 msgid "Choose a Nextcloud Account"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/AccountSettingsPage.qml:258
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/AccountSettingsPage.qml:258
 msgid ""
 "No Nextcloud accounts available. Tap on the button below to add an account."
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/AccountSettingsPage.qml:263
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/AccountSettingsPage.qml:263
 msgid "Add a new account"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/SharePage.qml:10
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/SharePage.qml:10
 msgid "Share"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/SyncServicePage.qml:37
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/SyncServicePage.qml:37
 #, qt-format
 msgid "Status: %1"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/SyncServicePage.qml:37
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/SyncServicePage.qml:37
 msgid "Syncing"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/SyncServicePage.qml:37
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/SyncServicePage.qml:37
 msgid "Idle"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/SyncServicePage.qml:37
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/SyncServicePage.qml:37
 msgid "Stopped"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/SyncServicePage.qml:42
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/SyncServicePage.qml:42
 msgid "Stop"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/SyncServicePage.qml:42
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/SyncServicePage.qml:42
 msgid "Start"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/SyncServicePage.qml:48
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/SyncServicePage.qml:48
 msgid "Stop Service"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/SyncServicePage.qml:48
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/SyncServicePage.qml:48
 msgid "Start Service"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/SyncServicePage.qml:57
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/SyncServicePage.qml:57
 msgid "Sync Required"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/SyncServicePage.qml:58
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/SyncServicePage.qml:58
 msgid "Last Sync: "
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/SyncServicePage.qml:62
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/SyncServicePage.qml:62
 msgid "Sync"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/SyncServicePage.qml:70
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/SyncServicePage.qml:70
 msgid "Sync Starting"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/SyncServicePage.qml:82
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/SyncServicePage.qml:82
 #, qt-format
-msgid "Nextcloudcmd Version: %1"
+msgid "Client : %1"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/SyncServicePage.qml:101
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/SyncServicePage.qml:101
 msgid "Never"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/SyncServicePage.qml:105
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/SyncServicePage.qml:105
 msgid " Months Ago"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/SyncServicePage.qml:109
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/SyncServicePage.qml:109
 msgid " Days Ago"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/SyncServicePage.qml:113
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/SyncServicePage.qml:113
 msgid "  Hours Ago"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/SyncServicePage.qml:117
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/SyncServicePage.qml:117
 msgid " Minutes Ago"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/SyncServicePage.qml:120
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/SyncServicePage.qml:120
 msgid "A Minute Ago"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/SyncServicePage.qml:124
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/SyncServicePage.qml:124
 msgid " Seconds Ago"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/SyncServicePage.qml:127
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/SyncServicePage.qml:127
 msgid "Just Now"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/SyncSettingsPage.qml:17
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/SyncSettingsPage.qml:17
 msgid "Sync Settings"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/SyncSettingsPage.qml:23
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/SyncSettingsPage.qml:23
 msgid "Add"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/SyncSettingsPage.qml:117
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/SyncSettingsPage.qml:117
 msgid "Add Folders"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/SyncSettingsPage.qml:144
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/SyncSettingsPage.qml:144
 msgid "Local Folder:"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/SyncSettingsPage.qml:164
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/SyncSettingsPage.qml:164
 msgid "Remote Folder:"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/SyncSettingsPage.qml:181
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/SyncSettingsPage.qml:181
 msgid "No Network Available"
 msgstr ""
 
-#: /home/ubucon/Downloads/UBsync-4/Owncloud-Sync/ui/WebdavFileBrowser.qml:31
+#: /home/ernest/Local/Project/original/UBsync/Owncloud-Sync/ui/WebdavFileBrowser.qml:31
 msgid "Loading"
 msgstr ""
 
-#: /home/ubucon/Downloads/build-UBsync-UbuntuSDK_for_builder_armhf_GCC_armhf_ubuntu_sdk_16_04-Release/Owncloud-Sync/UBsync.desktop.h:1
+#: /home/ernest/Local/Project/original/UBsync/build/Owncloud-Sync/UBsync.desktop.h:1
 msgid "UBsync"
 msgstr ""
