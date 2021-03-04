@@ -13,6 +13,7 @@ UBsync is a forked of [ownCloud-sync](https://launchpad.net/owncloud-sync) dedic
 1. arm64 version of owncloudcmd is 2.5.3; arm32 remains unchanged
 1. arch detection and paths to owncloudcmd changed in *OwncloudSyncd/owncloudsyncd.cpp*
 1. arch detection and paths for libs added to *OwncloudSync/servicecontrol.cpp*
+1. included support for owncloud account in ubuntu-touch (up to now, only nextcloud account was used, even those behave equaly from the UBsync point of view)
 
 # 0.4 Changelog
 1. Migrate the source to https://launchpad.net/owncloud-sync
