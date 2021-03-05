@@ -1,6 +1,6 @@
 **This repository is related to the discussion at [forums.ubports.com](https://forums.ubports.com/topic/5116/help-creating-an-ubsync-arm64-version/30) related to missing amr64 support for UBsync**
 
-**This fork needs revision!**
+**This fork needs revision: armhf build completely untested, while the arm64 build is poorly tested**
 
 # Project presentation
 

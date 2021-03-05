@@ -66,7 +66,7 @@ bool ServiceControl::installServiceFile()
     f.write("   initctl set-env LD_LIBRARY_PATH=/opt/click.ubuntu.com/ubsync/current/lib/aarch64-linux-gnu/\n");
 #else
     //f.write("   initctl set-env LD_LIBRARY_PATH=/opt/click.ubuntu.com/ubsync/current/Owncloud-Sync/lib/arm-linux-gnueabihf/lib\n");
-    f.write("   initctl set-env LD_LIBRARY_PATH=/opt/click.ubuntu.com/ubsync/current/lib/arm-linux-gnueabihf/\n");´
+    f.write("   initctl set-env LD_LIBRARY_PATH=/opt/click.ubuntu.com/ubsync/current/lib/arm-linux-gnueabihf/\n");
 #endif
     f.write("end script\n");
 
