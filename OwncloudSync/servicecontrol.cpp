@@ -31,7 +31,9 @@ bool ServiceControl::serviceFileInstalled() const
         return false;
     }
     QFile f(QDir::homePath() + "/.config/upstart/" + m_serviceName + ".conf");
-    return f.exists();
+    QFile fVer(QDir::homePath() + "/.config/upstart/" + m_serviceName + ".version");
+    
+    return (f.exists() && fVer.exists());
 }
 
 bool ServiceControl::installServiceFile()
@@ -42,13 +44,28 @@ bool ServiceControl::installServiceFile()
     }
 
     QFile f(QDir::homePath() + "/.config/upstart/" + m_serviceName + ".conf");
+    // version info file was create to support smooth updates for users with 
+    // non-multiarch UBsync version, as paths in the config file changed 
+    // and it must be updated when upgarding to multiarch ...
+    QFile fVer(QDir::homePath() + "/.config/upstart/" + m_serviceName + ".version");
+    
     if (f.exists()) {
-        qDebug() << "Service file already existing...";
-        return false;
+        // test if the app is not too old - to handle with v0.5 and older updates
+        if (fVer.exists()) {
+            qDebug() << "Service file already exist...";
+            return false;
+        } else {
+            qDebug() << "OLD service file exist - updating ... ";
+        }
     }
 
     if (!f.open(QFile::WriteOnly | QFile::Truncate)) {
         qDebug() << "Cannot create service file";
+        return false;
+    }
+    
+    if (!fVer.open(QFile::WriteOnly | QFile::Truncate)) {
+        qDebug() << "Cannot create version file";
         return false;
     }
 
@@ -78,6 +95,11 @@ bool ServiceControl::installServiceFile()
     //f.write("exec " + appDir.toUtf8() + "/lib/arm-linux-gnueabihf/bin/" + m_serviceName.toUtf8() + "\n");
     f.write("exec /opt/click.ubuntu.com/ubsync/current/lib/arm-linux-gnueabihf/bin/" + m_serviceName.toUtf8() + "\n");
     f.close();
+    
+    // Indicate "multiarch" version of this app
+    fVer.write("# This is *multiarch* version info only, do not remove this file!\n");
+    fVer.close();
+    
     return true;
 }
 
@@ -88,7 +110,9 @@ bool ServiceControl::removeServiceFile()
         return false;
     }
     QFile f(QDir::homePath() + "/.config/upstart/" + m_serviceName + ".conf");
-    return f.remove();
+    QFile fVer(QDir::homePath() + "/.config/upstart/" + m_serviceName + ".version");
+    
+    return (f.remove() && fVer.remove());
 }
 
 bool ServiceControl::serviceRunning() const
