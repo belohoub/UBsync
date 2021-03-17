@@ -1,7 +1,7 @@
 {
     "name": "ubsync",
-    "description": "A tool to synchronise Utouch to your Nextcloud server",
-    "architecture": "armhf",
+    "description": "A tool to synchronise Utouch to your ownCloud/nextCloud server",
+    "architecture": "@CLICK_ARCH@",
     "title": "UBsync",
     "hooks": {
         "UBsync": {
@@ -10,7 +10,7 @@
             "desktop": "Owncloud-Sync/UBsync.desktop"
         }
     },
-    "version": "0.5",
+    "version": "0.6-dev",
     "maintainer": "Ern st <slash.tux@gmail.com>",
     "framework": "ubuntu-sdk-16.04"
 }

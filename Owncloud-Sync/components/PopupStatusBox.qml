@@ -7,10 +7,11 @@ Item{
     property alias status: statusLabel.text
     property alias spinner: activity.running
     property alias button: button
+    property alias statusTimer: statusTimer
     property var targetHeight: units.gu(6)
     property bool autoHide
     property bool showButton: false
-
+    
     signal buttonClicked()
 
     visible: false
@@ -25,16 +26,21 @@ Item{
             status.visible = false
         }
     }
-
+    
     function show(){
         status.visible = true
         status.height = targetHeight
 
-        if(autoHide)
-        statusTimer.start()
+         if(autoHide) {
+             console.log("PopupStatusBox.qml - autoHide")
+             //statusTimer.start();
+             statusTimer.startTimer(hide, 3500);
+         } else {
+             console.log("PopupStatusBox.qml - NO autoHide")
+         }
     }
 
-    function hide(){
+    function hide() {
         status.height = units.gu(0.5)
 
     }
@@ -47,10 +53,22 @@ Item{
     }
 
 
-    Timer{
+    Timer {
         id: statusTimer
-        interval: 3500
-        onTriggered: hide()
+        
+        // Start the timer and execute the provided callback on every X milliseconds
+        function startTimer(callback, milliseconds) {
+            statusTimer.interval = milliseconds;
+            statusTimer.repeat = false;
+            statusTimer.triggered.connect(callback);
+            statusTimer.start();
+        }
+        
+        // Stop the timer and unregister the callback
+        function stopTimer(callback) {
+            statusTimer.stop();
+            statusTimer.triggered.disconnect(callback);
+        }
     }
 
     Rectangle{

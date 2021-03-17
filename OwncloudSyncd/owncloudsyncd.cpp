@@ -150,10 +150,17 @@ QString OwncloudSyncd::getOwncloudCmd(){
 
     QString owncloudcmd;
 
-    if( QFile("/opt/click.ubuntu.com/ubsync/current/Owncloud-Sync/lib/arm-linux-gnueabihf/bin/owncloudcmd").exists()){
-        owncloudcmd = "/opt/click.ubuntu.com/ubsync/current/Owncloud-Sync/lib/arm-linux-gnueabihf/bin/owncloudcmd";
+#if INTPTR_MAX == INT64_MAX
+    qDebug() << "Arm64";
+    if( QFile("/opt/click.ubuntu.com/ubsync/current/lib/aarch64-linux-gnu/bin/owncloudcmd").exists()){
+        owncloudcmd = "/opt/click.ubuntu.com/ubsync/current/lib/aarch64-linux-gnu/bin/owncloudcmd";
+#else
+    qDebug() << "Arm32";
+    if( QFile("/opt/click.ubuntu.com/ubsync/current/lib/arm-linux-gnueabihf/bin/owncloudcmd").exists()){
+        owncloudcmd = "/opt/click.ubuntu.com/ubsync/current/lib/arm-linux-gnueabihf/bin/owncloudcmd";
+#endif
         qDebug() << "Using Arm owncloudcmd Binary - Mobile";
-    }else{
+    } else{
         owncloudcmd = "owncloudcmd";
         qDebug() << "Using Local owncloudcmd Binary - Desktop";
     }

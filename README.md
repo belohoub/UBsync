@@ -1,8 +1,22 @@
+**This repository is related to the discussion at [forums.ubports.com](https://forums.ubports.com/topic/5116/help-creating-an-ubsync-arm64-version/30) related to missing amr64 support for UBsync**
+
+**This fork needs revision: armhf build completely untested, while the arm64 build is poorly tested**
+
+**This project will be merged back to launchpad, the last version here currently works, but it is for testing only**
+
 # Project presentation
 
 <img src="https://framagit.org/ernesst/UBsync/raw/master/Owncloud-Sync/UBsync.png" width="196">
 
 UBsync is a forked of [ownCloud-sync](https://launchpad.net/owncloud-sync) dedicated to Nextcloud application for **Ubuntu touch 16.04**,  supported by [Ubports](https://www.ubports.com).
+
+# Multiarch Changelog (03-02-2021)
+1. clickable.json added
+1. arm64 version of owncloudcmd is 2.5.3; arm32 remains unchanged
+1. arch detection and paths to owncloudcmd changed in *OwncloudSyncd/owncloudsyncd.cpp*
+1. arch detection and paths for libs added to *OwncloudSync/servicecontrol.cpp*
+1. included support for owncloud account in ubuntu-touch (up to now, only nextcloud account was used, even those behave equaly from the UBsync point of view)
+1. [build instructions](BUILD.md)
 
 # 0.4 Changelog
 1. Migrate the source to https://launchpad.net/owncloud-sync

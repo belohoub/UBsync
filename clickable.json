@@ -1,0 +1,11 @@
+{
+    "builder": "qmake",
+    "install_lib": [
+         "${ROOT}/Owncloud-Sync/lib/${ARCH_TRIPLET}/lib/libowncloud_csync.so*",
+         "${ROOT}/Owncloud-Sync/lib/${ARCH_TRIPLET}/lib/libowncloudsync.so*"
+    ],
+    "install_bin": [
+         "${ROOT}/Owncloud-Sync/lib/${ARCH_TRIPLET}/bin/owncloudcmd",
+         "${ROOT}/Owncloud-Sync/lib/${ARCH_TRIPLET}/bin/sync-exclude.lst"
+    ]
+}
