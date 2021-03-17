@@ -81,19 +81,15 @@ bool ServiceControl::installServiceFile()
     f.write("pre-start script\n");
 #if INTPTR_MAX == INT64_MAX
     f.write("   initctl set-env LD_LIBRARY_PATH=/opt/click.ubuntu.com/ubsync/current/lib/aarch64-linux-gnu/\n");
+    f.write("end script\n");
+    f.write("exec /opt/click.ubuntu.com/ubsync/current/lib/aarch64-linux-gnu/bin/" + m_serviceName.toUtf8() + "\n");
 #else
     //f.write("   initctl set-env LD_LIBRARY_PATH=/opt/click.ubuntu.com/ubsync/current/Owncloud-Sync/lib/arm-linux-gnueabihf/lib\n");
     f.write("   initctl set-env LD_LIBRARY_PATH=/opt/click.ubuntu.com/ubsync/current/lib/arm-linux-gnueabihf/\n");
-#endif
     f.write("end script\n");
-
-    // This works on desktop
-    //f.write("exec " + appDir.toUtf8() + "/" + m_serviceName.toUtf8() + "/" + m_serviceName.toUtf8() + "\n");
-    //Mobile
-    // Try to replace version with "current" to be more robust against updates
-    // Temporary fix for updates
-    //f.write("exec " + appDir.toUtf8() + "/lib/arm-linux-gnueabihf/bin/" + m_serviceName.toUtf8() + "\n");
     f.write("exec /opt/click.ubuntu.com/ubsync/current/lib/arm-linux-gnueabihf/bin/" + m_serviceName.toUtf8() + "\n");
+#endif
+
     f.close();
     
     // Indicate "multiarch" version of this app
