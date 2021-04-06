@@ -8,7 +8,7 @@ Page {
 
     header: PageHeader {
         property string username: owncloud.settings.username.charAt(0).toUpperCase() + owncloud.settings.username.slice(1);
-        title: username ? i18n.tr("%1's Nextcloud").arg(username) : i18n.tr("Nextcloud")
+        title: username ? i18n.tr("%1's Cloud").arg(username) : i18n.tr("Cloud")
         flickable: flickable
 
         trailingActionBar{

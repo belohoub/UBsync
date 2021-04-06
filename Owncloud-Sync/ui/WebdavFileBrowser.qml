@@ -29,6 +29,7 @@ FileBrowser{
         onFolderChanged: {
             connectionStatus.spinner = true
             connectionStatus.status = i18n.tr("Loading")
+            connectionStatus.indicationIcon = "updating"
         }
         onCountChanged: {
             connectionStatus.hide()

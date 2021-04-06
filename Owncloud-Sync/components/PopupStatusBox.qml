@@ -11,6 +11,7 @@ Item{
     property var targetHeight: units.gu(6)
     property bool autoHide
     property bool showButton: false
+    property string indicationIcon: "idle" /* error, idle, offline, paused, updating */
     
     signal buttonClicked()
 
@@ -86,7 +87,7 @@ Item{
             id: icon
             visible: !activity.running
             color: "white"
-            name: "dialog-warning-symbolic"
+            name: "sync-" + indicationIcon
             width: parent.height * 0.5
             height: width
             anchors{left: parent.left; verticalCenter: parent.verticalCenter; margins: units.gu(2)}

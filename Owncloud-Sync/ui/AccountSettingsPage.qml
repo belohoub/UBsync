@@ -25,7 +25,7 @@ Page {
         trailingActionBar{
             actions: [
                 Action {
-                    iconName: "contact"
+                    iconName: "add"
                     onTriggered: PopupUtils.open(dialogComponent)
                 }
             ]
@@ -234,7 +234,7 @@ Page {
             id: dialogComponent
             Dialog {
                 id: dialog
-                title: i18n.tr("Choose a Owncloud/Nextcloud Account")
+                title: i18n.tr("Choose an Owncloud/Nextcloud Account")
 
                 Repeater {
                     model: accounts

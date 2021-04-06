@@ -56,7 +56,7 @@ Page {
                     width: parent.width
                     horizontalAlignment: Text.AlignHCenter
                     // TRANSLATORS: Owncloud Sync version number e.g Version 0.1
-                    text: i18n.tr("App Version %1").arg("0.5")
+                    text: i18n.tr("App Version %1").arg(Qt.application.version)
                 }
                 Label{
                     width: parent.width
@@ -79,7 +79,7 @@ Page {
                     width: parent.width
                     horizontalAlignment: Text.AlignHCenter
                     wrapMode: Text.WordWrap
-                    text: i18n.tr("If you are willing to help please look at %1").arg("<a href=\"https://bugs.launchpad.net/owncloud-sync\">the bug list</a>")
+                    text: i18n.tr("If you are willing to help please look at %1").arg("<a href=\"https://bugs.launchpad.net/owncloud-sync/ubsync/+bugs\">the bug list</a>")
                     onLinkActivated: Qt.openUrlExternally(link)
                  }
             }
