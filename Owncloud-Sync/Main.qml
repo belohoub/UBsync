@@ -51,6 +51,7 @@ MainView {
         property bool mobileData: false
         property string lastSync
         property string owncloudcmdVersion
+        property string owncloudSyncdVersion
 
         function clearSettings(){
             password = ""

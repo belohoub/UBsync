@@ -83,6 +83,21 @@ Page {
                         ProgressionSlot {}
                     }
                 }
+                
+                ListItem {
+                    visible: ((!serviceController.serviceRunning) || (!owncloud.settings.owncloudSyncdVersion))
+                    ListItemLayout {
+                        title.text: i18n.tr("Sync Service Not Running!")
+                        anchors{verticalCenter: parent.verticalCenter}
+
+                        Icon{
+                            name: "dialog-warning-symbolic"
+                            anchors{verticalCenter: parent.verticalCenter}
+                            width: units.gu(3)
+                            SlotsLayout.position: SlotsLayout.Leading
+                        }
+                    }
+                }
             }
         }
     }

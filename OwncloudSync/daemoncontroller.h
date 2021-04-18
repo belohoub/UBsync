@@ -15,6 +15,7 @@ public:
     explicit DaemonController(QObject *parent = 0);
     Q_INVOKABLE void forceSync();
     Q_INVOKABLE void getOwncloudcmdVersion();
+    Q_INVOKABLE void getOwncloudSyncdVersion();
     Q_INVOKABLE void getLastSync();
 
     bool syncActive();

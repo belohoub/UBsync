@@ -49,6 +49,7 @@ OwncloudSyncd::OwncloudSyncd()
     //qDebug() << "Username: " << m_username << " Server: " << m_serverURL;
 
     settings.setValue("owncloudcmdVersion", getVersionNumber());
+    settings.setValue("owncloudSyncdVersion", OWNCLOUDSYNCD_VERSION);
 
     if (m_username.isEmpty() || m_password.isEmpty() || m_serverURL.isEmpty()){
         qWarning() << "Connection details missing  - Quiting";
@@ -113,6 +114,14 @@ QStringList OwncloudSyncd::forceSync(){
 
     QStringList list;
     list << "OwncloudSyncd::forceSync:" << "syncing";
+
+    return list;
+}
+
+QStringList OwncloudSyncd::dbusDaemonVersion(){
+    //return the owncloudsyncd version over dbus.
+    QStringList list;
+    list << "Version" << OWNCLOUDSYNCD_VERSION;
 
     return list;
 }

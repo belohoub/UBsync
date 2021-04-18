@@ -85,6 +85,17 @@ Page {
                         anchors{verticalCenter: parent.verticalCenter}
                     }
                 }
+                
+                ListItem {
+                    visible: owncloud.settings.owncloudSyncdVersion
+
+                    onClicked: daemonController.getOwncloudSyncdVersion()
+
+                    ListItemLayout {
+                        title.text: i18n.tr("Service : %1").arg(owncloud.settings.owncloudSyncdVersion)
+                        anchors{verticalCenter: parent.verticalCenter}
+                    }
+                }
             }
         }
     }

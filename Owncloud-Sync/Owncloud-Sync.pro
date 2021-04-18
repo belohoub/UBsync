@@ -36,11 +36,11 @@ component_files.files += components/*.qml
 config_files.path = /Owncloud-Sync
 config_files.files += $${CONF_FILES}
 
-owncloud_files.path = /Owncloud-Sync/lib/arm-linux-aarch64/bin
-owncloud_files.files += lib/arm-linux-aarch64/bin/*
-
-lib_files.path = /Owncloud-Sync/lib/arm-linux-aarch64/lib
-lib_files.files += lib/arm-linux-aarch64/lib/*
+owncloud_files.path = /Owncloud-Sync/lib/
+owncloud_files.files += aarch64-linux-gnu/bin/*
+owncloud_files.files += aarch64-linux-gnu/lib/*
+owncloud_files.files += arm-linux-gnueabihf/bin/*
+owncloud_files.files += arm-linux-gnueabihf/lib/*
 
 #install the desktop file, a translated version is
 #automatically created in the build directory
@@ -48,7 +48,7 @@ desktop_file.path = /Owncloud-Sync
 desktop_file.files = $$OUT_PWD/UBsync.desktop
 desktop_file.CONFIG += no_check_exist
 
-INSTALLS+=config_files qml_files desktop_file owncloud_files lib_files ui_files component_files
+INSTALLS+=config_files qml_files desktop_file owncloud_files ui_files component_files
 
 DISTFILES += \
     ui/SyncSettingsPage \
