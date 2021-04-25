@@ -10,7 +10,7 @@
             "desktop": "Owncloud-Sync/UBsync.desktop"
         }
     },
-    "version": "0.6-dev",
+    "version": "0.6",
     "maintainer": "Ern st <slash.tux@gmail.com>",
     "framework": "ubuntu-sdk-16.04"
 }
