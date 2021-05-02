@@ -66,7 +66,7 @@ Page {
 
             Label{
                 width: parent.width
-                text: i18n.tr("No Folders")
+                text: i18n.tr("No folders, press")
                 horizontalAlignment: Text.AlignHCenter
             }
 
@@ -79,7 +79,7 @@ Page {
 
             Label{
                 width: parent.width
-                text: i18n.tr("Press Tick To Select")
+                text: i18n.tr("on the panel to select this folder")
                 horizontalAlignment: Text.AlignHCenter
             }
         }

@@ -103,6 +103,14 @@ Page {
         //Shown if there are no sync items in the database
         anchors{centerIn: parent}
 
+        
+        
+        Label{
+            visible: !folderListModel.count
+            text: i18n.tr("No folders, press")
+            anchors{horizontalCenter: parent.horizontalCenter; bottom: addIcon.top; bottomMargin: units.gu(2)}
+        }
+        
         Icon {
             id: addIcon
             visible: !folderListModel.count
@@ -114,7 +122,7 @@ Page {
 
         Label{
             visible: !folderListModel.count
-            text: i18n.tr("Add Folders")
+            text: i18n.tr("on the panel to add a new folder")
             anchors{horizontalCenter: parent.horizontalCenter; top: addIcon.bottom; topMargin: units.gu(2)}
         }
     }
@@ -179,6 +187,7 @@ Page {
 
                         if(!owncloudsync.networkAvailable){
                             connectionStatus.status = i18n.tr("No Network Available")
+                            connectionStatus.indicationIcon = "offline"
                          }else{
 
                         apl.addPageToNextColumn(syncSettings, Qt.resolvedUrl("WebdavFileBrowser.qml"), {caller:remoteText})

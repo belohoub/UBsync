@@ -59,6 +59,10 @@ void DaemonController::getOwncloudcmdVersion(){
     sendBusCall("dbusVersionNumber");
 }
 
+void DaemonController::getOwncloudSyncdVersion(){    
+    sendBusCall("dbusDaemonVersion");
+}
+
 bool DaemonController::syncActive()
 {
     sendBusCall("dbusStatus");

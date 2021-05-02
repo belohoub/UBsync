@@ -25,7 +25,7 @@ Page {
         trailingActionBar{
             actions: [
                 Action {
-                    iconName: "contact"
+                    iconName: "add"
                     onTriggered: PopupUtils.open(dialogComponent)
                 }
             ]
@@ -183,7 +183,7 @@ Page {
     }*/
 
 ///////////////////////////////////////////////////
-    //Add Online Account connection
+    //Add Online Acocunt connection
 
     Timer {
         interval: 450
@@ -234,7 +234,7 @@ Page {
             id: dialogComponent
             Dialog {
                 id: dialog
-                title: i18n.tr("Choose a Nextcloud Account")
+                title: i18n.tr("Choose an Owncloud/Nextcloud Account")
 
                 Repeater {
                     model: accounts
@@ -255,13 +255,18 @@ Page {
                         margins: units.gu(1)
                     }
                     visible: accounts.count === 0
-                    text: i18n.tr("No Nextcloud accounts available. Tap on the button below to add an account.")
+                    text: i18n.tr("No Owncloud/Nextcloud accounts available. Tap on the button below to add an account.")
                     wrapMode: Text.Wrap
                 }
 
                 Button {
-                    text: i18n.tr("Add a new account")
+                    text: i18n.tr("Add a new NextCloud account")
                     onClicked: accounts.requestAccess(accounts.applicationId + "_nextcloud", {})
+                }
+                
+                Button {
+                    text: i18n.tr("Add a new OwnCloud account")
+                    onClicked: accounts.requestAccess(accounts.applicationId + "_owncloud", {})
                 }
 
                 Button {

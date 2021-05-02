@@ -3,6 +3,8 @@
 # file and takes care of subprojects
 TEMPLATE = subdirs
 
+CONFIG += -std=gnu++11
+
 #load Ubuntu specific features
 load(ubuntu-click)
 
@@ -45,3 +47,5 @@ unittest.depends  = sub-Owncloud-Sync
 QMAKE_EXTRA_TARGETS += aptest unittest
 
 DISTFILES += \
+
+

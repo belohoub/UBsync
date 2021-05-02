@@ -46,6 +46,7 @@ Page {
                             onClicked: {
                                 console.log("Accounts.qml - onButtonClicked - Start Sync daemon")
                                 connectionStatus.status = serviceController.serviceRunning ? i18n.tr("Stop Service") : i18n.tr("Start Service")
+                                connectionStatus.indicationIcon = serviceController.serviceRunning ? "paused" : "updating"
                                 serviceController.setServiceRunning(!serviceController.serviceRunning)
                             }
                         }
@@ -68,6 +69,7 @@ Page {
                                 console.log("Accounts.qml - onButtonClicked - Start Sync")
                                 daemonController.forceSync();
                                 connectionStatus.status = i18n.tr("Sync Starting")
+                                connectionStatus.indicationIcon = "updating"
                             }
                         }
                     }
@@ -80,6 +82,17 @@ Page {
 
                     ListItemLayout {
                         title.text: i18n.tr("Client : %1").arg(owncloud.settings.owncloudcmdVersion)
+                        anchors{verticalCenter: parent.verticalCenter}
+                    }
+                }
+                
+                ListItem {
+                    visible: owncloud.settings.owncloudSyncdVersion
+
+                    onClicked: daemonController.getOwncloudSyncdVersion()
+
+                    ListItemLayout {
+                        title.text: i18n.tr("Service : %1").arg(owncloud.settings.owncloudSyncdVersion)
                         anchors{verticalCenter: parent.verticalCenter}
                     }
                 }

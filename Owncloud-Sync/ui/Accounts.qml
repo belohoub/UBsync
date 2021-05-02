@@ -8,7 +8,7 @@ Page {
 
     header: PageHeader {
         property string username: owncloud.settings.username.charAt(0).toUpperCase() + owncloud.settings.username.slice(1);
-        title: username ? i18n.tr("%1's Nextcloud").arg(username) : i18n.tr("Nextcloud")
+        title: username ? i18n.tr("%1's Cloud").arg(username) : i18n.tr("Cloud")
         flickable: flickable
 
         trailingActionBar{
@@ -81,6 +81,21 @@ Page {
                         }
 
                         ProgressionSlot {}
+                    }
+                }
+                
+                ListItem {
+                    visible: ((!serviceController.serviceRunning) || (!owncloud.settings.owncloudSyncdVersion))
+                    ListItemLayout {
+                        title.text: i18n.tr("Sync Service Not Running!")
+                        anchors{verticalCenter: parent.verticalCenter}
+
+                        Icon{
+                            name: "dialog-warning-symbolic"
+                            anchors{verticalCenter: parent.verticalCenter}
+                            width: units.gu(3)
+                            SlotsLayout.position: SlotsLayout.Leading
+                        }
                     }
                 }
             }

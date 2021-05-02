@@ -49,6 +49,7 @@ OwncloudSyncd::OwncloudSyncd()
     //qDebug() << "Username: " << m_username << " Server: " << m_serverURL;
 
     settings.setValue("owncloudcmdVersion", getVersionNumber());
+    settings.setValue("owncloudSyncdVersion", OWNCLOUDSYNCD_VERSION);
 
     if (m_username.isEmpty() || m_password.isEmpty() || m_serverURL.isEmpty()){
         qWarning() << "Connection details missing  - Quiting";
@@ -117,6 +118,14 @@ QStringList OwncloudSyncd::forceSync(){
     return list;
 }
 
+QStringList OwncloudSyncd::dbusDaemonVersion(){
+    //return the owncloudsyncd version over dbus.
+    QStringList list;
+    list << "Version" << OWNCLOUDSYNCD_VERSION;
+
+    return list;
+}
+
 QStringList OwncloudSyncd::dbusVersionNumber(){
     //return the owncloudcmdversion over dbus.
     QStringList list;
@@ -150,10 +159,17 @@ QString OwncloudSyncd::getOwncloudCmd(){
 
     QString owncloudcmd;
 
-    if( QFile("/opt/click.ubuntu.com/ubsync/current/Owncloud-Sync/lib/arm-linux-gnueabihf/bin/owncloudcmd").exists()){
-        owncloudcmd = "/opt/click.ubuntu.com/ubsync/current/Owncloud-Sync/lib/arm-linux-gnueabihf/bin/owncloudcmd";
+#if INTPTR_MAX == INT64_MAX
+    qDebug() << "Arm64";
+    if( QFile("/opt/click.ubuntu.com/ubsync/current/lib/aarch64-linux-gnu/bin/owncloudcmd").exists()){
+        owncloudcmd = "/opt/click.ubuntu.com/ubsync/current/lib/aarch64-linux-gnu/bin/owncloudcmd";
+#else
+    qDebug() << "Arm32";
+    if( QFile("/opt/click.ubuntu.com/ubsync/current/lib/arm-linux-gnueabihf/bin/owncloudcmd").exists()){
+        owncloudcmd = "/opt/click.ubuntu.com/ubsync/current/lib/arm-linux-gnueabihf/bin/owncloudcmd";
+#endif
         qDebug() << "Using Arm owncloudcmd Binary - Mobile";
-    }else{
+    } else{
         owncloudcmd = "owncloudcmd";
         qDebug() << "Using Local owncloudcmd Binary - Desktop";
     }

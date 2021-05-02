@@ -17,6 +17,8 @@
 //#define OWNCLOUDSYNCD_CONTROLLER_PATH QStringLiteral("/org/owncloudsyncd/Controller")
 //#define OWNCLOUDSYNCD_CONTROLLER_INTERFACE QStringLiteral("org.owncloudsyncd.Controller")
 
+#define OWNCLOUDSYNCD_VERSION QStringLiteral("0.6")
+
 
 class OwncloudSyncd : public QObject
 {
@@ -33,6 +35,7 @@ public slots:
     Q_SCRIPTABLE QStringList forceSync();
     Q_SCRIPTABLE QStringList dbusVersionNumber();
     Q_SCRIPTABLE QStringList dbusStatus();
+    Q_SCRIPTABLE QStringList dbusDaemonVersion();
     Q_SCRIPTABLE QStringList getLastSync();
 
 signals:
