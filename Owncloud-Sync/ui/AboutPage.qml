@@ -67,7 +67,7 @@ Page {
                 Label {
                     width: parent.width
                     horizontalAlignment: Text.AlignHCenter
-                    text: i18n.tr("Maintained by %1").arg("Dan, Ern_st and Jan")
+                    text: i18n.tr("Maintained by %1").arg("Dan, Ern_st & Jan")
                 }
 
                 Label {
