@@ -10,6 +10,7 @@ Item{
     property alias statusTimer: statusTimer
     property var targetHeight: units.gu(6)
     property bool autoHide
+    property int hideDelay: 3500
     property bool showButton: false
     property string indicationIcon: "idle" /* error, idle, offline, paused, updating */
     
@@ -35,7 +36,7 @@ Item{
          if(autoHide) {
              console.log("PopupStatusBox.qml - autoHide")
              //statusTimer.start();
-             statusTimer.startTimer(hide, 3500);
+             statusTimer.startTimer(hide, hideDelay);
          } else {
              console.log("PopupStatusBox.qml - NO autoHide")
          }

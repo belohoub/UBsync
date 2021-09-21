@@ -9,7 +9,7 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
 
 
 Page {
-    id: accountSettingsPage
+    id: settingsPage
 
     property string accountName: accountConnection.target ? accountConnection.target.displayName : ""
     property bool authenticated: false
@@ -59,15 +59,21 @@ Page {
             anchors { top: parent.top; left: parent.left; right: parent.right; margins: units.gu(2) }
 
             Label {
+                id: accountName
+                //font.bold: true
+                text: i18n.tr("Account") + ": " + settingsPage.accountName
+            }
+
+            Label {
                 id: username
                 //font.bold: true
-                text: i18n.tr("User") + ": " + accountSettingsPage.username
+                text: i18n.tr("User") + ": " + settingsPage.username
             }
 
             Label {
                 id: hostcloud
                 //font.bold: true
-                text: i18n.tr("Host") + ": " +  accountSettingsPage.host
+                text: i18n.tr("Host") + ": " +  settingsPage.host
             }
 
             Item {
@@ -209,7 +215,7 @@ Page {
 
         AccountModel {
             id: accounts
-            applicationId: "ubsync_UBsync"
+            applicationId: "ubsyncdev_UBsyncDEV"
         }
 
         Connections {
@@ -219,11 +225,11 @@ Page {
                 var reply = authenticationData
                 if ("errorCode" in reply) {
                     console.warn("Authentication error: " + reply.errorText + " (" + reply.errorCode + ")")
-                    accountSettingsPage.authenticated = false
+                    settingsPage.authenticated = false
                 } else {
-                    accountSettingsPage.username = reply.Username
-                    accountSettingsPage.password = reply.Password
-                    accountSettingsPage.authenticated = true
+                    settingsPage.username = reply.Username
+                    settingsPage.password = reply.Password
+                    settingsPage.authenticated = true
                     testConnection()
                 }
             }
@@ -244,6 +250,7 @@ Page {
                         text: model.displayName
                         onClicked: {
                             useAccount(model.account)
+                            settingsPage.accountName = model.displayName
                             PopupUtils.close(dialog)
                         }
                     }
@@ -285,16 +292,16 @@ Page {
 
     function testConnection(){
 
-        if( accountSettingsPage.username && accountSettingsPage.password && accountSettingsPage.host){
+        if( settingsPage.username && settingsPage.password && settingsPage.host){
 
             //save the credentials
-            owncloud.settings.username = accountSettingsPage.username
-            owncloud.settings.password = accountSettingsPage.password
-            owncloud.settings.serverURL = accountSettingsPage.host
+            owncloud.settings.username = settingsPage.username
+            owncloud.settings.password = settingsPage.password
+            owncloud.settings.serverURL = settingsPage.host
 
-            Webdav.validateCredentials(accountSettingsPage.username,
-                                       accountSettingsPage.password,
-                                       accountSettingsPage.host);
+            Webdav.validateCredentials(settingsPage.username,
+                                       settingsPage.password,
+                                       settingsPage.host);
 
         }
     }
@@ -310,7 +317,7 @@ Page {
                 serviceController.startService()
             }
         }else{
-            console.log("failed to connect to: " + accountSettingsPages.host)
+            console.log("failed to connect to: " + settingsPages.host)
             //owncloud.settings.credentialsVerfied = false
         }
     }

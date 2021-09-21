@@ -105,10 +105,7 @@ MainView {
         property bool testingConnection: true
         property var  accountSettings
         anchors.fill: parent
-        primaryPageSource: Qt.resolvedUrl("ui/Accounts.qml")
-        //primaryPageSource: accountSettings.credentialsVerfied ? Qt.resolvedUrl("ui/Accounts.qml") : Qt.resolvedUrl("ui/LoginPage.qml")
-        //primaryPageSource: accountSettings.credentialsVerfied ? Qt.resolvedUrl("ui/Accounts.qml") : accounts.choose()
-        //primaryPageSource: Qt.resolvedUrl("ui/Accounts.qml"):
+        primaryPageSource: Qt.resolvedUrl("ui/MainPage.qml")
 
         /*
         Component.onCompleted: {

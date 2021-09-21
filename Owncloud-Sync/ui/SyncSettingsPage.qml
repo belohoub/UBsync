@@ -52,14 +52,22 @@ Page {
         syncSettings.db.transaction(
                     function(tx) {
                         // Create the database if it doesn't already exist
-                        tx.executeSql('CREATE TABLE IF NOT EXISTS SyncFolders(id INTEGER PRIMARY KEY AUTOINCREMENT, local TEXT, remote TEXT)');
+                        tx.executeSql('CREATE TABLE IF NOT EXISTS SyncFolders(id INTEGER PRIMARY KEY AUTOINCREMENT, local TEXT, remote TEXT, name TEXT)');
+
+                        // for migration purposes from older UBsync versions - alter table
+                        try {
+                            tx.executeSql('ALTER TABLE SyncFolders ADD name TEXT');
+                        } catch (error) {
+                            console.log("Table aready migrated!")
+                        }
+
                         // load all folder paths
                         var rs = tx.executeSql('SELECT * FROM SyncFolders');
 
                         console.log("[SyncSettingsPage - loadDB] - Database Open. Contains " + rs.rows.length + " rows.")
                         for(var i = 0; i < rs.rows.length; i++) {
                             //console.log("Append to folderlistmodel: " + rs.rows.item(i).id + " " + rs.rows.item(i).local + " " + rs.rows.item(i).remote)
-                            folderListModel.append({"id":rs.rows.item(i).id, "local":rs.rows.item(i).local, "remote":rs.rows.item(i).remote})
+                            folderListModel.append({"id":rs.rows.item(i).id, "local":rs.rows.item(i).local, "remote":rs.rows.item(i).remote, "name":rs.rows.item(i).name})
 
                         }
                     }
@@ -71,7 +79,7 @@ Page {
         syncSettings.db.transaction(
                     function(tx) {
                         // Create the database if it doesn't already exist
-                        tx.executeSql('INSERT INTO SyncFolders VALUES(NULL, "", "")');
+                        tx.executeSql('INSERT INTO SyncFolders VALUES(NULL, "", "", "")');
                     }
                     )
     }
@@ -91,20 +99,19 @@ Page {
         syncSettings.db.transaction(
                     function(tx) {
                         //console.log("update ID" + folderListModel.get(index).id)
-                        tx.executeSql('UPDATE SyncFolders SET local=(?), remote=(?) WHERE id = (?)',[ folderListModel.get(index).local,
-                                                                                                     folderListModel.get(index).remote,
-                                                                                                     folderListModel.get(index).id]);
+                        tx.executeSql('UPDATE SyncFolders SET local=(?), remote=(?), name=(?) WHERE id = (?)',[ folderListModel.get(index).local,
+                                                                                                                folderListModel.get(index).remote,
+                                                                                                                folderListModel.get(index).name,
+                                                                                                                folderListModel.get(index).id]);
                     }
                     )
     }
 
 
-    Item{
+    Item {
         //Shown if there are no sync items in the database
         anchors{centerIn: parent}
 
-        
-        
         Label{
             visible: !folderListModel.count
             text: i18n.tr("No folders, press")
@@ -138,7 +145,7 @@ Page {
             height: syncDirColumn.height + (syncDirColumn.spacing * 4)+ divider.height
             anchors{left:parent.left; right:parent.right}
 
-            Column{
+            Column {
                 id: syncDirColumn
 
                 spacing: units.gu(1)
@@ -146,13 +153,45 @@ Page {
                     top: parent.top; left: parent.left; right: parent.right; margins:units.gu(2)
                 }
 
-                Label{
+                height: units.gu(6)
+
+                Icon {
+                    id: accountIcon
+                    name: "sync-idle"
+                    width: units.gu(6)
+                    height: width
+                    anchors {
+                       left: parent.left; top: parent.top
+                    }
+                }
+
+                TextEdit {
+                    id: targetName
+                    text: folderListModel.get(index) ? folderListModel.get(index).name : ""
+                    readOnly: true
+                    height: units.gu(6)
+                    anchors {
+                       left: accountIcon.right; top: parent.top; margins:units.gu(1)
+                    }
+                    onTextChanged: {
+                        if (text.charAt(text.length-1) == '\n'){ // Workarount to notAvailable onFinished
+                            targetName.readOnly=true
+                            if(index > -1){
+                                folderListModel.setProperty(index, "name", text);
+                                syncSettings.updateDB(index);
+                            }
+                            targetName.text = text.substring(1, text.length-1);
+                        }
+                    }
+                }
+
+                /*Label{
                     id: localLabel
                     visible: folderListModel.count
                     text: i18n.tr("Local Folder:")
-                }
+                }*/
 
-                Button {
+                /*Button {
                     id: localText
                     text: folderListModel.get(index) ? folderListModel.get(index).local : ""
                     width: parent.width
@@ -164,15 +203,15 @@ Page {
                         }
                     }
                     onClicked: apl.addPageToNextColumn(syncSettings, Qt.resolvedUrl("LocalFileBrowser.qml"), {caller:localText})
-                }
+                }*/
 
-                Label{
+                /*Label{
                     id: remoteLabel
                     visible: folderListModel.count
                     text: i18n.tr("Remote Folder:")
-                }
+                }*/
 
-                Button {
+                /*Button {
                     id: remoteText
                     text: folderListModel.get(index) ? folderListModel.get(index).remote : ""
                     width: parent.width
@@ -193,7 +232,7 @@ Page {
                         apl.addPageToNextColumn(syncSettings, Qt.resolvedUrl("WebdavFileBrowser.qml"), {caller:remoteText})
                         }
                     }
-                }
+                }*/
             }
 
 
@@ -210,12 +249,84 @@ Page {
                     }
                 ]
             }
+
+            trailingActions: ListItemActions {
+                actions: [
+                    Action {
+                        iconName: "edit"
+                        text: folderListModel.get(index) ? folderListModel.get(index).remote : ""
+                        onTriggered: {
+                            console.log("Change Target Name: index " + index)
+                            targetName.readOnly=false
+                            targetName.focus=true
+                        }
+                    },
+
+                    Action {
+                        id: localText
+                        iconName: "folder-symbolic"
+                        text: folderListModel.get(index) ? folderListModel.get(index).local : ""
+                        onTextChanged: {
+                            if(index > -1){
+                                folderListModel.setProperty(index, "local", text);
+                                syncSettings.updateDB(index);
+                            }
+                        }
+                        onTriggered: {
+                            console.log("Change Local Folder: index " + index)
+                            apl.addPageToNextColumn(syncSettings, Qt.resolvedUrl("LocalFileBrowser.qml"), {caller:localText})
+                        }
+                    },
+
+                    Action {
+                        id: remoteText
+                        iconName: "network-server-symbolic"
+                        text: ""
+                        onTextChanged: {
+                            if(index > -1){
+                                folderListModel.setProperty(index, "remote", text)
+                                syncSettings.updateDB(index);
+                            }
+                        }
+                        onTriggered: {
+                            console.log("Change Remote Folder: index " + index)
+                            if(!owncloudsync.networkAvailable){
+                                connectionStatus.status = i18n.tr("No Network Available")
+                                connectionStatus.indicationIcon = "offline"
+                             } else{
+                                apl.addPageToNextColumn(syncSettings, Qt.resolvedUrl("WebdavFileBrowser.qml"), {caller:remoteText})
+                            }
+                        }
+                    },
+
+                    Action {
+                        iconName: "info"
+                        text: ""
+                        onTriggered: {
+                            console.log("Info Action: index " + index)
+                            itemInfo.status = folderListModel.get(index).name + "\n" +
+                                              i18n.tr("Local Folder") + ": " + folderListModel.get(index).local + "\n" +
+                                              i18n.tr("Remote Folder" + ": " + folderListModel.get(index).remote)
+                            itemInfo.indicationIcon = "idle"
+                        }
+                    }
+                ]
+            }
         }
     }
 
     PopupStatusBox{
         id: connectionStatus
         autoHide: true
+        anchors{left: parent.left; right:parent.right; bottom: parent.bottom;}
+
+    }
+
+    PopupStatusBox{
+        id: itemInfo
+        autoHide: true
+        targetHeight: units.gu(12)
+        hideDelay: 10000
         anchors{left: parent.left; right:parent.right; bottom: parent.bottom;}
 
     }
