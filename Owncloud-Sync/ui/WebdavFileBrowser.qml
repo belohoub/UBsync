@@ -12,6 +12,10 @@ FileBrowser{
     folderModel: folderListModel
     rootPath: "/"
 
+    property string paramUsername: ""
+    property string paramPassword: ""
+    property string paramServerUrl: ""
+
     WebdavFolderListModel{
         id: folderListModel
 
@@ -19,11 +23,10 @@ FileBrowser{
         showFiles: false
         showHidden: true
 
-        username: owncloud.settings.username
-        password: owncloud.settings.password
-        serverUrl:owncloud.settings.serverURL
+        username: fileBrowser.paramUsername
+        password: fileBrowser.paramPassword
+        serverUrl: fileBrowser.paramServerUrl
 
-        //folder must be set after the credenials are set - TO DO: Allow folder to be called any where.
         folder: caller.text ? caller.text : fileBrowser.rootPath
 
         onFolderChanged: {
@@ -38,7 +41,6 @@ FileBrowser{
 
         function newFolder(folderPath){
             console.log(folderPath)
-            //newFolder(folderPath)
 
             folderListModel.newWebDavFolder(folderPath)
 

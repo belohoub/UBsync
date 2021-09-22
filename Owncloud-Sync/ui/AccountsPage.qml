@@ -177,6 +177,10 @@ Page {
             height: accountColumn.height
             anchors{left:parent.left; right:parent.right}
 
+            onClicked: {
+                apl.addPageToNextColumn(accountsPage, Qt.resolvedUrl("EditAccount.qml"), {accountID: accountListModel.get(index).accountID})
+            }
+
             Column {
                 id: accountColumn
                 height: units.gu(12)
@@ -251,6 +255,14 @@ Page {
                         text: ""
                         onTriggered: {
                             apl.addPageToNextColumn(accountsPage, Qt.resolvedUrl("EditAccount.qml"), {accountID: accountListModel.get(index).accountID})
+                        }
+                    },
+
+                    Action {
+                        iconName: "note-new"
+                        text: ""
+                        onTriggered: {
+                            apl.addPageToNextColumn(accountsPage, Qt.resolvedUrl("EditTarget.qml"), {targetID: 0, accountID: accountListModel.get(index).accountID})
                         }
                     }
                 ]
