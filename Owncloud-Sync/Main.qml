@@ -105,7 +105,8 @@ MainView {
         property bool testingConnection: true
         property var  accountSettings
         anchors.fill: parent
-        primaryPageSource: Qt.resolvedUrl("ui/MainPage.qml")
+        //primaryPageSource: Qt.resolvedUrl("ui/MainPage.qml")
+        primaryPageSource: Qt.resolvedUrl("ui/TargetsPage.qml")
 
         /*
         Component.onCompleted: {

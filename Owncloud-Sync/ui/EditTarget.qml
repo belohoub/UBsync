@@ -102,7 +102,7 @@ Page {
 
     AccountModel {
         id: accounts
-        applicationId: "ubsyncdev_UBsyncDEV"
+        applicationId: "ubsync_UBsync"
     }
 
 
@@ -143,14 +143,14 @@ Page {
             onActiveChanged: {
                 /* re-render anytime page is shown */
                 console.log("editTargetPage activated")
-                targetPage.loadDB(targetPage.accountID)
-                targetPage.updateDB(targetPage.accountID)
+                targetPage.loadDB()
+                targetPage.updateDB()
 
-                console.log("Authenticat accountID: " + targetPage.accountID)
+                console.log("Authenticate accountID: " + targetPage.accountID)
                 console.log("  - account CNT: " + accounts.count)
 
                 for (var j = 0; j < accounts.count; j++) {
-                    console.log("  - accountID: " + accounts.get(j, "account").accountId)
+                    //console.log("  - accountID: " + accounts.get(j, "account").accountId)
                     if (accounts.get(j, "account").accountId === targetPage.accountID) {
                         console.log("Account auth to get password ... ")
                         accountConnection.target = accounts.get(j, "account")
@@ -163,7 +163,7 @@ Page {
 
     header: PageHeader {
         id: header
-        title: i18n.tr("Account Settings")
+        title: i18n.tr("Target Settings")
         flickable: flickable
 
         trailingActionBar{

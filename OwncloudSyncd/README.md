@@ -4,6 +4,9 @@
 
 UBsync is a forked of [ownCloud-sync](https://launchpad.net/owncloud-sync) application for **Ubuntu touch 16.04**,  surported by [Ubports](https://www.ubports.com).
 
+# 0.7 Changelog
+
+
 # 0.3 Changelog
 1. Compile for Xenial,
 1. Upgrade of owncloudcmd to nextcloudcmd 2.3.3, [Bug 1592538](https://bugs.launchpad.net/owncloud-sync/+bug/1592538)

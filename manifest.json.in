@@ -1,10 +1,10 @@
 {
-    "name": "ubsyncdev",
+    "name": "ubsync",
     "description": "A tool to synchronise Utouch to your ownCloud/nextCloud server",
     "architecture": "@CLICK_ARCH@",
-    "title": "UBsyncDEV",
+    "title": "UBsync",
     "hooks": {
-        "UBsyncDEV": {
+        "UBsync": {
             "accounts": "Owncloud-Sync/UBsync.accounts",
             "apparmor": "Owncloud-Sync/UBsync.apparmor",
             "desktop": "Owncloud-Sync/UBsync.desktop"

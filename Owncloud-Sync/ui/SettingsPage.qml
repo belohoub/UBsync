@@ -215,7 +215,7 @@ Page {
 
         AccountModel {
             id: accounts
-            applicationId: "ubsyncdev_UBsyncDEV"
+            applicationId: "ubsync_UBsync"
         }
 
         Connections {

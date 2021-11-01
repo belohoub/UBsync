@@ -10,10 +10,19 @@
 #include <QUrl>
 #include <QNetworkConfigurationManager>
 
+#include <Accounts/Account>
+#include <Accounts/Application>
+#include <Accounts/Manager>
+#include <Accounts/AccountService>
+
 #include <QtDBus/QtDBus>
 
+#include <SignOn/AuthSession>
+#include <SignOn/Identity>
 
 #include "owncloudsyncd.h"
+
+
 
 OwncloudSyncd::OwncloudSyncd()
 {
@@ -37,44 +46,113 @@ OwncloudSyncd::OwncloudSyncd()
 
     QSettings settings(m_settingsFile, QSettings::IniFormat);
 
-    m_username = settings.value("username").toString();
+    /*m_username = settings.value("username").toString();
     m_password = settings.value("password").toString();
     m_serverURL = settings.value("serverURL").toString();
     m_mobileData = settings.value("mobileData").toBool();
     m_hidden = settings.value("hiddenfiles").toString();
-    //m_syncInterval = settings.value("timer").toInt() * 60 * 1000 ;
     m_syncInterval = settings.value("timer").toInt() * 3600 * 1000 ;
-    m_lastSync = settings.value("lastSync").toInt();
+    m_lastSync = settings.value("lastSync").toInt();*/
 
-    //qDebug() << "Username: " << m_username << " Server: " << m_serverURL;
+    /* Try to sync every hour */
+    m_syncInterval = 3600 * 1000;
 
     settings.setValue("owncloudcmdVersion", getVersionNumber());
     settings.setValue("owncloudSyncdVersion", OWNCLOUDSYNCD_VERSION);
 
-    if (m_username.isEmpty() || m_password.isEmpty() || m_serverURL.isEmpty()){
-        qWarning() << "Connection details missing  - Quiting";
-        //QCoreApplication::quit();
-    }else{
+    m_timer = new QTimer(this);
+    connect(m_timer, SIGNAL(timeout()), this, SLOT(syncTargets()));
+    m_timer->setInterval(m_syncInterval);
+    m_timer->start();
 
-     if(m_syncInterval != 0){
-        getSyncFolders();
-        //addPathsToWatchlist();
-            //if the sync interval is greater than 0
-            m_timer = new QTimer(this);
-            connect(m_timer, SIGNAL(timeout()), this, SLOT(syncDirs()));
-            m_timer->setInterval(m_syncInterval);
-            m_timer->start();
 
-            qDebug() << "Sync Frequency: " << QString::number(m_syncInterval / 1000) + " seconds";
+/*
+    // Instantiate an account manager interested in e-mail services only.
+    Accounts::Manager *manager = new Accounts::Manager();
+    // Get the list of enabled AccountService objects of type e-mail.
+    Accounts::ServiceList services = manager->serviceList("");
+    // Loop through the account services and do something useful with them.
+    qDebug() << "XXX: ";
+    foreach (Accounts::Service service, services) {
+        qDebug() << "  - SSS: " << service.displayName();
+    }
+    qDebug() << "XXX: ";*/
 
-            if(!m_folderMap.isEmpty()){
-                //Try and sync now.
-                syncDirs();
-            }
-        }else{
-            qDebug() << "OwncloudSyncd::OwncloudSyncd - No Sync - Sync interval:" << m_syncInterval;
+
+    /*
+    // Instantiate an account manager interested in e-mail services only.
+    Accounts::Manager *manager = new Accounts::Manager();
+    // Get the list of enabled AccountService objects of type e-mail.
+    Accounts::ServiceList services = manager->serviceList();
+    Accounts::AccountIdList accounts = manager->accountListEnabled();
+    // Loop through the account services and do something useful with them.
+    qDebug() << "XXX: ";
+    foreach (Accounts::AccountId accountID, accounts) {
+        Accounts::Account * account = manager->account(accountID);
+        foreach (Accounts::Service service, services) {
+            qDebug() << "  - Service: " << service.displayName();
+            qDebug() << "  - Account: " << account->displayName();
         }
     }
+    qDebug() << "XXX: ";*/
+
+    // Instantiate an account manager interested in e-mail services only.
+    Accounts::Manager *manager = new Accounts::Manager();
+    // Get the list of enabled AccountService objects of type e-mail.
+    //Accounts::ServiceList services = manager->serviceList();
+    //Accounts::AccountIdList accounts = manager->accountListEnabled();
+    // Loop through the account services and do something useful with them.
+    qDebug() << "XXX: ";
+    Accounts::Account * account = manager->account(1);
+    qDebug() << "  - Account: " << account->displayName();
+    qDebug() << "  - Keys: " << account->allKeys();
+    qDebug() << "  - Host: " << account->value("host");
+    qDebug() << "  - CredentialsId: " << account->value("CredentialsId");
+    qDebug() << "  - enabled: " << account->value("enabled");
+    qDebug() << "  - name: " << account->value("name");
+    qDebug() << "  - auth/method: " << account->value("auth/method");
+    qDebug() << "  - auth/mechanism: " << account->value("auth/mechanism");
+    qDebug() << "  - ChildKeys: " << account->childKeys();
+
+    Accounts::ServiceList services =  account->enabledServices();
+    foreach (Accounts::Service service, services) {
+        qDebug() << "  - Service: " << service.displayName();
+        if (QString::compare(service.displayName(), "Owncloud", Qt::CaseInsensitive)) {
+            qDebug() << "    -> owncloud ";
+            Accounts::AccountService * as = new Accounts::AccountService(account, service);
+            Accounts::AuthData ad = as->authData();
+            qDebug() << "    -> authData " << ad.parameters().keys();
+
+            /*
+            //QPointer<SignOn::AuthSession> authSession;
+            SignOn::IdentityInfo * identityInfo = new SignOn::IdentityInfo();
+            identityInfo->setId(ad.credentialsId());
+            SignOn::Identity identity = SignOn::Identity::newIdentity(identityInfo, this);
+            //authSession = identity->createSession(ad.method());
+            //authSession->process(ad.parameters(), ad.mechanism());
+*/
+            qDebug() << "    -> Tags: " << service.tags();
+
+            qDebug() << "    ->DOM: " << service.domDocument().toString();
+
+        } else if (QString::compare(service.displayName(), "Nextcloud", Qt::CaseInsensitive)) {
+            qDebug() << "    -> nextcloud ";
+        }
+    }
+
+
+    account = manager->account(5);
+    qDebug() << "  - Account: " << account->displayName();
+    qDebug() << "  - Keys: " << account->allKeys();
+    qDebug() << "ID:: " << account->credentialsId();
+
+    qDebug() << "XXX: ";
+
+
+
+    //Try and sync now.
+    syncTargets();
+
 }
 
 void OwncloudSyncd::emitSignal(QString msgTxt){
@@ -84,6 +162,12 @@ void OwncloudSyncd::emitSignal(QString msgTxt){
     QDBusConnection::sessionBus().send(msg);
 }
 
+
+/**
+ * @brief Get owncloudcmd version
+ *
+ * @return version string
+ */
 QString OwncloudSyncd::getVersionNumber(){
 
     QString owncloudcmd = getOwncloudCmd();
@@ -98,19 +182,33 @@ QString OwncloudSyncd::getVersionNumber(){
 
     QString output(owncloudcmdVersion->readAllStandardOutput());
 
-    if(output.contains("version")){
+    if (output.contains("version")) {
         output.resize (26);
         output = output.simplified();
-    }else{
+    } else {
         output = tr("unspecified");
     }
 
     return output;
 }
 
+/**
+ * @brief force sync NOW
+ * @todo force sync now - do not take lastSync into account and sync only selected targets?
+ */
 QStringList OwncloudSyncd::forceSync(){
     qDebug() << "[owncloudsyncd](OwncloudSyncd::forceSync()) - force a sync event";
-    syncDirs();
+
+    // todo ???
+    // set all lastSyncs to 0
+    QMapIterator<int, qint64> i(m_targetLastSync);
+    while (i.hasNext()) {
+        i.next();
+        // this will force sync NOW
+        m_targetLastSync[i.key()] = 0;
+    }
+
+    syncTargets();
 
     QStringList list;
     list << "OwncloudSyncd::forceSync:" << "syncing";
@@ -118,6 +216,10 @@ QStringList OwncloudSyncd::forceSync(){
     return list;
 }
 
+/**
+ * @brief GET OwncloudSyncd version
+ * @return version string through DBUS
+ */
 QStringList OwncloudSyncd::dbusDaemonVersion(){
     //return the owncloudsyncd version over dbus.
     QStringList list;
@@ -126,6 +228,10 @@ QStringList OwncloudSyncd::dbusDaemonVersion(){
     return list;
 }
 
+/**
+ * @brief GET owncloudcmd version
+ * @return version string through DBUS
+ */
 QStringList OwncloudSyncd::dbusVersionNumber(){
     //return the owncloudcmdversion over dbus.
     QStringList list;
@@ -134,6 +240,10 @@ QStringList OwncloudSyncd::dbusVersionNumber(){
     return list;
 }
 
+/**
+ * @brief GET OwncloudSyncd status
+ * @return status through DBUS
+ */
 QStringList OwncloudSyncd::dbusStatus(){
 
     QStringList list;
@@ -147,6 +257,10 @@ QStringList OwncloudSyncd::dbusStatus(){
     return list;
 }
 
+/**
+ * @brief GET lastSync
+ * @return lastSync execution time
+ */
 QStringList OwncloudSyncd::getLastSync(){
     QStringList list;
 
@@ -155,6 +269,11 @@ QStringList OwncloudSyncd::getLastSync(){
     return list;
 }
 
+
+/**
+ * @brief GET owncloudcmd path
+ * @return owncloudcmd PATH
+ */
 QString OwncloudSyncd::getOwncloudCmd(){
 
     QString owncloudcmd;
@@ -171,89 +290,75 @@ QString OwncloudSyncd::getOwncloudCmd(){
         qDebug() << "Using Arm owncloudcmd Binary - Mobile";
     } else{
         owncloudcmd = "owncloudcmd";
-        qDebug() << "Using Local owncloudcmd Binary - Desktop";
+        qDebug() << "Using System owncloudcmd Binary - Desktop";
     }
 
     return owncloudcmd;
 
 }
 
+/**
+ * @brief Sync Targets
+ *
+ */
+void OwncloudSyncd::syncTargets() {
 
-void OwncloudSyncd::syncDirs(){
+    qDebug() << "OwncloudSyncd::syncTargets() - m_syncing = true";
 
-    qDebug() << "OwncloudSyncd::syncDirs() - m_syncing = true";
+    //stop m_timer running while syncing
+    m_timer->stop();
+
     m_syncing = true;
+    m_lastSync = QDateTime::currentDateTime().toMSecsSinceEpoch();
+
     emitSignal("SyncStart");
 
-    QMapIterator<QString, QString> i(m_folderMap);
+    // Get database content ...
+    getDatabase();
+
+    QMapIterator<int, int> i(m_targetAccount);
     while (i.hasNext()) {
         i.next();
-        if(QDir(i.key()).exists()){
-            qDebug() << "Directory: " << i.key() << " - Initiate Sync";
-            syncDir(i.key());
-        }else{
-            qDebug() << "Directory: " << i.key() << " Doesn't exist";
+        if (QDir(m_targetLocal[i.key()]).exists()) {
+            qDebug() << "Directory: " << m_targetLocal[i.key()] << " - Initiate Sync";
+            if (m_targetLastSync.contains(i.key())) {
+                qDebug() << "Directory: " << m_targetLocal[i.key()] << " - Initial Sync; Sync NOW";
+                syncDir(i.key());
+            } else if ((QDateTime::currentDateTime().toMSecsSinceEpoch() - m_targetLastSync.value(i.key())) >= m_accountSyncFreq.value(i.key())) {
+                qDebug() << "Directory: " << m_targetLocal[i.key()] << " - Repeated Sync; Sync NOW";
+                qDebug() << "  - m_accountSyncFreq.value(i.key())" << m_accountSyncFreq.value(i.key());
+                qDebug() << "  - m_targetLastSync.value(i.key())" << m_targetLastSync.value(i.key());
+                qDebug() << "  - QDateTime::currentDateTime().toMSecsSinceEpoch()" << QDateTime::currentDateTime().toMSecsSinceEpoch();
+                syncDir(i.key());
+            } else {
+                qDebug() << "Directory: " << m_targetLocal[i.key()] << " - Skip Sync NOW";
+            }
+        } else {
+            qDebug() << "Directory: " << m_targetLocal[i.key()] << " Doesn't exist";
         }
     }
-    qDebug() << "OwncloudSyncd::syncDirs() - m_syncing = false";
+    qDebug() << "OwncloudSyncd::syncTargets() - m_syncing = false";
+
+    // todo - start timer with different period?
+    m_timer->start();
+
     m_syncing = false;
+
     emitSignal("SyncStop");
 }
 
-void OwncloudSyncd::addPathsToWatchlist(){
 
-    m_watcher = new QFileSystemWatcher(this);
-
-    QMapIterator<QString, QString> i(m_folderMap);
-    while (i.hasNext()) {
-        i.next();
-        //qDebug() << i.key() << ": " << i.value() << endl;
-
-        if(QDir(i.key()).exists()){
-            m_watcher->addPath(i.key());
-            //m_watcher->removePath(i.key() + "/.csync_journal.db");
-            qDebug() << "/nDirectory: " << i.key() << " Added to watchlist";
-        }else{
-            qDebug() << "/nDirectory: " << i.key() << " Doesn't exist";
-        }
-    }
-
-    int dirs = m_watcher->directories().length();
-
-    if(!dirs){
-        qDebug() << " No Directories Configured - Quitting";
-        return;
-        //QCoreApplication::quit();
-    }
-
-    qDebug() << QString::number(dirs) << " Directories added to watchlist";
-    connect(m_watcher, SIGNAL(directoryChanged(QString)), this, SLOT(syncFolder(QString)));
-}
-
-void OwncloudSyncd::loadDB(const QString& path){
-
-    qDebug() << "Attempting to access DB: " << path;
-
-    //QSqlDatabase db = QSqlDatabase::database();
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName(path);
-
-    if (!db.open())
-    {
-        qDebug() << "Error: connection with database fail";
-    }else{
-        qDebug() << "Database: connection ok";
-    }
-
-}
-
-void OwncloudSyncd::getSyncFolders()
+/**
+ * @brief GET database content
+ *
+ */
+void OwncloudSyncd::getDatabase()
 {
     //Path should be: //home/phablet/.local/share
     QString path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
 
     path += "/ubsync/Databases";
-    qDebug() << "Writeable Path: " << path;
+    qDebug() << "Writable Path: " << path;
 
     //Find the Database Name
     QStringList nameFilter("*.sqlite");
@@ -266,149 +371,94 @@ void OwncloudSyncd::getSyncFolders()
 
     qDebug() << "Attempting to access DB: " << path;
 
-    //QSqlDatabase db = QSqlDatabase::database();
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName(path);
 
-    //db.open();
-
-    if (!db.open())
-    {
+    if (!db.open()) {
         qDebug() << "Error: connection with database fail";
-    }else{
+    } else {
         qDebug() << "Database: connection ok";
-        qDebug() << "Database Tables:" << db.tables(QSql::AllTables).at(0);
+        qDebug() << "Database Tables:" << db.tables(QSql::AllTables);
 
         QSqlQuery query(db);
 
-        query.exec("SELECT local, remote FROM SyncFolders");
+        query.exec("SELECT accountID, remoteAddress, remoteUser, syncHidden, useMobileData, syncFreq FROM SyncAccounts");
 
         while (query.next()) {
-            //qDebug() << query.value(0).toString();
-            //qDebug() << query.value(1).toString();
-            m_folderMap.insert(query.value(0).toString(), query.value(1).toString());
+            m_accountAddr.insert(query.value(0).toInt(), query.value(1).toString());
+            m_accountUser.insert(query.value(0).toInt(), query.value(2).toString());
+            m_accountSyncHidden.insert(query.value(0).toInt(), query.value(3).toBool());
+            m_accountUseMobileData.insert(query.value(0).toInt(), query.value(4).toBool());
+            m_accountSyncFreq.insert(query.value(0).toInt(), query.value(5).toInt());
+        }
 
+        query.exec("SELECT targetID, accountID, localPath, remotePath, active FROM SyncTargets");
+
+        while (query.next()) {
+
+            /* if is active */
+            if (query.value(4).toBool()) {
+                m_targetAccount.insert(query.value(0).toInt(), query.value(1).toInt());
+                m_targetLocal.insert(query.value(0).toInt(), query.value(2).toString());
+                m_targetRemote.insert(query.value(0).toInt(), query.value(3).toString());
+            }
         }
     }
 
     db.close();
 }
 
-void OwncloudSyncd::syncDir(const QString& localPath){
+void OwncloudSyncd::syncDir(const int targetID){
 
-    qDebug() << "\n"<< endl;
-
-    /*
-    QStringList files = watcher->files();
-
-    qDebug() << files.size() << "Files To Check";
-
-    bool filesToSync = false;
-
-    for(int i = 0; i < files.size(); i++){
-        qDebug() << "Sync File: " << files.at(i);
-        QFileInfo fileInfo(files.at(i));
-        if(!fileInfo.isHidden() || fileInfo.isDir()){
-            filesToSync = true;
-            break;
-        }
-    }
-
-    if(!filesToSync){
-        qDebug() << "Only Hidden Files - Quitting";
-        return;
-    }
-    */
-
-    //m_watcher->blockSignals(true);
-
-    /*
-    if (QFile(localPath + "/.csync_journal.db-shm").exists() ||
-            QFile(localPath + "/.csync_journal.db-wal").exists()  ){
-
-        qDebug() << "Delete Stale Database File";
-
-        QFile::remove(localPath + "/.csync_journal.db-shm");
-        QFile::remove(localPath + "/.csync_journal.db-wal");
-
-    }
-    */
+    qDebug() << "\n"<< endl << endl;
 
     //Create a connection manager, establish is a data connection is avaiable
     QNetworkConfigurationManager mgr;
     qDebug() << "Network Connection Type: " << mgr.defaultConfiguration().bearerTypeName();
-    qDebug() << "Mobile Data Sync: " << m_mobileData;
+    qDebug() << "Mobile Data Sync: " << m_accountUseMobileData[m_targetAccount.value(targetID)];
 
     QList<QNetworkConfiguration> activeConfigs = mgr.allConfigurations(QNetworkConfiguration::Active);
-    if (!activeConfigs.count()){
-        qWarning() << "No Data Connection Available  - Quiting";
+    if (!activeConfigs.count()) {
+        qWarning() << "No Data Connection Available  - Unable to Sync";
         return;
-    }else{
+    } else {
         QNetworkConfiguration::BearerType connType = mgr.defaultConfiguration().bearerType();
-        if(!m_mobileData){
-            if(connType != QNetworkConfiguration::BearerEthernet && connType != QNetworkConfiguration::BearerWLAN){
-                qDebug() << "No Sync on Mobile Data - Check User Settings - Quitting";
+        if( m_accountUseMobileData[m_targetAccount.value(targetID)] == false) {
+            if (connType != QNetworkConfiguration::BearerEthernet && connType != QNetworkConfiguration::BearerWLAN) {
+                qDebug() << "No Sync on Mobile Data - Check User Settings - Unable to Sync";
                 return;
             }
         }
-
-        //Either mobile data sync is allowed or Ethernet or Wifi is available
-        //stop m_timer running while syncing
-        m_timer->stop();
     }
 
-    QString remotePath = m_serverURL + QStringLiteral("/remote.php/webdav") + m_folderMap.value(localPath);
+    QString localPath = m_targetLocal[targetID];
+    QString remotePath = m_accountAddr[m_targetAccount.value(targetID)] + QStringLiteral("/remote.php/webdav") + m_targetRemote[targetID];
     qDebug() << "Starting Owncloud Sync from " << localPath << " to " << remotePath;
 
     QString owncloudcmd = getOwncloudCmd();
     QStringList arguments;
-    if(m_hidden.contains("-h")){
-           arguments << "--user" << m_username << "--password" << m_password << "--silent" << "--non-interactive" << m_hidden << localPath << remotePath;
-           qDebug() << "Hidden files synchronisation set";
-           //qDebug() <<  "--user" << m_username << "--password" << m_password << "--silent" << "--non-interactive" << m_hidden << localPath << remotePath;
-        }else{
-           arguments << "--user" << m_username << "--password" << m_password << "--silent" << "--non-interactive" << localPath << remotePath;
-           //qDebug() <<  "--user" << m_username << "--password" << m_password << "--silent" << "--non-interactive" << localPath << remotePath;
-        }
-    //QStringList arguments;
-    //arguments << "--user" << m_username << "--password" << m_password << "--silent" << "--non-interactive" << m_hidden << localPath << remotePath;
-    //qDebug() <<  "--user" << m_username << "--password" << m_password << "--silent" << "--non-interactive" << m_hidden << localPath << remotePath;
-
-    QProcess *owncloudsync = new QProcess();
-    //Retrieve all debug from process
-    owncloudsync->setProcessChannelMode(QProcess::ForwardedChannels);
-    owncloudsync->start(owncloudcmd, arguments);
-    //Wait for the sync to complete. Dont time out.
-    owncloudsync->waitForFinished(-1);
-
-    /*
-    QDateTime maxWait = QDateTime::currentDateTime();
-    maxWait.addSecs(30);
-    while (QFile(localPath + "/.csync_journal.db-shm").exists()){
-
-        qDebug() << "Waiting For Sync To Complete: " << QDateTime::currentDateTime();
-
-        if(QDateTime::currentDateTime() > maxWait){
-            qDebug() << "maxWait Reached - Quitting Loop";
-            break;
-        }
+    if (m_accountSyncHidden[m_targetAccount.value(targetID)] == true) {
+       arguments << "--user" << m_accountUser[m_targetAccount.value(targetID)] << "--password" << m_accountPass[m_targetAccount.value(targetID)] << "--silent" << "--non-interactive" << "-h" << localPath << remotePath;
+       qDebug() << "Hidden files synchronisation set";
+    } else{
+       arguments << "--user" << m_accountUser[m_targetAccount.value(targetID)] << "--password" << m_accountPass[m_targetAccount.value(targetID)] << "--silent" << "--non-interactive" << localPath << remotePath;
     }
-    */
+
+    qDebug() << "Arguments: " << arguments;
+
+    qDebug() << "Accounts: ";
 
 
-    //sleep(10);
-    //m_watcher->blockSignals(false);
-    //Sync Complete - Save the current date and time
-    qDebug() << localPath << " - Sync Completed: " << QDateTime::currentDateTime();
+ //   QProcess *owncloudsync = new QProcess();
+    //Retrieve all debug from process
+ //   owncloudsync->setProcessChannelMode(QProcess::ForwardedChannels);
+ //   owncloudsync->start(owncloudcmd, arguments);
+ //   //Wait for the sync to complete. Dont time out.
+ //   owncloudsync->waitForFinished(-1);
 
-    //start the timer again
-    m_timer->start();
+    // Sync Complete - Save the current date and time
+    qDebug() << "Sync of " << localPath << " completed at " << QDateTime::currentDateTime();
 
-
-    QSettings settings(m_settingsFile, QSettings::IniFormat);
-    //QSettings settings(m_settingsFile);
-    m_lastSync = QDateTime::currentDateTime().toMSecsSinceEpoch();
-    qDebug() << "OwncloudSyncd::getSyncFolders Epoch:" << QDateTime::currentDateTime().toMSecsSinceEpoch() << "m_lastSync:" << m_lastSync;
-    settings.setValue("lastSync", m_lastSync);
+    m_targetLastSync[targetID] = QDateTime::currentDateTime().toMSecsSinceEpoch();
 
 }

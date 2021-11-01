@@ -45,7 +45,7 @@ Page {
 
             onActiveChanged: {
                 /* re-render anytime page is shown */
-                console.log("targetsPagea ctivated")
+                console.log("targetsPage activated")
                 targetsPage.loadDB()
             }
         }
@@ -62,11 +62,25 @@ Page {
 
     header: PageHeader {
         id: header
-        title: i18n.tr("Sync Folders (Targets)")
+        title: "UBsync"
 
         trailingActionBar{
             actions: [
-                /* TODO: re-think actions here */
+                /* TODO: re-think actions here ? */
+                Action {
+                    iconName: "settings"
+                    onTriggered: apl.addPageToNextColumn(apl.primaryPage, Qt.resolvedUrl("SyncServicePage.qml"))
+                },
+
+                Action {
+                    iconName: "account"
+                    onTriggered: apl.addPageToNextColumn(apl.primaryPage, Qt.resolvedUrl("AccountsPage.qml"))
+                },
+
+                Action {
+                    iconName: "info"
+                    onTriggered: apl.addPageToNextColumn(apl.primaryPage, Qt.resolvedUrl("AboutPage.qml"))
+                }
             ]
         }
     }
