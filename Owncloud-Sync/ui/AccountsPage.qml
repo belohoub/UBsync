@@ -15,11 +15,11 @@ Page {
     /* load current data from DB */
     function loadDB() {
 
-        accountListModel.clear()
+        accountListModel.clear();
 
         accountsPage.db = LocalStorage.openDatabaseSync("UBsync", "1.0", "UBsync", 1000000);
 
-        console.log("Loading accountsPage data")
+        console.log("Loading accountsPage data");
 
         accountsPage.db.transaction(
                     function(tx) {
@@ -39,7 +39,29 @@ Page {
                         }
                 )
 
-        accountList.forceLayout()
+        accountList.forceLayout();
+    }
+
+    /* remove account */
+    function removeAccount(accountID) {
+
+        accountListModel.clear();
+
+        accountsPage.db = LocalStorage.openDatabaseSync("UBsync", "1.0", "UBsync", 1000000);
+
+        console.log("Removing account " + accountID)
+
+        accountsPage.db.transaction(
+                    function(tx) {
+                        // remove selected account from DB
+                        var rs = tx.executeSql('DELETE FROM SyncAccounts WHERE accountID = (?)', [accountID]);
+                    }
+                )
+
+        // TODO - disable account in online accounts ?
+
+        accountsPage.loadDB();
+        accountList.forceLayout();
     }
 
     Connections {
@@ -244,6 +266,10 @@ Page {
                 actions: [
                     Action {
                         iconName: "delete"
+                        text: ""
+                        onTriggered: {
+                            accountsPage.removeAccount(accountListModel.get(index).accountID)
+                        }
                     }
                 ]
             }

@@ -9,20 +9,9 @@
 #include <QSqlQuery>
 #include <QUrl>
 #include <QNetworkConfigurationManager>
-
-#include <Accounts/Account>
-#include <Accounts/Application>
-#include <Accounts/Manager>
-#include <Accounts/AccountService>
-
 #include <QtDBus/QtDBus>
 
-#include <SignOn/AuthSession>
-#include <SignOn/Identity>
-
 #include "owncloudsyncd.h"
-
-
 
 OwncloudSyncd::OwncloudSyncd()
 {
@@ -37,22 +26,24 @@ OwncloudSyncd::OwncloudSyncd()
 
     m_settingsFile =  QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + "/ubsync/ubsync.conf";
 
-    if( !QFile(m_settingsFile).exists()){
+    if( !QFile(m_settingsFile).exists()) {
         qDebug() << "No Settings File - Quiting";
-        //QCoreApplication::quit();
+        // QCoreApplication::quit();
     }
 
     qDebug() << QString("Retrieve settings from ") + m_settingsFile;
 
     QSettings settings(m_settingsFile, QSettings::IniFormat);
 
-    /*m_username = settings.value("username").toString();
+    /*
+    m_username = settings.value("username").toString();
     m_password = settings.value("password").toString();
     m_serverURL = settings.value("serverURL").toString();
     m_mobileData = settings.value("mobileData").toBool();
     m_hidden = settings.value("hiddenfiles").toString();
     m_syncInterval = settings.value("timer").toInt() * 3600 * 1000 ;
-    m_lastSync = settings.value("lastSync").toInt();*/
+    m_lastSync = settings.value("lastSync").toInt();
+    */
 
     /* Try to sync every hour */
     m_syncInterval = 3600 * 1000;
@@ -65,45 +56,11 @@ OwncloudSyncd::OwncloudSyncd()
     m_timer->setInterval(m_syncInterval);
     m_timer->start();
 
+    // Instantiate an account manager
+    ///Accounts::Manager *manager = new Accounts::Manager();
 
-/*
-    // Instantiate an account manager interested in e-mail services only.
-    Accounts::Manager *manager = new Accounts::Manager();
-    // Get the list of enabled AccountService objects of type e-mail.
-    Accounts::ServiceList services = manager->serviceList("");
-    // Loop through the account services and do something useful with them.
-    qDebug() << "XXX: ";
-    foreach (Accounts::Service service, services) {
-        qDebug() << "  - SSS: " << service.displayName();
-    }
-    qDebug() << "XXX: ";*/
-
-
+    ///Accounts::Account * account = manager->account(1);
     /*
-    // Instantiate an account manager interested in e-mail services only.
-    Accounts::Manager *manager = new Accounts::Manager();
-    // Get the list of enabled AccountService objects of type e-mail.
-    Accounts::ServiceList services = manager->serviceList();
-    Accounts::AccountIdList accounts = manager->accountListEnabled();
-    // Loop through the account services and do something useful with them.
-    qDebug() << "XXX: ";
-    foreach (Accounts::AccountId accountID, accounts) {
-        Accounts::Account * account = manager->account(accountID);
-        foreach (Accounts::Service service, services) {
-            qDebug() << "  - Service: " << service.displayName();
-            qDebug() << "  - Account: " << account->displayName();
-        }
-    }
-    qDebug() << "XXX: ";*/
-
-    // Instantiate an account manager interested in e-mail services only.
-    Accounts::Manager *manager = new Accounts::Manager();
-    // Get the list of enabled AccountService objects of type e-mail.
-    //Accounts::ServiceList services = manager->serviceList();
-    //Accounts::AccountIdList accounts = manager->accountListEnabled();
-    // Loop through the account services and do something useful with them.
-    qDebug() << "XXX: ";
-    Accounts::Account * account = manager->account(1);
     qDebug() << "  - Account: " << account->displayName();
     qDebug() << "  - Keys: " << account->allKeys();
     qDebug() << "  - Host: " << account->value("host");
@@ -113,7 +70,9 @@ OwncloudSyncd::OwncloudSyncd()
     qDebug() << "  - auth/method: " << account->value("auth/method");
     qDebug() << "  - auth/mechanism: " << account->value("auth/mechanism");
     qDebug() << "  - ChildKeys: " << account->childKeys();
+    */
 
+    /*
     Accounts::ServiceList services =  account->enabledServices();
     foreach (Accounts::Service service, services) {
         qDebug() << "  - Service: " << service.displayName();
@@ -121,33 +80,26 @@ OwncloudSyncd::OwncloudSyncd()
             qDebug() << "    -> owncloud ";
             Accounts::AccountService * as = new Accounts::AccountService(account, service);
             Accounts::AuthData ad = as->authData();
-            qDebug() << "    -> authData " << ad.parameters().keys();
 
-            /*
-            //QPointer<SignOn::AuthSession> authSession;
-            SignOn::IdentityInfo * identityInfo = new SignOn::IdentityInfo();
-            identityInfo->setId(ad.credentialsId());
-            SignOn::Identity identity = SignOn::Identity::newIdentity(identityInfo, this);
-            //authSession = identity->createSession(ad.method());
-            //authSession->process(ad.parameters(), ad.mechanism());
-*/
-            qDebug() << "    -> Tags: " << service.tags();
 
-            qDebug() << "    ->DOM: " << service.domDocument().toString();
+            //qDebug() << "    -> authData " << ad.parameters().keys();
 
+            QPointer<SignOn::AuthSession> authSession;
+            SignOn::IdentityInfo identityInfo;
+            identityInfo.setId(ad.credentialsId());
+            SignOn::Identity * identity = SignOn::Identity::newIdentity(identityInfo);
+            authSession = identity->createSession(ad.method());
+            SignOn::SessionData sessionData(ad.parameters());
+
+            connect(authSession, SIGNAL(response(SignOn::SessionData)), SLOT(signOnResponse(SignOn::SessionData)));
+            connect(authSession, SIGNAL(error(SignOn::Error)), SLOT(signOnError(SignOn::Error)));
+
+            authSession->request(sessionData, ad.method());
         } else if (QString::compare(service.displayName(), "Nextcloud", Qt::CaseInsensitive)) {
             qDebug() << "    -> nextcloud ";
         }
     }
-
-
-    account = manager->account(5);
-    qDebug() << "  - Account: " << account->displayName();
-    qDebug() << "  - Keys: " << account->allKeys();
-    qDebug() << "ID:: " << account->credentialsId();
-
-    qDebug() << "XXX: ";
-
+    */
 
 
     //Try and sync now.
@@ -199,7 +151,7 @@ QString OwncloudSyncd::getVersionNumber(){
 QStringList OwncloudSyncd::forceSync(){
     qDebug() << "[owncloudsyncd](OwncloudSyncd::forceSync()) - force a sync event";
 
-    // todo ???
+    // TODO - change ???
     // set all lastSyncs to 0
     QMapIterator<int, qint64> i(m_targetLastSync);
     while (i.hasNext()) {
@@ -297,6 +249,32 @@ QString OwncloudSyncd::getOwncloudCmd(){
 
 }
 
+
+/**
+ * @brief Accounts reponse
+ *
+ */
+void OwncloudSyncd::signOnResponse(const SignOn::SessionData &sessionData) {
+    qDebug() << "Online Accounts response()";
+
+    //qDebug() << "login: " << sessionData.UserName();
+    //qDebug() << "password: "  << sessionData.Secret();
+
+    m_accountUser.insert(m_processedAccountId, sessionData.UserName());
+    m_accountPass.insert(m_processedAccountId, sessionData.Secret());
+}
+
+/**
+ * @brief Accounts reponse
+ *
+ */
+void OwncloudSyncd::signOnError(const SignOn::Error &error) {
+    qDebug() << "Online Accounts response()";
+
+    m_accountUser.insert(m_processedAccountId, nullptr);
+    m_accountPass.insert(m_processedAccountId, nullptr);
+}
+
 /**
  * @brief Sync Targets
  *
@@ -315,26 +293,32 @@ void OwncloudSyncd::syncTargets() {
 
     // Get database content ...
     getDatabase();
+    // Get current user credentials
+    getCredentials();
 
     QMapIterator<int, int> i(m_targetAccount);
     while (i.hasNext()) {
         i.next();
-        if (QDir(m_targetLocal[i.key()]).exists()) {
-            qDebug() << "Directory: " << m_targetLocal[i.key()] << " - Initiate Sync";
-            if (m_targetLastSync.contains(i.key())) {
-                qDebug() << "Directory: " << m_targetLocal[i.key()] << " - Initial Sync; Sync NOW";
-                syncDir(i.key());
-            } else if ((QDateTime::currentDateTime().toMSecsSinceEpoch() - m_targetLastSync.value(i.key())) >= m_accountSyncFreq.value(i.key())) {
-                qDebug() << "Directory: " << m_targetLocal[i.key()] << " - Repeated Sync; Sync NOW";
-                qDebug() << "  - m_accountSyncFreq.value(i.key())" << m_accountSyncFreq.value(i.key());
-                qDebug() << "  - m_targetLastSync.value(i.key())" << m_targetLastSync.value(i.key());
-                qDebug() << "  - QDateTime::currentDateTime().toMSecsSinceEpoch()" << QDateTime::currentDateTime().toMSecsSinceEpoch();
-                syncDir(i.key());
-            } else {
-                qDebug() << "Directory: " << m_targetLocal[i.key()] << " - Skip Sync NOW";
-            }
+        if ((m_accountUser[m_targetAccount.value(i.key())]) == nullptr) {
+            qDebug() << "Credentials for account ID " << m_targetAccount.value(i.key()) << " NOT available! Skip Sync NOW!";
         } else {
-            qDebug() << "Directory: " << m_targetLocal[i.key()] << " Doesn't exist";
+            if (QDir(m_targetLocal[i.key()]).exists()) {
+                qDebug() << "Directory: " << m_targetLocal[i.key()] << " - Initiate Sync";
+                if (m_targetLastSync.contains(i.key())) {
+                    qDebug() << "Directory: " << m_targetLocal[i.key()] << " - Initial Sync; Sync NOW";
+                    syncDir(i.key());
+                } else if ((QDateTime::currentDateTime().toMSecsSinceEpoch() - m_targetLastSync.value(i.key())) >= m_accountSyncFreq.value(i.key())) {
+                    qDebug() << "Directory: " << m_targetLocal[i.key()] << " - Repeated Sync; Sync NOW";
+                    qDebug() << "  - m_accountSyncFreq.value(i.key())" << m_accountSyncFreq.value(i.key());
+                    qDebug() << "  - m_targetLastSync.value(i.key())" << m_targetLastSync.value(i.key());
+                    qDebug() << "  - QDateTime::currentDateTime().toMSecsSinceEpoch()" << QDateTime::currentDateTime().toMSecsSinceEpoch();
+                    syncDir(i.key());
+                } else {
+                    qDebug() << "Directory: " << m_targetLocal[i.key()] << " - Skip Sync NOW";
+                }
+            } else {
+                qDebug() << "Directory: " << m_targetLocal[i.key()] << " Doesn't exist";
+            }
         }
     }
     qDebug() << "OwncloudSyncd::syncTargets() - m_syncing = false";
@@ -386,7 +370,7 @@ void OwncloudSyncd::getDatabase()
 
         while (query.next()) {
             m_accountAddr.insert(query.value(0).toInt(), query.value(1).toString());
-            m_accountUser.insert(query.value(0).toInt(), query.value(2).toString());
+            //m_accountUser.insert(query.value(0).toInt(), query.value(2).toString()); // this will be obtrained from signond
             m_accountSyncHidden.insert(query.value(0).toInt(), query.value(3).toBool());
             m_accountUseMobileData.insert(query.value(0).toInt(), query.value(4).toBool());
             m_accountSyncFreq.insert(query.value(0).toInt(), query.value(5).toInt());
@@ -407,6 +391,89 @@ void OwncloudSyncd::getDatabase()
 
     db.close();
 }
+
+/**
+ * @brief GET account credentials
+ *
+ */
+void OwncloudSyncd::getCredentials()
+{
+    Accounts::Manager *manager = new Accounts::Manager();
+    Accounts::Account *account;
+
+    /* For response wait */
+    QTimer timer;
+    QEventLoop loop;
+
+    qDebug() << "getCredentials()";
+
+    QMapIterator<int, QString> i(m_accountAddr);
+    while (i.hasNext()) {
+        i.next();
+
+        // test if account from the database is enabled
+        if (manager->accountListEnabled().contains(i.key()) == false) {
+            continue;
+        }
+
+        account = manager->account(i.key());
+        Accounts::ServiceList services = account->enabledServices();
+
+        foreach (Accounts::Service service, services) {
+            qDebug() << "  - Service: " << service.displayName();
+            // TODO this sucks!!!
+            /*if (QString::compare(service.displayName(), "Owncloud", Qt::CaseInsensitive)) {
+                qDebug() << "    -> owncloud ";
+            } else if (QString::compare(service.displayName(), "Nextcloud", Qt::CaseInsensitive)) {
+                qDebug() << "    -> nextcloud ";
+            } else {
+                continue;
+            }*/
+
+            /* Get Credentials */
+            Accounts::AccountService * as = new Accounts::AccountService(account, service);
+            Accounts::AuthData ad = as->authData();
+
+            QPointer<SignOn::AuthSession> authSession;
+            SignOn::IdentityInfo identityInfo;
+            identityInfo.setId(ad.credentialsId());
+            SignOn::Identity * identity = SignOn::Identity::newIdentity(identityInfo);
+            authSession = identity->createSession(ad.method());
+            SignOn::SessionData sessionData(ad.parameters());
+
+            connect(authSession, SIGNAL(response(SignOn::SessionData)), SLOT(signOnResponse(SignOn::SessionData)));
+            connect(authSession, SIGNAL(error(SignOn::Error)), SLOT(signOnError(SignOn::Error)));
+
+            m_processedAccountId = i.key();
+
+            authSession->request(sessionData, ad.method());
+
+            /* Wait until requested credentials found */
+            timer.setSingleShot(true);
+            connect(authSession, SIGNAL(response(SignOn::SessionData)), &loop, SLOT(quit()));
+            connect(authSession, SIGNAL(error(SignOn::Error)), &loop, SLOT(quit()));
+            connect(&timer, SIGNAL(timeout()), &loop, SLOT(quit()));
+            timer.start(5000);
+            loop.exec(0x00);
+
+            if(timer.isActive()) {
+                qDebug() << "Get Credentials for account ID " << i.key() << " SUCCESS!";
+            } else {
+                qDebug() << "Get Credentials for account ID " << i.key() << " TIMEOUT!";
+            }
+
+            disconnect(authSession, SIGNAL(response(SignOn::SessionData)),0,0);
+            disconnect(authSession, SIGNAL(error(SignOn::Error)),0,0);
+            disconnect(&timer, SIGNAL(timeout()), 0,0);
+
+            // the first service is enough for owncloud/nextcloud
+            break;
+        }
+
+    }
+}
+
+
 
 void OwncloudSyncd::syncDir(const int targetID){
 
@@ -445,9 +512,6 @@ void OwncloudSyncd::syncDir(const int targetID){
     }
 
     qDebug() << "Arguments: " << arguments;
-
-    qDebug() << "Accounts: ";
-
 
  //   QProcess *owncloudsync = new QProcess();
     //Retrieve all debug from process

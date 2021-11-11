@@ -2,7 +2,15 @@
     "builder": "qmake",
     "dependencies_target": [
        "libaccounts-qt5-dev",
-       "libsignon-qt5-dev"
+       "libsignon-qt5-dev",
+       "signond",
+       "libaccounts-qt5-1",
+       "libonline-accounts-qt-dev",
+       "libonline-accounts-qt1",
+       "libonline-accounts-client1",
+       "qml-module-ubuntu-onlineaccounts",
+       "qml-module-ubuntu-onlineaccounts-client",
+       "qml-module-ubuntu-onlineaccounts"
     ],
     "install_lib": [
          "${ROOT}/Owncloud-Sync/lib/${ARCH_TRIPLET}/lib/libowncloud_csync.so*",

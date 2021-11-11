@@ -14,7 +14,7 @@ Page {
     /* load current data from DB */
     function loadDB() {
 
-        targetListModel.clear()
+        targetListModel.clear();
 
         targetsPage.db = LocalStorage.openDatabaseSync("UBsync", "1.0", "UBsync", 1000000);
 
@@ -37,7 +37,27 @@ Page {
                         }
                 )
 
-        targetList.forceLayout()
+        targetList.forceLayout();
+    }
+
+    /* remove target */
+    function removeTarget(targetID) {
+
+        targetListModel.clear();
+
+        targetsPage.db = LocalStorage.openDatabaseSync("UBsync", "1.0", "UBsync", 1000000);
+
+        console.log("Removing target " + targetID)
+
+        targetsPage.db.transaction(
+                    function(tx) {
+                        // remove target
+                        var rs = tx.executeSql('DELETE FROM SyncTargets WHERE targetID = (?)', [targetID]);
+                    }
+                )
+
+        targetsPage.loadDB();
+        targetList.forceLayout();
     }
 
     Connections {
@@ -189,6 +209,10 @@ Page {
                 actions: [
                     Action {
                         iconName: "delete"
+                        text: ""
+                        onTriggered: {
+                            targetsPage.removeTarget(targetListModel.get(index).targetID)
+                        }
                     }
                 ]
             }

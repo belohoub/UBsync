@@ -12,6 +12,14 @@
 #include <QDBusArgument>
 #include <QPair>
 
+#include <Accounts/Account>
+#include <Accounts/Application>
+#include <Accounts/Manager>
+#include <Accounts/AccountService>
+
+#include <SignOn/AuthSession>
+#include <SignOn/Identity>
+
 
 //#define OWNCLOUDSYNCD_SERVICE QStringLiteral("org.owncloudsyncd")
 //#define OWNCLOUDSYNCD_CONTROLLER_PATH QStringLiteral("/org/owncloudsyncd/Controller")
@@ -44,7 +52,10 @@ signals:
 private slots:
     void syncDir(const int targetID);
     void syncTargets();
+    void signOnResponse(const SignOn::SessionData &sessionData);
+    void signOnError(const SignOn::Error &error);
     void getDatabase();
+    void getCredentials();
 
     QString getOwncloudCmd();
     void emitSignal(QString);
@@ -80,6 +91,9 @@ private:
     QMap<int, bool> m_accountUseMobileData;
     /* accountID - syncFreq */
     QMap<int, int> m_accountSyncFreq;
+
+    /* Account beeing currently processed */
+    int m_processedAccountId;
 
     /* targetID - accountID */
     QMap<int, int> m_targetAccount;
