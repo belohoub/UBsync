@@ -9,7 +9,7 @@ CONFIG += -std=gnu++11
 load(ubuntu-click)
 
 SUBDIRS += qwebdavlib \
-           Owncloud-Sync \
+           UBsync-ui \
            OwncloudSync \
            OwncloudSyncd
 
@@ -37,11 +37,11 @@ UBUNTU_TRANSLATION_SOURCES+= \
 UBUNTU_PO_FILES+=$$files(po/*.po)
 
 aptest.target   = autopilot
-aptest.commands = bash $$PWD/Owncloud-Sync/tests/autopilot/run
+aptest.commands = bash $$PWD/UBsync-ui/tests/autopilot/run
 aptest.depends  = sub-Owncloud-Sync
 
 unittest.target   = check
-unittest.commands = /usr/bin/qmltestrunner -input $$PWD/Owncloud-Sync/tests/unit 
+unittest.commands = /usr/bin/qmltestrunner -input $$PWD/UBsync-ui/tests/unit 
 unittest.depends  = sub-Owncloud-Sync
 
 QMAKE_EXTRA_TARGETS += aptest unittest

@@ -1,0 +1,8 @@
+[Desktop Entry]
+_Name=UBsync
+Exec=qmlscene %U UBsync-ui/Main.qml
+Icon=UBsync-ui/UBsync.png
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
+

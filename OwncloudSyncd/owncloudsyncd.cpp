@@ -15,11 +15,9 @@
 
 OwncloudSyncd::OwncloudSyncd()
 {
-
-    //QCoreApplication::setApplicationName("owncloud-sync");
     QCoreApplication::setApplicationName("owncloud-sync");
-    QDBusConnection::sessionBus().registerService("org.owncloudsyncd");
-    QDBusConnection::sessionBus().registerObject("/org/owncloudsyncd/Controller", this, QDBusConnection::ExportScriptableSlots|QDBusConnection::ExportScriptableSignals);
+    QDBusConnection::sessionBus().registerService(OWNCLOUDSYNCD_SERVICE);
+    QDBusConnection::sessionBus().registerObject(OWNCLOUDSYNCD_CONTROLLER_PATH, this, QDBusConnection::ExportScriptableSlots|QDBusConnection::ExportScriptableSignals);
 
     qDebug() << "[owncloudsyncd](OwncloudSyncd::OwncloudSyncd()) - Registering with dbus";
 
@@ -35,16 +33,6 @@ OwncloudSyncd::OwncloudSyncd()
 
     QSettings settings(m_settingsFile, QSettings::IniFormat);
 
-    /*
-    m_username = settings.value("username").toString();
-    m_password = settings.value("password").toString();
-    m_serverURL = settings.value("serverURL").toString();
-    m_mobileData = settings.value("mobileData").toBool();
-    m_hidden = settings.value("hiddenfiles").toString();
-    m_syncInterval = settings.value("timer").toInt() * 3600 * 1000 ;
-    m_lastSync = settings.value("lastSync").toInt();
-    */
-
     /* Try to sync every hour */
     m_syncInterval = 3600 * 1000;
 
@@ -56,52 +44,6 @@ OwncloudSyncd::OwncloudSyncd()
     m_timer->setInterval(m_syncInterval);
     m_timer->start();
 
-    // Instantiate an account manager
-    ///Accounts::Manager *manager = new Accounts::Manager();
-
-    ///Accounts::Account * account = manager->account(1);
-    /*
-    qDebug() << "  - Account: " << account->displayName();
-    qDebug() << "  - Keys: " << account->allKeys();
-    qDebug() << "  - Host: " << account->value("host");
-    qDebug() << "  - CredentialsId: " << account->value("CredentialsId");
-    qDebug() << "  - enabled: " << account->value("enabled");
-    qDebug() << "  - name: " << account->value("name");
-    qDebug() << "  - auth/method: " << account->value("auth/method");
-    qDebug() << "  - auth/mechanism: " << account->value("auth/mechanism");
-    qDebug() << "  - ChildKeys: " << account->childKeys();
-    */
-
-    /*
-    Accounts::ServiceList services =  account->enabledServices();
-    foreach (Accounts::Service service, services) {
-        qDebug() << "  - Service: " << service.displayName();
-        if (QString::compare(service.displayName(), "Owncloud", Qt::CaseInsensitive)) {
-            qDebug() << "    -> owncloud ";
-            Accounts::AccountService * as = new Accounts::AccountService(account, service);
-            Accounts::AuthData ad = as->authData();
-
-
-            //qDebug() << "    -> authData " << ad.parameters().keys();
-
-            QPointer<SignOn::AuthSession> authSession;
-            SignOn::IdentityInfo identityInfo;
-            identityInfo.setId(ad.credentialsId());
-            SignOn::Identity * identity = SignOn::Identity::newIdentity(identityInfo);
-            authSession = identity->createSession(ad.method());
-            SignOn::SessionData sessionData(ad.parameters());
-
-            connect(authSession, SIGNAL(response(SignOn::SessionData)), SLOT(signOnResponse(SignOn::SessionData)));
-            connect(authSession, SIGNAL(error(SignOn::Error)), SLOT(signOnError(SignOn::Error)));
-
-            authSession->request(sessionData, ad.method());
-        } else if (QString::compare(service.displayName(), "Nextcloud", Qt::CaseInsensitive)) {
-            qDebug() << "    -> nextcloud ";
-        }
-    }
-    */
-
-
     //Try and sync now.
     syncTargets();
 
@@ -109,7 +51,7 @@ OwncloudSyncd::OwncloudSyncd()
 
 void OwncloudSyncd::emitSignal(QString msgTxt){
     // Example Signal Emit
-    QDBusMessage msg = QDBusMessage::createSignal("/org/owncloudsyncd/Controller", "org.owncloudsyncd.Controller", "status");
+    QDBusMessage msg = QDBusMessage::createSignal(OWNCLOUDSYNCD_CONTROLLER_PATH, OWNCLOUDSYNCD_CONTROLLER_INTERFACE, "status");
     msg << msgTxt;
     QDBusConnection::sessionBus().send(msg);
 }
@@ -421,14 +363,6 @@ void OwncloudSyncd::getCredentials()
 
         foreach (Accounts::Service service, services) {
             qDebug() << "  - Service: " << service.displayName();
-            // TODO this sucks!!!
-            /*if (QString::compare(service.displayName(), "Owncloud", Qt::CaseInsensitive)) {
-                qDebug() << "    -> owncloud ";
-            } else if (QString::compare(service.displayName(), "Nextcloud", Qt::CaseInsensitive)) {
-                qDebug() << "    -> nextcloud ";
-            } else {
-                continue;
-            }*/
 
             /* Get Credentials */
             Accounts::AccountService * as = new Accounts::AccountService(account, service);
@@ -511,14 +445,17 @@ void OwncloudSyncd::syncDir(const int targetID){
        arguments << "--user" << m_accountUser[m_targetAccount.value(targetID)] << "--password" << m_accountPass[m_targetAccount.value(targetID)] << "--silent" << "--non-interactive" << localPath << remotePath;
     }
 
-    qDebug() << "Arguments: " << arguments;
+    /* The following debug msg contains username/password */
+    //qDebug() << "Arguments: " << arguments;
 
- //   QProcess *owncloudsync = new QProcess();
+    
+    QProcess *owncloudsync = new QProcess();
     //Retrieve all debug from process
- //   owncloudsync->setProcessChannelMode(QProcess::ForwardedChannels);
- //   owncloudsync->start(owncloudcmd, arguments);
- //   //Wait for the sync to complete. Dont time out.
- //   owncloudsync->waitForFinished(-1);
+    owncloudsync->setProcessChannelMode(QProcess::ForwardedChannels);
+    owncloudsync->start(owncloudcmd, arguments);
+    //Wait for the sync to complete. Dont time out.
+    owncloudsync->waitForFinished(-1);
+    
 
     // Sync Complete - Save the current date and time
     qDebug() << "Sync of " << localPath << " completed at " << QDateTime::currentDateTime();

@@ -2,22 +2,14 @@
     "builder": "qmake",
     "dependencies_target": [
        "libaccounts-qt5-dev",
-       "libsignon-qt5-dev",
-       "signond",
-       "libaccounts-qt5-1",
-       "libonline-accounts-qt-dev",
-       "libonline-accounts-qt1",
-       "libonline-accounts-client1",
-       "qml-module-ubuntu-onlineaccounts",
-       "qml-module-ubuntu-onlineaccounts-client",
-       "qml-module-ubuntu-onlineaccounts"
+       "libsignon-qt5-dev"
     ],
     "install_lib": [
-         "${ROOT}/Owncloud-Sync/lib/${ARCH_TRIPLET}/lib/libowncloud_csync.so*",
-         "${ROOT}/Owncloud-Sync/lib/${ARCH_TRIPLET}/lib/libowncloudsync.so*"
+         "${ROOT}/lib/${ARCH_TRIPLET}/lib/libowncloud_csync.so*",
+         "${ROOT}/lib/${ARCH_TRIPLET}/lib/libowncloudsync.so*"
     ],
     "install_bin": [
-         "${ROOT}/Owncloud-Sync/lib/${ARCH_TRIPLET}/bin/owncloudcmd",
-         "${ROOT}/Owncloud-Sync/lib/${ARCH_TRIPLET}/bin/sync-exclude.lst"
+         "${ROOT}/lib/${ARCH_TRIPLET}/bin/owncloudcmd",
+         "${ROOT}/lib/${ARCH_TRIPLET}/bin/sync-exclude.lst"
     ]
 }

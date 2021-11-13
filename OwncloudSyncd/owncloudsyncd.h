@@ -21,17 +21,16 @@
 #include <SignOn/Identity>
 
 
-//#define OWNCLOUDSYNCD_SERVICE QStringLiteral("org.owncloudsyncd")
-//#define OWNCLOUDSYNCD_CONTROLLER_PATH QStringLiteral("/org/owncloudsyncd/Controller")
-//#define OWNCLOUDSYNCD_CONTROLLER_INTERFACE QStringLiteral("org.owncloudsyncd.Controller")
-
+#define OWNCLOUDSYNCD_SERVICE "org.owncloudsyncd"
+#define OWNCLOUDSYNCD_CONTROLLER_PATH "/org/owncloudsyncd/Controller"
+#define OWNCLOUDSYNCD_CONTROLLER_INTERFACE "org.owncloudsyncd.Controller"
 #define OWNCLOUDSYNCD_VERSION QStringLiteral("0.7")
 
 
 class OwncloudSyncd : public QObject
 {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus Interface", "org.owncloudsyncd.Controller")
+    Q_CLASSINFO("D-Bus Interface", OWNCLOUDSYNCD_CONTROLLER_INTERFACE)
 
 public:
     OwncloudSyncd();
@@ -64,17 +63,14 @@ private slots:
 private:
     QTimer * m_timer;
 
-    /* todo remove */
-    QString m_settingsFile;
-    QString m_username;
-    QString m_password;
-    QString m_serverURL;
-    QString m_hidden;
-    bool m_mobileData;
-    int m_syncInterval;
-
     /* last sync invoked */
     qint64 m_lastSync;
+    
+    /* Config file */
+    QString m_settingsFile;
+    
+    /* minimal sync interval */
+    int m_syncInterval;
 
     /* syncing or not */
     bool m_syncing;

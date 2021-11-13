@@ -5,9 +5,9 @@
     "title": "UBsync",
     "hooks": {
         "UBsync": {
-            "accounts": "Owncloud-Sync/UBsync.accounts",
-            "apparmor": "Owncloud-Sync/UBsync.apparmor",
-            "desktop": "Owncloud-Sync/UBsync.desktop"
+            "accounts": "UBsync-ui/UBsync.accounts",
+            "apparmor": "UBsync-ui/UBsync.apparmor",
+            "desktop": "UBsync-ui/UBsync.desktop"
         }
     },
     "version": "0.7",

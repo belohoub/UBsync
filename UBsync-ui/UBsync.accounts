@@ -1,0 +1,13 @@
+{
+  "services": [
+    {
+      "provider": "nextcloud",
+      "name" : "Nextcloud"
+    },
+    {
+      "provider": "owncloud",
+      "name" : "Owncloud"
+    }
+  ],
+  "translations": "UBsync"
+}

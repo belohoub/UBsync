@@ -18,9 +18,9 @@ $
 $ cmake -DCMAKE_BUILD_TYPE="release" -DENABLE_GUI="OFF" ..
 $ make
 $ 
-$ cp -a ${BUILD_PATH}/client-build/bin/owncloudcmd ${PKG_PATH}/Owncloud-Sync/lib/${ARCH_TRIPLET}/bin
-$ cp -a ${BUILD_PATH}/client-build/src/csync/libowncloud_csync.so* ${PKG_PATH}/Owncloud-Sync/lib/${ARCH_TRIPLET}/lib/
-$ cp -a ${BUILD_PATH}/client-build/src/libsync/libowncloudsync.so* ${PKG_PATH}/Owncloud-Sync/lib/${ARCH_TRIPLET}/lib/
+$ cp -a ${BUILD_PATH}/client-build/bin/owncloudcmd ${PKG_PATH}/lib/${ARCH_TRIPLET}/bin
+$ cp -a ${BUILD_PATH}/client-build/src/csync/libowncloud_csync.so* ${PKG_PATH}/lib/${ARCH_TRIPLET}/lib/
+$ cp -a ${BUILD_PATH}/client-build/src/libsync/libowncloudsync.so* ${PKG_PATH}/lib/${ARCH_TRIPLET}/lib/
 $
 ```
 
