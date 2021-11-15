@@ -60,4 +60,5 @@ DISTFILES += \
     components/PopupStatusBox.qml \
     ui/SyncServicePage.qml \
     ui/TargetsPage.qml \
+    ui/RequestAccountPage.qml \
     components/FileBrowser.qml \
