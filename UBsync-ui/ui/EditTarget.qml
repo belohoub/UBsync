@@ -130,16 +130,6 @@ Page {
     Connections {
             target: targetPage
 
-            /*onCompleted: {
-                for (var j = 0; j < accounts.count; j++) {
-                    if (accounts.get(j, "account").accountId === targetPage.accountID) {
-                        console.log("Account auth to get password ... ")
-                        accountConnection.target = accounts.get(j, "account")
-                        accounts.get(j, "account").authenticate({})
-                    }
-                }
-            }*/
-
             onActiveChanged: {
                 /* re-render anytime page is shown */
                 console.log("editTargetPage activated")
@@ -224,12 +214,6 @@ Page {
                    left: targetSymbol.right; top: targetSymbol.top
                 }
                 readOnly: true
-                /*onTextChanged: {
-                    targetSymbolText.text = "" + text.charAt(0).toUpperCase()
-                    // Invoke update DB
-                    console.log("Update DB")
-                    targetPage.updateDB()
-                }*/
             }
 
             Item {
@@ -324,11 +308,6 @@ Page {
                 anchors {
                    left: accountSymbol.right; verticalCenter: accountSymbol.verticalCenter
                 }
-                /*onTextChanged: {
-                    accountSymbolText.text = "" + accountName.text.charAt(0).toUpperCase()
-                    // Invoke update DB
-                    targetPage.updateDB()
-                }*/
             }
 
             }
@@ -462,8 +441,3 @@ Page {
 }
 
 
-/*##^##
-Designer {
-    D{i:0;autoSize:true;height:480;width:640}
-}
-##^##*/

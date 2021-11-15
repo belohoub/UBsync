@@ -100,12 +100,6 @@ Page {
                 accountPage.loadDB(accountPage.accountID)
                 accountPage.updateDB(accountPage.accountID)
             }
-
-            /*onCompleted: {
-                console.log("editAccountPage created")
-                accountPage.loadDB(accountPage.accountID)
-                accountPage.updateDB(accountPage.accountID)
-            }*/
         }
 
 
@@ -171,11 +165,6 @@ Page {
                 anchors {
                    left: accountSymbol.right; top: accountSymbol.top
                 }
-                /*onTextChanged: {
-                    accountSymbolText.text = "" + text.charAt(0).toUpperCase()
-                    // Invoke update DB
-                    accountPage.updateDB(accountPage.accountID)
-                }*/
             }
 
 
@@ -400,9 +389,3 @@ Page {
 
 
 }
-
-/*##^##
-Designer {
-    D{i:0;autoSize:true;height:480;width:640}
-}
-##^##*/
