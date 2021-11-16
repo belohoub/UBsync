@@ -170,7 +170,7 @@ Page {
             anchors{left:parent.left; right:parent.right}
 
             onClicked: {
-                apl.addPageToNextColumn(targetsPage, Qt.resolvedUrl("EditTarget.qml"), {targetID: targetListModel.get(index).targetID})
+                apl.addPageToNextColumn(targetsPage, Qt.resolvedUrl("EditTarget.qml"), {targetID: targetID})
             }
 
             Column {
@@ -186,7 +186,7 @@ Page {
 
                 Rectangle {
                     id: targetIcon
-                    color: targetListModel.get(index).color
+                    color: color
                     width: units.gu(9)
                     height: width
                     border.width: 0
@@ -198,7 +198,7 @@ Page {
 
                 Text {
                     id: targetIconText
-                    text: targetListModel.get(index).targetName.charAt(0).toUpperCase()
+                    text: targetName.charAt(0).toUpperCase()
                     color: "white"
                     font.pixelSize: units.gu(6)
                     anchors {
@@ -208,7 +208,7 @@ Page {
 
                 Text {
                     id: targetName
-                    text: targetListModel.get(index).targetName
+                    text: targetName
                     height: units.gu(6)
                     font.pixelSize: units.gu(3)
                     anchors.leftMargin: units.gu(2)
@@ -219,7 +219,7 @@ Page {
 
                 Text {
                     id: targetID
-                    text: targetListModel.get(index).targetID
+                    text: targetID
                     font.pixelSize: units.gu(2)
                     anchors.leftMargin: units.gu(2)
                     anchors {
@@ -238,7 +238,7 @@ Page {
                         iconName: "delete"
                         text: ""
                         onTriggered: {
-                            targetsPage.removeTarget(targetListModel.get(index).targetID)
+                            targetsPage.removeTarget(targetID)
                         }
                     }
                 ]
@@ -250,7 +250,7 @@ Page {
                         iconName: "edit"
                         text: ""
                         onTriggered: {
-                            apl.addPageToNextColumn(targetsPage, Qt.resolvedUrl("EditTarget.qml"), {targetID: targetListModel.get(index).targetID})
+                            apl.addPageToNextColumn(targetsPage, Qt.resolvedUrl("EditTarget.qml"), {targetID: targetID})
                         }
                     }
                 ]
