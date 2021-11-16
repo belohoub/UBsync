@@ -220,7 +220,7 @@ Page {
             anchors{left:parent.left; right:parent.right}
 
             onClicked: {
-                apl.addPageToNextColumn(accountsPage, Qt.resolvedUrl("EditAccount.qml"), {accountID: accountListModel.get(index).accountID})
+                apl.addPageToNextColumn(accountsPage, Qt.resolvedUrl("EditAccount.qml"), {accountID: model.accountID})
             }
 
             Column {
@@ -237,7 +237,7 @@ Page {
                 Rectangle {
                     id: accountIcon
                     //color: "steelblue"
-                    color: accountListModel.get(index).color
+                    color: model.color
                     width: units.gu(9)
                     height: width
                     border.width: 0
@@ -249,7 +249,7 @@ Page {
 
                 Text {
                     id: accountIconText
-                    text: accountListModel.get(index).accountName.charAt(0).toUpperCase()
+                    text: model.accountName.charAt(0).toUpperCase()
                     color: "white"
                     font.pixelSize: units.gu(6)
                     anchors {
@@ -259,7 +259,7 @@ Page {
 
                 Text {
                     id: accountName
-                    text: accountListModel.get(index).accountName
+                    text: model.accountName
                     height: units.gu(6)
                     font.pixelSize: units.gu(3)
                     anchors.leftMargin: units.gu(2)
@@ -270,7 +270,7 @@ Page {
 
                 Text {
                     id: accountID
-                    text: accountListModel.get(index).accountID
+                    text: model.accountID
                     font.pixelSize: units.gu(2)
                     anchors.leftMargin: units.gu(2)
                     anchors {
@@ -289,7 +289,7 @@ Page {
                         iconName: "delete"
                         text: ""
                         onTriggered: {
-                            accountsPage.removeAccount(accountListModel.get(index).accountID)
+                            accountsPage.removeAccount(model.accountID)
                         }
                     }
                 ]
@@ -301,7 +301,7 @@ Page {
                         iconName: "edit"
                         text: ""
                         onTriggered: {
-                            apl.addPageToNextColumn(accountsPage, Qt.resolvedUrl("EditAccount.qml"), {accountID: accountListModel.get(index).accountID})
+                            apl.addPageToNextColumn(accountsPage, Qt.resolvedUrl("EditAccount.qml"), {accountID: model.accountID})
                         }
                     },
 
@@ -309,7 +309,7 @@ Page {
                         iconName: "note-new"
                         text: ""
                         onTriggered: {
-                            apl.addPageToNextColumn(accountsPage, Qt.resolvedUrl("EditTarget.qml"), {targetID: 0, accountID: accountListModel.get(index).accountID})
+                            apl.addPageToNextColumn(accountsPage, Qt.resolvedUrl("EditTarget.qml"), {targetID: 0, accountID: model.accountID})
                         }
                     }
                 ]
