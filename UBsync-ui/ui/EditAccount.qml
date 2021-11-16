@@ -1,6 +1,8 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.3
 
+import Ubuntu.OnlineAccounts 2.0
+
 import QtQuick.LocalStorage 2.0
 
 
@@ -58,6 +60,16 @@ Page {
                         }
                     }
                     )
+
+        // test if account is enabled in online accounts
+        accountSymbol.color = "indianred" // color for disabled accounts
+        for (var j = 0; j < accounts.count; j++) {
+            if (accounts.get(j, "account").accountId === index) {
+                // account is enabled!
+                accountSymbol.color = "steelblue"
+                break
+            }
+        }
     }
 
     function updateDB(index) {
@@ -89,6 +101,11 @@ Page {
                         }
                     }
                     )
+    }
+
+    AccountModel {
+        id: accounts
+        applicationId: "ubsync_UBsync"
     }
 
     Connections {
@@ -135,7 +152,7 @@ Page {
 
             Rectangle {
                 id: accountSymbol
-                color: "steelblue" /*"#0000B5"*/
+                color: "silver" //default "unknown" color
                 width: units.gu(15)
                 height: units.gu(15)
                 border.width: 0

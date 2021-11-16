@@ -29,15 +29,23 @@ Page {
 
                         for(var i = 0; i < rs.rows.length; i++) {
                             console.log("Loading accountsPage: " + rs.rows.item(i).accountName + "; CNT: " + accounts.count + "; ID: " + rs.rows.item(i).accountID)
-                            for (var j = 0; j < accounts.count; j++) {
+                            var j = 0
+                            for (j = 0; j < accounts.count; j++) {
                                 if (accounts.get(j, "account").accountId === rs.rows.item(i).accountID) {
                                     console.log("Loading accountsPage: " + rs.rows.item(i).accountName + "; " + accounts.count + "; " + accounts.get(j, "account").accountId)
                                     /* Add only enabled accounts to the list */
-                                    accountListModel.append({"accountID": rs.rows.item(i).accountID, "accountName": rs.rows.item(i).accountName})
+                                    accountListModel.append({"accountID": rs.rows.item(i).accountID, "accountName": rs.rows.item(i).accountName, "color": "steelblue"})
+                                    break
                                 }
                             }
+
+                            if (j === accounts.count) {
+                                // account is NOT enabled!
+                                accountListModel.append({"accountID": rs.rows.item(i).accountID, "accountName": rs.rows.item(i).accountName, "color" : "indianred"})
+                                console.log("Color is indianred - account NOT enabled")
                             }
                         }
+                    }
                 )
 
         accountList.forceLayout();
@@ -154,6 +162,9 @@ Page {
                   /* TODO: activate in debug mode? */
                   //console.log("Account details are: " + " (" + account.accountId + ")" + " " + account.settings.host + "; " + authenticationData.Username + ":" + authenticationData.Password )
                   apl.addPageToNextColumn(accountsPage, Qt.resolvedUrl("EditAccount.qml"), {accountID: account.accountId, defaultAccountName: account.displayName, remoteAddress: account.settings.host, remoteUser: authenticationData.Username })
+
+                  // update
+                  accountsPage.loadDB()
               }
 
           }
@@ -218,7 +229,8 @@ Page {
 
                 Rectangle {
                     id: accountIcon
-                    color: "steelblue"
+                    //color: "steelblue"
+                    color: accountListModel.get(index).color
                     width: units.gu(9)
                     height: width
                     border.width: 0

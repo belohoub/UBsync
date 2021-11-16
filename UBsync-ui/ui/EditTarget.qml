@@ -22,6 +22,23 @@ Page {
     property string accountPassword: ""
     property string accountRemoteAddress: ""
 
+    /* Account status */
+    property bool accountEnabled: false
+
+
+    function updateSymbolColors() {
+        if (accountEnabled === false) {
+            targetSymbol.color = "orange"
+            accountSymbol.color = "indianred"
+        } else if (activeSwitch.checked === false) {
+            targetSymbol.color = "silver"
+            accountSymbol.color = "steelblue"
+        } else {
+            targetSymbol.color = "forestgreen"
+            accountSymbol.color = "steelblue"
+        }
+    }
+
 
     function loadDB() {
 
@@ -64,6 +81,18 @@ Page {
                         }
                     }
                     )
+
+        // test if account is enabled in online accounts
+        targetPage.accountEnabled = false
+        for (var j = 0; j < accounts.count; j++) {
+            if (accounts.get(j, "account").accountId ===  targetPage.accountID) {
+                // account is enabled!
+                targetPage.accountEnabled = true
+                break
+            }
+        }
+
+        updateSymbolColors()
     }
 
     function updateDB() {
@@ -278,7 +307,7 @@ Page {
 
             Rectangle {
                 id: accountSymbol
-                color: "steelblue" /*"#0000B5"*/
+                color: "silver" // "Unknown" color code
                 width: units.gu(6)
                 height: units.gu(6)
                 border.width: 0
@@ -423,11 +452,7 @@ Page {
                     /* Invoke update DB */
                     targetPage.updateDB()
                     /* Change activity indication color */
-                    if (activeSwitch.checked == true) {
-                        targetSymbol.color = "forestgreen"
-                    } else {
-                        targetSymbol.color = "silver"
-                    }
+                    updateSymbolColors()
                 }
             }
 

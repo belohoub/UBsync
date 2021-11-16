@@ -1,6 +1,7 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.3
 import "../components"
+import Ubuntu.OnlineAccounts 2.0
 
 import QtQuick.LocalStorage 2.0
 
@@ -27,14 +28,27 @@ Page {
 
                         for(var i = 0; i < rs.rows.length; i++) {
                             console.log("Loading targetsPage: " + rs.rows.item(i).targetName + "; Active: " + rs.rows.item(i).active)
-                            var color = "silver"
-                            if (rs.rows.item(i).active === 1) {
-                                color = "forestgreen"
-                                console.log("Color is green")
+
+                            var color = "orange" // expect, that the account is disabled in online accounts
+                            var j = 0
+                            for (j = 0; j < accounts.count; j++) {
+                                //console.log("  - accountID: " + accounts.get(j, "account").accountId)
+                                if (accounts.get(j, "account").accountId === rs.rows.item(i).accountID) {
+                                    // account is enabled!
+                                    if (rs.rows.item(i).active === 1) {
+                                        // active and target enabled
+                                        color = "forestgreen"
+                                    } else {
+                                        // active and target disabled
+                                        color = "silver"
+                                    }
+                                    break
+                                }
                             }
+
                             targetListModel.append({"targetID": rs.rows.item(i).targetID, "targetName": rs.rows.item(i).targetName, "targeActive": rs.rows.item(i).active, "color": color})
-                            }
                         }
+                    }
                 )
 
         targetList.forceLayout();
@@ -58,6 +72,11 @@ Page {
 
         targetsPage.loadDB();
         targetList.forceLayout();
+    }
+
+    AccountModel {
+        id: accounts
+        applicationId: "ubsync_UBsync"
     }
 
     Connections {
