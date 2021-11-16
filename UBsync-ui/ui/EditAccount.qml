@@ -28,7 +28,7 @@ Page {
 
         accountPage.db = LocalStorage.openDatabaseSync("UBsync", "1.0", "UBsync", 1000000);
 
-        console.log("Loading SyncAccounts index " + index)
+        console.log("EditAccount :: Loading SyncAccounts index " + index)
 
         accountPage.db.transaction(
                     function(tx) {
@@ -79,17 +79,17 @@ Page {
                         var rs = tx.executeSql('SELECT * FROM SyncAccounts WHERE accountID = (?)', [index]);
 
                         if (rs.rows.length === 0) {
-                            console.log("Inserting SyncAccounts index " + index)
+                            console.log("EditAccount :: Inserting SyncAccounts index " + index)
                             tx.executeSql('INSERT INTO SyncAccounts VALUES((?), (?), (?), (?), 0, 0, 1)', [
                                               index,
                                               accountName.text,
                                               remoteText.text,
                                               usernameText.text]);
                         } else {
-                            console.log("Updating SyncAccounts index " + index + ": ")
-                            console.log("  " + accountName.text)
-                            console.log("  " + remoteText.text)
-                            console.log("  " + usernameText.text)
+                            console.log("EditAccount :: Updating SyncAccounts index " + index + ": ")
+                            console.log("EditAccount ::   " + accountName.text)
+                            console.log("EditAccount ::   " + remoteText.text)
+                            console.log("EditAccount ::   " + usernameText.text)
                             tx.executeSql('UPDATE SyncAccounts SET accountName=(?), remoteAddress=(?), remoteUser=(?), syncHidden=(?), useMobileData=(?), syncFreq=(?) WHERE accountID = (?)', [
                                               accountName.text,
                                               remoteText.text,
@@ -113,7 +113,7 @@ Page {
 
             onActiveChanged: {
                 /* re-render anytime page is shown */
-                console.log("editAccountPage activated")
+                console.log("EditAccount :: editAccountPage activated")
                 accountPage.loadDB(accountPage.accountID)
                 accountPage.updateDB(accountPage.accountID)
             }
@@ -204,11 +204,11 @@ Page {
                             accountName.cursorVisible = true
                             accountNameEditIcon.name = "ok"
                             //targetName.cursorPosition = 0
-                            console.log("Change Name Start")
+                            console.log("EditAccount :: Change Name Start")
                         } else {
                             accountName.readOnly = true;
                             accountNameEditIcon.name = "edit"
-                            console.log("Change Name Finished");
+                            console.log("EditAccount :: Change Name Finished");
                             accountPage.updateDB(accountPage.accountID);
                             accountSymbolText.text = "" + accountName.text.charAt(0).toUpperCase();
                         }
@@ -387,7 +387,7 @@ Page {
                 }
 
                 onSelectedIndexChanged:{
-                    console.log("SelectedIndexChanged: " + selectedIndex)
+                    console.log("EditAccount :: SelectedIndexChanged: " + selectedIndex)
                 }
 
                 onDelegateClicked: {

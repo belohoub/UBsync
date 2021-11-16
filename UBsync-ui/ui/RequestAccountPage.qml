@@ -25,7 +25,7 @@ Page {
             }
 
             onClicked: {
-                console.log("Add NextCloud account: clicked")
+                console.log("RequestAccountPage :: Add NextCloud account: clicked")
                 apl.addPageToNextColumn(apl.primaryPage, Qt.resolvedUrl("AccountsPage.qml"), {requestAccount: "nextcloud"})
             }
         }
@@ -38,7 +38,7 @@ Page {
             }
 
             onClicked: {
-                console.log("Add OwnCloud account: clicked")
+                console.log("RequestAccountPage :: Add OwnCloud account: clicked")
                 apl.addPageToNextColumn(apl.primaryPage, Qt.resolvedUrl("AccountsPage.qml"), {requestAccount: "owncloud"})
             }
         }

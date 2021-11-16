@@ -20,7 +20,7 @@ Page {
 
         accountsPage.db = LocalStorage.openDatabaseSync("UBsync", "1.0", "UBsync", 1000000);
 
-        console.log("Loading accountsPage data");
+        console.log("AccountsPage :: Loading accountsPage data");
 
         accountsPage.db.transaction(
                     function(tx) {
@@ -28,11 +28,11 @@ Page {
                         var rs = tx.executeSql('SELECT * FROM SyncAccounts');
 
                         for(var i = 0; i < rs.rows.length; i++) {
-                            console.log("Loading accountsPage: " + rs.rows.item(i).accountName + "; CNT: " + accounts.count + "; ID: " + rs.rows.item(i).accountID)
+                            console.log("AccountsPage :: Loading accountsPage: " + rs.rows.item(i).accountName + "; CNT: " + accounts.count + "; ID: " + rs.rows.item(i).accountID)
                             var j = 0
                             for (j = 0; j < accounts.count; j++) {
                                 if (accounts.get(j, "account").accountId === rs.rows.item(i).accountID) {
-                                    console.log("Loading accountsPage: " + rs.rows.item(i).accountName + "; " + accounts.count + "; " + accounts.get(j, "account").accountId)
+                                    console.log("AccountsPage :: Loading accountsPage: " + rs.rows.item(i).accountName + "; " + accounts.count + "; " + accounts.get(j, "account").accountId)
                                     /* Add only enabled accounts to the list */
                                     accountListModel.append({"accountID": rs.rows.item(i).accountID, "accountName": rs.rows.item(i).accountName, "color": "steelblue"})
                                     break
@@ -42,7 +42,7 @@ Page {
                             if (j === accounts.count) {
                                 // account is NOT enabled!
                                 accountListModel.append({"accountID": rs.rows.item(i).accountID, "accountName": rs.rows.item(i).accountName, "color" : "indianred"})
-                                console.log("Color is indianred - account NOT enabled")
+                                console.log("AccountsPage :: Color is indianred - account NOT enabled")
                             }
                         }
                     }
@@ -58,7 +58,7 @@ Page {
 
         accountsPage.db = LocalStorage.openDatabaseSync("UBsync", "1.0", "UBsync", 1000000);
 
-        console.log("Removing account " + accountID)
+        console.log("AccountsPage :: Removing account " + accountID)
 
         accountsPage.db.transaction(
                     function(tx) {
@@ -77,21 +77,28 @@ Page {
             target: accountsPage
 
             /*onTargetChanged: {
-                console.log("accountsPage changed")
+                console.log("AccountsPage :: accountsPage changed")
                 accountsPage.loadDB()
             }*/
 
             onActiveChanged: {
                 /* re-render anytime page is shown */
-                console.log("accountsPage activated")
+                console.log("AccountsPage :: accountsPage activated")
                 accountsPage.loadDB()
             }
         }
 
     ListModel {
         id: accountListModel
+
+        ListElement {
+            accountID: 0
+            accountName: "Unknown"
+            color: "silver"
+        }
+
         Component.onCompleted: {
-            console.log("accountsPage created")
+            console.log("AccountsPage :: accountsPage created")
 
             accountsPage.loadDB()
         }
@@ -107,7 +114,7 @@ Page {
                 Action {
                     iconName: "add"
                     onTriggered: {
-                        console.log("Add New Online account.")
+                        console.log("AccountsPage :: Add New Online account.")
                         apl.addPageToNextColumn(accountsPage, Qt.resolvedUrl("RequestAccountPage.qml"))
                     }
                 }
@@ -128,10 +135,10 @@ Page {
 
             /* handle account requests */
             if (requestAccount.localeCompare("nextcloud") === 0) {
-                console.log("NextCloud activation request!")
+                console.log("AccountsPage :: NextCloud activation request!")
                 accounts.requestAccess(accounts.applicationId + "_nextcloud", {})
             } else if (requestAccount.localeCompare("owncloud") === 0) {
-                console.log("OwnCloud activation request!")
+                console.log("AccountsPage :: OwnCloud activation request!")
                 accounts.requestAccess(accounts.applicationId + "_owncloud", {})
             }
             requestAccount = ""
@@ -143,11 +150,11 @@ Page {
           target: accounts
 
            onAuthenticationReply: {
-               console.log("onAuthenticationReply()")
+               console.log("AccountsPage :: onAuthenticationReply()")
            }
 
           onAccessReply: {
-              console.log("onAccessReply()")
+              console.log("AccountsPage :: onAccessReply()")
 
               //console.log(JSON.stringify(reply.account))
               //console.log(JSON.stringify(authenticationData))
@@ -160,7 +167,7 @@ Page {
                   var account = reply.account;
 
                   /* TODO: activate in debug mode? */
-                  //console.log("Account details are: " + " (" + account.accountId + ")" + " " + account.settings.host + "; " + authenticationData.Username + ":" + authenticationData.Password )
+                  //console.log("AccountsPage :: Account details are: " + " (" + account.accountId + ")" + " " + account.settings.host + "; " + authenticationData.Username + ":" + authenticationData.Password )
                   apl.addPageToNextColumn(accountsPage, Qt.resolvedUrl("EditAccount.qml"), {accountID: account.accountId, defaultAccountName: account.displayName, remoteAddress: account.settings.host, remoteUser: authenticationData.Username })
 
                   // update

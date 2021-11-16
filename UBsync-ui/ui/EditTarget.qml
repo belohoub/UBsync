@@ -44,7 +44,7 @@ Page {
 
         targetPage.db = LocalStorage.openDatabaseSync("UBsync", "1.0", "UBsync", 1000000);
 
-        console.log("Loading SyncTargets ID " + targetPage.targetID)
+        console.log("EditTarget :: Loading SyncTargets ID " + targetPage.targetID)
 
         targetPage.db.transaction(
                     function(tx) {
@@ -62,7 +62,7 @@ Page {
                             localPath.text = rs.rows.item(i).localPath
                             remotePath.text = rs.rows.item(i).remotePath
 
-                            console.log("Target Enabled: " + rs.rows.item(i).active)
+                            console.log("EditTarget :: Target Enabled: " + rs.rows.item(i).active)
                             activeSwitch.checked = rs.rows.item(i).active
                         }
                     }
@@ -102,7 +102,7 @@ Page {
                         var rs = tx.executeSql('SELECT * FROM SyncTargets WHERE targetID = (?)', targetPage.targetID);
 
                         if (rs.rows.length === 0) {
-                            console.log("Inserting SyncTargets ID " + targetPage.targetID)
+                            console.log("EditTarget :: Inserting SyncTargets ID " + targetPage.targetID)
                             tx.executeSql('INSERT INTO SyncTargets VALUES(NULL, (?), (?), (?), (?), 1)', [
                                               targetPage.accountID,
                                               localPath.text,
@@ -116,7 +116,7 @@ Page {
                             targetIDText.text = "ID: " + targetPage.targetID
 
                         } else {
-                            console.log("Updating SyncTargets ID " + targetPage.targetID)
+                            console.log("EditTarget :: Updating SyncTargets ID " + targetPage.targetID)
                             tx.executeSql('UPDATE SyncTargets SET accountID=(?), localPath=(?), remotePath=(?), targetName=(?), active=(?) WHERE targetID = (?)', [
                                               targetPage.accountID,
                                               localPath.text,
@@ -150,7 +150,7 @@ Page {
                   targetPage.accountUser = reply.Username
                   targetPage.accountPassword = reply.Password
                   /* TODO: activate in debug mode? */
-                  //console.log("Account details are: " + reply.Username + ":" + reply.Password )
+                  //console.log("EditTarget :: Account details are: " + reply.Username + ":" + reply.Password )
               }
 
           }
@@ -161,17 +161,17 @@ Page {
 
             onActiveChanged: {
                 /* re-render anytime page is shown */
-                console.log("editTargetPage activated")
+                console.log("EditTarget :: editTargetPage activated")
                 targetPage.loadDB()
                 targetPage.updateDB()
 
-                console.log("Authenticate accountID: " + targetPage.accountID)
-                console.log("  - account CNT: " + accounts.count)
+                console.log("EditTarget :: Authenticate accountID: " + targetPage.accountID)
+                console.log("EditTarget ::   - account CNT: " + accounts.count)
 
                 for (var j = 0; j < accounts.count; j++) {
-                    //console.log("  - accountID: " + accounts.get(j, "account").accountId)
+                    //console.log("EditTarget ::   - accountID: " + accounts.get(j, "account").accountId)
                     if (accounts.get(j, "account").accountId === targetPage.accountID) {
-                        console.log("Account auth to get password ... ")
+                        console.log("EditTarget :: Account auth to get password ... ")
                         accountConnection.target = accounts.get(j, "account")
                         accounts.get(j, "account").authenticate({})
                     }
@@ -265,12 +265,12 @@ Page {
                             targetName.cursorVisible = true
                             targetNameEditIcon.name = "ok"
                             targetName.cursorPosition = 0
-                            console.log("Change Name Start")
+                            console.log("EditTarget :: Change Name Start")
                         } else {
                             targetName.readOnly = true;
                             //targetName.deselect()
                             targetNameEditIcon.name = "edit"
-                            console.log("Change Name Finished: " + targetName.text)
+                            console.log("EditTarget :: Change Name Finished: " + targetName.text)
                             targetSymbolText.text = "" + targetName.text.charAt(0).toUpperCase()
                             targetPage.updateDB()
                         }
@@ -352,7 +352,7 @@ Page {
                     height: localIcon.height
 
                     onClicked: {
-                        console.log("Change Local Folder")
+                        console.log("EditTarget :: Change Local Folder")
                         apl.addPageToNextColumn(targetPage, Qt.resolvedUrl("LocalFileBrowser.qml"), {caller:localPath})
                     }
             Icon {
@@ -395,7 +395,7 @@ Page {
                     height: remoteIcon.height
 
                     onClicked: {
-                        console.log("Change Remote Folder")
+                        console.log("EditTarget :: Change Remote Folder")
                          apl.addPageToNextColumn(targetPage, Qt.resolvedUrl("WebdavFileBrowser.qml"), {caller:remotePath, paramUsername: targetPage.accountUser, paramPassword: targetPage.accountPassword, paramServerUrl: targetPage.accountRemoteAddress})
                     }
             Icon {

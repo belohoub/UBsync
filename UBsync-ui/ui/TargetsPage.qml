@@ -19,7 +19,7 @@ Page {
 
         targetsPage.db = LocalStorage.openDatabaseSync("UBsync", "1.0", "UBsync", 1000000);
 
-        console.log("Loading targetsPage data")
+        console.log("TargetsPage :: Loading targetsPage data")
 
         targetsPage.db.transaction(
                     function(tx) {
@@ -27,12 +27,12 @@ Page {
                         var rs = tx.executeSql('SELECT * FROM SyncTargets');
 
                         for(var i = 0; i < rs.rows.length; i++) {
-                            console.log("Loading targetsPage: " + rs.rows.item(i).targetName + "; Active: " + rs.rows.item(i).active)
+                            console.log("TargetsPage :: Loading targetsPage: " + rs.rows.item(i).targetName + "; Active: " + rs.rows.item(i).active)
 
                             var color = "orange" // expect, that the account is disabled in online accounts
                             var j = 0
                             for (j = 0; j < accounts.count; j++) {
-                                //console.log("  - accountID: " + accounts.get(j, "account").accountId)
+                                //console.log("TargetsPage ::   - accountID: " + accounts.get(j, "account").accountId)
                                 if (accounts.get(j, "account").accountId === rs.rows.item(i).accountID) {
                                     // account is enabled!
                                     if (rs.rows.item(i).active === 1) {
@@ -61,7 +61,7 @@ Page {
 
         targetsPage.db = LocalStorage.openDatabaseSync("UBsync", "1.0", "UBsync", 1000000);
 
-        console.log("Removing target " + targetID)
+        console.log("TargetsPage :: Removing target " + targetID)
 
         targetsPage.db.transaction(
                     function(tx) {
@@ -84,15 +84,23 @@ Page {
 
             onActiveChanged: {
                 /* re-render anytime page is shown */
-                console.log("targetsPage activated")
+                console.log("TargetsPage :: targetsPage activated")
                 targetsPage.loadDB()
             }
         }
 
     ListModel {
         id: targetListModel
+
+        ListElement {
+            targetID: 0
+            targetName: "Unknown"
+            targeActive: false
+            color: "silver"
+        }
+
         Component.onCompleted: {
-            console.log("targetsPage created")
+            console.log("TargetsPage :: targetsPage created")
 
             targetsPage.loadDB()
         }
