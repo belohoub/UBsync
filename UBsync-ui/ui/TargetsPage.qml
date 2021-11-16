@@ -173,15 +173,16 @@ Page {
                 apl.addPageToNextColumn(targetsPage, Qt.resolvedUrl("EditTarget.qml"), {targetID: model.targetID})
             }
 
-            Column {
+            Item {
                 id: targetColumn
                 height: units.gu(12)
 
-                anchors.leftMargin: units.gu(2)
-
-                spacing: units.gu(1)
+                //spacing: units.gu(1)
                 anchors {
-                    top: parent.top; left: parent.left; right: parent.right; margins:units.gu(2)
+                    top: parent.top;
+                    left: parent.left;
+                    right: parent.right;
+                    margins:units.gu(2)
                 }
 
                 Rectangle {

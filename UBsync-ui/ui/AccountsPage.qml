@@ -149,9 +149,9 @@ Page {
           id: accountConnection
           target: accounts
 
-           onAuthenticationReply: {
+           /*onAuthenticationReply: {
                console.log("AccountsPage :: onAuthenticationReply()")
-           }
+           }*/
 
           onAccessReply: {
               console.log("AccountsPage :: onAccessReply()")
@@ -223,13 +223,13 @@ Page {
                 apl.addPageToNextColumn(accountsPage, Qt.resolvedUrl("EditAccount.qml"), {accountID: model.accountID})
             }
 
-            Column {
+            Item {
                 id: accountColumn
                 height: units.gu(12)
 
                 anchors.leftMargin: units.gu(2)
 
-                spacing: units.gu(1)
+                //spacing: units.gu(1)
                 anchors {
                     top: parent.top; left: parent.left; right: parent.right; margins:units.gu(2)
                 }
