@@ -79,6 +79,18 @@ Page {
         applicationId: "ubsync_UBsync"
     }
 
+    Timer {
+        // This timer delays target/account init
+        id: startTimer
+        interval: 250
+        running: true
+        repeat: false
+        onTriggered: {
+            console.log("TargetsPage :: targetsPage delayed activation")
+            targetsPage.loadDB()
+        }
+    }
+
     Connections {
             target: targetsPage
 

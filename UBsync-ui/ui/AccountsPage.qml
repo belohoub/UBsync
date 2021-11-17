@@ -12,6 +12,7 @@ Page {
     property var db
 
     property string requestAccount: ""
+    property int activeAccounts: 0
 
     /* load current data from DB */
     function loadDB() {
@@ -27,6 +28,7 @@ Page {
                         // load selected account
                         var rs = tx.executeSql('SELECT * FROM SyncAccounts');
 
+                        activeAccounts = 0
                         for(var i = 0; i < rs.rows.length; i++) {
                             console.log("AccountsPage :: Loading accountsPage: " + rs.rows.item(i).accountName + "; CNT: " + accounts.count + "; ID: " + rs.rows.item(i).accountID)
                             var j = 0
@@ -35,6 +37,7 @@ Page {
                                     console.log("AccountsPage :: Loading accountsPage: " + rs.rows.item(i).accountName + "; " + accounts.count + "; " + accounts.get(j, "account").accountId)
                                     /* Add only enabled accounts to the list */
                                     accountListModel.append({"accountID": rs.rows.item(i).accountID, "accountName": rs.rows.item(i).accountName, "color": "steelblue"})
+                                    activeAccounts = activeAccounts + 1
                                     break
                                 }
                             }
@@ -131,6 +134,11 @@ Page {
         onTriggered: {
             if (accounts.count > accountListModel.count) {
                 accountsPage.loadDB()
+            }
+
+            /* Check for undetected active accounts */
+            if (accounts.count > activeAccounts) {
+                    accountsPage.loadDB()
             }
 
             /* handle account requests */
