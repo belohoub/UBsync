@@ -51,6 +51,7 @@ INSTALLS+=config_files qml_files desktop_file owncloud_files ui_files component_
 
 DISTFILES += \
     ui/AboutPage.qml \
+    ui/HelpPage.qml \
     ui/AccountsPage.qml \
     ui/EditAccount \
     ui/EditTarget \

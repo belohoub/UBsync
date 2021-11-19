@@ -29,7 +29,7 @@ Page {
                         for(var i = 0; i < rs.rows.length; i++) {
                             console.log("TargetsPage :: Loading targetsPage: " + rs.rows.item(i).targetName + "; Active: " + rs.rows.item(i).active)
 
-                            var color = "orange" // expect, that the account is disabled in online accounts
+                            var color = owncloud.settings.color_targetAccountDisabled // expect, that the account is disabled in online accounts
                             var j = 0
                             for (j = 0; j < accounts.count; j++) {
                                 //console.log("TargetsPage ::   - accountID: " + accounts.get(j, "account").accountId)
@@ -37,10 +37,10 @@ Page {
                                     // account is enabled!
                                     if (rs.rows.item(i).active === 1) {
                                         // active and target enabled
-                                        color = "forestgreen"
+                                        color = owncloud.settings.color_targetActive
                                     } else {
                                         // active and target disabled
-                                        color = "silver"
+                                        color = owncloud.settings.color_targetInactive
                                     }
                                     break
                                 }
@@ -128,17 +128,26 @@ Page {
                 /* TODO: re-think actions here ? */
                 Action {
                     iconName: "settings"
+                    text: i18n.tr("Settings")
                     onTriggered: apl.addPageToNextColumn(apl.primaryPage, Qt.resolvedUrl("SyncServicePage.qml"))
                 },
 
                 Action {
                     iconName: "account"
+                    text: i18n.tr("Accounts")
                     onTriggered: apl.addPageToNextColumn(apl.primaryPage, Qt.resolvedUrl("AccountsPage.qml"))
                 },
 
                 Action {
                     iconName: "info"
+                    text: i18n.tr("About")
                     onTriggered: apl.addPageToNextColumn(apl.primaryPage, Qt.resolvedUrl("AboutPage.qml"))
+                },
+
+                Action {
+                    iconName: "help"
+                    text: i18n.tr("Help")
+                    onTriggered: apl.addPageToNextColumn(apl.primaryPage, Qt.resolvedUrl("HelpPage.qml"))
                 }
             ]
         }

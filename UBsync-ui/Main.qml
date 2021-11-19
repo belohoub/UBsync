@@ -30,7 +30,8 @@ import Qt.labs.settings 1.0
 
 MainView {
     id: owncloud
-    property alias settings: accountSettings
+    property alias settings: ubsyncSettings
+
     // objectName for functional testing purposes (autopilot-qt5)
     objectName: "mainView"
 
@@ -40,11 +41,18 @@ MainView {
     anchorToKeyboard: true
 
     Settings {
-        id: accountSettings
+        id: ubsyncSettings
 
         property int timer: 0
         property string owncloudcmdVersion
         property string owncloudSyncdVersion
+
+        property string color_targetActive: "forestgreen"
+        property string color_targetInactive: "silver"
+        property string color_targetAccountDisabled: "orange"
+
+        property string color_accountEnabled: "steelblue"
+        property string color_accountDisabled: "indianred"
 
         function clearSettings(){
             timer = 0

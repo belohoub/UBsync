@@ -28,14 +28,14 @@ Page {
 
     function updateSymbolColors() {
         if (accountEnabled === false) {
-            targetSymbol.color = "orange"
-            accountSymbol.color = "indianred"
+            targetSymbol.color = owncloud.settings.color_targetAccountDisabled
+            accountSymbol.color = owncloud.settings.color_accountDisabled
         } else if (activeSwitch.checked === false) {
-            targetSymbol.color = "silver"
-            accountSymbol.color = "steelblue"
+            targetSymbol.color = owncloud.settings.color_targetInactive
+            accountSymbol.color = owncloud.settings.color_accountEnabled
         } else {
-            targetSymbol.color = "forestgreen"
-            accountSymbol.color = "steelblue"
+            targetSymbol.color = owncloud.settings.color_targetActive
+            accountSymbol.color = owncloud.settings.color_accountEnabled
         }
     }
 

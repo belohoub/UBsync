@@ -62,11 +62,11 @@ Page {
                     )
 
         // test if account is enabled in online accounts
-        accountSymbol.color = "indianred" // color for disabled accounts
+        accountSymbol.color = owncloud.settings.color_accountDisabled // color for disabled accounts
         for (var j = 0; j < accounts.count; j++) {
             if (accounts.get(j, "account").accountId === index) {
                 // account is enabled!
-                accountSymbol.color = "steelblue"
+                accountSymbol.color = owncloud.settings.color_accountEnabled
                 break
             }
         }
@@ -189,7 +189,7 @@ Page {
                 width: accountNameEditIcon.width
                 height: accountNameEditIcon.height
                 anchors {
-                   right: parent.right; top: targetSymbol.top
+                   right: parent.right; top: accountSymbol.top
                 }
 
                 MouseArea {

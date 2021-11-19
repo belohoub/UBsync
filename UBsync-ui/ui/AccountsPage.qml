@@ -36,7 +36,7 @@ Page {
                                 if (accounts.get(j, "account").accountId === rs.rows.item(i).accountID) {
                                     console.log("AccountsPage :: Loading accountsPage: " + rs.rows.item(i).accountName + "; " + accounts.count + "; " + accounts.get(j, "account").accountId)
                                     /* Add only enabled accounts to the list */
-                                    accountListModel.append({"accountID": rs.rows.item(i).accountID, "accountName": rs.rows.item(i).accountName, "color": "steelblue"})
+                                    accountListModel.append({"accountID": rs.rows.item(i).accountID, "accountName": rs.rows.item(i).accountName, "color": owncloud.settings.color_accountEnabled})
                                     activeAccounts = activeAccounts + 1
                                     break
                                 }
@@ -44,8 +44,8 @@ Page {
 
                             if (j === accounts.count) {
                                 // account is NOT enabled!
-                                accountListModel.append({"accountID": rs.rows.item(i).accountID, "accountName": rs.rows.item(i).accountName, "color" : "indianred"})
-                                console.log("AccountsPage :: Color is indianred - account NOT enabled")
+                                accountListModel.append({"accountID": rs.rows.item(i).accountID, "accountName": rs.rows.item(i).accountName, "color" : owncloud.settings.color_accountDisabled})
+                                console.log("AccountsPage :: Color is " + owncloud.settings.color_accountDisabled + " - account NOT enabled")
                             }
                         }
                     }
@@ -244,7 +244,6 @@ Page {
 
                 Rectangle {
                     id: accountIcon
-                    //color: "steelblue"
                     color: model.color
                     width: units.gu(9)
                     height: width
