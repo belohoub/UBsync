@@ -53,6 +53,7 @@ MainView {
 
         property string color_accountEnabled: "steelblue"
         property string color_accountDisabled: "indianred"
+        property string color_accountEnabledNotConfigured: "purple"
 
         function clearSettings(){
             timer = 0

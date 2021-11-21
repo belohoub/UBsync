@@ -12,8 +12,17 @@ Page {
     property var db
     property int debounce: 0
 
+    // accounts may be not ready ...
+    property bool accountsLoaded: false
+
     /* load current data from DB */
     function loadDB() {
+
+        if (accounts.ready === false) {
+            return
+        } else {
+            accountsLoaded = true
+        }
 
         targetListModel.clear();
 
@@ -29,20 +38,28 @@ Page {
                         for(var i = 0; i < rs.rows.length; i++) {
                             console.log("TargetsPage :: Loading targetsPage: " + rs.rows.item(i).targetName + "; Active: " + rs.rows.item(i).active)
 
-                            var color = owncloud.settings.color_targetAccountDisabled // expect, that the account is disabled in online accounts
-                            var j = 0
-                            for (j = 0; j < accounts.count; j++) {
-                                //console.log("TargetsPage ::   - accountID: " + accounts.get(j, "account").accountId)
-                                if (accounts.get(j, "account").accountId === rs.rows.item(i).accountID) {
-                                    // account is enabled!
-                                    if (rs.rows.item(i).active === 1) {
-                                        // active and target enabled
-                                        color = owncloud.settings.color_targetActive
-                                    } else {
-                                        // active and target disabled
-                                        color = owncloud.settings.color_targetInactive
+                            // test for acvcount configuration
+                            var rs2 = tx.executeSql('SELECT * FROM SyncAccounts WHERE accountID = (?)', [rs.rows.item(i).accountID])
+
+                            var color = "silver"
+
+                            if (rs2.rows.length === 0)  {
+                                color = owncloud.settings.color_targetAccountDisabled // account not configured
+                            } else {
+                                color = owncloud.settings.color_targetAccountDisabled // expect, that the account is disabled in online accounts
+                                for (var j = 0; j < accounts.count; j++) {
+                                    //console.log("TargetsPage ::   - accountID: " + accounts.get(j, "account").accountId)
+                                    if (accounts.get(j, "account").accountId === rs.rows.item(i).accountID) {
+                                        // account is enabled!
+                                        if (rs.rows.item(i).active === 1) {
+                                            // active and target enabled
+                                            color = owncloud.settings.color_targetActive
+                                        } else {
+                                            // active and target disabled
+                                            color = owncloud.settings.color_targetInactive
+                                        }
+                                        break
                                     }
-                                    break
                                 }
                             }
 
@@ -77,6 +94,26 @@ Page {
     AccountModel {
         id: accounts
         applicationId: "ubsync_UBsync"
+    }
+
+    Timer {
+        // This timer checks if a accounts are ready
+        id: continuousCheck
+        interval: 250
+        running: true
+        repeat: true
+        onTriggered: {
+            // if accounts were not ready update again as soon as possible ...
+            if (accountsLoaded === false) {
+                targetsPage.loadDB()
+                if (accountsLoaded === false) {
+                    // if still not ready, wait ...
+                    return
+                } else {
+                    continuousCheck.repeat = false
+                }
+            }
+        }
     }
 
     Timer {

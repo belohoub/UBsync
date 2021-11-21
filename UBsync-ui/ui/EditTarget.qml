@@ -24,12 +24,20 @@ Page {
 
     /* Account status */
     property bool accountEnabled: false
+    property bool accountConfigured: false
+
+    // accounts may be not ready ...
+    property bool accountsLoaded: false
 
 
     function updateSymbolColors() {
         if (accountEnabled === false) {
             targetSymbol.color = owncloud.settings.color_targetAccountDisabled
             accountSymbol.color = owncloud.settings.color_accountDisabled
+        } else if (accountConfigured === false) {
+            accountName.text = i18n.tr("Not Configured Account") + "\n(" + i18n.tr("related targets will NOT sync") + ")"
+            targetSymbol.color = owncloud.settings.color_targetAccountDisabled
+            accountSymbol.color = owncloud.settings.color_accountEnabledNotConfigured
         } else if (activeSwitch.checked === false) {
             targetSymbol.color = owncloud.settings.color_targetInactive
             accountSymbol.color = owncloud.settings.color_accountEnabled
@@ -41,6 +49,12 @@ Page {
 
 
     function loadDB() {
+
+        if (accounts.ready === false) {
+            return
+        } else {
+            accountsLoaded = true
+        }
 
         targetPage.db = LocalStorage.openDatabaseSync("UBsync", "1.0", "UBsync", 1000000);
 
@@ -73,11 +87,16 @@ Page {
                         // load selected target
                         var rs = tx.executeSql('SELECT * FROM SyncAccounts WHERE accountID = (?)', targetPage.accountID);
 
-                        for(var i = 0; i < rs.rows.length; i++) {
-                           accountName.text = rs.rows.item(i).accountName
+                        if (rs.rows.length === 0) {
+                            accountConfigured = false
+                        } else {
+                            accountConfigured = true
+                            for(var i = 0; i < rs.rows.length; i++) {
+                               accountName.text = rs.rows.item(i).accountName
 
-                           targetPage.accountUser = rs.rows.item(i).remoteUser
-                           targetPage.accountRemoteAddress = rs.rows.item(i).remoteAddress
+                               targetPage.accountUser = rs.rows.item(i).remoteUser
+                               targetPage.accountRemoteAddress = rs.rows.item(i).remoteAddress
+                            }
                         }
                     }
                     )
@@ -135,6 +154,26 @@ Page {
     }
 
 
+    Timer {
+        // This timer checks if a accounts are ready
+        id: continuousCheck
+        interval: 250
+        running: true
+        repeat: true
+        onTriggered: {
+            // if accounts were not ready update again as soon as possible ...
+            if (accountsLoaded === false) {
+                targetPage.loadDB()
+                if (accountsLoaded === false) {
+                    // if still not ready, wait ...
+                    return
+                } else {
+                    continuousCheck.repeat = false
+                }
+            }
+        }
+    }
+
     Connections {
           id: accountConnection
           target: null
@@ -163,7 +202,7 @@ Page {
                 /* re-render anytime page is shown */
                 console.log("EditTarget :: editTargetPage activated")
                 targetPage.loadDB()
-                targetPage.updateDB()
+                targetPage.updateDB() // initial saving of the new target
 
                 console.log("EditTarget :: Authenticate accountID: " + targetPage.accountID)
                 console.log("EditTarget ::   - account CNT: " + accounts.count)
@@ -273,6 +312,7 @@ Page {
                             console.log("EditTarget :: Change Name Finished: " + targetName.text)
                             targetSymbolText.text = "" + targetName.text.charAt(0).toUpperCase()
                             targetPage.updateDB()
+                            targetPage.loadDB()
                         }
                     }
                 }
@@ -377,6 +417,7 @@ Page {
                 onTextChanged: {
                     /* Invoke update DB */
                     targetPage.updateDB()
+                    targetPage.loadDB()
                 }
             }
 
@@ -420,6 +461,7 @@ Page {
                 onTextChanged: {
                     /* Invoke update DB */
                     targetPage.updateDB()
+                    targetPage.loadDB()
                 }
             }
 
@@ -451,8 +493,7 @@ Page {
                 onCheckedChanged: {
                     /* Invoke update DB */
                     targetPage.updateDB()
-                    /* Change activity indication color */
-                    updateSymbolColors()
+                    targetPage.loadDB()
                 }
             }
 

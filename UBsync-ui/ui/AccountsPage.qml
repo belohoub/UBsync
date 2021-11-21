@@ -12,10 +12,16 @@ Page {
     property var db
 
     property string requestAccount: ""
-    property int activeAccounts: 0
+    property bool accountsLoaded: false // accounts may be not ready ...
 
     /* load current data from DB */
     function loadDB() {
+
+        if (accounts.ready === false) {
+            return
+        } else {
+            accountsLoaded = true
+        }
 
         accountListModel.clear();
 
@@ -28,24 +34,36 @@ Page {
                         // load selected account
                         var rs = tx.executeSql('SELECT * FROM SyncAccounts');
 
-                        activeAccounts = 0
                         for(var i = 0; i < rs.rows.length; i++) {
                             console.log("AccountsPage :: Loading accountsPage: " + rs.rows.item(i).accountName + "; CNT: " + accounts.count + "; ID: " + rs.rows.item(i).accountID)
                             var j = 0
                             for (j = 0; j < accounts.count; j++) {
                                 if (accounts.get(j, "account").accountId === rs.rows.item(i).accountID) {
                                     console.log("AccountsPage :: Loading accountsPage: " + rs.rows.item(i).accountName + "; " + accounts.count + "; " + accounts.get(j, "account").accountId)
-                                    /* Add only enabled accounts to the list */
-                                    accountListModel.append({"accountID": rs.rows.item(i).accountID, "accountName": rs.rows.item(i).accountName, "color": owncloud.settings.color_accountEnabled})
-                                    activeAccounts = activeAccounts + 1
+                                    // Add enabled accounts to the list
+                                    accountListModel.append({"accountID": rs.rows.item(i).accountID, "accountName": rs.rows.item(i).accountName, "color": owncloud.settings.color_accountEnabled, "isEditable": true})
                                     break
                                 }
                             }
 
                             if (j === accounts.count) {
                                 // account is NOT enabled!
-                                accountListModel.append({"accountID": rs.rows.item(i).accountID, "accountName": rs.rows.item(i).accountName, "color" : owncloud.settings.color_accountDisabled})
+                                accountListModel.append({"accountID": rs.rows.item(i).accountID, "accountName": rs.rows.item(i).accountName, "color" : owncloud.settings.color_accountDisabled, "isEditable": true})
                                 console.log("AccountsPage :: Color is " + owncloud.settings.color_accountDisabled + " - account NOT enabled")
+                            }
+                        }
+
+                        // Add enabled but unconfigured accounts to the end of the list
+                        for (j = 0; j < accounts.count; j++) {
+                            for(i = 0; i < rs.rows.length; i++) {
+                                if (accounts.get(j, "account").accountId === rs.rows.item(i).accountID) {
+                                    break
+                                }
+                            }
+                            if (i === rs.rows.length) {
+                                // Account was not found in database
+                                accountListModel.append({"accountID": accounts.get(j, "account").accountId, "accountName": accounts.get(j, "account").displayName, "color" : owncloud.settings.color_accountEnabledNotConfigured, "isEditable": false})
+                                console.log("AccountsPage :: Color is " + owncloud.settings.color_accountEnabledNotConfigured + " - account NOT configured")
                             }
                         }
                     }
@@ -79,11 +97,6 @@ Page {
     Connections {
             target: accountsPage
 
-            /*onTargetChanged: {
-                console.log("AccountsPage :: accountsPage changed")
-                accountsPage.loadDB()
-            }*/
-
             onActiveChanged: {
                 /* re-render anytime page is shown */
                 console.log("AccountsPage :: accountsPage activated")
@@ -98,6 +111,7 @@ Page {
             accountID: 0
             accountName: "Unknown"
             color: "silver"
+            isEditable: false  // account has a database entry
         }
 
         Component.onCompleted: {
@@ -126,19 +140,22 @@ Page {
     }
 
     Timer {
-        // This timer checks if a new account was added
         id: newAccountTimer
         interval: 250
         running: true
         repeat: true
         onTriggered: {
-            if (accounts.count > accountListModel.count) {
+            // if accounts were not ready update again as soon as possible ...
+            if (accountsLoaded === false) {
                 accountsPage.loadDB()
+                if (accountsLoaded === false) {
+                    // if still not ready, wait ...
+                    return
+                }
             }
 
-            /* Check for undetected active accounts */
-            if (accounts.count > activeAccounts) {
-                    accountsPage.loadDB()
+            if (accounts.count > accountListModel.count) {
+                accountsPage.loadDB()
             }
 
             /* handle account requests */
@@ -157,10 +174,6 @@ Page {
           id: accountConnection
           target: accounts
 
-           /*onAuthenticationReply: {
-               console.log("AccountsPage :: onAuthenticationReply()")
-           }*/
-
           onAccessReply: {
               console.log("AccountsPage :: onAccessReply()")
 
@@ -176,12 +189,34 @@ Page {
 
                   /* TODO: activate in debug mode? */
                   //console.log("AccountsPage :: Account details are: " + " (" + account.accountId + ")" + " " + account.settings.host + "; " + authenticationData.Username + ":" + authenticationData.Password )
-                  apl.addPageToNextColumn(accountsPage, Qt.resolvedUrl("EditAccount.qml"), {accountID: account.accountId, defaultAccountName: account.displayName, remoteAddress: account.settings.host, remoteUser: authenticationData.Username })
+                  apl.addPageToNextColumn(accountsPage, Qt.resolvedUrl("EditAccount.qml"), {accountID: account.accountId, defaultAccountName: account.displayName, remoteAddress: account.settings.host, remoteUser: authenticationData.Username, isEditable: true })
 
                   // update
                   accountsPage.loadDB()
               }
 
+          }
+    }
+
+    Connections {
+          id: accountConnectionAccount
+          target: null
+
+          onAuthenticationReply: {
+              console.log("AccountsPage :: onAuthenticationReply()")
+              var reply = authenticationData
+
+              if ("errorCode" in reply) {
+                  console.warn("Authentication error: " + reply.errorText + " (" + reply.errorCode + ")")
+                  // TODO: report an error to user ?
+              } else {
+                  /* TODO: activate in debug mode? */
+                  //console.log("AccountsPage :: Account details are: " + " (" + account.accountId + ")" + " " + account.settings.host + "; " + authenticationData.Username + ":" + authenticationData.Password )
+                  apl.addPageToNextColumn(accountsPage, Qt.resolvedUrl("EditAccount.qml"), {accountID: target.accountId, defaultAccountName: target.displayName, remoteAddress: target.settings.host, remoteUser: reply.Username, isEditable: true })
+
+                  // update
+                  accountsPage.loadDB()
+              }
           }
     }
 
@@ -211,7 +246,7 @@ Page {
 
         Label{
             visible: !accountListModel.count
-            text: i18n.tr("on the panel to add a new accounts")
+            text: i18n.tr("on the panel to add a new account")
             anchors{horizontalCenter: parent.horizontalCenter; top: addIcon.bottom; topMargin: units.gu(2)}
         }
     }
@@ -228,7 +263,16 @@ Page {
             anchors{left:parent.left; right:parent.right}
 
             onClicked: {
-                apl.addPageToNextColumn(accountsPage, Qt.resolvedUrl("EditAccount.qml"), {accountID: model.accountID})
+                if (model.isEditable === true) {
+                    apl.addPageToNextColumn(accountsPage, Qt.resolvedUrl("EditAccount.qml"), {accountID: model.accountID, isEditable: model.isEditable})
+                } else {
+                    for (var j = 0; j < accounts.count; j++) {
+                        if (accounts.get(j, "account").accountId === model.accountID) {
+                            accountConnectionAccount.target = accounts.get(j, "account")
+                            accounts.get(j, "account").authenticate({})
+                        }
+                    }
+                }
             }
 
             Item {
@@ -294,6 +338,7 @@ Page {
                 actions: [
                     Action {
                         iconName: "delete"
+                        enabled: model.isEditable
                         text: ""
                         onTriggered: {
                             accountsPage.removeAccount(model.accountID)
@@ -308,13 +353,23 @@ Page {
                         iconName: "edit"
                         text: ""
                         onTriggered: {
-                            apl.addPageToNextColumn(accountsPage, Qt.resolvedUrl("EditAccount.qml"), {accountID: model.accountID})
+                            if (model.isEditable === true) {
+                                apl.addPageToNextColumn(accountsPage, Qt.resolvedUrl("EditAccount.qml"), {accountID: model.accountID, isEditable: model.isEditable})
+                            } else {
+                                for (var j = 0; j < accounts.count; j++) {
+                                    if (accounts.get(j, "account").accountId === model.accountID) {
+                                        accountConnectionAccount.target = accounts.get(j, "account")
+                                        accounts.get(j, "account").authenticate({})
+                                    }
+                                }
+                            }
                         }
                     },
 
                     Action {
                         iconName: "note-new"
                         text: ""
+                        enabled: model.isEditable
                         onTriggered: {
                             apl.addPageToNextColumn(accountsPage, Qt.resolvedUrl("EditTarget.qml"), {targetID: 0, accountID: model.accountID})
                         }

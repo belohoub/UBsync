@@ -16,19 +16,29 @@ Page {
     property string remoteAddress: "https://owncloud.tld/"
     property string remoteUser: "Unknown User"
     property int accountID: 0
+    property bool isEditable: false // Account can be updated
 
     /* Settings */
     property bool syncHidden: false
     property bool useMobileData: false
     property int syncFreq: 1
 
-
+    // accounts may be not ready ...
+    property bool accountsLoaded: false
 
     function loadDB(index) {
+
+        if (accounts.ready === false) {
+            return
+        } else {
+            accountsLoaded = true
+        }
 
         accountPage.db = LocalStorage.openDatabaseSync("UBsync", "1.0", "UBsync", 1000000);
 
         console.log("EditAccount :: Loading SyncAccounts index " + index)
+
+        var hasDatabaseEntry = false
 
         accountPage.db.transaction(
                     function(tx) {
@@ -39,8 +49,11 @@ Page {
                         var rs = tx.executeSql('SELECT * FROM SyncAccounts WHERE accountID = (?)', [index]);
 
                         for(var i = 0; i < rs.rows.length; i++) {
+                            hasDatabaseEntry = true
+
                             //accountID.text = "ID: " + rs.rows.item(i).accountID
                             accountName.text = rs.rows.item(i).accountName
+                            accountSymbolText.text = "" + accountName.text.charAt(0).toUpperCase();
 
                             accountPage.remoteAddress = rs.rows.item(i).remoteAddress
                             remoteText.text = accountPage.remoteAddress
@@ -61,18 +74,29 @@ Page {
                     }
                     )
 
-        // test if account is enabled in online accounts
-        accountSymbol.color = owncloud.settings.color_accountDisabled // color for disabled accounts
-        for (var j = 0; j < accounts.count; j++) {
-            if (accounts.get(j, "account").accountId === index) {
-                // account is enabled!
-                accountSymbol.color = owncloud.settings.color_accountEnabled
-                break
+        if (hasDatabaseEntry === false) {
+            accountSymbol.color = owncloud.settings.color_accountEnabledNotConfigured // account NOT Configured!
+            accountStateDescription.text = i18n.tr("Not Configured Account") + "<br>(" + i18n.tr("related targets will NOT sync") + ")"
+        } else {
+            // test if account is enabled in online accounts
+            accountSymbol.color = owncloud.settings.color_accountDisabled // color for disabled accounts
+            accountStateDescription.text = i18n.tr("Disabled Account")  + "<br>(" + i18n.tr("related targets will NOT sync") + ")"
+            for (var j = 0; j < accounts.count; j++) {
+                if (accounts.get(j, "account").accountId === index) {
+                    // account is enabled!
+                    accountSymbol.color = owncloud.settings.color_accountEnabled
+                    accountStateDescription.text = i18n.tr("Enabled Account") + "<br>(" + i18n.tr("related targets will sync") + ")"
+                    break
+                }
             }
         }
     }
 
     function updateDB(index) {
+        if (isEditable === false) {
+            return
+        }
+
         accountPage.db.transaction(
                     function(tx) {
 
@@ -108,6 +132,26 @@ Page {
         applicationId: "ubsync_UBsync"
     }
 
+    Timer {
+        // This timer checks if a accounts are ready
+        id: continuousCheck
+        interval: 250
+        running: true
+        repeat: true
+        onTriggered: {
+            // if accounts were not ready update again as soon as possible ...
+            if (accountsLoaded === false) {
+                accountPage.loadDB(accountPage.accountID)
+                if (accountsLoaded === false) {
+                    // if still not ready, wait ...
+                    return
+                } else {
+                    continuousCheck.repeat = false
+                }
+            }
+        }
+    }
+
     Connections {
             target: accountPage
 
@@ -115,7 +159,7 @@ Page {
                 /* re-render anytime page is shown */
                 console.log("EditAccount :: editAccountPage activated")
                 accountPage.loadDB(accountPage.accountID)
-                accountPage.updateDB(accountPage.accountID)
+                // Do not updateDb() here - only explicit save after any edit is required when creating a new account
             }
         }
 
@@ -188,6 +232,7 @@ Page {
             Item {
                 width: accountNameEditIcon.width
                 height: accountNameEditIcon.height
+                visible: isEditable
                 anchors {
                    right: parent.right; top: accountSymbol.top
                 }
@@ -209,8 +254,8 @@ Page {
                             accountName.readOnly = true;
                             accountNameEditIcon.name = "edit"
                             console.log("EditAccount :: Change Name Finished");
-                            accountPage.updateDB(accountPage.accountID);
-                            accountSymbolText.text = "" + accountName.text.charAt(0).toUpperCase();
+                            accountPage.updateDB(accountPage.accountID)
+                            accountPage.loadDB(accountPage.accountID)
                         }
                     }
                 }
@@ -235,6 +280,17 @@ Page {
                 onTextChanged: {
                     /* Invoke load DB */
                     accountPage.loadDB(accountPage.accountID)
+                }
+            }
+
+            Text {
+                id: accountStateDescription
+                text: ""
+                anchors.leftMargin: units.gu(2)
+                anchors.topMargin: units.gu(1)
+                font.pixelSize: units.gu(2)
+                anchors {
+                   left: accountSymbol.right; top: accountID.bottom
                 }
             }
 
@@ -314,6 +370,7 @@ Page {
             Switch{
                 id: mobileDataSwitch
                 checked: false
+                enabled: isEditable
                 anchors {
                    right: parent.right; verticalCenter: mobileDataLabel.verticalCenter
                 }
@@ -321,6 +378,7 @@ Page {
                     accountPage.useMobileData = mobileDataSwitch.checked
                     /* Invoke update DB */
                     accountPage.updateDB(accountPage.accountID)
+                    accountPage.loadDB(accountPage.accountID)
                 }
             }
 
@@ -344,6 +402,7 @@ Page {
             Switch{
                 id: hiddenFilesSwitch
                 checked: false
+                enabled: isEditable
                 anchors {
                    right: parent.right; verticalCenter: hiddenFilesLabel.verticalCenter
                 }
@@ -351,6 +410,7 @@ Page {
                     accountPage.syncHidden = hiddenFilesSwitch.checked
                     /* Invoke update DB */
                     accountPage.updateDB(accountPage.accountID)
+                    accountPage.loadDB(accountPage.accountID)
                 }
             }
 
@@ -374,6 +434,7 @@ Page {
             OptionSelector {
                 id: syncFrequency
                 selectedIndex: 0
+                enabled: isEditable
                 width: units.gu(20)
 
                 anchors {
@@ -395,6 +456,7 @@ Page {
                     syncFrequency.selectedIndex = index;
                     /* Invoke update DB */
                     accountPage.updateDB(accountPage.accountID)
+                    accountPage.loadDB(accountPage.accountID)
                 }
 
             }
