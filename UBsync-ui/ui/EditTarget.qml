@@ -30,7 +30,7 @@ Page {
     property bool accountsLoaded: false
 
 
-    function updateSymbolColors() {
+    function updateSymbol() {
         if (accountEnabled === false) {
             targetSymbol.color = owncloud.settings.color_targetAccountDisabled
             accountSymbol.color = owncloud.settings.color_accountDisabled
@@ -45,6 +45,9 @@ Page {
             targetSymbol.color = owncloud.settings.color_targetActive
             accountSymbol.color = owncloud.settings.color_accountEnabled
         }
+
+        targetSymbolText.text = "" + targetName.text.charAt(0).toUpperCase()
+        accountSymbolText.text = "" + accountName.text.charAt(0).toUpperCase()
     }
 
 
@@ -111,7 +114,7 @@ Page {
             }
         }
 
-        updateSymbolColors()
+        updateSymbol()
     }
 
     function updateDB() {
@@ -168,6 +171,18 @@ Page {
                     // if still not ready, wait ...
                     return
                 } else {
+                    console.log("EditTarget :: Authenticate accountID: " + targetPage.accountID)
+                    console.log("EditTarget ::   - account CNT: " + accounts.count)
+
+                    for (var j = 0; j < accounts.count; j++) {
+                        //console.log("EditTarget ::   - accountID: " + accounts.get(j, "account").accountId)
+                        if (accounts.get(j, "account").accountId === targetPage.accountID) {
+                            console.log("EditTarget :: Account auth to get password ... ")
+                            accountConnection.target = accounts.get(j, "account")
+                            accounts.get(j, "account").authenticate({})
+                        }
+                    }
+
                     continuousCheck.repeat = false
                 }
             }
@@ -203,19 +218,6 @@ Page {
                 console.log("EditTarget :: editTargetPage activated")
                 targetPage.loadDB()
                 targetPage.updateDB() // initial saving of the new target
-
-                console.log("EditTarget :: Authenticate accountID: " + targetPage.accountID)
-                console.log("EditTarget ::   - account CNT: " + accounts.count)
-
-                for (var j = 0; j < accounts.count; j++) {
-                    //console.log("EditTarget ::   - accountID: " + accounts.get(j, "account").accountId)
-                    if (accounts.get(j, "account").accountId === targetPage.accountID) {
-                        console.log("EditTarget :: Account auth to get password ... ")
-                        accountConnection.target = accounts.get(j, "account")
-                        accounts.get(j, "account").authenticate({})
-                    }
-                }
-
             }
         }
 
