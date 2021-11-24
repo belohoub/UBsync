@@ -255,7 +255,7 @@ Page {
                     }
                 }
 
-                Text {
+                Label {
                     id: targetIconText
                     text: model.targetName.charAt(0).toUpperCase()
                     color: "white"
@@ -265,7 +265,7 @@ Page {
                     }
                 }
 
-                Text {
+                Label {
                     id: targetName
                     text: model.targetName
                     height: units.gu(6)
@@ -276,7 +276,7 @@ Page {
                     }
                 }
 
-                Text {
+                Label {
                     id: targetID
                     text: model.targetID
                     font.pixelSize: units.gu(2)

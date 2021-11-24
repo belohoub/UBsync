@@ -298,7 +298,7 @@ Page {
                     }
                 }
 
-                Text {
+                Label {
                     id: accountIconText
                     text: model.accountName.charAt(0).toUpperCase()
                     color: "white"
@@ -308,7 +308,7 @@ Page {
                     }
                 }
 
-                Text {
+                Label {
                     id: accountName
                     text: model.accountName
                     height: units.gu(6)
@@ -319,7 +319,7 @@ Page {
                     }
                 }
 
-                Text {
+                Label {
                     id: accountID
                     text: model.accountID
                     font.pixelSize: units.gu(2)

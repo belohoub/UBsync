@@ -171,7 +171,13 @@ Page {
 
         trailingActionBar{
             actions: [
-
+                Action {
+                    iconName: "note-new"
+                    text: i18n.tr("New Target")
+                    onTriggered: {
+                        apl.addPageToNextColumn(accountPage, Qt.resolvedUrl("EditTarget.qml"), {targetID: 0, accountID: accountPage.accountID})
+                    }
+                }
             ]
         }
     }
@@ -206,7 +212,7 @@ Page {
                 }
             }
 
-            Text {
+            Label {
                 id: accountSymbolText
                 text: "U"  /* Modified by accountName change */
                 color: "white"
@@ -220,9 +226,12 @@ Page {
             TextEdit {
                 id: accountName
                 text: accountPage.defaultAccountName
+                color: accountID.color // inherit text color from the element following the system color theme
                 anchors.leftMargin: units.gu(2)
                 font.pixelSize: units.gu(3)
                 readOnly: true
+                wrapMode: TextEdit.WrapAnywhere
+                width: parent.width - accountSymbol.width - accountNameEditIcon.width - units.gu(4)
                 anchors {
                    left: accountSymbol.right; top: accountSymbol.top
                 }
@@ -268,7 +277,7 @@ Page {
             }
 
 
-            Text {
+            Label {
                 id: accountID
                 text: "ID: " + accountPage.accountID
                 anchors.leftMargin: units.gu(2)
@@ -283,7 +292,7 @@ Page {
                 }
             }
 
-            Text {
+            Label {
                 id: accountStateDescription
                 text: ""
                 anchors.leftMargin: units.gu(2)
@@ -311,7 +320,7 @@ Page {
                 }
             }
 
-            Text {
+            Label {
                 id: remoteText
                 text: "" + accountPage.remoteAddress
                 anchors.leftMargin: units.gu(3)
@@ -339,7 +348,7 @@ Page {
                 }
             }
 
-            Text {
+            Label {
                 id: usernameText
                 text: "" + accountPage.remoteUser
                 anchors.leftMargin: units.gu(3)
@@ -438,7 +447,9 @@ Page {
                 width: units.gu(20)
 
                 anchors {
-                   right: parent.right; verticalCenter: frequencyLabel.verticalCenter
+                   right: parent.right
+                   //verticalCenter: frequencyLabel.verticalCenter
+                   top: frequencyLabel.top
                 }
 
                 model: [0, 1, 2, 4, 6, 12, 24, 48, 168]

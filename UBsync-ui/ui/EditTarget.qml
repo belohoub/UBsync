@@ -264,7 +264,7 @@ Page {
                 }
             }
 
-            Text {
+            Label {
                 id: targetSymbolText
                 text: "U"  /* Modified by Name change */
                 color: "white"
@@ -278,8 +278,11 @@ Page {
             TextEdit {
                 id: targetName
                 text: "New Target"
+                color: targetIDText.color // inherit text color from the element following the system color theme
                 anchors.leftMargin: units.gu(2)
                 font.pixelSize: units.gu(3)
+                wrapMode: TextEdit.WrapAnywhere
+                width: parent.width - targetSymbol.width - targetNameEditIcon.width - units.gu(4)
                 anchors {
                    left: targetSymbol.right; top: targetSymbol.top
                 }
@@ -326,7 +329,7 @@ Page {
                 }
             }
 
-            Text {
+            Label {
                 id: targetIDText
                 text: "ID: " + targetPage.targetID
                 anchors.leftMargin: units.gu(2)
@@ -359,7 +362,7 @@ Page {
                 }
             }
 
-            Text {
+            Label {
                 id: accountSymbolText
                 text: "U"  /* Modified by accountName change */
                 color: "white"
@@ -370,12 +373,11 @@ Page {
             }
 
 
-            TextEdit {
+            Label {
                 id: accountName
                 text: "Unknown Account"
                 anchors.leftMargin: units.gu(2)
                 font.pixelSize: units.gu(2)
-                readOnly: true
                 anchors {
                    left: accountSymbol.right; verticalCenter: accountSymbol.verticalCenter
                 }
@@ -407,7 +409,7 @@ Page {
                 }
                 }
 
-            Text {
+            Label {
                 id: localPath
                 text: ""
                 anchors.leftMargin: units.gu(3)
@@ -451,7 +453,7 @@ Page {
                 }
             }
 
-            Text {
+            Label {
                 id: remotePath
                 text: ""
                 anchors.leftMargin: units.gu(3)
