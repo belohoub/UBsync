@@ -43,7 +43,7 @@ Page {
         accountPage.db.transaction(
                     function(tx) {
                         // Create table if it doesn't already exist
-                        tx.executeSql('CREATE TABLE IF NOT EXISTS SyncAccounts(accountID INTEGER PRIMARY KEY, accountName TEXT, remoteAddress TEXT, remoteUser TEXT, syncHidden BOOLEAN, useMobileData BOOLEAN, syncFreq INTEGER)');
+                        //tx.executeSql('CREATE TABLE IF NOT EXISTS SyncAccounts(accountID INTEGER PRIMARY KEY, accountName TEXT, remoteAddress TEXT, remoteUser TEXT, syncHidden BOOLEAN, useMobileData BOOLEAN, syncFreq INTEGER)');
 
                         // load selected account
                         var rs = tx.executeSql('SELECT * FROM SyncAccounts WHERE accountID = (?)', [index]);
@@ -77,15 +77,18 @@ Page {
         if (hasDatabaseEntry === false) {
             accountSymbol.color = owncloud.settings.color_accountEnabledNotConfigured // account NOT Configured!
             accountStateDescription.text = i18n.tr("Not Configured Account") + "<br>(" + i18n.tr("related targets will NOT sync") + ")"
+            accountStateIcon.name = "dialog-warning-symbolic"
         } else {
             // test if account is enabled in online accounts
             accountSymbol.color = owncloud.settings.color_accountDisabled // color for disabled accounts
             accountStateDescription.text = i18n.tr("Disabled Account")  + "<br>(" + i18n.tr("related targets will NOT sync") + ")"
+            accountStateIcon.name = "dialog-warning-symbolic"
             for (var j = 0; j < accounts.count; j++) {
                 if (accounts.get(j, "account").accountId === index) {
                     // account is enabled!
                     accountSymbol.color = owncloud.settings.color_accountEnabled
                     accountStateDescription.text = i18n.tr("Enabled Account") + "<br>(" + i18n.tr("related targets will sync") + ")"
+                    accountStateIcon.name = "info"
                     break
                 }
             }
@@ -226,11 +229,13 @@ Page {
             TextEdit {
                 id: accountName
                 text: accountPage.defaultAccountName
+                height: accountSymbol.height/3
                 color: accountID.color // inherit text color from the element following the system color theme
                 anchors.leftMargin: units.gu(2)
                 font.pixelSize: units.gu(3)
                 readOnly: true
                 wrapMode: TextEdit.WrapAnywhere
+                inputMethodHints: Qt.ImhNoPredictiveText
                 width: parent.width - accountSymbol.width - accountNameEditIcon.width - units.gu(4)
                 anchors {
                    left: accountSymbol.right; top: accountSymbol.top
@@ -282,24 +287,14 @@ Page {
                 text: "ID: " + accountPage.accountID
                 anchors.leftMargin: units.gu(2)
                 anchors.topMargin: units.gu(1)
+                anchors.bottomMargin: units.gu(1)
                 font.pixelSize: units.gu(3)
                 anchors {
-                   left: accountSymbol.right; top: accountName.bottom
+                   left: accountSymbol.right; bottom: accountSymbol.bottom
                 }
                 onTextChanged: {
                     /* Invoke load DB */
                     accountPage.loadDB(accountPage.accountID)
-                }
-            }
-
-            Label {
-                id: accountStateDescription
-                text: ""
-                anchors.leftMargin: units.gu(2)
-                anchors.topMargin: units.gu(1)
-                font.pixelSize: units.gu(2)
-                anchors {
-                   left: accountSymbol.right; top: accountID.bottom
                 }
             }
 
@@ -323,6 +318,10 @@ Page {
             Label {
                 id: remoteText
                 text: "" + accountPage.remoteAddress
+                wrapMode: Text.WrapAnywhere
+                maximumLineCount: 2
+                //width: parent.width - remoteIcon.width - units.gu(10)
+                width: accountName.width + units.gu(12) /* TODO remove this hack - computing width from parent fails here ... why? */
                 anchors.leftMargin: units.gu(3)
                 anchors.verticalCenterOffset: 0
                 font.pixelSize: units.gu(2)
@@ -351,6 +350,10 @@ Page {
             Label {
                 id: usernameText
                 text: "" + accountPage.remoteUser
+                wrapMode: Text.WrapAnywhere
+                maximumLineCount: 2
+                //width: parent.width - usernameIcon.width - units.gu(10)
+                width: accountName.width + units.gu(12) /* TODO remove this hack - computing width from parent fails here ... why? */
                 anchors.leftMargin: units.gu(3)
                 anchors.verticalCenterOffset: 0
                 font.pixelSize: units.gu(2)
@@ -455,7 +458,7 @@ Page {
                 model: [0, 1, 2, 4, 6, 12, 24, 48, 168]
 
                 delegate: OptionSelectorDelegate {
-                    text: syncFrequency.model[index] === 0 ? i18n.tr("No Sync") : syncFrequency.model[index] + " " + i18n.tr("hours")
+                    text: syncFrequency.model[index] === 0 ? i18n.tr("No Sync") : syncFrequency.model[index] + " " + i18n.tr("hour", "hours", syncFrequency.model[index])
                 }
 
                 onSelectedIndexChanged:{
@@ -471,6 +474,63 @@ Page {
                 }
 
             }
+            }
+
+
+            /* State information */
+            Item {
+                width: parent.width
+                height: 2 * accountStateIcon.height + units.gu(10)
+
+                Icon {
+                    id: accountStateIcon
+                    visible: (serviceController.serviceRunning)
+                    name: "info"
+                    width: units.gu(6)
+                    height: width
+                    anchors {
+                       left: parent.left
+                       bottom: parent.bottom
+                    }
+                }
+
+                Icon {
+                    id: syncServiceIcon
+                    visible: !(serviceController.serviceRunning)
+                    name: "dialog-warning-symbolic"
+                    width: units.gu(6)
+                    height: width
+                    anchors {
+                       left: parent.left
+                       bottom: parent.bottom
+                    }
+                }
+
+                Label {
+                    id: accountStateDescription
+                    visible: (serviceController.serviceRunning)
+                    text: ""
+                    anchors.leftMargin: units.gu(2)
+                    anchors.topMargin: units.gu(1)
+                    font.pixelSize: units.gu(2)
+                    anchors {
+                        left: accountStateIcon.right; verticalCenter: accountStateIcon.verticalCenter
+                        leftMargin: units.gu(2)
+                    }
+                }
+
+                Label{
+                        id: syncServiceStatus
+                        visible: !(serviceController.serviceRunning)
+                        font.pixelSize: units.gu(2)
+                        width: parent.width - accountStateIcon.width - units.gu(4)
+                        wrapMode: Text.WordWrap
+                        text: serviceController.serviceRunning ? "" : i18n.tr("Synchronization service not running! Please, go to UBsync Settings and start the sync service unless the target synchronization will not begin.")
+                        anchors {
+                            left: accountStateIcon.right; verticalCenter: accountStateIcon.verticalCenter
+                            leftMargin: units.gu(2)
+                        }
+                    }
             }
 
         }

@@ -228,16 +228,18 @@ Page {
     Item {
         //Shown only if there are no items in accounts
         anchors{centerIn: parent}
+        visible: !accountListModel.count
+        width: parent.width - units.gu(4)
 
         Label{
-            visible: !accountListModel.count
+            wrapMode: Text.WrapAnywhere
+            width: parent.width - units.gu(4)
             text: i18n.tr("No accounts, press")
             anchors{horizontalCenter: parent.horizontalCenter; bottom: addIcon.top; bottomMargin: units.gu(2)}
         }
 
         Icon {
             id: addIcon
-            visible: !accountListModel.count
             name: "add"
             width: units.gu(4)
             height: width
@@ -245,7 +247,8 @@ Page {
         }
 
         Label{
-            visible: !accountListModel.count
+            wrapMode: Text.WrapAnywhere
+            width: parent.width - units.gu(4)
             text: i18n.tr("on the panel to add a new account")
             anchors{horizontalCenter: parent.horizontalCenter; top: addIcon.bottom; topMargin: units.gu(2)}
         }
@@ -310,6 +313,8 @@ Page {
 
                 Label {
                     id: accountName
+                    wrapMode: Text.WrapAnywhere
+                    width: parent.width - accountIcon.width - units.gu(4)
                     text: model.accountName
                     height: units.gu(6)
                     font.pixelSize: units.gu(3)
@@ -319,7 +324,7 @@ Page {
                     }
                 }
 
-                Label {
+                /*Label {
                     id: accountID
                     text: model.accountID
                     font.pixelSize: units.gu(2)
@@ -327,7 +332,7 @@ Page {
                     anchors {
                        left: accountIcon.right; top: accountName.bottom
                     }
-                }
+                }*/
 
                 /* TODO display number of sync targets ? */
 

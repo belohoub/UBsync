@@ -34,16 +34,24 @@ Page {
         if (accountEnabled === false) {
             targetSymbol.color = owncloud.settings.color_targetAccountDisabled
             accountSymbol.color = owncloud.settings.color_accountDisabled
+            accountStateDescription.text = i18n.tr("Account Disabled") + "\n(" + i18n.tr("target will NOT sync") + ")"
+            accountStateIcon.name = "dialog-warning-symbolic"
         } else if (accountConfigured === false) {
-            accountName.text = i18n.tr("Not Configured Account") + "\n(" + i18n.tr("related targets will NOT sync") + ")"
+            accountName.text = i18n.tr("Account Not Configured")
             targetSymbol.color = owncloud.settings.color_targetAccountDisabled
             accountSymbol.color = owncloud.settings.color_accountEnabledNotConfigured
+            accountStateDescription.text = i18n.tr("Account Not Configured") + "\n(" + i18n.tr("target will NOT sync") + ")"
+            accountStateIcon.name = "dialog-warning-symbolic"
         } else if (activeSwitch.checked === false) {
             targetSymbol.color = owncloud.settings.color_targetInactive
             accountSymbol.color = owncloud.settings.color_accountEnabled
+            accountStateDescription.text = i18n.tr("Target Disabled") + "\n(" + i18n.tr("target will NOT sync") + ")"
+            accountStateIcon.name = "dialog-warning-symbolic"
         } else {
             targetSymbol.color = owncloud.settings.color_targetActive
             accountSymbol.color = owncloud.settings.color_accountEnabled
+            accountStateDescription.text = i18n.tr("Target Enabled") + "\n(" + i18n.tr("target will sync") + ")"
+            accountStateIcon.name = "info"
         }
 
         targetSymbolText.text = "" + targetName.text.charAt(0).toUpperCase()
@@ -66,7 +74,7 @@ Page {
         targetPage.db.transaction(
                     function(tx) {
                         // Create table if it doesn't already exist
-                        tx.executeSql('CREATE TABLE IF NOT EXISTS SyncTargets(targetID INTEGER PRIMARY KEY AUTOINCREMENT, accountID INTEGER, localPath TEXT, remotePath TEXT, targetName TEXT, active BOOLEAN)');
+                        //tx.executeSql('CREATE TABLE IF NOT EXISTS SyncTargets(targetID INTEGER PRIMARY KEY AUTOINCREMENT, accountID INTEGER, localPath TEXT, remotePath TEXT, targetName TEXT, active BOOLEAN)');
 
                         // load selected target
                         var rs = tx.executeSql('SELECT * FROM SyncTargets WHERE targetID = (?)', targetPage.targetID);
@@ -278,10 +286,12 @@ Page {
             TextEdit {
                 id: targetName
                 text: "New Target"
+                height: targetSymbol.height/3
                 color: targetIDText.color // inherit text color from the element following the system color theme
                 anchors.leftMargin: units.gu(2)
                 font.pixelSize: units.gu(3)
                 wrapMode: TextEdit.WrapAnywhere
+                inputMethodHints: Qt.ImhNoPredictiveText
                 width: parent.width - targetSymbol.width - targetNameEditIcon.width - units.gu(4)
                 anchors {
                    left: targetSymbol.right; top: targetSymbol.top
@@ -334,12 +344,13 @@ Page {
                 text: "ID: " + targetPage.targetID
                 anchors.leftMargin: units.gu(2)
                 anchors.topMargin: units.gu(1)
+                anchors.bottomMargin: units.gu(1)
                 font.pixelSize: units.gu(3)
                 anchors {
-                   left: targetSymbol.right; top: targetName.bottom
+                   left: targetSymbol.right; bottom: targetSymbol.bottom
                 }
                 onTextChanged: {
-                    /* Invoke load DB */
+                    // Invoke load DB
                     targetPage.loadDB()
                 }
             }
@@ -376,6 +387,9 @@ Page {
             Label {
                 id: accountName
                 text: "Unknown Account"
+                wrapMode: Text.WrapAnywhere
+                maximumLineCount: 2
+                width: parent.width - accountSymbol.width - units.gu(4)
                 anchors.leftMargin: units.gu(2)
                 font.pixelSize: units.gu(2)
                 anchors {
@@ -412,6 +426,10 @@ Page {
             Label {
                 id: localPath
                 text: ""
+                wrapMode: Text.WrapAnywhere
+                maximumLineCount: 2
+                //width: parent.width - localIcon.width - units.gu(10)
+                width: targetName.width + units.gu(12) /* TODO remove this hack - computing width from parent fails here ... why? */
                 anchors.leftMargin: units.gu(3)
                 anchors.verticalCenterOffset: 0
                 font.pixelSize: units.gu(2)
@@ -456,6 +474,10 @@ Page {
             Label {
                 id: remotePath
                 text: ""
+                wrapMode: Text.WrapAnywhere
+                maximumLineCount: 2
+                //width: parent.width - remoteIcon.width - units.gu(10)
+                width: targetName.width + units.gu(12) /* TODO remove this hack - computing width from parent fails here ... why? */
                 anchors.leftMargin: units.gu(3)
                 anchors.verticalCenterOffset: 0
                 font.pixelSize: units.gu(2)
@@ -474,6 +496,7 @@ Page {
             }
 
             Item {
+                id: mobileDataItem
                 anchors.topMargin: units.gu(10)
                 width: parent.width
                 height: mobileDataLabel.height
@@ -503,6 +526,62 @@ Page {
 
             }
 
+
+            /* State information */
+            Item {
+                width: parent.width
+                height: 2 * warningIcon.height + units.gu(10)
+
+                Icon {
+                    id: warningIcon
+                    visible: !(serviceController.serviceRunning)
+                    name: "dialog-warning-symbolic"
+                    width: units.gu(6)
+                    height: width
+                    anchors {
+                       left: parent.left
+                       bottom: parent.bottom
+                    }
+                }
+
+                Icon {
+                    id: accountStateIcon
+                    visible: (serviceController.serviceRunning)
+                    name: "info"
+                    width: units.gu(6)
+                    height: width
+                    anchors {
+                       left: parent.left
+                       bottom: parent.bottom
+                    }
+                }
+
+                Label{
+                        id: syncServiceStatus
+                        visible: !(serviceController.serviceRunning)
+                        font.pixelSize: units.gu(2)
+                        width: parent.width - warningIcon.width - units.gu(4)
+                        wrapMode: Text.WordWrap
+                        text: serviceController.serviceRunning ? "" : i18n.tr("Synchronization service not running! Please, go to UBsync Settings and start the sync service unless the target synchronization will not begin.")
+                        anchors {
+                            left: warningIcon.right; verticalCenter: warningIcon.verticalCenter
+                            leftMargin: units.gu(2)
+                        }
+                    }
+
+                Label {
+                    id: accountStateDescription
+                    visible: (serviceController.serviceRunning)
+                    text: ""
+                    anchors.leftMargin: units.gu(2)
+                    anchors.topMargin: units.gu(1)
+                    font.pixelSize: units.gu(2)
+                    anchors {
+                        left: accountStateIcon.right; verticalCenter: accountStateIcon.verticalCenter
+                        leftMargin: units.gu(2)
+                    }
+                }
+            }
         }
 
     }

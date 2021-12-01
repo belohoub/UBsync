@@ -15,8 +15,24 @@ Page {
     // accounts may be not ready ...
     property bool accountsLoaded: false
 
+    /* Init database */
+    function createDB() {
+
+        targetsPage.db = LocalStorage.openDatabaseSync("UBsync", "1.0", "UBsync", 1000000);
+
+        targetsPage.db.transaction(
+                    function(tx) {
+                        // Create tables if it doesn't already exist
+                        tx.executeSql('CREATE TABLE IF NOT EXISTS SyncAccounts(accountID INTEGER PRIMARY KEY, accountName TEXT, remoteAddress TEXT, remoteUser TEXT, syncHidden BOOLEAN, useMobileData BOOLEAN, syncFreq INTEGER)');
+                        tx.executeSql('CREATE TABLE IF NOT EXISTS SyncTargets(targetID INTEGER PRIMARY KEY AUTOINCREMENT, accountID INTEGER, localPath TEXT, remotePath TEXT, targetName TEXT, active BOOLEAN)');
+                    }
+                    )
+    }
+
     /* load current data from DB */
     function loadDB() {
+
+        createDB();
 
         if (accounts.ready === false) {
             return
@@ -116,18 +132,6 @@ Page {
         }
     }
 
-    Timer {
-        // This timer delays target/account init
-        id: startTimer
-        interval: 250
-        running: true
-        repeat: false
-        onTriggered: {
-            console.log("TargetsPage :: targetsPage delayed activation")
-            targetsPage.loadDB()
-        }
-    }
-
     Connections {
             target: targetsPage
 
@@ -158,23 +162,10 @@ Page {
 
     header: PageHeader {
         id: header
-        title: "UBsync"
+        title: "Sync Targets"
 
         trailingActionBar{
             actions: [
-                /* TODO: re-think actions here ? */
-                Action {
-                    iconName: "settings"
-                    text: i18n.tr("Settings")
-                    onTriggered: apl.addPageToNextColumn(apl.primaryPage, Qt.resolvedUrl("SyncServicePage.qml"))
-                },
-
-                Action {
-                    iconName: "account"
-                    text: i18n.tr("Accounts")
-                    onTriggered: apl.addPageToNextColumn(apl.primaryPage, Qt.resolvedUrl("AccountsPage.qml"))
-                },
-
                 Action {
                     iconName: "info"
                     text: i18n.tr("About")
@@ -185,33 +176,51 @@ Page {
                     iconName: "help"
                     text: i18n.tr("Help")
                     onTriggered: apl.addPageToNextColumn(apl.primaryPage, Qt.resolvedUrl("HelpPage.qml"))
+                },
+
+                Action {
+                    iconName: "settings"
+                    text: i18n.tr("Settings")
+                    onTriggered: apl.addPageToNextColumn(apl.primaryPage, Qt.resolvedUrl("SyncServicePage.qml"))
+                },
+
+                Action {
+                    iconName: "account"
+                    text: i18n.tr("Accounts")
+                    onTriggered: apl.addPageToNextColumn(apl.primaryPage, Qt.resolvedUrl("AccountsPage.qml"))
                 }
             ]
+
+            // Display all icons by default - 4 should be still OK for all possible displays
+            numberOfSlots: 4
         }
     }
 
     Item {
         //Shown only if there are no items in targets
         anchors{centerIn: parent}
+        width: parent.width
+        visible: !targetListModel.count
 
         Label{
-            visible: !targetListModel.count
-            text: i18n.tr("No targets, go to")
+            wrapMode: Text.WrapAnywhere
+            width: parent.width - units.gu(4)
+            text: i18n.tr("No synchronization targets configured, press")
             anchors{horizontalCenter: parent.horizontalCenter; bottom: addCenterHelp.top; bottomMargin: units.gu(2)}
         }
 
-        Label {
+        Icon {
             id: addCenterHelp
-            visible: !targetListModel.count
-            text: i18n.tr("Targets Settings")
+            name: "account"
             width: units.gu(4)
             height: width
             anchors{centerIn: parent}
         }
 
         Label{
-            visible: !targetListModel.count
-            text: i18n.tr("and create one ...")
+            wrapMode: Text.WrapAnywhere
+            width: parent.width - units.gu(4)
+            text: i18n.tr("in the main panel to enter Account Settings. In Account Settings, create a new synchronization target from an existing or new account. For explanation, see the help page.")
             anchors{horizontalCenter: parent.horizontalCenter; top: addCenterHelp.bottom; topMargin: units.gu(2)}
         }
     }
@@ -267,6 +276,8 @@ Page {
 
                 Label {
                     id: targetName
+                    wrapMode: Text.WrapAnywhere
+                    width: parent.width - targetIcon.width - units.gu(4)
                     text: model.targetName
                     height: units.gu(6)
                     font.pixelSize: units.gu(3)
@@ -276,7 +287,7 @@ Page {
                     }
                 }
 
-                Label {
+                /*Label {
                     id: targetID
                     text: model.targetID
                     font.pixelSize: units.gu(2)
@@ -284,7 +295,7 @@ Page {
                     anchors {
                        left: targetIcon.right; top: targetName.bottom
                     }
-                }
+                }*/
 
                 /* TODO display number of sync targets ? */
 
