@@ -81,7 +81,7 @@ Page {
                     width: parent.width
                     horizontalAlignment: Text.AlignHCenter
                     wrapMode: Text.WordWrap
-                    text: i18n.tr("If you are willing to help please look at %1").arg("<a href=\"https://bugs.launchpad.net/owncloud-sync/ubsync/+bugs\">the bug list</a>")
+                    text: i18n.tr("If you are willing to help please look at %1").arg("<a href=\"https://github.com/belohoub/UBsync/issues\">the issue tracker</a>")
                     onLinkActivated: Qt.openUrlExternally(link)
                  }
             }

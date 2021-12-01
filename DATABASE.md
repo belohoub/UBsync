@@ -28,3 +28,4 @@ The following columns are included:
   * *localPath* - local pyth; type = TEXT
   * *remotePath* - remote path; type = TEXT
   * *active* - is this target active (targets may be temporarily deactivated by setting *active* FALSE); type = BOOLEAN
+  * TODO ADD *lastSync* - last synchronization time; type = DATETIME

@@ -1,50 +1,49 @@
-**This repository is related to the discussion at [forums.ubports.com](https://forums.ubports.com/topic/5116/help-creating-an-ubsync-arm64-version/30) related to missing amr64 support for UBsync**
+# UBsync
 
-**This fork needs revision: armhf build completely untested, while the arm64 build is poorly tested**
+UBsync is the featured application for OwnCloud/Nextcloud synchronization on [ubuntu-touch](https://ubports.com/es/).
 
-**This project will be merged back to launchpad, the last version here currently works, but it is for testing only**
-
-# Project presentation
+[![OpenStore](https://open-store.io/badges/en_US.png)](https://open-store.io/app/ubsync)
 
 <img src="https://framagit.org/ernesst/UBsync/raw/master/Owncloud-Sync/UBsync.png" width="196">
 
-UBsync is a forked of [ownCloud-sync](https://launchpad.net/owncloud-sync) dedicated to Nextcloud application for **Ubuntu touch 16.04**,  supported by [Ubports](https://www.ubports.com).
 
-# Multiarch Changelog (03-02-2021)
-1. clickable.json added
-1. arm64 version of owncloudcmd is 2.5.3; arm32 remains unchanged
-1. arch detection and paths to owncloudcmd changed in *OwncloudSyncd/owncloudsyncd.cpp*
-1. arch detection and paths for libs added to *OwncloudSync/servicecontrol.cpp*
-1. included support for owncloud account in ubuntu-touch (up to now, only nextcloud account was used, even those behave equaly from the UBsync point of view)
-1. [build instructions](BUILD.md)
+## Project History
+UBsync was originally forked from [ownCloud-sync](https://launchpad.net/owncloud-sync), a dedicated Nextcloud application for **Ubuntu touch 16.04**,  supported by [Ubports](https://www.ubports.com).
 
-# 0.4 Changelog
-1. Migrate the source to https://launchpad.net/owncloud-sync
-1. Allo to synchronize hidden folder on the phone
-1. Add hidden file synchronization
-1. Update about.qml
+This repository continues, where [UBsync Launchpad Project](https://code.launchpad.net/~ocs-team/owncloud-sync/UBsync) finished.
 
-# 0.3 Changelog
-1. Compiled for Xenial,
-1. Upgraded of owncloudcmd to nextcloudcmd 2.3.3, [Bug 1592538](https://bugs.launchpad.net/owncloud-sync/+bug/1592538)
-1. Get ride off the bug "owncloud network access is disabled" - [Bug 1572321](https://bugs.launchpad.net/ubuntu/+source/owncloud-client/+bug/1572321?comments=all),
-1. Use of Online Account - [bug 1573802](https://bugs.launchpad.net/owncloud-sync/+bug/1573802), in the hope to get ride off the password in the config file in the future 
-1. Change the frequencies from seconds to hours,
-1. Acknowledge qWebdavlib - [bug 1592750](https://bugs.launchpad.net/owncloud-sync/+bug/1592750)
-1. New icon,
+This fork was originally created as a reaction to the discussion at [forums.ubports.com](https://forums.ubports.com/topic/5116/help-creating-an-ubsync-arm64-version/30) related to missing amr64 support for UBsync.
 
-# Thanks 
+Later the development was returned to Launchpad for a short period but after discussions in the developers/testers community - since version 0.7, 
+the development was moved to GitHub because GitHub remains one of two major platforms, 
+where UBports community lives and Github-centric development is more comfortable for current maintainers.
 
-I would like to thanks several projects / persons 
+Code evolution is documented in the [changelog](CHANGELOG.md).
+
+## Credits
+
+We would like to thank several projects/persons:
 1. [ownCloud-sync application](https://launchpad.net/owncloud-sync),
 1. [Nextcloudcmd](https://docs.nextcloud.com/desktop/2.3/advancedusage.html), a Nextcloud client,
 1. [qWebdavlib](https://github.com/mhaller/qwebdavlib) a Qt library for WebDAV,
 1. Joan CiberSheep for the icon using [Suru Icon Theme elements](https://github.com/snwh/suru-icon-theme)
 
+### Current and Past Contributors
+  * Jan Belohoubek <jan.belohoubek@fit.cvut.cz>
+  * Ernesst <slash.tux@gmail.com>
+  * ownCloud-sync <https://launchpad.net/owncloud-sync>
 
-# Contribution
+## Contribute
 
-Any help on the code is welcomed to enhance the app. 
+Please use the [issue tracker](https://github.com/belohoub/UBsync/issues) to report a bug or request a new feature.
+Any help on the code is welcomed to enhance the app!
 
 
-Ernesst
+### Translations
+
+TBD
+
+
+### Documentation
+  * [BUILD.md](BUILD.md)
+  * [DATABASE.md](DATABASE.md)
