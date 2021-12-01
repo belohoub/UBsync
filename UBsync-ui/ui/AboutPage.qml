@@ -14,6 +14,7 @@ Page {
     Flickable {
         id: flickable
 
+        flickableDirection: Flickable.AutoFlickIfNeeded
         anchors.fill: parent
         contentHeight: dataColumn.height + units.gu(10) + dataColumn.anchors.topMargin
 

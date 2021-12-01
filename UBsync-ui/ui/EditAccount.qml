@@ -189,6 +189,7 @@ Page {
         id: flickable
         anchors.fill: parent
         contentHeight: accountEditColumn.height
+        flickableDirection: Flickable.AutoFlickIfNeeded
 
         Column {
             id: accountEditColumn

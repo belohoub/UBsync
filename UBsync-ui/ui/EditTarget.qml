@@ -244,6 +244,8 @@ Page {
 
     Flickable {
         id: flickable
+
+        flickableDirection: Flickable.AutoFlickIfNeeded
         anchors.fill: parent
         contentHeight: accountEditColumn.height
 
@@ -260,100 +262,100 @@ Page {
                 height: targetSymbol.height
                 anchors.topMargin: units.gu(10)
 
-            Rectangle {
-                id: targetSymbol
-                color: "silver" /*"#0000B5"*/
-                width: units.gu(15)
-                height: units.gu(15)
-                border.width: 0
-                radius: units.gu(2)
-                anchors {
-                   left: parent.left; top: parent.top
-                }
-            }
-
-            Label {
-                id: targetSymbolText
-                text: "U"  /* Modified by Name change */
-                color: "white"
-                font.pixelSize: units.gu(10)
-                anchors {
-                   horizontalCenter: targetSymbol.horizontalCenter; verticalCenter: targetSymbol.verticalCenter
-                }
-            }
-
-
-            TextEdit {
-                id: targetName
-                text: "New Target"
-                height: targetSymbol.height/3
-                color: targetIDText.color // inherit text color from the element following the system color theme
-                anchors.leftMargin: units.gu(2)
-                font.pixelSize: units.gu(3)
-                wrapMode: TextEdit.WrapAnywhere
-                inputMethodHints: Qt.ImhNoPredictiveText
-                width: parent.width - targetSymbol.width - targetNameEditIcon.width - units.gu(4)
-                anchors {
-                   left: targetSymbol.right; top: targetSymbol.top
-                }
-                readOnly: true
-            }
-
-            Item {
-                width: targetNameEditIcon.width
-                height: targetNameEditIcon.height
-                anchors {
-                   right: parent.right; top: targetSymbol.top
-                }
-
-                MouseArea {
-                    width: targetNameEditIcon.width
-                    height: targetNameEditIcon.height
-
-                    onClicked: {
-                        /* Init name editing */
-                        if (targetName.readOnly === true) {
-                            targetName.readOnly = false;
-                            //targetName.selectAll()
-                            targetName.forceActiveFocus()
-                            targetName.cursorVisible = true
-                            targetNameEditIcon.name = "ok"
-                            targetName.cursorPosition = 0
-                            console.log("EditTarget :: Change Name Start")
-                        } else {
-                            targetName.readOnly = true;
-                            //targetName.deselect()
-                            targetNameEditIcon.name = "edit"
-                            console.log("EditTarget :: Change Name Finished: " + targetName.text)
-                            targetSymbolText.text = "" + targetName.text.charAt(0).toUpperCase()
-                            targetPage.updateDB()
-                            targetPage.loadDB()
-                        }
+                Rectangle {
+                    id: targetSymbol
+                    color: "silver" /*"#0000B5"*/
+                    width: units.gu(15)
+                    height: units.gu(15)
+                    border.width: 0
+                    radius: units.gu(2)
+                    anchors {
+                       left: parent.left; top: parent.top
                     }
                 }
-                Icon {
-                    id: targetNameEditIcon
-                    name: "edit"
-                    width: units.gu(4)
-                    height: width
-                }
-            }
 
-            Label {
-                id: targetIDText
-                text: "ID: " + targetPage.targetID
-                anchors.leftMargin: units.gu(2)
-                anchors.topMargin: units.gu(1)
-                anchors.bottomMargin: units.gu(1)
-                font.pixelSize: units.gu(3)
-                anchors {
-                   left: targetSymbol.right; bottom: targetSymbol.bottom
+                Label {
+                    id: targetSymbolText
+                    text: "U"  /* Modified by Name change */
+                    color: "white"
+                    font.pixelSize: units.gu(10)
+                    anchors {
+                       horizontalCenter: targetSymbol.horizontalCenter; verticalCenter: targetSymbol.verticalCenter
+                    }
                 }
-                onTextChanged: {
-                    // Invoke load DB
-                    targetPage.loadDB()
+
+
+                TextEdit {
+                    id: targetName
+                    text: "New Target"
+                    height: targetSymbol.height/3
+                    color: targetIDText.color // inherit text color from the element following the system color theme
+                    anchors.leftMargin: units.gu(2)
+                    font.pixelSize: units.gu(3)
+                    wrapMode: TextEdit.WrapAnywhere
+                    inputMethodHints: Qt.ImhNoPredictiveText
+                    width: parent.width - targetSymbol.width - targetNameEditIcon.width - units.gu(4)
+                    anchors {
+                       left: targetSymbol.right; top: targetSymbol.top
+                    }
+                    readOnly: true
                 }
-            }
+
+                Item {
+                    width: targetNameEditIcon.width
+                    height: targetNameEditIcon.height
+                    anchors {
+                       right: parent.right; top: targetSymbol.top
+                    }
+
+                    MouseArea {
+                        width: targetNameEditIcon.width
+                        height: targetNameEditIcon.height
+
+                        onClicked: {
+                            /* Init name editing */
+                            if (targetName.readOnly === true) {
+                                targetName.readOnly = false;
+                                //targetName.selectAll()
+                                targetName.forceActiveFocus()
+                                targetName.cursorVisible = true
+                                targetNameEditIcon.name = "ok"
+                                targetName.cursorPosition = 0
+                                console.log("EditTarget :: Change Name Start")
+                            } else {
+                                targetName.readOnly = true;
+                                //targetName.deselect()
+                                targetNameEditIcon.name = "edit"
+                                console.log("EditTarget :: Change Name Finished: " + targetName.text)
+                                targetSymbolText.text = "" + targetName.text.charAt(0).toUpperCase()
+                                targetPage.updateDB()
+                                targetPage.loadDB()
+                            }
+                        }
+                    }
+                    Icon {
+                        id: targetNameEditIcon
+                        name: "edit"
+                        width: units.gu(4)
+                        height: width
+                    }
+                }
+
+                Label {
+                    id: targetIDText
+                    text: "ID: " + targetPage.targetID
+                    anchors.leftMargin: units.gu(2)
+                    anchors.topMargin: units.gu(1)
+                    anchors.bottomMargin: units.gu(1)
+                    font.pixelSize: units.gu(3)
+                    anchors {
+                       left: targetSymbol.right; bottom: targetSymbol.bottom
+                    }
+                    onTextChanged: {
+                        // Invoke load DB
+                        targetPage.loadDB()
+                    }
+                }
 
             }
 
@@ -361,41 +363,51 @@ Page {
                 width: parent.width
                 height: accountSymbol.height
 
-            Rectangle {
-                id: accountSymbol
-                color: "silver" // "Unknown" color code
-                width: units.gu(6)
-                height: units.gu(6)
-                border.width: 0
-                radius: units.gu(0.9)
-                anchors {
-                   left: parent.left; top: parent.top
-                }
-            }
+                MouseArea {
+                    width: accountSymbol.width
+                    height: accountSymbol.height
 
-            Label {
-                id: accountSymbolText
-                text: "U"  /* Modified by accountName change */
-                color: "white"
-                font.pixelSize: units.gu(4)
-                anchors {
-                   horizontalCenter: accountSymbol.horizontalCenter; verticalCenter: accountSymbol.verticalCenter
-                }
-            }
+                    onClicked: {
+                        console.log("EditTarget :: Edit Account")
+                        apl.addPageToNextColumn(targetPage, Qt.resolvedUrl("EditAccount.qml"), {accountID: targetPage.accountID, isEditable: accountConfigured })
+                    }
 
+                    Rectangle {
+                        id: accountSymbol
+                        color: "silver" // "Unknown" color code
+                        width: units.gu(6)
+                        height: units.gu(6)
+                        border.width: 0
+                        radius: units.gu(0.9)
+                        anchors {
+                           left: parent.left; top: parent.top
+                        }
+                    }
 
-            Label {
-                id: accountName
-                text: "Unknown Account"
-                wrapMode: Text.WrapAnywhere
-                maximumLineCount: 2
-                width: parent.width - accountSymbol.width - units.gu(4)
-                anchors.leftMargin: units.gu(2)
-                font.pixelSize: units.gu(2)
-                anchors {
-                   left: accountSymbol.right; verticalCenter: accountSymbol.verticalCenter
+                    Label {
+                        id: accountSymbolText
+                        text: "U"  /* Modified by accountName change */
+                        color: "white"
+                        font.pixelSize: units.gu(4)
+                        anchors {
+                           horizontalCenter: accountSymbol.horizontalCenter; verticalCenter: accountSymbol.verticalCenter
+                        }
+                    }
+
+                    Label {
+                        id: accountName
+                        text: "Unknown Account"
+                        wrapMode: Text.WrapAnywhere
+                        maximumLineCount: 2
+                        width: parent.width - accountSymbol.width - units.gu(4)
+                        anchors.leftMargin: units.gu(2)
+                        font.pixelSize: units.gu(2)
+                        anchors {
+                           left: accountSymbol.right; verticalCenter: accountSymbol.verticalCenter
+                        }
+                    }
+
                 }
-            }
 
             }
 
@@ -413,35 +425,36 @@ Page {
                         console.log("EditTarget :: Change Local Folder")
                         apl.addPageToNextColumn(targetPage, Qt.resolvedUrl("LocalFileBrowser.qml"), {caller:localPath})
                     }
-            Icon {
-                id: localIcon
-                name: "folder-symbolic"
-                width: units.gu(6)
-                height: width
-                anchors {
-                   left: parent.left; top: parent.top
-                }
-                }
 
-            Label {
-                id: localPath
-                text: ""
-                wrapMode: Text.WrapAnywhere
-                maximumLineCount: 2
-                //width: parent.width - localIcon.width - units.gu(10)
-                width: targetName.width + units.gu(12) /* TODO remove this hack - computing width from parent fails here ... why? */
-                anchors.leftMargin: units.gu(3)
-                anchors.verticalCenterOffset: 0
-                font.pixelSize: units.gu(2)
-                anchors {
-                   left: localIcon.right; verticalCenter: localIcon.verticalCenter
-                }
-                onTextChanged: {
-                    /* Invoke update DB */
-                    targetPage.updateDB()
-                    targetPage.loadDB()
-                }
-            }
+                    Icon {
+                        id: localIcon
+                        name: "folder-symbolic"
+                        width: units.gu(6)
+                        height: width
+                        anchors {
+                           left: parent.left; top: parent.top
+                        }
+                        }
+
+                    Label {
+                        id: localPath
+                        text: ""
+                        wrapMode: Text.WrapAnywhere
+                        maximumLineCount: 2
+                        //width: parent.width - localIcon.width - units.gu(10)
+                        width: targetName.width + units.gu(12) /* TODO remove this hack - computing width from parent fails here ... why? */
+                        anchors.leftMargin: units.gu(3)
+                        anchors.verticalCenterOffset: 0
+                        font.pixelSize: units.gu(2)
+                        anchors {
+                           left: localIcon.right; verticalCenter: localIcon.verticalCenter
+                        }
+                        onTextChanged: {
+                            /* Invoke update DB */
+                            targetPage.updateDB()
+                            targetPage.loadDB()
+                        }
+                    }
 
             }
 

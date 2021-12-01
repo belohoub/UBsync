@@ -22,6 +22,7 @@ Page {
     Flickable {
         id: flickable
         anchors.fill: parent
+        flickableDirection: Flickable.AutoFlickIfNeeded
 
         Column {
             id: dataColumn
