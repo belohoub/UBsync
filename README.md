@@ -1,6 +1,6 @@
 # UBsync
 
-UBsync is the featured application for OwnCloud/Nextcloud synchronization on [ubuntu-touch](https://ubports.com/es/).
+UBsync is the featured application for OwnCloud/Nextcloud synchronization on [ubuntu-touch](https://ubports.com/).
 
 [![OpenStore](https://open-store.io/badges/en_US.png)](https://open-store.io/app/ubsync)
 

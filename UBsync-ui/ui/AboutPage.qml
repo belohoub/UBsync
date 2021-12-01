@@ -64,7 +64,7 @@ Page {
                     width: parent.width
                     horizontalAlignment: Text.AlignHCenter
                     // TRANSLATORS: Nextcloudcmd binary version number e.g Version 1.8.1
-                    text: i18n.tr("Client : %1").arg(owncloud.settings.owncloudcmdVersion)
+                    text: i18n.tr("Client: %1").arg(owncloud.settings.owncloudcmdVersion)
                 }
                 Label {
                     width: parent.width
@@ -81,7 +81,7 @@ Page {
                     width: parent.width
                     horizontalAlignment: Text.AlignHCenter
                     wrapMode: Text.WordWrap
-                    text: i18n.tr("If you are willing to help please look at %1").arg("<a href=\"https://github.com/belohoub/UBsync/issues\">the issue tracker</a>")
+                    text: i18n.tr("Please report bugs to the %1").arg("<a href=\"https://github.com/belohoub/UBsync/issues\">issue tracker</a>")
                     onLinkActivated: Qt.openUrlExternally(link)
                  }
             }
@@ -150,7 +150,7 @@ Page {
                 wrapMode: Text.WordWrap
                 textSize: Label.Small
                 horizontalAlignment: Text.AlignHCenter
-                text: "Fork from %1".arg("<a href=\"https://launchpad.net/owncloud-sync\">Owncloud-Sync</a>")
+                text: "Fork of %1".arg("<a href=\"https://launchpad.net/owncloud-sync\">Owncloud-Sync</a>")
                 onLinkActivated: Qt.openUrlExternally(link)
             }
             Label {
@@ -158,7 +158,7 @@ Page {
                 wrapMode: Text.WordWrap
                 textSize: Label.Small
                 horizontalAlignment: Text.AlignHCenter
-                text: i18n.tr("Source code available on %1").arg("<a href=\"https://code.launchpad.net/~ocs-team/owncloud-sync/UBsync\">Owncloud-sync/UBsync</a>")
+                text: i18n.tr("Source code available on %1").arg("<a href=\"https://github.com/belohoub/UBsync\">github.com/belohoub/UBsyncc</a>")
                 onLinkActivated: Qt.openUrlExternally(link)
             }
         }
