@@ -14,11 +14,11 @@ This repository continues, where [UBsync Launchpad Project](https://code.launchp
 
 This fork was originally created as a reaction to the discussion at [forums.ubports.com](https://forums.ubports.com/topic/5116/help-creating-an-ubsync-arm64-version/30) related to missing amr64 support for UBsync.
 
-Later the development was returned to Launchpad for a short period but after discussions in the developers/testers community - since version 0.7, 
-the development was moved to GitHub because GitHub remains one of two major platforms, 
+Later the development was returned to Launchpad for a short period but after discussions in the developers/testers community (12/2021 - since version 0.7),
+the development was moved to GitHub, as GitHub remains one of two major platforms, 
 where UBports community lives and Github-centric development is more comfortable for current maintainers.
 
-Code evolution is documented in the [changelog](CHANGELOG.md).
+Code evolution is briefly documented in the [changelog](CHANGELOG.md).
 
 ## Credits
 
@@ -29,9 +29,14 @@ We would like to thank several projects/persons:
 1. Joan CiberSheep for the icon using [Suru Icon Theme elements](https://github.com/snwh/suru-icon-theme)
 
 ### Current and Past Contributors
-  * Jan Belohoubek <jan.belohoubek@fit.cvut.cz>
-  * Ernesst <slash.tux@gmail.com>
-  * ownCloud-sync <https://launchpad.net/owncloud-sync>
+  * [Jan Belohoubek](https://github.com/belohoub/)
+  * [Ernesst](https://github.com/ernesst/)
+  * [ownCloud-sync](https://launchpad.net/owncloud-sync)
+    * [Dubstar_04](https://launchpad.net/~dubstar-04)
+    * [Filip Dorosz](https://launchpad.net/~fihufil)
+    * [Nekhelesh Ramananthan](https://launchpad.net/~nik90)
+    * Jan Belohoubek
+    * Ernesst aka "slash"
 
 ## Contribute
 

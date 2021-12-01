@@ -1,33 +1,5 @@
-# Project presentation
+# owncloudsyncd: UBsync Backend/Daemon
 
-<img src="https://framagit.org/ernesst/UBsync/raw/master/Owncloud-Sync/UBsync.png" width="196">
+The owncloudsyncd provides the backend synchronization service to the UBsync application.
 
-UBsync is a forked of [ownCloud-sync](https://launchpad.net/owncloud-sync) application for **Ubuntu touch 16.04**,  surported by [Ubports](https://www.ubports.com).
-
-# 0.7 Changelog
-
-
-# 0.3 Changelog
-1. Compile for Xenial,
-1. Upgrade of owncloudcmd to nextcloudcmd 2.3.3, [Bug 1592538](https://bugs.launchpad.net/owncloud-sync/+bug/1592538)
-1. Get ride off the bug "owncloud network access is disabled" - [Bug 1572321](https://bugs.launchpad.net/ubuntu/+source/owncloud-client/+bug/1572321?comments=all),
-1. Use of Online Account - [bug 1573802](https://bugs.launchpad.net/owncloud-sync/+bug/1573802), in the hope to get ride off the password in the config file in the future 
-1. Change the frequencies from seconds to hours,
-1. Acknowledge qWebdavlib - [bug 1592750](https://bugs.launchpad.net/owncloud-sync/+bug/1592750)
-1. New icon,
-
-# Thanks 
-
-I would like to thanks several projects / persons 
-1. [ownCloud-sync application](https://launchpad.net/owncloud-sync),
-1. [Nextcloudcmd](https://docs.nextcloud.com/desktop/2.3/advancedusage.html), a Nextcloud client,
-1. [qWebdavlib](https://github.com/mhaller/qwebdavlib) a Qt library for WebDAV,
-1. Joan CiberSheep for the icon using [Suru Icon Theme elements](https://github.com/snwh/suru-icon-theme)
-
-
-# Contribution
-
-Any help on the code is welcome to enhance the app. 
-
-
-Ernesst
+Code evolution is briefly documented in the [changelog](CHANGELOG.md).
