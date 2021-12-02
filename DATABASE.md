@@ -16,10 +16,10 @@ The following columns are included:
   * *useMobileData* - sync when mobile data setting; type = BOOLEAN
   * *syncFreq* - sync frequency; indexes of pre-defined values in hours ({0, 1, 2, 4, 6, 12, 24, 48, 168}); type = INTEGER
   * *serviceName* - type of remote service; (currently unused) "" or "owncloud" or "nextcloud"; type = TEXT
-  
+
 # Targets : SyncTargets Table
 
-This table holds terget information. Target is remote/local directory sync pair.
+This table holds target information. Target means a remote/local directory sync pair.
 
 The following columns are included:
   * *targetID* - target identifier; type = INTEGER PRIMARY KEY
