@@ -1,6 +1,6 @@
 # UBsync
 
-UBsync is the featured application for OwnCloud/Nextcloud synchronization on [ubuntu-touch](https://ubports.com/).
+UBsync is the featured application for [OwnCloud](https://owncloud.com/)/[Nextcloud](https://nextcloud.com/) synchronization on [Ubuntu Touch](https://ubports.com/).
 
 [![OpenStore](https://open-store.io/badges/en_US.png)](https://open-store.io/app/ubsync)
 
@@ -8,14 +8,14 @@ UBsync is the featured application for OwnCloud/Nextcloud synchronization on [ub
 
 
 ## Project History
-UBsync was originally forked from [ownCloud-sync](https://launchpad.net/owncloud-sync), a dedicated Nextcloud application for **Ubuntu touch 16.04**,  supported by [Ubports](https://www.ubports.com).
+UBsync was originally forked from [ownCloud-sync](https://launchpad.net/owncloud-sync), a dedicated Nextcloud application for **Ubuntu touch 16.04**,  supported by [UBports](https://www.ubports.com).
 
 This repository continues, where [UBsync Launchpad Project](https://code.launchpad.net/~ocs-team/owncloud-sync/UBsync) finished.
 
-This fork was originally created as a reaction to the discussion at [forums.ubports.com](https://forums.ubports.com/topic/5116/help-creating-an-ubsync-arm64-version/30) related to missing amr64 support for UBsync.
+This fork was originally created as a reaction to the discussion at [forums.ubports.com](https://forums.ubports.com/topic/5116/help-creating-an-ubsync-arm64-version/30) related to missing arm64 support for UBsync.
 
-Later the development was returned to Launchpad for a short period but after discussions in the developers/testers community (12/2021 - since version 0.7),
-the development was moved to GitHub, as GitHub remains one of two major platforms, 
+Later the development was returned to Launchpad for a short period. After discussions in the developers/testers community (12/2021 - since version 0.7),
+the development was moved to GitHub, as GitHub remains one of two major platforms,
 where UBports community lives and Github-centric development is more comfortable for current maintainers.
 
 Code evolution is briefly documented in the [changelog](CHANGELOG.md).
