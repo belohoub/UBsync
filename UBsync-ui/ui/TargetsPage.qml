@@ -15,24 +15,8 @@ Page {
     // accounts may be not ready ...
     property bool accountsLoaded: false
 
-    /* Init database */
-    function createDB() {
-
-        targetsPage.db = LocalStorage.openDatabaseSync("UBsync", "1.0", "UBsync", 1000000);
-
-        targetsPage.db.transaction(
-                    function(tx) {
-                        // Create tables if it doesn't already exist
-                        tx.executeSql('CREATE TABLE IF NOT EXISTS SyncAccounts(accountID INTEGER PRIMARY KEY, accountName TEXT, remoteAddress TEXT, remoteUser TEXT, syncHidden BOOLEAN, useMobileData BOOLEAN, syncFreq INTEGER)');
-                        tx.executeSql('CREATE TABLE IF NOT EXISTS SyncTargets(targetID INTEGER PRIMARY KEY AUTOINCREMENT, accountID INTEGER, localPath TEXT, remotePath TEXT, targetName TEXT, active BOOLEAN)');
-                    }
-                    )
-    }
-
     /* load current data from DB */
     function loadDB() {
-
-        createDB();
 
         if (accounts.ready === false) {
             return
@@ -54,19 +38,30 @@ Page {
                         for(var i = 0; i < rs.rows.length; i++) {
                             console.log("TargetsPage :: Loading targetsPage: " + rs.rows.item(i).targetName + "; Active: " + rs.rows.item(i).active)
 
-                            // test for acvcount configuration
+                            // test for account configuration
                             var rs2 = tx.executeSql('SELECT * FROM SyncAccounts WHERE accountID = (?)', [rs.rows.item(i).accountID])
 
                             var color = "silver"
+                            var accountColor = "silver"
+                            var accountName = i18n.tr("Unknown Account")
 
                             if (rs2.rows.length === 0)  {
                                 color = owncloud.settings.color_targetAccountDisabled // account not configured
+                                accountColor = owncloud.settings.color_accountEnabledNotConfigured
                             } else {
+                                for (var j = 0; j < rs2.rows.length; j++) {
+                                    if (rs2.rows.item(j).accountID === rs.rows.item(i).accountID) {
+                                        accountName = rs2.rows.item(j).accountName
+                                        break
+                                    }
+                                }
                                 color = owncloud.settings.color_targetAccountDisabled // expect, that the account is disabled in online accounts
+                                accountColor = owncloud.settings.color_accountDisabled
                                 for (var j = 0; j < accounts.count; j++) {
                                     //console.log("TargetsPage ::   - accountID: " + accounts.get(j, "account").accountId)
                                     if (accounts.get(j, "account").accountId === rs.rows.item(i).accountID) {
                                         // account is enabled!
+                                        accountColor = owncloud.settings.color_accountEnabled
                                         if (rs.rows.item(i).active === 1) {
                                             // active and target enabled
                                             color = owncloud.settings.color_targetActive
@@ -79,7 +74,7 @@ Page {
                                 }
                             }
 
-                            targetListModel.append({"targetID": rs.rows.item(i).targetID, "targetName": rs.rows.item(i).targetName, "targeActive": rs.rows.item(i).active, "color": color})
+                            targetListModel.append({"targetID": rs.rows.item(i).targetID, "targetName": rs.rows.item(i).targetName, "targeActive": rs.rows.item(i).active, "color": color, "accountColor": accountColor, "accountID": rs.rows.item(i).accountID, "accountName": accountName})
                         }
                     }
                 )
@@ -129,6 +124,7 @@ Page {
                     continuousCheck.repeat = false
                 }
             }
+
         }
     }
 
@@ -147,9 +143,13 @@ Page {
 
         ListElement {
             targetID: 0
-            targetName: "Unknown"
+            targetName: "Unknown Target"
             targeActive: 0
             color: "silver"
+
+            accountColor: "silver"
+            accountID: 0
+            accountName: "Unknown Account"
         }
 
         Component.onCompleted: {
@@ -232,6 +232,11 @@ Page {
         clip: true
         visible: targetListModel.count
 
+        onMovementEnded: {
+            /* update page when moving ...*/
+            targetsPage.loadDB()
+        }
+
         delegate: ListItem {
             height: targetColumn.height
             anchors{left:parent.left; right:parent.right}
@@ -244,7 +249,6 @@ Page {
                 id: targetColumn
                 height: units.gu(12)
 
-                //spacing: units.gu(1)
                 anchors {
                     top: parent.top;
                     left: parent.left;
@@ -277,10 +281,11 @@ Page {
                 Label {
                     id: targetName
                     wrapMode: Text.WrapAnywhere
+                    maximumLineCount: 2
                     width: parent.width - targetIcon.width - units.gu(4)
                     text: model.targetName
                     height: units.gu(6)
-                    font.pixelSize: units.gu(3)
+                    font.pixelSize: units.gu(2.5)
                     anchors.leftMargin: units.gu(2)
                     anchors {
                        left: targetIcon.right; top: parent.top
@@ -296,6 +301,46 @@ Page {
                        left: targetIcon.right; top: targetName.bottom
                     }
                 }*/
+
+                Rectangle {
+                    id: accountSymbol
+                    color: model.accountColor
+                    width: units.gu(3)
+                    height: units.gu(3)
+                    border.width: 0
+                    radius: units.gu(0.4)
+                    anchors {
+                        bottom: targetIcon.bottom
+                        left: targetIcon.right
+                        leftMargin: units.gu(2)
+                        bottomMargin: units.gu(0)
+                    }
+                }
+
+                Label {
+                    id: accountSymbolText
+                    text: model.accountName.charAt(0).toUpperCase()
+                    color: "white"
+                    font.pixelSize: units.gu(2)
+                    anchors {
+                       horizontalCenter: accountSymbol.horizontalCenter; verticalCenter: accountSymbol.verticalCenter
+                    }
+                }
+
+                Label {
+                    id: accountName
+                    text: model.accountName
+                    wrapMode: Text.WrapAnywhere
+                    maximumLineCount: 1
+                    width: parent.width - targetIcon.width - accountSymbol.width - units.gu(6)
+                    anchors.leftMargin: units.gu(1)
+                    font.pixelSize: units.gu(2)
+                    anchors {
+                       left: accountSymbol.right; verticalCenter: accountSymbol.verticalCenter
+                    }
+                }
+
+
 
                 /* TODO display number of sync targets ? */
 

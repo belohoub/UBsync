@@ -17,7 +17,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
-//import Ubuntu.Components.Pickers 1.0
+import QtQuick.LocalStorage 2.0
+
 import "ui"
 import "components"
 
@@ -31,12 +32,17 @@ import Qt.labs.settings 1.0
 MainView {
     id: owncloud
     property alias settings: ubsyncSettings
+    property var applicationVersion
+
+    // UBsync database
+    property var db
 
     // objectName for functional testing purposes (autopilot-qt5)
     objectName: "mainView"
 
     // Note! applicationName needs to match the "name" field of the click manifest
     applicationName: "ubsync"
+    applicationVersion: "0.7"
 
     anchorToKeyboard: true
 
@@ -46,6 +52,7 @@ MainView {
         property int timer: 0
         property string owncloudcmdVersion
         property string owncloudSyncdVersion
+        property string ubsyncVersion
 
         property string color_targetActive: "forestgreen"
         property string color_targetInactive: "silver"
@@ -55,10 +62,39 @@ MainView {
         property string color_accountDisabled: "indianred"
         property string color_accountEnabledNotConfigured: "purple"
 
+        /* deprecated options */
+        property string password: ""
+        property string serverURL: ""
+        property string username: ""
+
+
         function clearSettings(){
             timer = 0
         }
 
+    }
+
+    /* Init database */
+    function createDB() {
+
+        owncloud.db = LocalStorage.openDatabaseSync("UBsync", "1.0", "UBsync", 1000000);
+
+        owncloud.db.transaction(
+                    function(tx) {
+                        // Create tables if it doesn't already exist
+                        tx.executeSql('CREATE TABLE IF NOT EXISTS SyncAccounts(accountID INTEGER PRIMARY KEY, accountName TEXT, remoteAddress TEXT, remoteUser TEXT, syncHidden BOOLEAN, useMobileData BOOLEAN, syncFreq INTEGER, serviceName TEXT)');
+                        tx.executeSql('CREATE TABLE IF NOT EXISTS SyncTargets(targetID INTEGER PRIMARY KEY AUTOINCREMENT, accountID INTEGER, localPath TEXT, remotePath TEXT, targetName TEXT, active BOOLEAN, lastSync TEXT)');
+
+                        // to correct strcuture for testers
+                        // TODO remove in future releases
+                        try {
+                            tx.executeSql('ALTER TABLE ADD COLUMN SyncAccounts serviceName TEXT');
+                            tx.executeSql('ALTER TABLE ADD COLUMN SyncTargets lastSync TEXT');
+                        } catch (error) {
+                            // Nothink to do
+                        }
+                    }
+                )
     }
 
     OwncloudSync{
@@ -82,6 +118,25 @@ MainView {
                 serviceController.installServiceFile();
             }
 
+            /* config file version - related update actions */
+            if ((parseFloat(owncloud.settings.ubsyncVersion) < 0.7) || (owncloud.settings.username != "")) {
+                // remove deprecated options
+                owncloud.settings.password = ""
+                owncloud.settings.serverURL = ""
+                owncloud.settings.username = ""
+                // update database structure and database ...
+                createDB()
+                // TODO no migration here ... ???
+            } if (parseFloat(owncloud.settings.ubsyncVersion) === 0.7) {
+                // do nothing
+            } else {
+                // probably a new installation
+                createDB()
+            }
+
+            // strore current app version
+            owncloud.settings.ubsyncVersion = owncloud.applicationVersion
+
           //  if (!serviceController.serviceRunning) {
           //      print("Service not running. Starting now.")
           //      serviceController.startService();
@@ -98,7 +153,7 @@ MainView {
         property int maxWidth: 91 //width in grid units
         property bool connected: false
         property bool testingConnection: true
-        property var  accountSettings
+        property var  accountSettings // TODO remove?
         anchors.fill: parent
         primaryPageSource: Qt.resolvedUrl("ui/TargetsPage.qml")
 

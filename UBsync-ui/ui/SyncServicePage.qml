@@ -77,7 +77,7 @@ Page {
                 }
 
                 ListItem {
-                    visible: owncloud.settings.owncloudcmdVersion
+                    //visible: owncloud.settings.owncloudcmdVersion
 
                     onClicked: daemonController.getOwncloudcmdVersion()
 
@@ -88,7 +88,7 @@ Page {
                 }
                 
                 ListItem {
-                    visible: owncloud.settings.owncloudSyncdVersion
+                    //visible: owncloud.settings.owncloudSyncdVersion
 
                     onClicked: daemonController.getOwncloudSyncdVersion()
 

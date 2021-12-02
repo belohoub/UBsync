@@ -261,6 +261,11 @@ Page {
         clip: true
         visible: accountListModel.count
 
+        onMovementEnded: {
+            /* update page when moving ...*/
+            accountsPage.loadDB()
+        }
+
         delegate: ListItem {
             height: accountColumn.height
             anchors{left:parent.left; right:parent.right}
