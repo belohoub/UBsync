@@ -576,7 +576,7 @@ Page {
                         font.pixelSize: units.gu(2)
                         width: parent.width - warningIcon.width - units.gu(4)
                         wrapMode: Text.WordWrap
-                        text: serviceController.serviceRunning ? "" : i18n.tr("Synchronization service not running! Please, go to UBsync Settings and start the sync service unless the target synchronization will not begin.")
+                        text: serviceController.serviceRunning ? "" : i18n.tr("Synchronization service not running! Please, go to UBsync Settings and start the sync service, otherwise the target synchronization will not begin.")
                         anchors {
                             left: warningIcon.right; verticalCenter: warningIcon.verticalCenter
                             leftMargin: units.gu(2)
