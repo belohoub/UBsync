@@ -57,7 +57,8 @@ Page {
                 ListItem {
                     ListItemLayout {
                         property string lastSyncTime: daemonController.lastSync ? timeSince(daemonController.lastSync) : owncloud.settings.lastSync ? timeSince(owncloud.settings.lastSync) : i18n.tr("Sync Required")
-                        title.text: i18n.tr("Last Sync: ") +  lastSyncTime
+                        title.text: i18n.tr("Last Sync:")
+                        subtitle.text: lastSyncTime
                         anchors{verticalCenter: parent.verticalCenter}
 
                         Button{
