@@ -116,26 +116,26 @@ Page {
         }
         interval = Math.floor(seconds / 2592000);
         if (interval > 1) {
-            return interval + i18n.tr(" Months Ago");
+            return i18n.tr("%1 Months Ago".arg(interval));
         }
         interval = Math.floor(seconds / 86400);
         if (interval > 1) {
-            return interval + i18n.tr(" Days Ago");
+            return i18n.tr("%1 Days Ago".arg(interval));
         }
         interval = Math.floor(seconds / 3600);
         if (interval > 1) {
-            return interval + i18n.tr("  Hours Ago");
+            return i18n.tr("%1  Hours Ago".arg(interval));
         }
         interval = Math.floor(seconds / 60);
         if (interval > 1) {
-            return interval + i18n.tr(" Minutes Ago");
+            return i18n.tr("%1 Minutes Ago".arg(interval));
         }
         if (seconds > 60 && seconds < 120) {
             return i18n.tr("A Minute Ago");
         }
 
         if (seconds > 30 && seconds < 60) {
-            return Math.floor(seconds) + i18n.tr(" Seconds Ago");
+            return i18n.tr("%1 Seconds Ago".arg(Math.floor(seconds)));
         }
 
         return i18n.tr("Just Now") //Math.floor(seconds) + i18n.tr(" Seconds Ago");
