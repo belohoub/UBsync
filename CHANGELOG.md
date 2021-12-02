@@ -2,7 +2,7 @@
 
 # 0.7 (12/2021)
 1. directory-tree cleanup
-1. database structure altered (see [DATABASE.md](DATABASE.md))
+1. database structure altered (see [DATABASE.md](DATABASE.md) for the new structure)
 1. multi-account support
 1. UI re-designed completely
 
@@ -11,7 +11,7 @@
 1. arm64 version of owncloudcmd is 2.5.3; arm32 remains unchanged
 1. arch detection and paths to owncloudcmd changed in *OwncloudSyncd/owncloudsyncd.cpp*
 1. arch detection and paths for libs added to *OwncloudSync/servicecontrol.cpp*
-1. included support for owncloud account in ubuntu-touch (up to now, only nextcloud account was used, even those behave equaly from the UBsync point of view)
+1. included support for owncloud account in Ubuntu Touch (up to now, only nextcloud account was used, even those behave equaly from the UBsync point of view)
 1. [build instructions](BUILD.md)
 
 # 0.4 Changelog
@@ -24,14 +24,14 @@
 1. Compiled for Xenial,
 1. Upgraded of owncloudcmd to nextcloudcmd 2.3.3, [Bug 1592538](https://bugs.launchpad.net/owncloud-sync/+bug/1592538)
 1. Get ride off the bug "owncloud network access is disabled" - [Bug 1572321](https://bugs.launchpad.net/ubuntu/+source/owncloud-client/+bug/1572321?comments=all),
-1. Use of Online Account - [bug 1573802](https://bugs.launchpad.net/owncloud-sync/+bug/1573802), in the hope to get ride off the password in the config file in the future 
+1. Use of Online Account - [bug 1573802](https://bugs.launchpad.net/owncloud-sync/+bug/1573802), in the hope to get rid off the password in the config file in the future
 1. Change the frequencies from seconds to hours,
 1. Acknowledge qWebdavlib - [bug 1592750](https://bugs.launchpad.net/owncloud-sync/+bug/1592750)
 1. New icon,
 
-# Thanks 
+# Thanks
 
-I would like to thanks several projects / persons 
+I would like to thank several projects / persons
 1. [ownCloud-sync application](https://launchpad.net/owncloud-sync),
 1. [Nextcloudcmd](https://docs.nextcloud.com/desktop/2.3/advancedusage.html), a Nextcloud client,
 1. [qWebdavlib](https://github.com/mhaller/qwebdavlib) a Qt library for WebDAV,
@@ -40,7 +40,7 @@ I would like to thanks several projects / persons
 
 # Contribution
 
-Any help on the code is welcomed to enhance the app. 
+Any help on the code is welcome to enhance the app.
 
 
 Ernesst
