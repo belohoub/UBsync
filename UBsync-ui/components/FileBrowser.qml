@@ -137,23 +137,22 @@ Page {
             }
 
             Button {
-                text: i18n.tr("Cancel")
-                onClicked: PopupUtils.close(dialogue)
-            }
-            Button {
                 id: okButton
                 text: i18n.tr("OK")
                 enabled: folderName.text
-                color: UbuntuColors.orange
+                color: theme.palette.normal.positive
                 onClicked: {
                     folderListModel.newFolder(currentPath + "/" + folderName.text)
                     PopupUtils.close(dialogue)
                 }
+            }
+
+            Button {
+                text: i18n.tr("Cancel")
+                onClicked: PopupUtils.close(dialogue)
             }
         }
     }
 
 
 }
-
-
