@@ -75,7 +75,7 @@ Page {
                 Label {
                     width: parent.width
                     horizontalAlignment: Text.AlignHCenter
-                    text: i18n.tr(" ")
+                    text: " "
                 }
                  Label {
                     width: parent.width
