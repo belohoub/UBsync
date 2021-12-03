@@ -8,7 +8,7 @@ UBsync is the featured application for [OwnCloud](https://owncloud.com/)/[Nextcl
 
 
 ## Project History
-UBsync was originally forked from [ownCloud-sync](https://launchpad.net/owncloud-sync), a dedicated Nextcloud application for **Ubuntu touch 16.04**,  supported by [UBports](https://www.ubports.com).
+UBsync was originally forked from [ownCloud-sync](https://launchpad.net/owncloud-sync), a dedicated Nextcloud application for **Ubuntu touch**,  supported by [UBports](https://www.ubports.com).
 
 This repository continues, where [UBsync Launchpad Project](https://code.launchpad.net/~ocs-team/owncloud-sync/UBsync) finished.
 

@@ -97,21 +97,21 @@ Page {
                     wrapMode: Text.WordWrap
                     font.weight: Font.DemiBold
                     horizontalAlignment: Text.AlignHCenter
-                    text: "Thanks to"
+                    text: i18n.tr("Thanks to")
                 }
 
                 Label {
                     width: parent.width
                     wrapMode: Text.WordWrap
                     horizontalAlignment: Text.AlignHCenter
-                    text: "Owncloud client: %1".arg("<a href=\"https://doc.owncloud.org/desktop/2.3/owncloudcmd.1.html\">Owncloudcmd</a>")
+                    text: i18n.tr("Owncloud client: %1".arg("<a href=\"https://doc.owncloud.org/desktop/2.3/owncloudcmd.1.html\">Owncloudcmd</a>"))
                     onLinkActivated: Qt.openUrlExternally(link)
                 }
                 Label {
                     width: parent.width
                     wrapMode: Text.WordWrap
                     horizontalAlignment: Text.AlignHCenter
-                    text: "Nextcloud client: %1".arg("<a href=\"https://docs.nextcloud.com/desktop/2.3/advancedusage.html\">Nextcloudcmd</a>")
+                    text: i18n.tr("Nextcloud client: %1".arg("<a href=\"https://docs.nextcloud.com/desktop/2.3/advancedusage.html\">Nextcloudcmd</a>"))
                     onLinkActivated: Qt.openUrlExternally(link)
                 }
 
@@ -120,21 +120,21 @@ Page {
                     width: parent.width
                     wrapMode: Text.WordWrap
                     horizontalAlignment: Text.AlignHCenter
-                    text: "%1, a Qt library for WebDAV".arg("<a href=\"https://github.com/mhaller/qwebdavlib\">qwebdavlib</a>")
+                    text: i18n.tr("%1, a Qt library for WebDAV".arg("<a href=\"https://github.com/mhaller/qwebdavlib\">qwebdavlib</a>"))
                     onLinkActivated: Qt.openUrlExternally(link)
                 }
                 Label {
                     width: parent.width
                     wrapMode: Text.WordWrap
                     horizontalAlignment: Text.AlignHCenter
-                    text: "Joan CiberSheep for the %1 logo".arg("<a href=\"https://github.com/snwh/suru-icon-theme\">Suru Theme</a>")
+                    text: i18n.tr("Joan CiberSheep for the %1 logo".arg("<a href=\"https://github.com/snwh/suru-icon-theme\">Suru Theme</a>"))
                     onLinkActivated: Qt.openUrlExternally(link)
                 }
                 Label {
                     width: parent.width
                     wrapMode: Text.WordWrap
                     horizontalAlignment: Text.AlignHCenter
-                    text: "Lukas to enable the application with %1".arg("<a href=\"http://clickable.bhdouglass.com/en/latest/index.html\">Clickable</a>")
+                    text: i18n.tr("Lukas to enable the application with %1".arg("<a href=\"http://clickable.bhdouglass.com/en/latest/index.html\">Clickable</a>"))
                     onLinkActivated: Qt.openUrlExternally(link)
                 }
             }
@@ -150,7 +150,7 @@ Page {
                 wrapMode: Text.WordWrap
                 textSize: Label.Small
                 horizontalAlignment: Text.AlignHCenter
-                text: "Fork of %1".arg("<a href=\"https://launchpad.net/owncloud-sync\">Owncloud-Sync</a>")
+                text: i18n.tr("Fork of %1".arg("<a href=\"https://launchpad.net/owncloud-sync\">Owncloud-Sync</a>"))
                 onLinkActivated: Qt.openUrlExternally(link)
             }
             Label {

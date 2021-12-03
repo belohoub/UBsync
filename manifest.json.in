@@ -1,6 +1,6 @@
 {
     "name": "ubsync",
-    "description": "A tool to synchronise Utouch to your ownCloud/nextCloud server",
+    "description": "A tool to synchronise files between Ubuntu Touch and your ownCloud/nextCloud server",
     "architecture": "@CLICK_ARCH@",
     "title": "UBsync",
     "hooks": {
