@@ -397,7 +397,7 @@ Page {
 
                     Label {
                         id: accountName
-                        text: "Unknown Account"
+                        text: i18n.tr("Unknown Account")
                         wrapMode: Text.WrapAnywhere
                         maximumLineCount: 2
                         width: parent.width - accountSymbol.width - units.gu(4)

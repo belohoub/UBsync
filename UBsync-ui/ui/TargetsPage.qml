@@ -162,7 +162,7 @@ Page {
 
     header: PageHeader {
         id: header
-        title: "Sync Targets"
+        title: i18n.tr("Sync Targets")
 
         trailingActionBar{
             actions: [
