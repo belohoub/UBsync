@@ -69,7 +69,7 @@ Page {
                 Label {
                     width: parent.width
                     horizontalAlignment: Text.AlignHCenter
-                    text: i18n.tr("Maintained by %1").arg("Dan, Ern_st & Jan")
+                    text: i18n.tr("Maintained by %1").arg("Jan") + " " + i18n.tr("and by the %1").arg("<a href=\"https://github.com/belohoub/UBsync\">UBsync team</a>")
                 }
 
                 Label {
@@ -158,7 +158,7 @@ Page {
                 wrapMode: Text.WordWrap
                 textSize: Label.Small
                 horizontalAlignment: Text.AlignHCenter
-                text: i18n.tr("Source code available on %1").arg("<a href=\"https://github.com/belohoub/UBsync\">github.com/belohoub/UBsyncc</a>")
+                text: i18n.tr("Source code available on %1").arg("<a href=\"https://github.com/belohoub/UBsync\">github.com/belohoub/UBsync</a>")
                 onLinkActivated: Qt.openUrlExternally(link)
             }
         }
