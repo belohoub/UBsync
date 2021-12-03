@@ -89,10 +89,13 @@ i18n.tr("<p>UBsync uses following account symbols to express account states:</p>
         Label {
             id: accountName
             text: i18n.tr("Enabled Account") + "<br>(" + i18n.tr("related targets will sync") + ")"
-            anchors.leftMargin: units.gu(2)
             font.pixelSize: units.gu(2)
+            wrapMode: Text.WordWrap
             anchors {
-               left: accountSymbol.right; verticalCenter: accountSymbol.verticalCenter
+               left: accountSymbol.right
+               leftMargin: units.gu(2)
+               verticalCenter: accountSymbol.verticalCenter
+               right: parent.right
             }
         }
 
@@ -123,10 +126,12 @@ i18n.tr("<p>UBsync uses following account symbols to express account states:</p>
         Label {
             id: accountSymbolNotConfiguredName
             text: i18n.tr("Not Configured Account") + "<br>(" + i18n.tr("related targets will NOT sync") + ")"
-            anchors.leftMargin: units.gu(2)
             font.pixelSize: units.gu(2)
             anchors {
-               left: accountSymbolNotConfigured.right; verticalCenter: accountSymbolNotConfigured.verticalCenter
+               left: accountSymbolNotConfigured.right
+               leftMargin: units.gu(2)
+               verticalCenter: accountSymbolNotConfigured.verticalCenter
+               right: parent.right
             }
         }
 
@@ -159,10 +164,12 @@ i18n.tr("<p>UBsync uses following account symbols to express account states:</p>
             text: i18n.tr("Disabled Account")  + "<br>(" + i18n.tr("related targets will NOT sync") + ")"
             width: parent.width - parent.anchors.leftMargin - parent.anchors.rightMargin - units.gu(11)
             wrapMode: Text.WordWrap
-            anchors.leftMargin: units.gu(2)
             font.pixelSize: units.gu(2)
             anchors {
-               left: accountSymbolDisabled.right; verticalCenter: accountSymbolDisabled.verticalCenter
+               left: accountSymbolDisabled.right
+               leftMargin: units.gu(2)
+               verticalCenter: accountSymbolDisabled.verticalCenter
+               right: parent.right
             }
         }
 
