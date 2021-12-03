@@ -1,5 +1,6 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.3
+import "../components"
 
 Page {
     id: aboutPage
@@ -55,35 +56,41 @@ Page {
                 width: parent.width
 
                 Label {
+                    id: appVersionLabel
                     width: parent.width
                     horizontalAlignment: Text.AlignHCenter
                     // TRANSLATORS: Owncloud Sync version number e.g Version 0.1
                     text: i18n.tr("App Version %1").arg(Qt.application.version)
                 }
                 Label{
+                    id: clientLabel
                     width: parent.width
                     horizontalAlignment: Text.AlignHCenter
                     // TRANSLATORS: Nextcloudcmd binary version number e.g Version 1.8.1
                     text: i18n.tr("Client: %1").arg(owncloud.settings.owncloudcmdVersion)
                 }
-                Label {
+                LabelLinkRow {
+                    id: maintainerLabel
                     width: parent.width
-                    horizontalAlignment: Text.AlignHCenter
-                    text: i18n.tr("Maintained by %1").arg("Jan") + " " + i18n.tr("and by the %1").arg("<a href=\"https://github.com/belohoub/UBsync\">UBsync team</a>")
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    // TRANSLATORS: %1 is the maintainers name, %2 is the link text to the UBsync contributors teams page
+                    labeltext: i18n.tr("Maintained by %1 and the").arg("Jan")
+                    linktext: i18n.tr("UBsync team")
+                    linkurl: "https://github.com/belohoub/UBsync"
                 }
-
                 Label {
                     width: parent.width
                     horizontalAlignment: Text.AlignHCenter
                     text: " "
                 }
-                 Label {
+                LabelLinkRow {
+                    id: issueReportLabel
                     width: parent.width
-                    horizontalAlignment: Text.AlignHCenter
-                    wrapMode: Text.WordWrap
-                    text: i18n.tr("Please report bugs to the %1").arg("<a href=\"https://github.com/belohoub/UBsync/issues\">issue tracker</a>")
-                    onLinkActivated: Qt.openUrlExternally(link)
-                 }
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    labeltext: i18n.tr("Please report bugs to the")
+                    linktext: i18n.tr("issue tracker")
+                    linkurl: "https://github.com/belohoub/UBsync/issues"
+                }
             }
 
             Column {
@@ -100,42 +107,45 @@ Page {
                     text: i18n.tr("Thanks to")
                 }
 
-                Label {
+                LabelLinkRow {
+                    id: ownCloudClientLabel
                     width: parent.width
-                    wrapMode: Text.WordWrap
-                    horizontalAlignment: Text.AlignHCenter
-                    text: i18n.tr("Owncloud client: %1".arg("<a href=\"https://doc.owncloud.org/desktop/2.3/owncloudcmd.1.html\">Owncloudcmd</a>"))
-                    onLinkActivated: Qt.openUrlExternally(link)
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    labeltext: i18n.tr("Owncloud client:")
+                    linktext: "Owncloudcmd"
+                    linkurl: "https://doc.owncloud.org/desktop/2.3/owncloudcmd.1.html"
                 }
-                Label {
+                LabelLinkRow {
+                    id: nextCloudClientLabel
                     width: parent.width
-                    wrapMode: Text.WordWrap
-                    horizontalAlignment: Text.AlignHCenter
-                    text: i18n.tr("Nextcloud client: %1".arg("<a href=\"https://docs.nextcloud.com/desktop/2.3/advancedusage.html\">Nextcloudcmd</a>"))
-                    onLinkActivated: Qt.openUrlExternally(link)
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    labeltext: i18n.tr("Nextcloud client:")
+                    linktext: "Nextcloudcmd"
+                    linkurl: "https://docs.nextcloud.com/desktop/2.3/advancedusage.html"
                 }
-
-
-                Label {
+                LabelLinkRow {
+                    id: qtLabel
                     width: parent.width
-                    wrapMode: Text.WordWrap
-                    horizontalAlignment: Text.AlignHCenter
-                    text: i18n.tr("%1, a Qt library for WebDAV".arg("<a href=\"https://github.com/mhaller/qwebdavlib\">qwebdavlib</a>"))
-                    onLinkActivated: Qt.openUrlExternally(link)
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    labeltext: i18n.tr("This Qt library for WebDAV:")
+                    linktext: "qwebdavlib"
+                    linkurl: "https://github.com/mhaller/qwebdavlib"
                 }
-                Label {
+                LabelLinkRow {
+                    id: iconLabel
                     width: parent.width
-                    wrapMode: Text.WordWrap
-                    horizontalAlignment: Text.AlignHCenter
-                    text: i18n.tr("Joan CiberSheep for the %1 logo".arg("<a href=\"https://github.com/snwh/suru-icon-theme\">Suru Theme</a>"))
-                    onLinkActivated: Qt.openUrlExternally(link)
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    labeltext: i18n.tr("Joan CiberSheep for the logo from:")
+                    linktext: "Suru Theme"
+                    linkurl: "https://github.com/snwh/suru-icon-theme"
                 }
-                Label {
+                LabelLinkRow {
+                    id: clickableLabel
                     width: parent.width
-                    wrapMode: Text.WordWrap
-                    horizontalAlignment: Text.AlignHCenter
-                    text: i18n.tr("Lukas to enable the application with %1".arg("<a href=\"http://clickable.bhdouglass.com/en/latest/index.html\">Clickable</a>"))
-                    onLinkActivated: Qt.openUrlExternally(link)
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    labeltext: i18n.tr("Lukas to enable the application with:")
+                    linktext: "Clickable"
+                    linkurl: "https://clickable-ut.dev/en/latest/index.html"
                 }
             }
             Label {
@@ -145,21 +155,21 @@ Page {
                 horizontalAlignment: Text.AlignHCenter
                 text: i18n.tr("Released under the terms of the GNU GPL v3")
             }
-            Label {
+            LabelLinkRow {
+                id: forkLabel
                 width: parent.width
-                wrapMode: Text.WordWrap
-                textSize: Label.Small
-                horizontalAlignment: Text.AlignHCenter
-                text: i18n.tr("Fork of %1".arg("<a href=\"https://launchpad.net/owncloud-sync\">Owncloud-Sync</a>"))
-                onLinkActivated: Qt.openUrlExternally(link)
+                anchors.horizontalCenter: parent.horizontalCenter
+                labeltext: i18n.tr("Fork of:")
+                linktext: "Owncloud-Sync"
+                linkurl: "https://launchpad.net/owncloud-sync"
             }
-            Label {
+            LabelLinkRow {
+                id: sourceCodeLabel
                 width: parent.width
-                wrapMode: Text.WordWrap
-                textSize: Label.Small
-                horizontalAlignment: Text.AlignHCenter
-                text: i18n.tr("Source code available on %1").arg("<a href=\"https://github.com/belohoub/UBsync\">github.com/belohoub/UBsync</a>")
-                onLinkActivated: Qt.openUrlExternally(link)
+                anchors.horizontalCenter: parent.horizontalCenter
+                labeltext: i18n.tr("Source code available on:")
+                linktext: "github.com/belohoub/UBsync"
+                linkurl: "https://github.com/belohoub/UBsync"
             }
         }
     }
