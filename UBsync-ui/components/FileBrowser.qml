@@ -61,7 +61,8 @@ Page {
         visible:!folderListModel.count && showNoChildFolders
 
         Column{
-            anchors{centerIn: parent}
+            anchors.centerIn: parent
+            width: parent.width
             spacing: units.gu(2)
 
             Label{
@@ -71,7 +72,8 @@ Page {
             }
 
             Icon {
-                id: addIcon
+                id: tickIcon
+                anchors.horizontalCenter: parent.horizontalCenter
                 name: "tick"
                 width: units.gu(4)
                 height: width
@@ -79,7 +81,22 @@ Page {
 
             Label{
                 width: parent.width
-                text: i18n.tr("on the panel to select this folder")
+                text: i18n.tr("on the panel to select this folder, or press")
+                horizontalAlignment: Text.AlignHCenter
+                wrapMode: Text.WordWrap
+            }
+
+            Icon {
+                id: addIcon
+                anchors.horizontalCenter: parent.horizontalCenter
+                name: "add"
+                width: units.gu(4)
+                height: width
+            }
+
+            Label{
+                width: parent.width
+                text: i18n.tr("to create a new folder.")
                 horizontalAlignment: Text.AlignHCenter
             }
         }
