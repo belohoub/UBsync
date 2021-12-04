@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-03 22:35+0000\n"
+"POT-Creation-Date: 2021-12-04 15:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,558 +18,602 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/components/FileBrowser.qml:70
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/components/FileBrowser.qml:70
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/components/FileBrowser.qml:70
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/components/FileBrowser.qml:69
 msgid "No folders, press"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/components/FileBrowser.qml:84
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/components/FileBrowser.qml:84
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/components/FileBrowser.qml:84
 msgid "on the panel to select this folder, or press"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/components/FileBrowser.qml:99
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/components/FileBrowser.qml:99
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/components/FileBrowser.qml:99
 msgid "to create a new folder."
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/components/FileBrowser.qml:146
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/components/FileBrowser.qml:146
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/components/FileBrowser.qml:146
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/components/FileBrowser.qml:129
 msgid "Create New Folder"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/components/FileBrowser.qml:150
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/components/FileBrowser.qml:150
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/components/FileBrowser.qml:150
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/components/FileBrowser.qml:133
 msgid "New Folder"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/components/FileBrowser.qml:158
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/components/FileBrowser.qml:158
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/components/FileBrowser.qml:158
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/components/FileBrowser.qml:145
 msgid "OK"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/components/FileBrowser.qml:168
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/components/FileBrowser.qml:168
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/components/FileBrowser.qml:168
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/components/FileBrowser.qml:140
 msgid "Cancel"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/AboutPage.qml:11
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/TargetsPage.qml:171
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/AboutPage.qml:11
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/TargetsPage.qml:171
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:11
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/TargetsPage.qml:171
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/AboutPage.qml:10
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/TargetsPage.qml:171
 msgid "About"
 msgstr ""
 
 #. TRANSLATORS: Owncloud Sync version number e.g Version 0.1
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/AboutPage.qml:63
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/AboutPage.qml:62
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:63
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/AboutPage.qml:61
 #, qt-format
 msgid "App Version %1"
 msgstr ""
 
 #. TRANSLATORS: Nextcloudcmd binary version number e.g Version 1.8.1
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/AboutPage.qml:70
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/AboutPage.qml:68
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:70
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/AboutPage.qml:67
 #, qt-format
 msgid "Client: %1"
 msgstr ""
 
 #. TRANSLATORS: %1 is the maintainers name, %2 is the link text to the UBsync contributors teams page
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/AboutPage.qml:77
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:79
 #, qt-format
 msgid "Maintained by %1 and the"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/AboutPage.qml:78
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:80
 msgid "UBsync team"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/AboutPage.qml:90
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:92
 msgid "Please report bugs to the"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/AboutPage.qml:91
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:93
 msgid "issue tracker"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/AboutPage.qml:107
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/AboutPage.qml:107
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:109
 msgid "Thanks to"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/AboutPage.qml:114
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:116
 msgid "Owncloud client:"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/AboutPage.qml:122
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:124
 msgid "Nextcloud client:"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/AboutPage.qml:130
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:132
 msgid "This Qt library for WebDAV:"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/AboutPage.qml:138
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:140
 msgid "Joan CiberSheep for the logo from:"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/AboutPage.qml:146
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:148
 msgid "Lukas to enable the application with:"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/AboutPage.qml:156
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/AboutPage.qml:153
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:158
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/AboutPage.qml:146
 msgid "Released under the terms of the GNU GPL v3"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/AboutPage.qml:162
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:164
 msgid "Fork of:"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/AboutPage.qml:170
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:172
 msgid "Source code available on:"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/AccountsPage.qml:127
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/AccountsPage.qml:127
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AccountsPage.qml:127
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/AccountsPage.qml:127
 msgid "Online Accounts"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/AccountsPage.qml:237
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/AccountsPage.qml:237
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AccountsPage.qml:237
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/AccountsPage.qml:237
 msgid "No accounts, press"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/AccountsPage.qml:252
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/AccountsPage.qml:252
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AccountsPage.qml:252
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/AccountsPage.qml:252
 msgid "on the panel to add a new account"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/EditAccount.qml:79
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/HelpPage.qml:128
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/EditAccount.qml:79
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/HelpPage.qml:128
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/EditAccount.qml:79
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:133
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditAccount.qml:79
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:125
 msgid "Not Configured Account"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/EditAccount.qml:79
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/EditAccount.qml:84
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/HelpPage.qml:128
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/HelpPage.qml:164
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/EditAccount.qml:79
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/EditAccount.qml:84
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/HelpPage.qml:128
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/HelpPage.qml:164
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/EditAccount.qml:79
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/EditAccount.qml:84
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:133
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:169
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditAccount.qml:79
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditAccount.qml:84
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:125
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:159
 msgid "related targets will NOT sync"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/EditAccount.qml:84
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/HelpPage.qml:164
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/EditAccount.qml:84
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/HelpPage.qml:164
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/EditAccount.qml:84
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:169
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditAccount.qml:84
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:159
 msgid "Disabled Account"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/EditAccount.qml:90
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/HelpPage.qml:91
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/EditAccount.qml:90
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/HelpPage.qml:91
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/EditAccount.qml:90
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:96
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditAccount.qml:90
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:91
 msgid "Enabled Account"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/EditAccount.qml:90
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/HelpPage.qml:91
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/EditAccount.qml:90
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/HelpPage.qml:91
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/EditAccount.qml:90
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:96
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditAccount.qml:90
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:91
 msgid "related targets will sync"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/EditAccount.qml:172
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/EditAccount.qml:172
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/EditAccount.qml:172
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditAccount.qml:172
 msgid "Account Settings"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/EditAccount.qml:179
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/EditAccount.qml:179
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/EditAccount.qml:179
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditAccount.qml:179
 msgid "New Target"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/EditAccount.qml:377
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/EditAccount.qml:377
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/EditAccount.qml:377
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditAccount.qml:377
 msgid "Sync on Mobile Data"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/EditAccount.qml:409
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/EditAccount.qml:409
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/EditAccount.qml:409
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditAccount.qml:409
 msgid "Sync hidden files"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/EditAccount.qml:441
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/EditAccount.qml:441
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/EditAccount.qml:441
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditAccount.qml:441
 msgid "Sync Frequency"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/EditAccount.qml:462
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/EditAccount.qml:462
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/EditAccount.qml:462
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditAccount.qml:462
 msgid "No Sync"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/EditAccount.qml:462
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/EditAccount.qml:462
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/EditAccount.qml:462
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditAccount.qml:462
 msgid "hour"
 msgid_plural "hours"
 msgstr[0] ""
 msgstr[1] ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/EditAccount.qml:529
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/EditTarget.qml:579
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/EditAccount.qml:529
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/EditTarget.qml:579
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/EditAccount.qml:529
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/EditTarget.qml:579
 msgid ""
 "Synchronization service not running! Please, go to UBsync Settings and start "
 "the sync service, otherwise the target synchronization will not begin."
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/EditTarget.qml:37
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/EditTarget.qml:37
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/EditTarget.qml:37
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditTarget.qml:37
 msgid "Account Disabled"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/EditTarget.qml:37
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/EditTarget.qml:43
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/EditTarget.qml:48
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/HelpPage.qml:263
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/HelpPage.qml:300
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/EditTarget.qml:37
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/EditTarget.qml:43
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/EditTarget.qml:48
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/HelpPage.qml:263
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/HelpPage.qml:300
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/EditTarget.qml:37
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/EditTarget.qml:43
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/EditTarget.qml:48
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:269
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:306
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditTarget.qml:37
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditTarget.qml:43
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditTarget.qml:48
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:256
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:293
 msgid "target will NOT sync"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/EditTarget.qml:40
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/EditTarget.qml:43
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/EditTarget.qml:40
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/EditTarget.qml:43
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/EditTarget.qml:40
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/EditTarget.qml:43
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditTarget.qml:40
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditTarget.qml:43
 msgid "Account Not Configured"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/EditTarget.qml:48
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/EditTarget.qml:48
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/EditTarget.qml:48
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditTarget.qml:48
 msgid "Target Disabled"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/EditTarget.qml:53
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/EditTarget.qml:53
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/EditTarget.qml:53
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditTarget.qml:53
 msgid "Target Enabled"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/EditTarget.qml:53
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/HelpPage.qml:227
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/EditTarget.qml:53
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/HelpPage.qml:227
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/EditTarget.qml:53
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:233
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditTarget.qml:53
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:220
 msgid "target will sync"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/EditTarget.qml:236
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/EditTarget.qml:236
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/EditTarget.qml:236
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditTarget.qml:236
 msgid "Target Settings"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/EditTarget.qml:400
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/TargetsPage.qml:46
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/EditTarget.qml:400
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/TargetsPage.qml:46
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/EditTarget.qml:400
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/TargetsPage.qml:46
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/TargetsPage.qml:46
 msgid "Unknown Account"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/EditTarget.qml:522
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/EditTarget.qml:522
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/EditTarget.qml:522
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditTarget.qml:522
 msgid "Enable/Disable this Target"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/HelpPage.qml:8
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/TargetsPage.qml:177
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/HelpPage.qml:8
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/TargetsPage.qml:177
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:8
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/TargetsPage.qml:177
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:8
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/TargetsPage.qml:177
 msgid "Help"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/HelpPage.qml:29
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/HelpPage.qml:29
-msgid "<p>To set-up synchronization for your folders:</p>"
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:30
+msgid "To set-up synchronization for your folders:"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/HelpPage.qml:42
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/TargetsPage.qml:189
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/HelpPage.qml:42
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/TargetsPage.qml:189
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:31
+msgid ""
+"1) go to UBsync \"Online Accounts\", add new account by clicking \"plus\" "
+"icon in the main menu"
+msgstr ""
+
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:32
+msgid ""
+"2) set-up new \"target\" by clicking  \"new target\" icon in the account "
+"detail page main menu, or in the accounts list accounts' trailer menu"
+msgstr ""
+
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:33
+msgid "3) start the synchronization service from the \"UBsync Settings\""
+msgstr ""
+
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:44
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/TargetsPage.qml:189
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:42
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/TargetsPage.qml:189
 msgid "Accounts"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/HelpPage.qml:54
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/HelpPage.qml:54
-msgid "<p>UBsync uses following account symbols to express account states:</p>"
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:54
+msgid ""
+"The term \"account\" represents in the UBsync context the system online "
+"account, as configured in system settings plus the custom UBsync "
+"configuration maintained by UBsync."
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/HelpPage.qml:179
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/HelpPage.qml:179
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:55
+msgid ""
+"The account might be enabled or disabled independently on UBsync. If an "
+"account cannot be used by UBsync anymore, its configuration persists in "
+"UBsync, however, the related targets will not synchronize."
+msgstr ""
+
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:56
+msgid ""
+"If you remove the account configuration from UBsync, the related targets may "
+"still synchronize until you disable the account in system settings. "
+"Moreover, if you wish to temporarily pause all targets related to the "
+"particular account, you can disable this account in system settings "
+"temporarily without affecting UBsync configuration."
+msgstr ""
+
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:58
+msgid "UBsync uses following account symbols to express account states:"
+msgstr ""
+
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:184
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:172
 msgid "Targets"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/HelpPage.qml:190
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/HelpPage.qml:190
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:195
 msgid ""
-"<p>The term \"target\" represents in the UBsync context the remote/local "
+"The term \"target\" represents in the UBsync context the remote/local "
 "directory pair intended for synchronization plus  the set of custom \"target"
-"\" configuration.</p>"
+"\" configuration."
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/HelpPage.qml:190
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/HelpPage.qml:190
-msgid "<p>UBsync uses following target symbols to express target states:</p>"
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:196
+msgid "UBsync uses following target symbols to express target states:"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/HelpPage.qml:227
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/HelpPage.qml:227
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:233
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:220
 msgid "Active Target"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/HelpPage.qml:263
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/HelpPage.qml:263
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:269
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:256
 msgid "Inactive Target"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/HelpPage.qml:300
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/HelpPage.qml:300
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:306
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:293
 msgid "Target With Disabled/Not Configured Account"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/HelpPage.qml:51
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/HelpPage.qml:51
-msgid ""
-"<p>The term \"account\" represents in the UBsync context the system online "
-"account, as configured in system settings plus the custom UBsync "
-"configuration maintained by UBsync.</p>"
-msgstr ""
-
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/RequestAccountPage.qml:13
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/RequestAccountPage.qml:13
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/RequestAccountPage.qml:13
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/RequestAccountPage.qml:13
 msgid "Add Online Account"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/RequestAccountPage.qml:22
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/RequestAccountPage.qml:22
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/RequestAccountPage.qml:22
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/RequestAccountPage.qml:22
 msgid "Add NextCloud account"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/RequestAccountPage.qml:35
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/RequestAccountPage.qml:35
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/RequestAccountPage.qml:35
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/RequestAccountPage.qml:35
 msgid "Add OwnCloud account"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/SyncServicePage.qml:10
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/SyncServicePage.qml:10
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/SyncServicePage.qml:10
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:10
 msgid "Sync Service"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/SyncServicePage.qml:38
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/SyncServicePage.qml:38
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/SyncServicePage.qml:38
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:38
 #, qt-format
 msgid "Status: %1"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/SyncServicePage.qml:38
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/SyncServicePage.qml:38
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/SyncServicePage.qml:38
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:38
 msgid "Syncing"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/SyncServicePage.qml:38
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/SyncServicePage.qml:38
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/SyncServicePage.qml:38
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:38
 msgid "Idle"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/SyncServicePage.qml:38
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/SyncServicePage.qml:38
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/SyncServicePage.qml:38
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:38
 msgid "Stopped"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/SyncServicePage.qml:43
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/SyncServicePage.qml:43
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/SyncServicePage.qml:43
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:43
 msgid "Stop"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/SyncServicePage.qml:43
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/SyncServicePage.qml:43
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/SyncServicePage.qml:43
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:43
 msgid "Start"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/SyncServicePage.qml:49
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/SyncServicePage.qml:49
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/SyncServicePage.qml:49
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:49
 msgid "Stop Service"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/SyncServicePage.qml:49
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/SyncServicePage.qml:49
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/SyncServicePage.qml:49
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:49
 msgid "Start Service"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/SyncServicePage.qml:59
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/SyncServicePage.qml:59
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/SyncServicePage.qml:59
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:59
 msgid "Sync Required"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/SyncServicePage.qml:60
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/SyncServicePage.qml:60
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/SyncServicePage.qml:60
 msgid "Last Sync:"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/SyncServicePage.qml:65
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/SyncServicePage.qml:65
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/SyncServicePage.qml:65
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:64
 msgid "Sync"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/SyncServicePage.qml:73
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/SyncServicePage.qml:73
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/SyncServicePage.qml:73
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:72
 msgid "Sync Starting"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/SyncServicePage.qml:86
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/SyncServicePage.qml:86
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/SyncServicePage.qml:86
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:85
 #, qt-format
 msgid "Client : %1"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/SyncServicePage.qml:97
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/SyncServicePage.qml:97
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/SyncServicePage.qml:97
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:96
 #, qt-format
 msgid "Service : %1"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/SyncServicePage.qml:116
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/SyncServicePage.qml:116
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/SyncServicePage.qml:116
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:115
 msgid "Never"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/SyncServicePage.qml:120
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/SyncServicePage.qml:120
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/SyncServicePage.qml:120
 #, qt-format
 msgid "%1 Months Ago"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/SyncServicePage.qml:124
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/SyncServicePage.qml:124
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/SyncServicePage.qml:124
 #, qt-format
 msgid "%1 Days Ago"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/SyncServicePage.qml:128
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/SyncServicePage.qml:128
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/SyncServicePage.qml:128
 #, qt-format
 msgid "%1  Hours Ago"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/SyncServicePage.qml:132
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/SyncServicePage.qml:132
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/SyncServicePage.qml:132
 #, qt-format
 msgid "%1 Minutes Ago"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/SyncServicePage.qml:135
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/SyncServicePage.qml:135
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/SyncServicePage.qml:135
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:134
 msgid "A Minute Ago"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/SyncServicePage.qml:139
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/SyncServicePage.qml:139
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/SyncServicePage.qml:139
 #, qt-format
 msgid "%1 Seconds Ago"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/SyncServicePage.qml:142
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/SyncServicePage.qml:142
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/SyncServicePage.qml:142
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:141
 msgid "Just Now"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/TargetsPage.qml:165
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/TargetsPage.qml:165
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/TargetsPage.qml:165
 msgid "Sync Targets"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/TargetsPage.qml:183
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/TargetsPage.qml:183
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/TargetsPage.qml:183
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/TargetsPage.qml:183
 msgid "Settings"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/TargetsPage.qml:208
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/TargetsPage.qml:208
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/TargetsPage.qml:208
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/TargetsPage.qml:208
 msgid "No synchronization targets configured, press"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/TargetsPage.qml:223
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/TargetsPage.qml:223
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/TargetsPage.qml:223
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/TargetsPage.qml:223
 msgid ""
 "in the main panel to enter Account Settings. In Account Settings, create a "
 "new synchronization target from an existing or new account. For explanation, "
 "see the help page."
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/UBsync-ui/ui/WebdavFileBrowser.qml:34
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/WebdavFileBrowser.qml:34
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/WebdavFileBrowser.qml:34
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/WebdavFileBrowser.qml:34
 msgid "Loading"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/AboutPage.qml:73
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/components/FileBrowser.qml:82
+msgid "on the panel to select this folder"
+msgstr ""
+
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/AboutPage.qml:72
 #, qt-format
 msgid "Maintained by %1"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/AboutPage.qml:73
-#, qt-format
-msgid "and by the %1"
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/AboutPage.qml:78
+msgid " "
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/AboutPage.qml:85
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/AboutPage.qml:84
 #, qt-format
 msgid "Please report bugs to the %1"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/AboutPage.qml:114
-#, qt-format
-msgid "Owncloud client: %1"
-msgstr ""
-
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/AboutPage.qml:121
-#, qt-format
-msgid "Nextcloud client: %1"
-msgstr ""
-
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/AboutPage.qml:130
-#, qt-format
-msgid "%1, a Qt library for WebDAV"
-msgstr ""
-
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/AboutPage.qml:137
-#, qt-format
-msgid "Joan CiberSheep for the %1 logo"
-msgstr ""
-
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/AboutPage.qml:144
-#, qt-format
-msgid "Lukas to enable the application with %1"
-msgstr ""
-
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/AboutPage.qml:160
-#, qt-format
-msgid "Fork of %1"
-msgstr ""
-
-#: /media/Daten/Forks/UBsync/build/x86_64-linux-gnu/app/install/UBsync-ui/ui/AboutPage.qml:168
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/AboutPage.qml:161
 #, qt-format
 msgid "Source code available on %1"
 msgstr ""
 
-#: /media/Daten/Forks/UBsync/build/aarch64-linux-gnu/app/UBsync-ui/UBsync.desktop.h:1
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditAccount.qml:529
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditTarget.qml:579
+msgid ""
+"Synchronization service not running! Please, go to UBsync Settings and start "
+"the sync service unless the target synchronization will not begin."
+msgstr ""
+
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:29
+msgid "<p>To set-up synchronization for your folders:</p>"
+msgstr ""
+
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:54
+msgid "<p>UBsync uses following account symbols to express account states:</p>"
+msgstr ""
+
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:183
+msgid ""
+"<p>The term \"target\" represents in the UBsync context the remote/local "
+"directory pair intended for synchronization plus  the set of custom \"target"
+"\" configuration.</p>"
+msgstr ""
+
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:183
+msgid "<p>UBsync uses following target symbols to express target states:</p>"
+msgstr ""
+
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:51
+msgid ""
+"<p>The term \"account\" represents in the UBsync context the system online "
+"account, as configured in system settings plus the custom UBsync "
+"configuration maintained by UBsync.</p>"
+msgstr ""
+
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:60
+msgid "Last Sync: "
+msgstr ""
+
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:119
+msgid " Months Ago"
+msgstr ""
+
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:123
+msgid " Days Ago"
+msgstr ""
+
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:127
+msgid "  Hours Ago"
+msgstr ""
+
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:131
+msgid " Minutes Ago"
+msgstr ""
+
+#: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:138
+msgid " Seconds Ago"
+msgstr ""
+
+#: /home/jan/projects/private/ubports/UBsync/build/aarch64-linux-gnu/app/UBsync-ui/UBsync.desktop.h:1
 msgid "UBsync"
 msgstr ""

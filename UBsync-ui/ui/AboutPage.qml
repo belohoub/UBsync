@@ -72,7 +72,9 @@ Page {
                 LabelLinkRow {
                     id: maintainerLabel
                     width: parent.width
-                    anchors.horizontalCenter: parent.horizontalCenter
+                    anchors{
+                        horizontalCenter: clientLabel.horizontalCenter
+                    }
                     // TRANSLATORS: %1 is the maintainers name, %2 is the link text to the UBsync contributors teams page
                     labeltext: i18n.tr("Maintained by %1 and the").arg("Jan")
                     linktext: i18n.tr("UBsync team")

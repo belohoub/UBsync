@@ -453,7 +453,7 @@ Page {
                 anchors {
                    right: parent.right
                    //verticalCenter: frequencyLabel.verticalCenter
-                   top: frequencyLabel.top
+                   top: frequencyLabel.bottom
                 }
 
                 model: [0, 1, 2, 4, 6, 12, 24, 48, 168]
