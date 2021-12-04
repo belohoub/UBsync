@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-04 15:06+0000\n"
+"POT-Creation-Date: 2021-12-04 15:10+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -73,57 +73,57 @@ msgid "Client: %1"
 msgstr ""
 
 #. TRANSLATORS: %1 is the maintainers name, %2 is the link text to the UBsync contributors teams page
-#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:79
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:84
 #, qt-format
 msgid "Maintained by %1 and the"
 msgstr ""
 
-#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:80
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:85
 msgid "UBsync team"
 msgstr ""
 
-#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:92
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:97
 msgid "Please report bugs to the"
 msgstr ""
 
-#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:93
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:98
 msgid "issue tracker"
 msgstr ""
 
-#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:109
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:114
 msgid "Thanks to"
 msgstr ""
 
-#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:116
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:121
 msgid "Owncloud client:"
 msgstr ""
 
-#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:124
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:129
 msgid "Nextcloud client:"
 msgstr ""
 
-#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:132
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:137
 msgid "This Qt library for WebDAV:"
 msgstr ""
 
-#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:140
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:145
 msgid "Joan CiberSheep for the logo from:"
 msgstr ""
 
-#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:148
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:153
 msgid "Lukas to enable the application with:"
 msgstr ""
 
-#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:158
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:163
 #: /home/jan/projects/private/ubports/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/AboutPage.qml:146
 msgid "Released under the terms of the GNU GPL v3"
 msgstr ""
 
-#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:164
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:169
 msgid "Fork of:"
 msgstr ""
 
-#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:172
+#: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/AboutPage.qml:177
 msgid "Source code available on:"
 msgstr ""
 

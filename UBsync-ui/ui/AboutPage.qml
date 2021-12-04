@@ -69,6 +69,11 @@ Page {
                     // TRANSLATORS: Nextcloudcmd binary version number e.g Version 1.8.1
                     text: i18n.tr("Client: %1").arg(owncloud.settings.owncloudcmdVersion)
                 }
+                Label {
+                    width: parent.width
+                    horizontalAlignment: Text.AlignHCenter
+                    text: " "
+                }
                 LabelLinkRow {
                     id: maintainerLabel
                     width: parent.width
@@ -78,7 +83,7 @@ Page {
                     // TRANSLATORS: %1 is the maintainers name, %2 is the link text to the UBsync contributors teams page
                     labeltext: i18n.tr("Maintained by %1 and the").arg("Jan")
                     linktext: i18n.tr("UBsync team")
-                    linkurl: "https://github.com/belohoub/UBsync"
+                    linkurl: "https://github.com/belohoub/UBsync#current-and-past-contributors"
                 }
                 Label {
                     width: parent.width
