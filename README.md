@@ -69,7 +69,9 @@ Any help on the code is welcomed to enhance the app!
 
 ### Translations
 
-TBD
+For translation instructions please read this page from the [docs](https://docs.ubports.com/en/latest/contribute/translations.html).
+
+In short, this app currently does not use a translation service. So you will need to either create or edit the *.po* file for your language and commit this new/changed *.po* file as a PR.
 
 
 ### Documentation
