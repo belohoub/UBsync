@@ -7,7 +7,7 @@ UBsync is the featured application for [OwnCloud](https://owncloud.com/)/[Nextcl
 <img src="https://framagit.org/ernesst/UBsync/raw/master/Owncloud-Sync/UBsync.png" width="196">
 
 ## Common UBsync Recommendations
-* Do not synchronize the entire home folder, because it can be quite big. Rather set up several targets and select individual folders.
+* Do not synchronize the entire home folder, because it can be quite big and certain fast-evolving files (caches, or profiles) may induce many file versions in the cloud. Rather set up several targets and select individual folders.
 * UBsync can be used to back up your app configs to Owncloud/Nextcloud
 * Application sync support tips:
   * UBsync can be used to sync [Activity Tracker](https://open-store.io/app/activitytracker.cwayne18) app and Nextcloud GPXedit
