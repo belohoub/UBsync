@@ -28,11 +28,13 @@ This application needs to be *unconfined*, as the pre-defined AppArmor policies 
 1. create the backend daemon (*Owncloudsyncd*) by upstart for background synchronisation
 1. *UBsync-ui* to *Owncloudsyncd* communication through *DBUS*
 
-As unconfined apps may introduce security risks, you can review the apps source code or even build the app by yourself to be sure, that the app is not harmful.
+As unconfined apps may introduce security risks, you can review the app's source code or even build the app by yourself to be sure, that the app is not harmful.
 
-Go to [GitHub](https://github.com/belohoub/UBsync) to download and review the UBsync source code.
+Please note, that *unconfined* applications in [OpenStore](https://open-store.io/) are manually [reviewed](https://open-store.io/about).
 
-To build the app, install [Clickable](https://clickable-ut.dev/en/latest/) (v7.0.0 or above), open a terminal, clone UBsync repo, change into the UBsync folder and run `clickable`.
+To get the source code, go to [GitHub](https://github.com/belohoub/UBsync) to download and review the UBsync source code.
+
+To build the app, install [Clickable](https://clickable-ut.dev/en/latest/) (v7.0.0 or above), open a terminal, clone the UBsync repo, change into the UBsync folder and run `clickable`.
 
 ## Project History
 UBsync was originally forked from [ownCloud-sync](https://launchpad.net/owncloud-sync), a dedicated Nextcloud application for **Ubuntu touch**,  supported by [UBports](https://www.ubports.com).
@@ -75,7 +77,7 @@ Any help on the code is welcomed to enhance the app!
 
 For translation instructions please read this page from the [docs](https://docs.ubports.com/en/latest/contribute/translations.html).
 
-In short, this app currently does not use a translation service. So you will need to either create or edit the *.po* file for your language and commit this new/changed *.po* file as a PR.
+In short, this app currently does not use a translation service. So you will need to either create or edit the *.po* file for your language and commit this new/changed *.po* file as a pull request.
 
 
 ### Documentation
