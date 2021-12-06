@@ -133,12 +133,11 @@ Page {
 
                         if (rs.rows.length === 0) {
                             console.log("EditTarget :: Inserting SyncTargets ID " + targetPage.targetID)
-                            tx.executeSql('INSERT INTO SyncTargets VALUES(NULL, (?), (?), (?), (?), 1)', [
+                            tx.executeSql('INSERT INTO SyncTargets VALUES(NULL, (?), (?), (?), (?), 1, "")', [
                                               targetPage.accountID,
                                               localPath.text,
                                               remotePath.text,
                                               targetName.text]);
-
                             // load inserted ID
                             rs = tx.executeSql('SELECT * FROM SyncTargets');
                             targetPage.targetID = rs.rows.item(rs.rows.length - 1).targetID

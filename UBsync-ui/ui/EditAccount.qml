@@ -107,7 +107,7 @@ Page {
 
                         if (rs.rows.length === 0) {
                             console.log("EditAccount :: Inserting SyncAccounts index " + index)
-                            tx.executeSql('INSERT INTO SyncAccounts VALUES((?), (?), (?), (?), 0, 0, 1)', [
+                            tx.executeSql('INSERT INTO SyncAccounts VALUES((?), (?), (?), (?), 0, 0, 1, "")', [
                                               index,
                                               accountName.text,
                                               remoteText.text,
