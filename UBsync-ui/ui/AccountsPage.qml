@@ -232,7 +232,7 @@ Page {
         width: parent.width - units.gu(4)
 
         Label{
-            wrapMode: Text.WrapAnywhere
+            wrapMode: Text.Wrap
             width: parent.width - units.gu(4)
             text: i18n.tr("No accounts, press")
             anchors{horizontalCenter: parent.horizontalCenter; bottom: addIcon.top; bottomMargin: units.gu(2)}
@@ -247,7 +247,7 @@ Page {
         }
 
         Label{
-            wrapMode: Text.WrapAnywhere
+            wrapMode: Text.Wrap
             width: parent.width - units.gu(4)
             text: i18n.tr("on the panel to add a new account")
             anchors{horizontalCenter: parent.horizontalCenter; top: addIcon.bottom; topMargin: units.gu(2)}
@@ -318,7 +318,7 @@ Page {
 
                 Label {
                     id: accountName
-                    wrapMode: Text.WrapAnywhere
+                    wrapMode: Text.Wrap
                     width: parent.width - accountIcon.width - units.gu(4)
                     text: model.accountName
                     height: units.gu(6)

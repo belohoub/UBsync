@@ -203,7 +203,7 @@ Page {
         visible: !targetListModel.count
 
         Label{
-            wrapMode: Text.WrapAnywhere
+            wrapMode: Text.Wrap
             width: parent.width - units.gu(4)
             text: i18n.tr("No synchronization targets configured, press")
             anchors{horizontalCenter: parent.horizontalCenter; bottom: addCenterHelp.top; bottomMargin: units.gu(2)}
@@ -218,7 +218,7 @@ Page {
         }
 
         Label{
-            wrapMode: Text.WrapAnywhere
+            wrapMode: Text.Wrap
             width: parent.width - units.gu(4)
             text: i18n.tr("in the main panel to enter Account Settings. In Account Settings, create a new synchronization target from an existing or new account. For explanation, see the help page.")
             anchors{horizontalCenter: parent.horizontalCenter; top: addCenterHelp.bottom; topMargin: units.gu(2)}
@@ -280,7 +280,7 @@ Page {
 
                 Label {
                     id: targetName
-                    wrapMode: Text.WrapAnywhere
+                    wrapMode: Text.Wrap
                     maximumLineCount: 2
                     width: parent.width - targetIcon.width - units.gu(4)
                     text: model.targetName
@@ -330,7 +330,7 @@ Page {
                 Label {
                     id: accountName
                     text: model.accountName
-                    wrapMode: Text.WrapAnywhere
+                    wrapMode: Text.Wrap
                     maximumLineCount: 1
                     width: parent.width - targetIcon.width - accountSymbol.width - units.gu(6)
                     anchors.leftMargin: units.gu(1)
