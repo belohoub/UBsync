@@ -13,6 +13,7 @@ UBsync is the featured application for [OwnCloud](https://owncloud.com/)/[Nextcl
   * UBsync can be used to sync [Activity Tracker](https://open-store.io/app/activitytracker.cwayne18) app and Nextcloud GPXedit
   * UBsync Can be used to sync [Crazy Mark](https://open-store.io/app/crazy-mark.timsueberkrueb) app with Nextcloud Notes
   * UBsync Can be used to sync your music files
+  * ...
 
 ## Upgrade/Post-Install Recommendations
 * Reboot your phone after installation - backend daemon  is started by upstart and will be properly initialized when you log out and log in, the simpler way is probably to reboot your phone
