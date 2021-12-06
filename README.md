@@ -7,28 +7,34 @@ UBsync is the featured application for [OwnCloud](https://owncloud.com/)/[Nextcl
 <img src="https://framagit.org/ernesst/UBsync/raw/master/Owncloud-Sync/UBsync.png" width="196">
 
 ## Common UBsync Recommendations
-* Do not synchronize the entire home folder, rather select the relevant folder.
+* Do not synchronize the entire home folder, because it can be quite big. Rather set up several targets and select individual folders.
 * UBsync can be used to back up your app configs to Owncloud/Nextcloud
 * Application sync support tips:
   * UBsync can be used to sync [Activity Tracker](https://open-store.io/app/activitytracker.cwayne18) app and Nextcloud GPXedit
   * UBsync Can be used to sync [Crazy Mark](https://open-store.io/app/crazy-mark.timsueberkrueb) app with Nextcloud Notes
+  * UBsync Can be used to sync your music files
 
 ## Upgrade/Post-Install Recommendations
 * Reboot your phone after installation - backend daemon  is started by upstart and will be properly initialized when you log out and log in, the simpler way is probably to reboot your phone
 
 ## App Permissions
 UBsync requests explicitly following permissions:
-1. Online Accounts - to be able to use system-wide accounts
-1. Networking - cloud synchronization app naturally needs network access
+1. Online Accounts - to be able to use Owncloud/Nextcloud accounts already set up in system settings
+1. Networking - as a cloud synchronization app, it naturally needs network access
 
 Additionally, UBsync is an *unconfined* app, which means, that it is not limited by any AppArmor security policies.
-This application needs to be *unconfined*, as the pre-defined AppArmor policies does not allow to cover UBsyncs' vital features:
+This application needs to be *unconfined*, as the pre-defined AppArmor policies do not permit all of UBsyncs' vital features:
 1. gain read/write access to any folder you wish to synchronize
-1. define the backend daemon (*Owncloudsyncd*) by upstart
+1. create the backend daemon (*Owncloudsyncd*) by upstart for background synchronisation
 1. *UBsync-ui* to *Owncloudsyncd* communication through *DBUS*
 
-As unconfined apps may introduce security risks, you can review the application source code or even build your package to be sure, that the app is not evil. 
-Go to [GitHub](https://github.com/belohoub/UBsync) to download and review the UBsync source code.
+As unconfined apps may introduce security risks, you can review the app's source code or even build the app by yourself to be sure, that the app is not harmful.
+
+Please note, that *unconfined* applications in [OpenStore](https://open-store.io/) are manually [reviewed](https://open-store.io/about).
+
+To get the source code, go to [GitHub](https://github.com/belohoub/UBsync) to download and review the UBsync source code.
+
+To build the app, install [Clickable](https://clickable-ut.dev/en/latest/) (v7.0.0 or above), open a terminal, clone the UBsync repo, change into the UBsync folder and run `clickable`.
 
 ## Project History
 UBsync was originally forked from [ownCloud-sync](https://launchpad.net/owncloud-sync), a dedicated Nextcloud application for **Ubuntu touch**,  supported by [UBports](https://www.ubports.com).
@@ -69,7 +75,9 @@ Any help on the code is welcomed to enhance the app!
 
 ### Translations
 
-TBD
+For translation instructions please read this page from the [docs](https://docs.ubports.com/en/latest/contribute/translations.html).
+
+In short, this app currently does not use a translation service. So you will need to either create or edit the *.po* file for your language and commit this new/changed *.po* file as a pull request.
 
 
 ### Documentation
