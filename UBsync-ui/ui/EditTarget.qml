@@ -29,6 +29,9 @@ Page {
     // accounts may be not ready ...
     property bool accountsLoaded: false
 
+    // remote browser could be open - only when credentials were obtained succesfully
+    property bool credentialsLoaded: false
+    property bool askForRemoteBrowser: false
 
     function updateSymbol() {
         if (accountEnabled === false) {
@@ -197,6 +200,23 @@ Page {
         }
     }
 
+    Timer {
+        // This timer checks if credentials are ready to open remote browser
+        id: openRemoteBrowser
+        interval: 250
+        running: true
+        repeat: true
+        onTriggered: {
+            if (askForRemoteBrowser === true) {
+                // wait until accounts are not ready
+                if (accountsLoaded === false) {
+                    askForRemoteBrowser = false
+                    apl.addPageToNextColumn(targetPage, Qt.resolvedUrl("WebdavFileBrowser.qml"), {caller:remotePath, paramUsername: targetPage.accountUser, paramPassword: targetPage.accountPassword, paramServerUrl: targetPage.accountRemoteAddress})
+                }
+            }
+        }
+    }
+
     Connections {
           id: accountConnection
           target: null
@@ -211,6 +231,7 @@ Page {
               } else {
                   targetPage.accountUser = reply.Username
                   targetPage.accountPassword = reply.Password
+                  credentialsLoaded = true
                   /* TODO: activate in debug mode? */
                   //console.log("EditTarget :: Account details are: " + reply.Username + ":" + reply.Password )
               }
@@ -472,7 +493,8 @@ Page {
 
                     onClicked: {
                         console.log("EditTarget :: Change Remote Folder")
-                         apl.addPageToNextColumn(targetPage, Qt.resolvedUrl("WebdavFileBrowser.qml"), {caller:remotePath, paramUsername: targetPage.accountUser, paramPassword: targetPage.accountPassword, paramServerUrl: targetPage.accountRemoteAddress})
+                        askForRemoteBrowser = true
+                        // apl.addPageToNextColumn(targetPage, Qt.resolvedUrl("WebdavFileBrowser.qml"), {caller:remotePath, paramUsername: targetPage.accountUser, paramPassword: targetPage.accountPassword, paramServerUrl: targetPage.accountRemoteAddress})
                     }
             Icon {
                 id: remoteIcon
