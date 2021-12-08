@@ -161,8 +161,14 @@ Page {
             onActiveChanged: {
                 /* re-render anytime page is shown */
                 console.log("EditAccount :: editAccountPage activated")
+                // load from DB if already exist
                 accountPage.loadDB(accountPage.accountID)
-                // Do not updateDb() here - only explicit save after any edit is required when creating a new account
+                // Implicit save of the new account happens here
+                // Expicit DB ebntry creation was confusing for users, thus DB entry is created implicitly
+                // Any conflict should not happen, as accounts are unique in the system
+                accountPage.updateDB(accountPage.accountID)
+                // load to update view ...
+                accountPage.loadDB(accountPage.accountID)
             }
         }
 
@@ -295,6 +301,11 @@ Page {
                 }
                 onTextChanged: {
                     /* Invoke load DB */
+                    accountPage.loadDB(accountPage.accountID)
+                    // Explicit save was confusing for users, thus DB entry is created implicitly
+                    // Any conflict should not happen, as accounts are unique in the system
+                    accountPage.updateDB(accountPage.accountID)
+                    // load to update view ...
                     accountPage.loadDB(accountPage.accountID)
                 }
             }
