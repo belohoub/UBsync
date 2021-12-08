@@ -199,14 +199,14 @@ Page {
     Item {
         //Shown only if there are no items in targets
         anchors{centerIn: parent}
-        width: parent.width
+        width: parent.width - units.gu(4)
         visible: !targetListModel.count
 
         Label{
             wrapMode: Text.Wrap
-            width: parent.width - units.gu(4)
+            //width: parent.width - units.gu(4)
             text: i18n.tr("No synchronization targets configured, press")
-            anchors{horizontalCenter: parent.horizontalCenter; bottom: addCenterHelp.top; bottomMargin: units.gu(2)}
+            anchors{horizontalCenter: addCenterHelp.horizontalCenter; bottom: addCenterHelp.top; bottomMargin: units.gu(2)}
         }
 
         Icon {
@@ -219,9 +219,9 @@ Page {
 
         Label{
             wrapMode: Text.Wrap
-            width: parent.width - units.gu(4)
+            //width: parent.width - units.gu(4)
             text: i18n.tr("in the main panel to enter Account Settings. In Account Settings, create a new synchronization target from an existing or new account. For explanation, see the help page.")
-            anchors{horizontalCenter: parent.horizontalCenter; top: addCenterHelp.bottom; topMargin: units.gu(2)}
+            anchors{horizontalCenter: addCenterHelp.horizontalCenter; top: addCenterHelp.bottom; topMargin: units.gu(2)}
         }
     }
 

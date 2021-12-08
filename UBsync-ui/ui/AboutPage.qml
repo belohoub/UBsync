@@ -76,7 +76,7 @@ Page {
                 }
                 LabelLinkRow {
                     id: maintainerLabel
-                    width: parent.width
+                    //width: parent.width
                     anchors{
                         horizontalCenter: clientLabel.horizontalCenter
                     }
@@ -92,7 +92,7 @@ Page {
                 }
                 LabelLinkRow {
                     id: issueReportLabel
-                    width: parent.width
+                    //width: parent.width
                     anchors.horizontalCenter: parent.horizontalCenter
                     labeltext: i18n.tr("Please report bugs to the")
                     linktext: i18n.tr("issue tracker")
@@ -164,7 +164,7 @@ Page {
             }
             LabelLinkRow {
                 id: forkLabel
-                width: parent.width
+                //width: parent.width
                 anchors.horizontalCenter: parent.horizontalCenter
                 labeltext: i18n.tr("Fork of:")
                 linktext: "Owncloud-Sync"
@@ -172,7 +172,7 @@ Page {
             }
             LabelLinkRow {
                 id: sourceCodeLabel
-                width: parent.width
+                //width: parent.width
                 anchors.horizontalCenter: parent.horizontalCenter
                 labeltext: i18n.tr("Source code available on:")
                 linktext: "github.com/belohoub/UBsync"

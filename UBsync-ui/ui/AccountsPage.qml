@@ -233,9 +233,9 @@ Page {
 
         Label{
             wrapMode: Text.Wrap
-            width: parent.width - units.gu(4)
+            //width: parent.width - units.gu(4)
             text: i18n.tr("No accounts, press")
-            anchors{horizontalCenter: parent.horizontalCenter; bottom: addIcon.top; bottomMargin: units.gu(2)}
+            anchors{horizontalCenter: addIcon.horizontalCenter; bottom: addIcon.top; bottomMargin: units.gu(2)}
         }
 
         Icon {
@@ -248,9 +248,9 @@ Page {
 
         Label{
             wrapMode: Text.Wrap
-            width: parent.width - units.gu(4)
+            //width: parent.width - units.gu(4)
             text: i18n.tr("on the panel to add a new account")
-            anchors{horizontalCenter: parent.horizontalCenter; top: addIcon.bottom; topMargin: units.gu(2)}
+            anchors{horizontalCenter: addIcon.horizontalCenter; top: addIcon.bottom; topMargin: units.gu(2)}
         }
     }
 

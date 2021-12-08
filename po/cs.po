@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-08 10:40+0000\n"
-"PO-Revision-Date: 2021-12-08 11:45+0100\n"
+"POT-Creation-Date: 2021-12-08 14:50+0000\n"
+"PO-Revision-Date: 2021-12-08 14:09+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: cs_CZ\n"
@@ -248,23 +248,27 @@ msgstr "Nápověda"
 
 #: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:30
 msgid "To set-up synchronization for your folders:"
-msgstr ""
+msgstr "Synchronizaci adresářů nastavíte takto:"
 
 #: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:31
 msgid ""
 "1) go to UBsync \"Online Accounts\", add new account by clicking \"plus\" "
 "icon in the main menu"
 msgstr ""
+"1) přejděte do nastavení \"Účty\", přidejte nový účet kliknutím na ikonu "
+"\"plus\" v nabídce v záhlaví"
 
 #: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:32
 msgid ""
 "2) set-up new \"target\" by clicking  \"new target\" icon in the account "
 "detail page main menu, or in the accounts list accounts' trailer menu"
 msgstr ""
+"2) nastavte nový \"cíl\" kliknutím na ikonu \"nový cíl\" na stránce detailu "
+"účtu, případně v seznamu účtů v pravém vysouvacím menu u zvoleného účtu"
 
 #: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:33
 msgid "3) start the synchronization service from the \"UBsync Settings\""
-msgstr ""
+msgstr "3) spusťte službu synchronizace na stránce nastavení UBsync"
 
 #: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:44
 #: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/TargetsPage.qml:189
@@ -277,6 +281,9 @@ msgid ""
 "account, as configured in system settings plus the custom UBsync "
 "configuration maintained by UBsync."
 msgstr ""
+"Termín \"účet\" v UBsync představuje systémový účet (\"online account\") "
+"nastavený ve Vašem systému sdružený s nastavením tohoto účtu přímo v "
+"aplikaci UBsync."
 
 #: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:55
 msgid ""
@@ -284,19 +291,27 @@ msgid ""
 "account cannot be used by UBsync anymore, its configuration persists in "
 "UBsync, however, the related targets will not synchronize."
 msgstr ""
+"Účet může být povolen nebo zakázán nezávisle na aplikaci UBsync (v nastavení "
+"systému). Pokud UBsync nemůže účet používat, jeho nastavení v UBsync je "
+"zachováno, avšak s ním spojené cíle nemohou být synchronizovány."
 
 #: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:56
 msgid ""
-"If you remove the account configuration from UBsync, the related targets may "
-"still synchronize until you disable the account in system settings. "
-"Moreover, if you wish to temporarily pause all targets related to the "
-"particular account, you can disable this account in system settings "
-"temporarily without affecting UBsync configuration."
+"If you remove the account configuration from UBsync, the related targets "
+"will NOT synchronize until you re-create the account settings. If you wish "
+"to temporarily pause all targets related to the particular account, you can "
+"disable this account in system settings temporarily without affecting UBsync "
+"configuration."
 msgstr ""
+"Pokud odstraníte nastavení účtu z UBsync, příslušné cíle NEBUDOU "
+"synchronizovány. Pokud si přejete pouze dočasně pozastavit cíle sdružené s "
+"určitým účtem, zakažte použití účtu aplikací UBsync  v nastavení systému - "
+"tento krok nepoškodí nastavení provedená v UBsync, ale cíl nebude "
+"synchronizován."
 
 #: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:58
 msgid "UBsync uses following account symbols to express account states:"
-msgstr ""
+msgstr "UBsync používá následující symboly pro ilustraci stavu účtu:"
 
 #: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:184
 msgid "Targets"
@@ -308,10 +323,12 @@ msgid ""
 "directory pair intended for synchronization plus  the set of custom \"target"
 "\" configuration."
 msgstr ""
+"Termín \"cíl\" v UBsync představuje dvojici vzdáleného a lokálního adresáře "
+"k synchronizaci spolu s množinou nastavení tohoto \"cíle\"."
 
 #: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:196
 msgid "UBsync uses following target symbols to express target states:"
-msgstr ""
+msgstr "UBsync používá následující symboly pro ilustraci stavu cíle:"
 
 #: /home/jan/projects/private/ubports/UBsync/UBsync-ui/ui/HelpPage.qml:233
 msgid "Active Target"
