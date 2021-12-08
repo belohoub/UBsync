@@ -11,8 +11,8 @@ UBsync is the featured application for [OwnCloud](https://owncloud.com/)/[Nextcl
 * UBsync can be used to back up your app configs to Owncloud/Nextcloud
 * Application sync support tips:
   * UBsync can be used to sync [Activity Tracker](https://open-store.io/app/activitytracker.cwayne18) app and Nextcloud GPXedit
-  * UBsync Can be used to sync [Crazy Mark](https://open-store.io/app/crazy-mark.timsueberkrueb) app with Nextcloud Notes
-  * UBsync Can be used to sync your music files
+  * UBsync can be used to sync [Crazy Mark](https://open-store.io/app/crazy-mark.timsueberkrueb) app with Nextcloud Notes
+  * UBsync can be used to sync your music files
   * ...
 
 ## Upgrade/Post-Install Recommendations
