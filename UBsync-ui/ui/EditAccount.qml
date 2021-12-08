@@ -530,6 +530,8 @@ Page {
                         anchors {
                             left: accountStateIcon.right; verticalCenter: accountStateIcon.verticalCenter
                             leftMargin: units.gu(2)
+                            right: parent.right
+                            rightMargin: units.gu(2)
                         }
                     }
             }
