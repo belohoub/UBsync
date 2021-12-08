@@ -34,7 +34,6 @@ MainView {
     property alias settings: ubsyncSettings
     property var applicationVersion
     property var applicationPatch
-    property var applicationName
 
     // UBsync database
     property var db
