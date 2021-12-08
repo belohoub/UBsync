@@ -33,6 +33,8 @@ MainView {
     id: owncloud
     property alias settings: ubsyncSettings
     property var applicationVersion
+    property var applicationPatch
+    property var applicationName
 
     // UBsync database
     property var db
@@ -43,6 +45,7 @@ MainView {
     // Note! applicationName needs to match the "name" field of the click manifest
     applicationName: "ubsync"
     applicationVersion: "0.7"
+    applicationPatch: "1" // minor version
 
     anchorToKeyboard: true
 
@@ -52,7 +55,8 @@ MainView {
         property int timer: 0
         property string owncloudcmdVersion
         property string owncloudSyncdVersion
-        property string ubsyncVersion
+        property string ubsyncVersion: "0.7"
+        property string ubsyncVersionPatch: "0"
 
         property string color_targetActive: "forestgreen"
         property string color_targetInactive: "silver"
@@ -88,10 +92,11 @@ MainView {
                         // to correct strcuture for testers
                         // TODO remove in future releases
                         try {
-                            tx.executeSql('ALTER TABLE ADD COLUMN SyncAccounts serviceName TEXT');
-                            tx.executeSql('ALTER TABLE ADD COLUMN SyncTargets lastSync TEXT');
+                            tx.executeSql('ALTER TABLE SyncAccounts ADD COLUMN serviceName TEXT' );
+                            tx.executeSql('ALTER TABLE SyncTargets ADD COLUMN lastSync TEXT');
                         } catch (error) {
                             // Nothink to do
+                            print("Database structure update ERROR!")
                         }
                     }
                 )
@@ -119,7 +124,7 @@ MainView {
             }
 
             /* config file version - related update actions */
-            if ((parseFloat(owncloud.settings.ubsyncVersion) < 0.7) || (owncloud.settings.username != "")) {
+            if ((parseFloat(owncloud.settings.ubsyncVersion) < parseFloat(owncloud.applicationVersion)) || (owncloud.settings.username != "")) {
                 // remove deprecated options
                 owncloud.settings.password = ""
                 owncloud.settings.serverURL = ""
@@ -127,15 +132,20 @@ MainView {
                 // update database structure and database ...
                 createDB()
                 // TODO no migration here ... ???
-            } if (parseFloat(owncloud.settings.ubsyncVersion) === 0.7) {
+            } if ((parseFloat(owncloud.settings.ubsyncVersion) === parseFloat(owncloud.applicationVersion)) && (parseInt(owncloud.settings.ubsyncVersionPatch) === parseInt(owncloud.applicationPatch))) {
                 // do nothing
+            }  if (parseFloat(owncloud.settings.ubsyncVersion) > parseFloat(owncloud.applicationVersion)) {
+                // Newer configuration file!
+                // do nothing
+                // TODO?
             } else {
-                // probably a new installation
+                // probably a new installation, patch upgrade
                 createDB()
             }
 
             // strore current app version
             owncloud.settings.ubsyncVersion = owncloud.applicationVersion
+            owncloud.settings.ubsyncVersionPatch = owncloud.applicationPatch
 
           //  if (!serviceController.serviceRunning) {
           //      print("Service not running. Starting now.")
