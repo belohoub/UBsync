@@ -209,7 +209,7 @@ Page {
         onTriggered: {
             if (askForRemoteBrowser === true) {
                 // wait until accounts are not ready
-                if (accountsLoaded === false) {
+                if (accountsLoaded === true) {
                     askForRemoteBrowser = false
                     apl.addPageToNextColumn(targetPage, Qt.resolvedUrl("WebdavFileBrowser.qml"), {caller:remotePath, paramUsername: targetPage.accountUser, paramPassword: targetPage.accountPassword, paramServerUrl: targetPage.accountRemoteAddress})
                 }

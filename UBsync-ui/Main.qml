@@ -44,7 +44,7 @@ MainView {
     // Note! applicationName needs to match the "name" field of the click manifest
     applicationName: "ubsync"
     applicationVersion: "0.7"
-    applicationPatch: "1" // minor version
+    applicationPatch: "2" // minor version
 
     anchorToKeyboard: true
 
