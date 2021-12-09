@@ -204,9 +204,9 @@ Page {
 
         Label{
             wrapMode: Text.Wrap
-            //width: parent.width - units.gu(4)
             text: i18n.tr("No synchronization targets configured, press")
-            anchors{horizontalCenter: addCenterHelp.horizontalCenter; bottom: addCenterHelp.top; bottomMargin: units.gu(2)}
+            anchors{left: parent.left; right: parent.right; bottom: addCenterHelp.top; bottomMargin: units.gu(2)}
+            horizontalAlignment: Text.AlignHCenter
         }
 
         Icon {
@@ -219,9 +219,9 @@ Page {
 
         Label{
             wrapMode: Text.Wrap
-            //width: parent.width - units.gu(4)
             text: i18n.tr("in the main panel to enter Account Settings. In Account Settings, create a new synchronization target from an existing or new account. For explanation, see the help page.")
-            anchors{horizontalCenter: addCenterHelp.horizontalCenter; top: addCenterHelp.bottom; topMargin: units.gu(2)}
+            anchors{ left: parent.left; right: parent.right; top: addCenterHelp.bottom; topMargin: units.gu(2)}
+            horizontalAlignment: Text.AlignHCenter
         }
     }
 
