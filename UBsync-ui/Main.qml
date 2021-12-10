@@ -123,7 +123,7 @@ MainView {
             }
 
             /* config file version - related update actions */
-            if ((parseFloat(owncloud.settings.ubsyncVersion) < parseFloat(owncloud.applicationVersion)) || (owncloud.settings.username != "")) {
+            if ((parseFloat(owncloud.settings.ubsyncVersion) < 0.7) || (owncloud.settings.username != "")) {
                 // remove deprecated options
                 owncloud.settings.password = ""
                 owncloud.settings.serverURL = ""
