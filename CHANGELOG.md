@@ -5,7 +5,7 @@
 1. database structure altered (see [DATABASE.md](DATABASE.md) for the new structure)
 1. multi-account support
 1. UI re-designed completely
-1. Internationalization: German and Czech localization
+1. Internationalization: German, Spanish, and Czech localization
 
 # 0.6 (multiarch) (02/2021)
 1. clickable.json added
