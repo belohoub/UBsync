@@ -34,6 +34,7 @@ MainView {
     property alias settings: ubsyncSettings
     property var applicationVersion
     property var applicationPatch
+    property var returnPage
 
     // UBsync database
     property var db
@@ -164,7 +165,9 @@ MainView {
         property bool testingConnection: true
         property var  accountSettings // TODO remove?
         anchors.fill: parent
-        primaryPageSource: Qt.resolvedUrl("ui/TargetsPage.qml")
+        //primaryPageSource: Qt.resolvedUrl("ui/TargetsPage.qml")
+        primaryPageSource: Qt.resolvedUrl("ui/MenuPage.qml")
+        //primaryPageSource: (width > units.gu(apl.maxWidth)) ? Qt.resolvedUrl("ui/MenuPage.qml") : Qt.resolvedUrl("ui/TargetsPage.qml")
 
 
         layouts: PageColumnsLayout {

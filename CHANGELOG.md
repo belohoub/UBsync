@@ -15,6 +15,12 @@
 1. included support for owncloud account in Ubuntu Touch (up to now, only nextcloud account was used, even those behave equaly from the UBsync point of view)
 1. [build instructions](BUILD.md)
 
+# 0.5 Changelog:
+1. Enable clickable thanks to Lukas
+1. fix issue with webdav port thanks to Lukas
+1. upgrade to owncloudcmd 2.6.0-git
+1. cleanup some files
+
 # 0.4 Changelog
 1. Migrate the source to https://launchpad.net/owncloud-sync
 1. Allo to synchronize hidden folder on the phone

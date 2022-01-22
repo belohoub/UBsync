@@ -10,7 +10,6 @@ Page {
     id: targetsPage
 
     property var db
-    property int debounce: 0
 
     // accounts may be not ready ...
     property bool accountsLoaded: false
@@ -114,6 +113,11 @@ Page {
         running: true
         repeat: true
         onTriggered: {
+            // hide back navigation, as this serves as main page in a single-column mode
+            if (apl.columns === 1) {
+                header.navigationActions[0].visible = false
+            }
+
             // if accounts were not ready update again as soon as possible ...
             if (accountsLoaded === false) {
                 targetsPage.loadDB()
@@ -169,30 +173,33 @@ Page {
                 Action {
                     iconName: "info"
                     text: i18n.tr("About")
-                    onTriggered: apl.addPageToNextColumn(apl.primaryPage, Qt.resolvedUrl("AboutPage.qml"))
+                    onTriggered: apl.addPageToNextColumn(targetsPage, Qt.resolvedUrl("AboutPage.qml"))
                 },
 
                 Action {
                     iconName: "help"
                     text: i18n.tr("Help")
-                    onTriggered: apl.addPageToNextColumn(apl.primaryPage, Qt.resolvedUrl("HelpPage.qml"))
+                    onTriggered: apl.addPageToNextColumn(targetsPage, Qt.resolvedUrl("HelpPage.qml"))
                 },
 
                 Action {
                     iconName: "settings"
                     text: i18n.tr("Settings")
-                    onTriggered: apl.addPageToNextColumn(apl.primaryPage, Qt.resolvedUrl("SyncServicePage.qml"))
+                    onTriggered: apl.addPageToNextColumn(targetsPage, Qt.resolvedUrl("SyncServicePage.qml"))
                 },
 
                 Action {
                     iconName: "account"
                     text: i18n.tr("Accounts")
-                    onTriggered: apl.addPageToNextColumn(apl.primaryPage, Qt.resolvedUrl("AccountsPage.qml"))
+                    onTriggered: apl.addPageToNextColumn(targetsPage, Qt.resolvedUrl("AccountsPage.qml"))
                 }
             ]
 
             // Display all icons by default - 4 should be still OK for all possible displays
             numberOfSlots: 4
+
+            /* this page is main page on small display only */
+            visible: (apl.columns === 1)
         }
     }
 
