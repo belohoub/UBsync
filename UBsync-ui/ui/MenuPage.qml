@@ -15,6 +15,7 @@ Page {
     header: PageHeader {
         id: header
         title: i18n.tr("UBsync")
+        flickable: flickable
 
         trailingActionBar{
             actions: [
@@ -25,38 +26,38 @@ Page {
 
     Timer {
         id: checkLayoutTimer
-        interval: 50
+        interval: 250
         running: true
         repeat: true
         onTriggered: {
             if (delayedExec > 0) {
                 delayedExec = delayedExec - 1
             } else {
-                checkLayoutTimer.repeat = false
                 console.log("MenuPage :: adding targetsPage")
                 apl.addPageToNextColumn(menuPage, targetsPage)
+                checkLayoutTimer.repeat = false
             }
 
         }
     }
 
-    Column {
-            spacing: units.gu(1)
-            id: pageLayout
-            anchors {
-                margins: units.gu(2)
-                fill: parent
-            }
+    Flickable {
+        id: flickable
 
+        flickableDirection: Flickable.AutoFlickIfNeeded
+        anchors.fill: parent
+        contentHeight: targetList.height
 
-            ListView {
+            Grid {
                 id: targetList
                 visible: true
-                clip: true
+
                 width: parent.width
-                //anchors{left:parent.left; right:parent.right; top:header.bottom; bottom:parent.bottom; bottomMargin:units.gu(2)}
-                //fill: parent
-                height: units.gu(8) * 6
+                anchors {
+                    top: parent.top; left: parent.left; right: parent.right; topMargin: units.gu(1); rightMargin:units.gu(1); leftMargin: units.gu(1)
+                }
+
+                height: units.gu(8) * 6 + units.gu(2)
 
 
                 ListItem {
@@ -68,7 +69,6 @@ Page {
                         top: parent.top;
                         left: parent.left;
                         right: parent.right;
-                        topMargin: units.gu(4)
                     }
 
                     onClicked: {
@@ -309,7 +309,6 @@ Page {
 
 
             }
-
 
     }
 
