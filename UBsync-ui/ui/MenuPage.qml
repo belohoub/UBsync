@@ -89,7 +89,7 @@ Page {
                     Label {
                         id: targetLink
                         text: i18n.tr("Sync Targets")
-                        font.pixelSize: units.gu(2.5)
+                        font.pixelSize: units.gu(2)
                         width: text.width
                         anchors {
                              left: targetIcon.right
@@ -138,7 +138,7 @@ Page {
                     Label {
                         id: accountLink
                         text: i18n.tr("Online Accounts")
-                        font.pixelSize: units.gu(2.5)
+                        font.pixelSize: units.gu(2)
                         width: text.width
                         anchors {
                              left: accountIcon.right
@@ -187,7 +187,7 @@ Page {
                     Label {
                         id: settingsLink
                         text: i18n.tr("Settings")
-                        font.pixelSize: units.gu(2.5)
+                        font.pixelSize: units.gu(2)
                         width: text.width
                         anchors {
                              left: settingsIcon.right
@@ -236,7 +236,7 @@ Page {
                     Label {
                         id: helpLink
                         text: i18n.tr("Help")
-                        font.pixelSize: units.gu(2.5)
+                        font.pixelSize: units.gu(2)
                         width: text.width
                         anchors {
                              left: helpIcon.right
@@ -286,7 +286,7 @@ Page {
                     Label {
                         id: aboutLink
                         text: i18n.tr("About")
-                        font.pixelSize: units.gu(2.5)
+                        font.pixelSize: units.gu(2)
                         width: text.width
                         anchors {
                              left: aboutIcon.right

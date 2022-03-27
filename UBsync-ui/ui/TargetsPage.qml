@@ -113,10 +113,8 @@ Page {
         running: true
         repeat: true
         onTriggered: {
-            // hide back navigation, as this serves as main page in a single-column mode
-            if (apl.columns === 1) {
-                header.navigationActions[0].visible = false
-            }
+            // hide back navigation, as this serves as main page in a single-column mode and it is not required in double-column mode
+            header.navigationActions[0].visible = false
 
             // if accounts were not ready update again as soon as possible ...
             if (accountsLoaded === false) {

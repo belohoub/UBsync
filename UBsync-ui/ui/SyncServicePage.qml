@@ -7,8 +7,23 @@ Page {
     id: syncServicePage
 
     header: PageHeader {
-        title: i18n.tr("Sync Service")
+        title: i18n.tr("Settings")
         flickable: flickable
+    }
+
+    Timer {
+        id: continuousCheck
+        interval: 50
+        running: true
+        repeat: true
+        onTriggered: {
+            // hide back navigation in double-column mode
+            if (apl.columns === 1) {
+                header.navigationActions[0].visible = true
+            } else {
+                header.navigationActions[0].visible = false
+            }
+        }
     }
 
     Timer {

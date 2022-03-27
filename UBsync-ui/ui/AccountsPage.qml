@@ -140,6 +140,21 @@ Page {
     }
 
     Timer {
+        id: continuousCheck
+        interval: 50
+        running: true
+        repeat: true
+        onTriggered: {
+            // hide back navigation in double-column mode
+            if (apl.columns === 1) {
+                header.navigationActions[0].visible = true
+            } else {
+                header.navigationActions[0].visible = false
+            }
+        }
+    }
+
+    Timer {
         id: newAccountTimer
         interval: 250
         running: true
