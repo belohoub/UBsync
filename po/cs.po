@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-22 20:26+0000\n"
-"PO-Revision-Date: 2021-12-08 14:09+0100\n"
+"POT-Creation-Date: 2022-03-27 16:36+0000\n"
+"PO-Revision-Date: 2022-03-27 18:30+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: cs_CZ\n"
@@ -18,127 +18,135 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n>=2 && n<=4 ? 1 : 2);\n"
 "X-Generator: Poedit 2.4.2\n"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:70
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:71
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/components/FileBrowser.qml:70
 msgid "No folders, press"
 msgstr "Žádné adresáře, stiskněte"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:84
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:85
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/components/FileBrowser.qml:84
 msgid "on the panel to select this folder, or press"
 msgstr "pro výběr tohoto adresáře, nebo stiskněte"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:99
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:100
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/components/FileBrowser.qml:99
 msgid "to create a new folder."
 msgstr "a vytvořte nový adresář."
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:146
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:154
+msgid "Error occured!"
+msgstr "Vyskytla se chyba!"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:170
+msgid "Go Back"
+msgstr "Jít zpět"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:185
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/components/FileBrowser.qml:146
 msgid "Create New Folder"
 msgstr "Vytvořit nový adresář"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:150
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:189
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/components/FileBrowser.qml:150
 msgid "New Folder"
 msgstr "Nový adresář"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:158
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:197
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/components/FileBrowser.qml:158
 msgid "OK"
 msgstr ""
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:168
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:207
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/components/FileBrowser.qml:168
 msgid "Cancel"
 msgstr "Zrušit"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:11
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:288
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:175
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:173
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/AboutPage.qml:11
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/TargetsPage.qml:171
 msgid "About"
 msgstr "O aplikaci"
 
 #. TRANSLATORS: Owncloud Sync version number e.g Version 0.1
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:63
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:78
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/AboutPage.qml:63
 #, qt-format
 msgid "App Version %1"
 msgstr "Verze aplikace: %1"
 
 #. TRANSLATORS: Nextcloudcmd binary version number e.g Version 1.8.1
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:70
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:85
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/AboutPage.qml:70
 #, qt-format
 msgid "Client: %1"
 msgstr "Klient: %1"
 
 #. TRANSLATORS: %1 is the maintainers name, %2 is the link text to the UBsync contributors teams page
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:84
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:99
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/AboutPage.qml:84
 #, qt-format
 msgid "Maintained by %1 and the"
 msgstr "Aplikaci spravuje %1 a"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:85
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:100
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/AboutPage.qml:85
 #, fuzzy
 msgid "UBsync team"
 msgstr "tým UBsync"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:97
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:112
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/AboutPage.qml:97
 msgid "Please report bugs to the"
 msgstr "Prosím hlaste chyby do"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:98
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:113
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/AboutPage.qml:98
 msgid "issue tracker"
 msgstr "issue trackeru"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:114
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:129
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/AboutPage.qml:114
 msgid "Thanks to"
 msgstr "Poděkování"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:121
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:136
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/AboutPage.qml:121
 msgid "Owncloud client:"
 msgstr "Klient Owncloud:"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:129
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:144
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/AboutPage.qml:129
 msgid "Nextcloud client:"
 msgstr "Klient Nextcloud:"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:137
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:152
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/AboutPage.qml:137
 msgid "This Qt library for WebDAV:"
 msgstr "QT knihovna pro WevDAV:"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:145
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:160
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/AboutPage.qml:145
 msgid "Joan CiberSheep for the logo from:"
 msgstr "Joan CiberSheep za logo z:"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:153
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:168
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/AboutPage.qml:153
 msgid "Lukas to enable the application with:"
 msgstr "Lukas za práci na podpoře:"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:163
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:178
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/AboutPage.qml:163
 msgid "Released under the terms of the GNU GPL v3"
 msgstr "Uvolněno za podmínek licence GNU GPL v3"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:169
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:184
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/AboutPage.qml:169
 msgid "Fork of:"
 msgstr "Původní projekt:"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:177
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:192
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/AboutPage.qml:177
 msgid "Source code available on:"
 msgstr "Zdrojové kódy:"
@@ -149,18 +157,18 @@ msgstr "Zdrojové kódy:"
 msgid "Online Accounts"
 msgstr "Účty"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AccountsPage.qml:236
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AccountsPage.qml:251
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/AccountsPage.qml:236
 msgid "No accounts, press"
 msgstr "Nejsou tu žádné účty, pro přidání účtu stiskněte"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AccountsPage.qml:251
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AccountsPage.qml:266
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/AccountsPage.qml:251
 msgid "on the panel to add a new account"
 msgstr "na panelu"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:79
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:133
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:148
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditAccount.qml:79
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:133
 msgid "Not Configured Account"
@@ -168,8 +176,8 @@ msgstr "Nenastavený účet"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:79
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:84
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:133
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:169
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:148
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:184
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditAccount.qml:79
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditAccount.qml:84
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:133
@@ -178,21 +186,21 @@ msgid "related targets will NOT sync"
 msgstr "související cíle NEBUDOU synchronizovány"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:84
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:169
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:184
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditAccount.qml:84
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:169
 msgid "Disabled Account"
 msgstr "Zakázaný účet"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:90
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:96
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:111
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditAccount.qml:90
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:96
 msgid "Enabled Account"
 msgstr "Povolený účet"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:90
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:96
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:111
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditAccount.qml:90
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:96
 msgid "related targets will sync"
@@ -256,8 +264,8 @@ msgstr "Účet zakázán"
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:40
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:46
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:51
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:269
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:306
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:284
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:321
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditTarget.qml:40
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditTarget.qml:46
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditTarget.qml:51
@@ -284,7 +292,7 @@ msgid "Target Enabled"
 msgstr "Cíl je povolen"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:56
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:233
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:248
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/EditTarget.qml:56
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:233
 msgid "target will sync"
@@ -309,18 +317,18 @@ msgstr "Povolit/zakázat tento cíl"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:8
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:238
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:181
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:179
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:8
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/TargetsPage.qml:177
 msgid "Help"
 msgstr "Nápověda"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:30
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:45
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:30
 msgid "To set-up synchronization for your folders:"
 msgstr "Synchronizaci adresářů nastavíte takto:"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:31
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:46
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:31
 msgid ""
 "1) go to UBsync \"Online Accounts\", add new account by clicking \"plus\" "
@@ -329,7 +337,7 @@ msgstr ""
 "1) přejděte do nastavení \"Účty\", přidejte nový účet kliknutím na ikonu "
 "\"plus\" v nabídce v záhlaví"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:32
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:47
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:32
 msgid ""
 "2) set-up new \"target\" by clicking  \"new target\" icon in the account "
@@ -338,19 +346,19 @@ msgstr ""
 "2) nastavte nový \"cíl\" kliknutím na ikonu \"nový cíl\" na stránce detailu "
 "účtu, případně v seznamu účtů v pravém vysouvacím menu u zvoleného účtu"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:33
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:48
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:33
 msgid "3) start the synchronization service from the \"UBsync Settings\""
 msgstr "3) spusťte službu synchronizace na stránce nastavení UBsync"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:44
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:193
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:59
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:191
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:44
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/TargetsPage.qml:189
 msgid "Accounts"
 msgstr "Účty"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:54
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:69
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:54
 msgid ""
 "The term \"account\" represents in the UBsync context the system online "
@@ -361,7 +369,7 @@ msgstr ""
 "nastavený ve Vašem systému sdružený s nastavením tohoto účtu přímo v "
 "aplikaci UBsync."
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:55
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:70
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:55
 msgid ""
 "The account might be enabled or disabled independently on UBsync. If an "
@@ -372,7 +380,7 @@ msgstr ""
 "systému). Pokud UBsync nemůže účet používat, jeho nastavení v UBsync je "
 "zachováno, avšak s ním spojené cíle nemohou být synchronizovány."
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:56
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:71
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:56
 msgid ""
 "If you remove the account configuration from UBsync, the related targets "
@@ -387,17 +395,17 @@ msgstr ""
 "tento krok nepoškodí nastavení provedená v UBsync, ale cíl nebude "
 "synchronizován."
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:58
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:73
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:58
 msgid "UBsync uses following account symbols to express account states:"
 msgstr "UBsync používá následující symboly pro ilustraci stavu účtu:"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:184
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:199
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:184
 msgid "Targets"
 msgstr "Cíle"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:195
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:210
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:195
 msgid ""
 "The term \"target\" represents in the UBsync context the remote/local "
@@ -407,22 +415,22 @@ msgstr ""
 "Termín \"cíl\" v UBsync představuje dvojici vzdáleného a lokálního adresáře "
 "k synchronizaci spolu s množinou nastavení tohoto \"cíle\"."
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:196
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:211
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:196
 msgid "UBsync uses following target symbols to express target states:"
 msgstr "UBsync používá následující symboly pro ilustraci stavu cíle:"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:233
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:248
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:233
 msgid "Active Target"
 msgstr "Aktivní cíl"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:269
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:284
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:269
 msgid "Inactive Target"
 msgstr "Neaktivní cíl"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:306
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:321
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/HelpPage.qml:306
 msgid "Target With Disabled/Not Configured Account"
 msgstr "Cíl, jehož účet je zakázán nebo není nastaven"
@@ -434,14 +442,15 @@ msgid "UBsync"
 msgstr ""
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:91
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:169
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:167
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/MenuPage.qml:60
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/TargetsPage.qml:165
 msgid "Sync Targets"
 msgstr "Synchronizační cíle"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:189
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:187
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:10
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:185
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/TargetsPage.qml:183
 msgid "Settings"
 msgstr "Nastavení"
@@ -461,136 +470,131 @@ msgstr "Přidat účet NextCloud"
 msgid "Add OwnCloud account"
 msgstr "Přidat účet OwnCloud"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:10
-#: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:10
-msgid "Sync Service"
-msgstr "Služba synchronizace"
-
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:38
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:53
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:38
 #, qt-format
 msgid "Status: %1"
 msgstr "Stav: %1"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:38
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:53
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:38
 msgid "Syncing"
 msgstr "Synchronizuji"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:38
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:53
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:38
 msgid "Idle"
 msgstr "Nečinný"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:38
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:53
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:38
 msgid "Stopped"
 msgstr "Zasaveno"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:43
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:58
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:43
 msgid "Stop"
 msgstr "Zastavit"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:43
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:58
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:43
 msgid "Start"
 msgstr "Spustit"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:49
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:64
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:49
 msgid "Stop Service"
 msgstr "Zastavit službu"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:49
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:64
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:49
 msgid "Start Service"
 msgstr "Spustit službu"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:59
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:74
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:59
 msgid "Sync Required"
 msgstr "Musí být provedena synchronizace"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:60
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:75
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:60
 msgid "Last Sync:"
 msgstr "Poslední synchronizace:"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:65
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:80
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:65
 msgid "Sync"
 msgstr "Synchronizovat"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:73
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:88
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:73
 msgid "Sync Starting"
 msgstr "Startuji synchronizaci"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:86
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:101
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:86
 #, qt-format
 msgid "Client : %1"
 msgstr "Klient: %1"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:97
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:112
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:97
 #, qt-format
 msgid "Service : %1"
 msgstr "Služba (owncloudsyncd): %1"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:116
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:131
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:116
 msgid "Never"
 msgstr "Nikdy"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:120
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:135
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:120
 #, qt-format
 msgid "%1 Months Ago"
 msgstr "Před %1 měsíci"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:124
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:139
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:124
 #, qt-format
 msgid "%1 Days Ago"
 msgstr "Před %1 dny"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:128
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:143
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:128
 #, qt-format
 msgid "%1  Hours Ago"
 msgstr "Před %1 hodinami"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:132
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:147
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:132
 #, qt-format
 msgid "%1 Minutes Ago"
 msgstr "Před %1 minutami"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:135
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:150
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:135
 msgid "A Minute Ago"
 msgstr "Před minutou"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:139
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:154
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:139
 #, qt-format
 msgid "%1 Seconds Ago"
 msgstr "Před %1 sekundami"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:142
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:157
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:142
 msgid "Just Now"
 msgstr "Právě teď"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:214
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:212
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/TargetsPage.qml:210
 msgid "No synchronization targets configured, press"
 msgstr ""
 "Nejsou nastaveny žádné synchronizační cíle, na hlavním panelu stiskněte"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:229
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:227
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/TargetsPage.qml:225
 msgid ""
 "in the main panel to enter Account Settings. In Account Settings, create a "
@@ -605,3 +609,11 @@ msgstr ""
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/WebdavFileBrowser.qml:34
 msgid "Loading"
 msgstr "Načítám"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/WebdavFileBrowser.qml:45
+msgid "Check your connection or try again!"
+msgstr "Ověřte připojení k síti a zkuste to znovu!"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:10
+msgid "Sync Service"
+msgstr "Služba synchronizace"
