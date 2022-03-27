@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-27 11:21+0000\n"
+"POT-Creation-Date: 2022-03-27 16:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,37 +18,45 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:70
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:71
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/components/FileBrowser.qml:70
 msgid "No folders, press"
 msgstr ""
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:84
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:85
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/components/FileBrowser.qml:84
 msgid "on the panel to select this folder, or press"
 msgstr ""
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:99
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:100
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/components/FileBrowser.qml:99
 msgid "to create a new folder."
 msgstr ""
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:146
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:154
+msgid "Error occured!"
+msgstr ""
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:170
+msgid "Go Back"
+msgstr ""
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:185
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/components/FileBrowser.qml:146
 msgid "Create New Folder"
 msgstr ""
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:150
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:189
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/components/FileBrowser.qml:150
 msgid "New Folder"
 msgstr ""
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:158
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:197
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/components/FileBrowser.qml:158
 msgid "OK"
 msgstr ""
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:168
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:207
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/components/FileBrowser.qml:168
 msgid "Cancel"
 msgstr ""
@@ -574,6 +582,10 @@ msgstr ""
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/WebdavFileBrowser.qml:34
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/WebdavFileBrowser.qml:34
 msgid "Loading"
+msgstr ""
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/WebdavFileBrowser.qml:45
+msgid "Check your connection or try again!"
 msgstr ""
 
 #: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/install/UBsync-ui/ui/SyncServicePage.qml:10

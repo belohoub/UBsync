@@ -43,7 +43,10 @@ Item{
     }
 
     function hide() {
-        status.height = units.gu(0.5)
+        // if condition is still valid
+        if (autoHide) {
+            status.height = units.gu(0.5)
+        }
 
     }
 

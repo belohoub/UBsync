@@ -101,6 +101,11 @@ QString webdavfolderlistmodel::folder(){
     return m_folder;
 }
 
+QString webdavfolderlistmodel::getErrorMsg(){
+
+    return m_errorMsg;
+}
+
 void webdavfolderlistmodel::setFolder(QString &folder)
 {
     qDebug() << "webdavfolderlistmodel::setFolder - folder changed:" << folder ;
@@ -121,8 +126,9 @@ void webdavfolderlistmodel::setFolder(QString &folder)
 void webdavfolderlistmodel::newWebDavFolder(QString folderPath)
 {
     m_webdav.mkdir(folderPath);
-    emit folderChanged();
     getFolderList();
+
+    emit folderChanged();
 }
 
 void webdavfolderlistmodel::setUsername(QString &username)
@@ -209,6 +215,10 @@ bool webdavfolderlistmodel::isFolder(int index) const
 void webdavfolderlistmodel::printError(QString errorMsg)
 {
     qDebug() << "webdavfolderlistmodel::printErrors()  errorMsg == " << errorMsg;
+
+    m_errorMsg = errorMsg;
+
+    emit errorOccured();
 }
 
 void webdavfolderlistmodel::replySkipRead()

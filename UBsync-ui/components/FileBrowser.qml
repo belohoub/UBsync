@@ -11,6 +11,7 @@ Page {
     property string rootPath
     property var caller
     property bool showNoChildFolders: false
+    property bool errorOccured: false
 
     header: PageHeader {
         id: fileBrowserHeader
@@ -58,7 +59,7 @@ Page {
     Item{
         anchors.fill: parent
         //anchors{centerIn: parent}
-        visible:!folderListModel.count && showNoChildFolders
+        visible: !folderListModel.count && showNoChildFolders && !errorOccured
 
         Column{
             anchors.centerIn: parent
@@ -135,6 +136,44 @@ Page {
                 }
                 console.log(folderListModel.count)
                 folderListModel.folder = filePath
+            }
+        }
+    }
+
+    Item{
+        anchors.fill: parent
+        visible: errorOccured
+
+        Column{
+            anchors.centerIn: parent
+            width: parent.width
+            spacing: units.gu(2)
+
+            Label{
+                width: parent.width
+                text: i18n.tr("Error occured!")
+                font.pixelSize: units.gu(3.5)
+                horizontalAlignment: Text.AlignHCenter
+            }
+
+            Icon {
+                id: errorIcon
+                anchors.horizontalCenter: parent.horizontalCenter
+                name: "sync-error"
+                width: units.gu(8)
+                height: width
+            }
+
+            Button{
+                anchors.topMargin: units.gu(5)
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: i18n.tr("Go Back")
+                color: UbuntuColors.silk
+
+                onClicked: {
+                    console.log("FileBrowser :: exit")
+                    apl.removePages(fileBrowser)
+                }
             }
         }
     }

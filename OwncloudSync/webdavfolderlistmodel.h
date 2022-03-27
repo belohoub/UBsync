@@ -17,6 +17,7 @@ class webdavfolderlistmodel : public QAbstractListModel
 {
     Q_OBJECT
 
+    Q_PROPERTY(QString errorMsg READ getErrorMsg NOTIFY errorOccured)
     Q_PROPERTY(QString folder READ folder WRITE setFolder NOTIFY folderChanged)
     Q_PROPERTY(bool showDirs READ showDirs WRITE setShowDirs)
     Q_PROPERTY(bool showFiles READ showFiles WRITE setShowFiles)
@@ -39,6 +40,8 @@ public:
     QVariant data(const QModelIndex &index, int role) const;
 
     int count() const { return rowCount(QModelIndex()); }
+
+    QString getErrorMsg();
 
     QString folder();    
     void setFolder(QString &folder);
@@ -66,6 +69,7 @@ signals:
     void folderChanged();
     void countChanged();
     void credentialsChanged();
+    void errorOccured();
 
 public slots:
     Q_INVOKABLE void getFolderList();
@@ -82,6 +86,7 @@ private slots:
 
 private:
     QString m_folder;
+    QString m_errorMsg;
     QString m_username;
     QString m_password;
     QString m_serverUrl;

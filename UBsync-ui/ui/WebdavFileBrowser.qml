@@ -34,9 +34,21 @@ FileBrowser{
             connectionStatus.status = i18n.tr("Loading")
             connectionStatus.indicationIcon = "updating"
         }
+
         onCountChanged: {
             connectionStatus.hide()
             fileBrowser.showNoChildFolders = true
+        }
+
+        onErrorOccured: {
+            connectionStatus.spinner = false
+            connectionStatus.status = i18n.tr("Check your connection or try again!") + "<br>(" + folderListModel.errorMsg + ")"
+            connectionStatus.indicationIcon = "error"
+            connectionStatus.autoHide = false
+            fileBrowser.header.trailingActionBar.actions = []
+            fileBrowser.header.leadingActionBar.actions = []
+            // Indicate error
+            fileBrowser.errorOccured = true
         }
 
         function newFolder(folderPath){
@@ -54,5 +66,3 @@ FileBrowser{
 
     }
 }
-
-
