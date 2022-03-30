@@ -178,25 +178,23 @@ Page {
             // if accounts were not ready update again as soon as possible ...
             if (accountsLoaded === false) {
                 targetPage.loadDB()
-                if (accountsLoaded === false) {
-                    // if still not ready, wait ...
-                    return
-                } else {
-                    console.log("EditTarget :: Authenticate accountID: " + targetPage.accountID)
-                    console.log("EditTarget ::   - account CNT: " + accounts.count)
+            } else {
+                console.log("EditTarget :: Authenticate accountID: " + targetPage.accountID)
+                console.log("EditTarget ::   - account CNT: " + accounts.count)
 
-                    for (var j = 0; j < accounts.count; j++) {
-                        //console.log("EditTarget ::   - accountID: " + accounts.get(j, "account").accountId)
-                        if (accounts.get(j, "account").accountId === targetPage.accountID) {
-                            console.log("EditTarget :: Account auth to get password ... ")
-                            accountConnection.target = accounts.get(j, "account")
-                            accounts.get(j, "account").authenticate({})
-                        }
+                for (var j = 0; j < accounts.count; j++) {
+                    //console.log("EditTarget ::   - accountID: " + accounts.get(j, "account").accountId)
+                    if (accounts.get(j, "account").accountId === targetPage.accountID) {
+                        console.log("EditTarget :: Account auth to get password ... ")
+                        accountConnection.target = accounts.get(j, "account")
+                        credentialsLoaded = false // set to false until auth is finished
+                        accounts.get(j, "account").authenticate({})
                     }
-
-                    continuousCheck.repeat = false
                 }
+
+                continuousCheck.repeat = false
             }
+
         }
     }
 
@@ -208,8 +206,8 @@ Page {
         repeat: true
         onTriggered: {
             if (askForRemoteBrowser === true) {
-                // wait until accounts are not ready
-                if (accountsLoaded === true) {
+                // wait until credentials are not ready
+                if (credentialsLoaded === true) {
                     askForRemoteBrowser = false
                     apl.addPageToNextColumn(targetPage, Qt.resolvedUrl("WebdavFileBrowser.qml"), {caller:remotePath, paramUsername: targetPage.accountUser, paramPassword: targetPage.accountPassword, paramServerUrl: targetPage.accountRemoteAddress})
                 }
