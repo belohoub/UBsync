@@ -10,7 +10,7 @@
             "desktop": "UBsync-ui/UBsync.desktop"
         }
     },
-    "version": "0.7",
+    "version": "0.7.5",
     "maintainer": "Jan Belohoubek <jan.belohoubek@fit.cvut.cz>",
     "framework": "ubuntu-sdk-16.04"
 }
