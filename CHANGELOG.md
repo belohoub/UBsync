@@ -1,5 +1,11 @@
 # Changelog
 
+# 0.7.5 (04/2022)
+1. UI re-designed a bit - new main screen in landscape mode
+1. WebDAV browser extension: errors are reported to users
+1. Minor fixes
+1. Internationalization: German, Spanish, French, Dutch, and Czech localization
+
 # 0.7 (12/2021)
 1. directory-tree cleanup
 1. database structure altered (see [DATABASE.md](DATABASE.md) for the new structure)
