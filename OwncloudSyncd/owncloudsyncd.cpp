@@ -445,7 +445,7 @@ void OwncloudSyncd::syncDir(const int targetID){
        arguments << "--user" << m_accountUser[m_targetAccount.value(targetID)] << "--password" << m_accountPass[m_targetAccount.value(targetID)] << "--silent" << "--non-interactive" << localPath << remotePath;
     }
 
-    /* The following debug msg contains username/password */
+    /* The following debug msg contains username/password ! */
     //qDebug() << "Arguments: " << arguments;
 
     
@@ -456,6 +456,18 @@ void OwncloudSyncd::syncDir(const int targetID){
     //Wait for the sync to complete. Dont time out.
     owncloudsync->waitForFinished(-1);
     
+    // Inotify if sync was in media directories
+    if (QString::compare(QString(QString(QDir(localPath).makeAbsolute())).left(QString(QDir("~/Music").makeAbsolute()).length()), (QString(QDir("~/Music").makeAbsolute())), Qt::CaseSensitive) == 0) {
+        qDebug() << "~/Music subpath synchronized";
+    }
+    
+    if (QString::compare(QString(QString(QDir(localPath).makeAbsolute())).left(QString(QDir("~/Pictures").makeAbsolute()).length()), (QString(QDir("~/Pictures").makeAbsolute())), Qt::CaseSensitive) == 0) {
+        qDebug() << "~/Pictures subpath synchronized";
+    }
+    
+    if (QString::compare(QString(QString(QDir(localPath).makeAbsolute())).left(QString(QDir("~/Videos").makeAbsolute()).length()), (QString(QDir("~/Videos").makeAbsolute())), Qt::CaseSensitive) == 0) {
+        qDebug() << "~/Videos subpath synchronized";
+    }
 
     // Sync Complete - Save the current date and time
     qDebug() << "Sync of " << localPath << " completed at " << QDateTime::currentDateTime();
