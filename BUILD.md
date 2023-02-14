@@ -7,8 +7,14 @@
 $ PKG_PATH=PATH_TO_UBSYNC
 $ 
 $ cd ${PKG_PATH}
-$ clickable --arch arm64
-$ clickable --arch armhf
+$ clickable clean --arch arm64
+$ clickable build --arch arm64
+$
+$ clickable clean --arch armhf
+$ clickable build --arch armhf
+$
+$ clickable clean --arch amd64
+$ clickable build --arch amd64
 $
 $ # work with the packages ...
 $ touch ${PKG_PATH}/build/aarch64-linux-gnu/app/ubsync_0.5_arm64.click
