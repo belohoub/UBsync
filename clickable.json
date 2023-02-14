@@ -1,4 +1,5 @@
 {
+    "framework": "ubuntu-sdk-20.04",
     "builder": "qmake",
     "dependencies_target": [
        "libaccounts-qt5-dev",

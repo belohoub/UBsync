@@ -1,7 +1,7 @@
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import "../components"
-import Ubuntu.OnlineAccounts 2.0
+import Lomiri.OnlineAccounts 2.0
 
 import QtQuick.LocalStorage 2.0
 

@@ -18,9 +18,12 @@ $
 
 
 ## owncloudcmd build
+
 This step is applicable when new binaries ar required: e.g when deploying version for a new architecture, or new OS version, or in case of issue with current binary version.
 
-The owncloudcmd and libraries for the 64-bit version were build following the command sequence below, the 32-bit version uses the original binaries from the previous builds:
+The owncloudcmd binary and libraries for 20.04 (focal) were extracted from ubuntu packages @ http://ports.ubuntu.com/ubuntu-ports/ubuntu-ports/pool/universe/o/owncloud-client/
+
+To build binaries from source, the command sequence similar to that presented below could be used:
 
 ```bash
 $ PKG_PATH=PATH_TO_UBSYNC
