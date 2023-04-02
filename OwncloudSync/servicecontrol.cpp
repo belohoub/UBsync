@@ -30,10 +30,9 @@ bool ServiceControl::serviceFileInstalled() const
         qDebug() << "Service name not set.";
         return false;
     }
-    QFile f(QDir::homePath() + "/.config/upstart/" + m_serviceName + ".conf");
-    QFile fVer(QDir::homePath() + "/.config/upstart/" + m_serviceName + ".version");
+    QFile f(QDir::homePath() + "/.config/systemd/user/" + m_serviceName + ".service");
     
-    return (f.exists() && fVer.exists());
+    return (f.exists());
 }
 
 bool ServiceControl::installServiceFile()
@@ -43,58 +42,45 @@ bool ServiceControl::installServiceFile()
         return false;
     }
 
-    QFile f(QDir::homePath() + "/.config/upstart/" + m_serviceName + ".conf");
-    // version info file was create to support smooth updates for users with 
-    // non-multiarch UBsync version, as paths in the config file changed 
-    // and it must be updated when upgarding to multiarch ...
-    QFile fVer(QDir::homePath() + "/.config/upstart/" + m_serviceName + ".version");
+    QFile f(QDir::homePath() + "/.config/systemd/user/" + m_serviceName + ".service");
     
     if (f.exists()) {
-        // test if the app is not too old - to handle with v0.5 and older updates
-        if (fVer.exists()) {
-            qDebug() << "Service file already exist...";
-            return false;
-        } else {
-            qDebug() << "OLD service file exist - updating ... ";
-        }
+        qDebug() << "Service file already exist...";
     }
 
     if (!f.open(QFile::WriteOnly | QFile::Truncate)) {
         qDebug() << "Cannot create service file";
         return false;
     }
-    
-    if (!fVer.open(QFile::WriteOnly | QFile::Truncate)) {
-        qDebug() << "Cannot create version file";
-        return false;
-    }
 
-    //QString appDir = qApp->applicationDirPath();
-    QString appDir = QDir::currentPath();
-    //Mobile Devie =  /opt/click.ubuntu.com/owncloud-sync/0.1
-    // Try to replace version with "current" to be more robust against updates
-    //appDir.replace(QRegExp("ubsync\/[0-9.]*\/"), "ubsync/current/");
-
-    qDebug() << "App Directory: " << appDir;
-
-    f.write("start on started unity8\n");
-    f.write("pre-start script\n");
+    f.write("[Unit]\n");
+    f.write("Description=UBsync Owncloud/Nextcloud client\n");
+    f.write("After=network.target\n");
+    f.write("\n");
+    f.write("[Service]\n");
+    f.write("Type=simple\n");
+    f.write("WorkingDirectory=%h/.config/ubsync\n");
 #if INTPTR_MAX == INT64_MAX
-    f.write("   initctl set-env LD_LIBRARY_PATH=/opt/click.ubuntu.com/ubsync/current/lib/aarch64-linux-gnu/\n");
-    f.write("end script\n");
-    f.write("exec /opt/click.ubuntu.com/ubsync/current/lib/aarch64-linux-gnu/bin/" + m_serviceName.toUtf8() + "\n");
+    f.write("Environment=\"LD_LIBRARY_PATH=/opt/click.ubuntu.com/ubsync/current/lib/aarch64-linux-gnu/\"\n");
+    f.write("ExecStart=/opt/click.ubuntu.com/ubsync/current/lib/aarch64-linux-gnu/bin/" + m_serviceName.toUtf8() + "\n");
 #else
-    //f.write("   initctl set-env LD_LIBRARY_PATH=/opt/click.ubuntu.com/ubsync/current/Owncloud-Sync/lib/arm-linux-gnueabihf/lib\n");
-    f.write("   initctl set-env LD_LIBRARY_PATH=/opt/click.ubuntu.com/ubsync/current/lib/arm-linux-gnueabihf/\n");
-    f.write("end script\n");
-    f.write("exec /opt/click.ubuntu.com/ubsync/current/lib/arm-linux-gnueabihf/bin/" + m_serviceName.toUtf8() + "\n");
+    f.write("Environment=\"LD_LIBRARY_PATH=/opt/click.ubuntu.com/ubsync/current/lib/arm-linux-gnueabihf/\"\n");
+    f.write("ExecStart=/opt/click.ubuntu.com/ubsync/current/lib/arm-linux-gnueabihf/bin/" + m_serviceName.toUtf8() + "\n");
 #endif
+    f.write("\n");
+    f.write("[Install]\n");
+    f.write("WantedBy=default.target\n");
 
     f.close();
     
-    // Indicate "multiarch" version of this app
-    fVer.write("# This is *multiarch* version info only, do not remove this file!\n");
-    fVer.close();
+    int ret = QProcess::execute("systemctl --user daemon-reload", {});
+    if (ret != 0) {
+        return false;
+    }
+    ret = QProcess::execute("systemctl --user enable ", {m_serviceName.toUtf8() + ".service"});
+    if (ret != 0) {
+        return false;
+    }
     
     return true;
 }
@@ -105,21 +91,20 @@ bool ServiceControl::removeServiceFile()
         qDebug() << "Service name not set.";
         return false;
     }
-    QFile f(QDir::homePath() + "/.config/upstart/" + m_serviceName + ".conf");
-    QFile fVer(QDir::homePath() + "/.config/upstart/" + m_serviceName + ".version");
+    QFile f(QDir::homePath() + "/.config/systemd/user/" + m_serviceName + ".service");
     
-    return (f.remove() && fVer.remove());
+    return (f.remove());
 }
 
 bool ServiceControl::serviceRunning() const
 {
 
     QProcess p;
-    p.start("initctl", {"status", m_serviceName});
+    p.start("systemctl --user", {"status", m_serviceName.toUtf8() + ".service"});
     p.waitForFinished();
     QByteArray output = p.readAll();
     //qDebug() << output;
-    return output.contains("running");
+    return output.contains("active (running)");
 }
 
 bool ServiceControl::setServiceRunning(bool running)
@@ -137,24 +122,23 @@ bool ServiceControl::startService()
 {
     qDebug() << "should start service";
 
-   int ret = QProcess::execute("start", {m_serviceName});
-   emit serviceRunningChanged();
-   return ret == 0;
+    int ret = QProcess::execute("systemctl --user", {"start", m_serviceName.toUtf8() + ".service"});
+    emit serviceRunningChanged();
+    return (ret == 0);
 }
 
 bool ServiceControl::stopService()
 {
     qDebug() << "should stop service";
-   int ret = QProcess::execute("stop", {m_serviceName});
-   emit serviceRunningChanged();
-   return ret == 0;
+    int ret = QProcess::execute("systemctl --user", {"stop", m_serviceName.toUtf8() + ".service"});
+    emit serviceRunningChanged();
+    return (ret == 0);
 }
 
 bool ServiceControl::restartService()
 {
-    qDebug() << "should stop service";
-   int ret = QProcess::execute("restart", {m_serviceName});
-   emit serviceRunningChanged();
-   return ret == 0;
+    qDebug() << "should restart service";
+    int ret = QProcess::execute("systemctl --user", {"restart", m_serviceName.toUtf8() + ".service"});
+    emit serviceRunningChanged();
+    return ret == 0;
 }
-
