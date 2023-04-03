@@ -168,7 +168,7 @@ Page {
                 anchors.topMargin: units.gu(5)
                 anchors.horizontalCenter: parent.horizontalCenter
                 text: i18n.tr("Go Back")
-                color: UbuntuColors.silk
+                color: LomiriColors.silk
 
                 onClicked: {
                     console.log("FileBrowser :: exit")

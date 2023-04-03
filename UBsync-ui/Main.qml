@@ -96,7 +96,7 @@ MainView {
                             tx.executeSql('ALTER TABLE SyncTargets ADD COLUMN lastSync TEXT');
                         } catch (error) {
                             // Nothink to do
-                            print("Database structure update ERROR!")
+                            print("Database structure update NOT needed.")
                         }
                     }
                 )

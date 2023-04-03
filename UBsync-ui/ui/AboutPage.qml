@@ -42,7 +42,7 @@ Page {
                 top: parent.top; left: parent.left; right: parent.right; topMargin: units.gu(5); rightMargin:units.gu(2.5); leftMargin: units.gu(2.5)
             }
 
-            UbuntuShape {
+            LomiriShape {
                 width: units.gu(20)
                 height: width
                 anchors.horizontalCenter: parent.horizontalCenter

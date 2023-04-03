@@ -70,6 +70,12 @@ bool ServiceControl::installServiceFile()
     f.write("\n");
     f.write("[Install]\n");
     f.write("WantedBy=default.target\n");
+    f.write("\n");
+    f.write("[D-BUS Service]\n");
+    f.write("Name=org.owncloudsyncd\n");
+    f.write("Exec=/bin/false\n");
+    f.write("User=phablet\n");
+    f.write("SystemdService=" + m_serviceName.toUtf8() + ".service\n");
 
     f.close();
     

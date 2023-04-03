@@ -56,7 +56,7 @@ Page {
 
                         Button{
                             text: serviceController.serviceRunning ? i18n.tr("Stop") : i18n.tr("Start")
-                            color: serviceController.serviceRunning ? UbuntuColors.red : UbuntuColors.green
+                            color: serviceController.serviceRunning ? LomiriColors.red : LomiriColors.green
                             SlotsLayout.position: SlotsLayout.Trailing;
 
                             onClicked: {
@@ -79,7 +79,7 @@ Page {
                         Button{
                             text: i18n.tr("Sync")
                             visible: serviceController.serviceRunning && !daemonController.syncActive
-                            color: UbuntuColors.green
+                            color: LomiriColors.green
                             SlotsLayout.position: SlotsLayout.Trailing;
 
                             onClicked: {

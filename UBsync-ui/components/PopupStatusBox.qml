@@ -78,7 +78,7 @@ Item{
 
     Rectangle{
         anchors.fill: parent
-        color: UbuntuColors.warmGrey
+        color: LomiriColors.warmGrey
 
         ActivityIndicator {
             id: activity
