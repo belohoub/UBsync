@@ -2,3 +2,9 @@ Source binary package: owncloud-client-cmd_2.5.1.10973+dfsg-1ubuntu4_armhf.deb
 Source binary package: libowncloudsync0_2.5.1.10973+dfsg-1ubuntu4_armhf.deb
 
 Source: http://ports.ubuntu.com/pool/universe/o/owncloud-client/
+
+---
+
+Source package: libqt5keychain1_0.10.0-1build1_armhf64.deb
+
+Source: http://old-releases.ubuntu.com/ubuntu/pool/universe/q/qtkeychain/

@@ -7,7 +7,8 @@
     ],
     "install_lib": [
          "${ROOT}/lib/${ARCH_TRIPLET}/lib/libowncloud_csync.so*",
-         "${ROOT}/lib/${ARCH_TRIPLET}/lib/libowncloudsync.so*"
+         "${ROOT}/lib/${ARCH_TRIPLET}/lib/libowncloudsync.so*",
+         "${ROOT}/lib/${ARCH_TRIPLET}/lib/libqt5keychain.so*"
     ],
     "install_bin": [
          "${ROOT}/lib/${ARCH_TRIPLET}/bin/owncloudcmd",

@@ -457,15 +457,15 @@ void OwncloudSyncd::syncDir(const int targetID){
     owncloudsync->waitForFinished(-1);
     
     // Inotify if sync was in media directories
-    if (QString::compare(QString(QString(QDir(localPath).makeAbsolute())).left(QString(QDir("~/Music").makeAbsolute()).length()), (QString(QDir("~/Music").makeAbsolute())), Qt::CaseSensitive) == 0) {
-        qDebug() << "~/Music subpath synchronized";
+    if (QString::compare(QString(QString(QDir(localPath).absolutePath())).left(QString(QDir("~/Music").absolutePath()).length()), (QString(QDir("~/Music").absolutePath())), Qt::CaseSensitive) == 0) {
+        qDebug() << "~/Music subpath synchronized " << QString(QDir("~/Music").absolutePath()) << " " << (QString(QDir(localPath).absolutePath()));
     }
     
-    if (QString::compare(QString(QString(QDir(localPath).makeAbsolute())).left(QString(QDir("~/Pictures").makeAbsolute()).length()), (QString(QDir("~/Pictures").makeAbsolute())), Qt::CaseSensitive) == 0) {
+    if (QString::compare(QString(QString(QDir(localPath).absolutePath())).left(QString(QDir("~/Pictures").absolutePath()).length()), (QString(QDir("~/Pictures").absolutePath())), Qt::CaseSensitive) == 0) {
         qDebug() << "~/Pictures subpath synchronized";
     }
     
-    if (QString::compare(QString(QString(QDir(localPath).makeAbsolute())).left(QString(QDir("~/Videos").makeAbsolute()).length()), (QString(QDir("~/Videos").makeAbsolute())), Qt::CaseSensitive) == 0) {
+    if (QString::compare(QString(QString(QDir(localPath).absolutePath())).left(QString(QDir("~/Videos").absolutePath()).length()), (QString(QDir("~/Videos").absolutePath())), Qt::CaseSensitive) == 0) {
         qDebug() << "~/Videos subpath synchronized";
     }
 

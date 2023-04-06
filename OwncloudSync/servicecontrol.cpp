@@ -70,20 +70,14 @@ bool ServiceControl::installServiceFile()
     f.write("\n");
     f.write("[Install]\n");
     f.write("WantedBy=default.target\n");
-    f.write("\n");
-    f.write("[D-BUS Service]\n");
-    f.write("Name=org.owncloudsyncd\n");
-    f.write("Exec=/bin/false\n");
-    f.write("User=phablet\n");
-    f.write("SystemdService=" + m_serviceName.toUtf8() + ".service\n");
 
     f.close();
     
-    int ret = QProcess::execute("systemctl --user daemon-reload", {});
+    int ret = QProcess::execute("systemctl", {"--user", "daemon-reload"});
     if (ret != 0) {
         return false;
     }
-    ret = QProcess::execute("systemctl --user enable ", {m_serviceName.toUtf8() + ".service"});
+    ret = QProcess::execute("systemctl", {"--user", "enable", m_serviceName.toUtf8() + ".service"});
     if (ret != 0) {
         return false;
     }
@@ -106,11 +100,11 @@ bool ServiceControl::serviceRunning() const
 {
 
     QProcess p;
-    p.start("systemctl --user", {"status", m_serviceName.toUtf8() + ".service"});
+    p.start("systemctl", {"--user", "status", m_serviceName.toUtf8() + ".service"});
     p.waitForFinished();
-    QByteArray output = p.readAll();
-    //qDebug() << output;
-    return output.contains("active (running)");
+    QByteArray output = p.readAllStandardOutput();
+    //qDebug() << "Reading service state:" << output;
+    return output.contains("running");
 }
 
 bool ServiceControl::setServiceRunning(bool running)
@@ -128,7 +122,7 @@ bool ServiceControl::startService()
 {
     qDebug() << "should start service";
 
-    int ret = QProcess::execute("systemctl --user", {"start", m_serviceName.toUtf8() + ".service"});
+    int ret = QProcess::execute("systemctl", {"--user", "start", m_serviceName.toUtf8() + ".service"});
     emit serviceRunningChanged();
     return (ret == 0);
 }
@@ -136,7 +130,7 @@ bool ServiceControl::startService()
 bool ServiceControl::stopService()
 {
     qDebug() << "should stop service";
-    int ret = QProcess::execute("systemctl --user", {"stop", m_serviceName.toUtf8() + ".service"});
+    int ret = QProcess::execute("systemctl", {"--user", "stop", m_serviceName.toUtf8() + ".service"});
     emit serviceRunningChanged();
     return (ret == 0);
 }
@@ -144,7 +138,7 @@ bool ServiceControl::stopService()
 bool ServiceControl::restartService()
 {
     qDebug() << "should restart service";
-    int ret = QProcess::execute("systemctl --user", {"restart", m_serviceName.toUtf8() + ".service"});
+    int ret = QProcess::execute("systemctl", {"--user", "restart", m_serviceName.toUtf8() + ".service"});
     emit serviceRunningChanged();
     return ret == 0;
 }
