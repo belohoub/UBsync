@@ -13,7 +13,9 @@ Page {
 
     property string requestAccount: ""
     property bool accountsLoaded: false // accounts may be not ready ...
-
+    
+    property bool upMoveDetected: false // detect Up move to update the ListView
+    
     /* load current data from DB */
     function loadDB() {
 
@@ -268,6 +270,21 @@ Page {
             horizontalAlignment: Text.AlignHCenter
         }
     }
+    
+    Item {
+        //TODO Shown only if there is a top move in progress
+        id: accountsListUpdateHelper
+        anchors{left:parent.left; right:parent.right; top:header.bottom; bottom:parent.bottom; bottomMargin: units.gu(5); topMargin: units.gu(5)}
+        width: parent.width
+        visible: false
+        
+        Label{
+            wrapMode: Text.Wrap
+            text: i18n.tr("Release to update the list of accounts ...")
+            anchors{left: parent.left; right: parent.right; bottom: accountList.top; bottomMargin: units.gu(5); topMargin: units.gu(5)}
+            horizontalAlignment: Text.AlignHCenter
+        }
+    }
 
     ListView {
         id: accountList
@@ -276,9 +293,28 @@ Page {
         clip: true
         visible: accountListModel.count
 
+        onContentYChanged: {
+            // Prevent triggering pulldown item when rebound from top boundary.
+            if (contentY < ((-1) * units.gu(20))) {
+                console.log("AccountsPage :: Show reload helper text.")
+                accountsListUpdateHelper.visible = true
+                upMoveDetected = true 
+            } else {
+                accountsListUpdateHelper.visible = false
+            }
+        }
+        
+        onMovementStarted: {
+            /* update page when moving ...*/
+        }
+        
         onMovementEnded: {
             /* update page when moving ...*/
-            accountsPage.loadDB()
+            if ((accountList.atYBeginning === true) && (upMoveDetected === true)) {
+                console.log("AccountsPage :: Page reload forced due to top positioning.")
+                accountsPage.loadDB()
+                upMoveDetected = false 
+            }
         }
 
         delegate: ListItem {

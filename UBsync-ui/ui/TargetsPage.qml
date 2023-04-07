@@ -13,6 +13,8 @@ Page {
 
     // accounts may be not ready ...
     property bool accountsLoaded: false
+    
+    property bool upMoveDetected: false // detect Up move to update the ListView
 
     /* load current data from DB */
     function loadDB() {
@@ -229,6 +231,22 @@ Page {
             horizontalAlignment: Text.AlignHCenter
         }
     }
+    
+    Item {
+        // TODO Shown only if there is a top move in progress
+        id: targetsListUpdateHelper
+        anchors{left:parent.left; right:parent.right; top:header.bottom; bottomMargin:units.gu(5); topMargin:units.gu(5)}
+        width: parent.width
+        height: units.gu(10)
+        visible: false
+        
+        Label{
+            wrapMode: Text.Wrap
+            text: i18n.tr("Release to update the list of targets ...")
+            anchors{left: parent.left; right: parent.right; bottom: targetListModel.top; bottomMargin: units.gu(5); topMargin: units.gu(5)}
+            horizontalAlignment: Text.AlignHCenter
+        }
+    }
 
     ListView {
         id: targetList
@@ -237,9 +255,28 @@ Page {
         clip: true
         visible: targetListModel.count
 
+        onMovementStarted: {
+            /* update page when moving ...*/
+        }
+        
+        onContentYChanged: {
+            // Prevent triggering pulldown item when rebound from top boundary.
+            if (contentY < ((-1) * units.gu(20))) {
+                console.log("TargetsPage :: Show reload helper text.")
+                targetsListUpdateHelper.visible = true
+                upMoveDetected = true 
+            } else {
+                targetsListUpdateHelper.visible = false
+            }
+        }
+        
         onMovementEnded: {
             /* update page when moving ...*/
-            targetsPage.loadDB()
+            if ((targetList.atYBeginning === true) && (upMoveDetected === true)) {
+                console.log("TargetsPage :: Page reload forced due to top positioning.")
+                targetsPage.loadDB()
+                upMoveDetected = false 
+            }
         }
 
         delegate: ListItem {
