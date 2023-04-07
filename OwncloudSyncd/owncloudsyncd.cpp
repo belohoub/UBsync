@@ -456,9 +456,9 @@ void OwncloudSyncd::syncDir(const int targetID){
     //Wait for the sync to complete. Dont time out.
     owncloudsync->waitForFinished(-1);
     
-    // Inotify if sync was in media directories
+    // TODO: Inotify if sync was in media directories
     if (QString::compare(QString(QString(QDir(localPath).absolutePath())).left(QString(QDir("~/Music").absolutePath()).length()), (QString(QDir("~/Music").absolutePath())), Qt::CaseSensitive) == 0) {
-        qDebug() << "~/Music subpath synchronized " << QString(QDir("~/Music").absolutePath()) << " " << (QString(QDir(localPath).absolutePath()));
+        qDebug() << "~/Music subpath synchronized";
     }
     
     if (QString::compare(QString(QString(QDir(localPath).absolutePath())).left(QString(QDir("~/Pictures").absolutePath()).length()), (QString(QDir("~/Pictures").absolutePath())), Qt::CaseSensitive) == 0) {
