@@ -423,16 +423,12 @@ void OwncloudSyncd::syncDir(const int targetID){
         return;
     } else {
         if( m_accountUseMobileData[m_targetAccount.value(targetID)] == false) {
-            int i;
-            for(i = 0; i < activeConfigs.count(); i++) {
-                QNetworkConfiguration::BearerType connType = activeConfigs[i].bearerTypeFamily();
-                qDebug() << "Network Connection Type: " << activeConfigs[i].bearerTypeName();
-                if ((connType != QNetworkConfiguration::BearerUnknown) && (connType != QNetworkConfiguration::Bearer2G)  && (connType != QNetworkConfiguration::Bearer3G) && (connType != QNetworkConfiguration::Bearer4G)) {
-                    qDebug() << "Non-Mobile-Data connection found! Going to Sync.";
-                    break;
-                }
-            }
-            if (i == activeConfigs.count()) {
+            /* We must test against default connection */
+            QNetworkConfiguration::BearerType connType = mgr.defaultConfiguration().bearerTypeFamily();
+            qDebug() << "Network Connection Type: " << mgr.defaultConfiguration().bearerTypeName();
+            if ((connType != QNetworkConfiguration::BearerUnknown) && (connType != QNetworkConfiguration::Bearer2G)  && (connType != QNetworkConfiguration::Bearer3G) && (connType != QNetworkConfiguration::Bearer4G)) {
+                qDebug() << "Non-Mobile-Data connection found! Going to Sync.";
+            } else {
                 /* Only mobile-data or No connection available */
                 qDebug() << "No Sync on Mobile Data - Check User Settings - Unable to Sync.";
                 return;
