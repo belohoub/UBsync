@@ -415,7 +415,6 @@ void OwncloudSyncd::syncDir(const int targetID){
 
     //Create a connection manager, establish is a data connection is avaiable
     QNetworkConfigurationManager mgr;
-    qDebug() << "Network Connection Type: " << mgr.defaultConfiguration().bearerTypeName();
     qDebug() << "Mobile Data Sync: " << m_accountUseMobileData[m_targetAccount.value(targetID)];
 
     QList<QNetworkConfiguration> activeConfigs = mgr.allConfigurations(QNetworkConfiguration::Active);
@@ -423,10 +422,19 @@ void OwncloudSyncd::syncDir(const int targetID){
         qWarning() << "No Data Connection Available  - Unable to Sync";
         return;
     } else {
-        QNetworkConfiguration::BearerType connType = mgr.defaultConfiguration().bearerType();
         if( m_accountUseMobileData[m_targetAccount.value(targetID)] == false) {
-            if (connType != QNetworkConfiguration::BearerEthernet && connType != QNetworkConfiguration::BearerWLAN) {
-                qDebug() << "No Sync on Mobile Data - Check User Settings - Unable to Sync";
+            int i;
+            for(i = 0; i < activeConfigs.count(); i++) {
+                QNetworkConfiguration::BearerType connType = activeConfigs[i].bearerTypeFamily();
+                qDebug() << "Network Connection Type: " << activeConfigs[i].bearerTypeName();
+                if ((connType != QNetworkConfiguration::BearerUnknown) && (connType != QNetworkConfiguration::Bearer2G)  && (connType != QNetworkConfiguration::Bearer3G) && (connType != QNetworkConfiguration::Bearer4G)) {
+                    qDebug() << "Non-Mobile-Data connection found! Going to Sync.";
+                    break;
+                }
+            }
+            if (i == activeConfigs.count()) {
+                /* Only mobile-data or No connection available */
+                qDebug() << "No Sync on Mobile Data - Check User Settings - Unable to Sync.";
                 return;
             }
         }

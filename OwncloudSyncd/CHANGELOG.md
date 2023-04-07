@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8 Changelog
+1. migration to Focal
+1. minor fixes related to reported issues
+
 ## 0.7 Changelog
 1. new database model compatible with UBsync-ui v0.7
 1. system accounts are accessed by daemon directly, no need to store passwords in plain-text config file

@@ -1,9 +1,10 @@
 # Changelog
 
-# 0.7.6 (02/2023)
+# 0.8.0 (03/2023)
 1. Focal support added
 1. New focal-compatible binaries and libs included
 1. Upstart migrated to systemd
+1. Minor fixes of reported issues
 
 # 0.7.5 (04/2022)
 1. UI re-designed a bit - new main screen in landscape mode
