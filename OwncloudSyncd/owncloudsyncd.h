@@ -26,7 +26,6 @@
 #define OWNCLOUDSYNCD_CONTROLLER_INTERFACE "org.owncloudsyncd.Controller"
 #define OWNCLOUDSYNCD_VERSION QStringLiteral("0.8")
 
-
 class OwncloudSyncd : public QObject
 {
     Q_OBJECT

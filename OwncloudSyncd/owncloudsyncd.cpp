@@ -8,7 +8,7 @@
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include <QUrl>
-#include <QNetworkConfigurationManager>
+#include <QNetworkInterface>
 #include <QtDBus/QtDBus>
 
 #include "owncloudsyncd.h"
@@ -413,25 +413,28 @@ void OwncloudSyncd::syncDir(const int targetID){
 
     qDebug() << "\n"<< endl << endl;
 
-    //Create a connection manager, establish is a data connection is avaiable
-    QNetworkConfigurationManager mgr;
     qDebug() << "Mobile Data Sync: " << m_accountUseMobileData[m_targetAccount.value(targetID)];
 
-    QList<QNetworkConfiguration> activeConfigs = mgr.allConfigurations(QNetworkConfiguration::Active);
-    if (!activeConfigs.count()) {
+    QList<QNetworkInterface> interfaces = QNetworkInterface::allInterfaces();
+    if (!interfaces.count()) {
         qWarning() << "No Data Connection Available  - Unable to Sync";
         return;
     } else {
         if( m_accountUseMobileData[m_targetAccount.value(targetID)] == false) {
-            /* We must test against default connection */
-            QNetworkConfiguration::BearerType connType = mgr.defaultConfiguration().bearerTypeFamily();
-            qDebug() << "Network Connection Type: " << mgr.defaultConfiguration().bearerTypeName();
-            if ((connType != QNetworkConfiguration::BearerUnknown) && (connType != QNetworkConfiguration::Bearer2G)  && (connType != QNetworkConfiguration::Bearer3G) && (connType != QNetworkConfiguration::Bearer4G)) {
-                qDebug() << "Non-Mobile-Data connection found! Going to Sync.";
-            } else {
-                /* Only mobile-data or No connection available */
-                qDebug() << "No Sync on Mobile Data - Check User Settings - Unable to Sync.";
-                return;
+            for (int i = 0; i < interfaces.count(); i++) {
+                if(interfaces[i].flags() & (QNetworkInterface::IsRunning | QNetworkInterface::IsUp)) {
+                    qDebug() << "Network Connection " << interfaces[i].name() << " Type: " << interfaces[i].type();
+                    if ((interfaces[i].type() == QNetworkInterface::Wifi) || (interfaces[i].type() == QNetworkInterface::Ethernet)) {
+                        qDebug() << "Non-Mobile-Data connection found! Going to Sync.";
+                        break;
+                    }
+                }
+                
+                if (i == (interfaces.count() - 1)) {
+                    /* Only mobile-data or No connection available */
+                    qDebug() << "No Sync on Mobile Data - Check User Settings - Unable to Sync.";
+                    return;
+                }
             }
         }
     }
