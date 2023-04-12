@@ -118,6 +118,45 @@ bool ServiceControl::setServiceRunning(bool running)
     return true; // Requested state is already the current state.
 }
 
+bool ServiceControl::isServiceEnabled() const
+{
+    QProcess p;
+    p.start("systemctl", {"--user", "status", m_serviceName.toUtf8() + ".service"});
+    p.waitForFinished();
+    QByteArray output = p.readAllStandardOutput();
+    return (!output.contains("disabled;"));
+}
+
+bool ServiceControl::enableService()
+{
+    qDebug() << "should enable service";
+
+    int ret = QProcess::execute("systemctl", {"--user", "enable", m_serviceName.toUtf8() + ".service"});
+    emit serviceEnableChanged();
+    return (ret == 0);
+}
+
+bool ServiceControl::setServiceEnable(bool enable)
+{
+    qDebug() << "ServiceControl::setServiceEnable:" << enable;
+    if (enable && !isServiceEnabled()) {
+        return enableService();
+    } else if (!enable && isServiceEnabled()) {
+        return disableService();
+    }
+    return true; // Requested state is already the current state.
+}
+
+bool ServiceControl::disableService()
+{
+    qDebug() << "should disable service";
+
+    int ret = QProcess::execute("systemctl", {"--user", "disable", m_serviceName.toUtf8() + ".service"});
+    emit serviceEnableChanged();
+    return (ret == 0);
+}
+
+
 bool ServiceControl::startService()
 {
     qDebug() << "should start service";

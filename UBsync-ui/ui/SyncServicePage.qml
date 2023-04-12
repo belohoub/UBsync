@@ -60,7 +60,7 @@ Page {
                             SlotsLayout.position: SlotsLayout.Trailing;
 
                             onClicked: {
-                                console.log("SyncServicePage :: Accounts.qml - onButtonClicked - Start Sync daemon")
+                                console.log("SyncServicePage :: onButtonClicked - Start Sync daemon")
                                 connectionStatus.status = serviceController.serviceRunning ? i18n.tr("Stop Service") : i18n.tr("Start Service")
                                 connectionStatus.indicationIcon = serviceController.serviceRunning ? "paused" : "updating"
                                 serviceController.setServiceRunning(!serviceController.serviceRunning)
@@ -111,6 +111,23 @@ Page {
                     ListItemLayout {
                         title.text: i18n.tr("Service : %1").arg(owncloud.settings.owncloudSyncdVersion)
                         anchors{verticalCenter: parent.verticalCenter}
+                    }
+                }
+                
+                ListItem {
+                    ListItemLayout {
+                        title.text: i18n.tr("Service autostart:")
+                        subtitle.text: i18n.tr("Enable/Disable service autostart:")
+                        anchors{verticalCenter: parent.verticalCenter}
+
+                        Switch {
+                            id: serviceEnableSwitch
+                            checked: serviceController.isServiceEnabled
+                            onClicked: {
+                                console.log("SyncServicePage :: onSwitchToggled - Enable/Disable service")
+                                serviceController.setServiceEnable(serviceEnableSwitch.checked)
+                            }
+                        }
                     }
                 }
             }
