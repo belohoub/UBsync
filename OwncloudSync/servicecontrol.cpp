@@ -42,6 +42,11 @@ bool ServiceControl::installServiceFile()
         return false;
     }
 
+    QDir dir(QDir::homePath() + "/.config/systemd/user/");
+    if (!dir.exists()) {
+        dir.mkpath(".");
+    }
+    
     QFile f(QDir::homePath() + "/.config/systemd/user/" + m_serviceName + ".service");
     
     if (f.exists()) {
