@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-14 08:15+0000\n"
-"PO-Revision-Date: 2021-12-28 14:10+0100\n"
+"POT-Creation-Date: 2023-04-12 09:09+0000\n"
+"PO-Revision-Date: 2023-05-05 12:05+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:71
 msgid "No folders, press"
@@ -32,11 +32,11 @@ msgstr "om een nieuwe map aan te maken."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:154
 msgid "Error occured!"
-msgstr ""
+msgstr "Er is een fout opgetreden!"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:170
 msgid "Go Back"
-msgstr ""
+msgstr "Ga terug"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:185
 msgid "Create New Folder"
@@ -56,7 +56,7 @@ msgstr "Annuleren"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:11
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:288
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:173
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:175
 msgid "About"
 msgstr "Over"
 
@@ -84,7 +84,7 @@ msgstr "UBsync-team"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:112
 msgid "Please report bugs to the"
-msgstr "Meld bugs of deel ideëen op de"
+msgstr "Meld bugs of deel ideeën op de"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:113
 msgid "issue tracker"
@@ -126,18 +126,22 @@ msgstr "Afgesplitst van:"
 msgid "Source code available on:"
 msgstr "Broncode:"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AccountsPage.qml:127
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AccountsPage.qml:129
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:140
 msgid "Online Accounts"
 msgstr "Online-accounts"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AccountsPage.qml:251
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AccountsPage.qml:253
 msgid "No accounts, press"
 msgstr "Geen accounts - druk"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AccountsPage.qml:266
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AccountsPage.qml:268
 msgid "on the panel to add a new account"
 msgstr "op het paneel om een account toe te voegen"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AccountsPage.qml:283
+msgid "Release to update the list of accounts ..."
+msgstr "Laat los om de accountlijst bij te werken…"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:79
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:148
@@ -172,7 +176,7 @@ msgstr "Accountinstellingen"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:185
 msgid "New Target"
-msgstr "Nieuw doel"
+msgstr "Nieuw item"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:388
 msgid "Sync on Mobile Data"
@@ -215,7 +219,7 @@ msgstr "Account uitgeschakeld"
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:284
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:321
 msgid "target will NOT sync"
-msgstr "het item wordt NIET gesynchroniseerd"
+msgstr "item wordt NIET gesynchroniseerd"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:43
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:46
@@ -233,24 +237,24 @@ msgstr "Item ingeschakeld"
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:56
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:248
 msgid "target will sync"
-msgstr "het item wordt gesynchroniseerd"
+msgstr "item wordt gesynchroniseerd"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:254
 msgid "Target Settings"
-msgstr "Doelinstellingen"
+msgstr "Iteminstellingen"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:418
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:45
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:47
 msgid "Unknown Account"
 msgstr "Onbekend account"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:541
 msgid "Enable/Disable this Target"
-msgstr "Doel in-/uitschakelen"
+msgstr "Item in-/uitschakelen"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:8
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:238
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:179
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:181
 msgid "Help"
 msgstr "Hulp"
 
@@ -271,7 +275,7 @@ msgid ""
 "2) set-up new \"target\" by clicking  \"new target\" icon in the account "
 "detail page main menu, or in the accounts list accounts' trailer menu"
 msgstr ""
-"2) stel een nieuw doel in door op het gelijknamige pictogram te drukken op "
+"2) stel een nieuw item in door op het gelijknamige pictogram te drukken op "
 "de accountinformatiepagina of via het menu op de accountslijst;"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:48
@@ -279,7 +283,7 @@ msgid "3) start the synchronization service from the \"UBsync Settings\""
 msgstr "3) start de synchronisatiedienst via de instellingen."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:59
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:191
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:193
 msgid "Accounts"
 msgstr "Accounts"
 
@@ -289,7 +293,7 @@ msgid ""
 "account, as configured in system settings plus the custom UBsync "
 "configuration maintained by UBsync."
 msgstr ""
-"Met de term ‘account’ wordt hier een online-account van het systeem bedoeld, "
+"Met de term ‘account’ wordt een online-account van het systeem bedoeld, "
 "zoals ingesteld in de systeeminstellingen, maar ook het in UBsync ingestelde "
 "account."
 
@@ -300,7 +304,7 @@ msgid ""
 "UBsync, however, the related targets will not synchronize."
 msgstr ""
 "Een account kan los van UBsync worden in- of uitgeschakeld. Als een account "
-"niet gebruikt kan worden, dan worden de bijbehorende doelen niet "
+"niet gebruikt kan worden, dan worden de bijbehorende items niet "
 "gesynchroniseerd."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:71
@@ -311,7 +315,7 @@ msgid ""
 "disable this account in system settings temporarily without affecting UBsync "
 "configuration."
 msgstr ""
-"Als je de accountinstellingen wist, dan worden de bijbehorende doelen NIET "
+"Als je de accountinstellingen wist, dan worden de bijbehorende items NIET "
 "gesynchroniseerd totdat je het account in kwestie opnieuw toevoegt. Als je "
 "de synchronisatie tijdelijk wilt onderbreken, dan kun je het account in "
 "kwestie tijdelijk uitschakelen in de systeeminstellingen."
@@ -322,46 +326,46 @@ msgstr "UBsync gebruikt de volgende accountsymbolen om de status aan te geven:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:199
 msgid "Targets"
-msgstr "Doelen"
+msgstr "Items"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:210
 msgid ""
 "The term \"target\" represents in the UBsync context the remote/local "
-"directory pair intended for synchronization plus  the set of custom \"target"
-"\" configuration."
+"directory pair intended for synchronization plus  the set of custom "
+"\"target\" configuration."
 msgstr ""
-"Met de term ‘doel’ wordt hier een synchronisatiemap, lokaal of extern, maar "
-"ook de eigen gekozen doelen."
+"Met de term ‘item’ wordt een synchronisatiemap - lokaal of extern - bedoeld, "
+"maar ook de eigen gekozen items."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:211
 msgid "UBsync uses following target symbols to express target states:"
-msgstr "UBsync gebruikt de volgende doelsymbolen om de status aan te geven:"
+msgstr "UBsync gebruikt de volgende itemsymbolen om de status aan te geven:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:248
 msgid "Active Target"
-msgstr "Actief doel"
+msgstr "Actief item"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:284
 msgid "Inactive Target"
-msgstr "Inactief doel"
+msgstr "Inactief item"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:321
 msgid "Target With Disabled/Not Configured Account"
-msgstr "Het doel hoort bij een uitgeschakeld/niet-ingesteld account"
+msgstr "Het item hoort bij een uitgeschakeld/niet-ingesteld account"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:17
-#: /home/jan/projects/private/ubports/repos/UBsync/build/arm-linux-gnueabihf/app/UBsync-ui/UBsync.desktop.h:1
+#: /home/jan/projects/private/ubports/repos/UBsync/build/aarch64-linux-gnu/app/UBsync-ui/UBsync.desktop.h:1
 msgid "UBsync"
 msgstr "UBsync"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:91
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:167
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:169
 msgid "Sync Targets"
-msgstr "Synchronisatiedoelen"
+msgstr "Synchronisatie-items"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:189
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:10
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:185
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:187
 msgid "Settings"
 msgstr "Instellingen"
 
@@ -392,11 +396,11 @@ msgstr "Inactief"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:53
 msgid "Stopped"
-msgstr "Gestopt"
+msgstr "Onderbroken"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:58
 msgid "Stop"
-msgstr "Stoppen"
+msgstr "Onderbrekenn"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:58
 msgid "Start"
@@ -404,7 +408,7 @@ msgstr "Starten"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:64
 msgid "Stop Service"
-msgstr "Dienst stoppen"
+msgstr "Dienst onderbreken"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:64
 msgid "Start Service"
@@ -424,7 +428,7 @@ msgstr "Synchroniseren"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:88
 msgid "Sync Starting"
-msgstr "Bezig met starten van synchronisatie…"
+msgstr "Bezig met starten…"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:101
 #, qt-format
@@ -436,56 +440,68 @@ msgstr "Client : %1"
 msgid "Service : %1"
 msgstr "Dienst: %1"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:131
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:119
+msgid "Service autostart:"
+msgstr "Dienst automatisch starten:"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:120
+msgid "Enable/Disable service autostart:"
+msgstr "Dienst automatisch starten:"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:148
 msgid "Never"
 msgstr "Nooit"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:135
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:152
 #, qt-format
 msgid "%1 Months Ago"
 msgstr "%1 maanden geleden"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:139
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:156
 #, qt-format
 msgid "%1 Days Ago"
 msgstr "%1 dagen geleden"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:143
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:160
 #, qt-format
 msgid "%1  Hours Ago"
 msgstr "%1 uur geleden"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:147
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:164
 #, qt-format
 msgid "%1 Minutes Ago"
 msgstr "%1 minuten geleden"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:150
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:167
 msgid "A Minute Ago"
 msgstr "Eén minuut geleden"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:154
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:171
 #, qt-format
 msgid "%1 Seconds Ago"
 msgstr "%1 seconden geleden"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:157
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:174
 msgid "Just Now"
 msgstr "Zojuist"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:212
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:214
 msgid "No synchronization targets configured, press"
-msgstr "Er zijn geen doelen ingesteld. Druk op"
+msgstr "Er zijn geen items ingesteld. Druk op"
 
-#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:227
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:229
 msgid ""
 "in the main panel to enter Account Settings. In Account Settings, create a "
 "new synchronization target from an existing or new account. For explanation, "
 "see the help page."
 msgstr ""
 "op het paneel om de accountinstellingen te openen. Maak in de "
-"accountinstellingen een nieuw doel aan voor een bestaand of nieuw account. "
+"accountinstellingen een nieuw item aan voor een bestaand of nieuw account. "
 "Bekijk voor meer informatie de hulppagina."
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:245
+msgid "Release to update the list of targets ..."
+msgstr "Laat los om de itemlijst bij te werken…"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/WebdavFileBrowser.qml:34
 msgid "Loading"
@@ -493,7 +509,7 @@ msgstr "Bezig met laden…"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/WebdavFileBrowser.qml:46
 msgid "Check your connection or try again!"
-msgstr ""
+msgstr "Controleer de internetverbinding en probeer het opnieuw!"
 
 #~ msgid "Sync Service"
 #~ msgstr "Synchronisatiedienst"
