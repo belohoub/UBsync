@@ -8,15 +8,16 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-12 09:09+0000\n"
-"PO-Revision-Date: 2022-03-29 06:05+0200\n"
+"PO-Revision-Date: 2023-05-13 21:03+0000\n"
 "Last-Translator: Daniel Frost <one@frostinfo.de>\n"
-"Language-Team: \n"
+"Language-Team: German <https://hosted.weblate.org/projects/ubports/ubsync/de/"
+">\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18-dev\n"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:71
 msgid "No folders, press"
@@ -141,7 +142,7 @@ msgstr "in der Kopfleiste um ein Konto hinzuzufügen"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AccountsPage.qml:283
 msgid "Release to update the list of accounts ..."
-msgstr ""
+msgstr "Loslassen um die Kontoliste zu aktualisieren..."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:79
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:148
@@ -447,16 +448,12 @@ msgid "Service : %1"
 msgstr "Dienst: %1"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:119
-#, fuzzy
-#| msgid "Service : %1"
 msgid "Service autostart:"
-msgstr "Dienst: %1"
+msgstr "Dienst automatisch starten: %1"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:120
-#, fuzzy
-#| msgid "Enable/Disable this Target"
 msgid "Enable/Disable service autostart:"
-msgstr "Aktiviere/Deaktiviere dieses Ziel"
+msgstr "Aktiviere/Deaktiviere automatisches Starten des Dienstes:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:148
 msgid "Never"
@@ -511,7 +508,7 @@ msgstr ""
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:245
 msgid "Release to update the list of targets ..."
-msgstr ""
+msgstr "Loslassen um die Liste der Ziele zu aktualisieren..."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/WebdavFileBrowser.qml:34
 msgid "Loading"
