@@ -4,7 +4,7 @@ UBsync is the featured application for [OwnCloud](https://owncloud.com/)/[Nextcl
 
 [![OpenStore](https://open-store.io/badges/en_US.png)](https://open-store.io/app/ubsync)
 
-<img src="https://framagit.org/ernesst/UBsync/raw/master/Owncloud-Sync/UBsync.png" width="196">
+<img src="https://framagit.org/ernesst/UBsync/raw/master/Owncloud-Sync/UBsync.png" width="196"> [![Weblate Translation Status](https://hosted.weblate.org/widgets/ubports/-/ubsync/multi-auto.svg)](https://hosted.weblate.org/engage/ubports/)
 
 ## Common UBsync Recommendations
 * Do not synchronize the entire home folder, because it can be quite big and certain fast-evolving files (caches, or profiles) may induce many file versions in the cloud. Rather set up several targets and select individual folders.
