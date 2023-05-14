@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-12 09:09+0000\n"
-"PO-Revision-Date: 2023-05-13 21:03+0000\n"
+"PO-Revision-Date: 2023-05-14 06:27+0000\n"
 "Last-Translator: Daniel Frost <one@frostinfo.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/ubports/ubsync/de/"
 ">\n"
@@ -154,7 +154,7 @@ msgstr "Nicht konfiguriertes Konto"
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:148
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:184
 msgid "related targets will NOT sync"
-msgstr "verbundene Ziele werden NICHT syncronisiert"
+msgstr "verbundene Ziele werden NICHT synchronisiert"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:84
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:184
@@ -169,7 +169,7 @@ msgstr "Aktiviertes Konto"
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:90
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:111
 msgid "related targets will sync"
-msgstr "verbundene Ziele werden syncronisiert"
+msgstr "verbundene Ziele werden synchronisiert"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:178
 msgid "Account Settings"
