@@ -8,15 +8,16 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-12 09:09+0000\n"
-"PO-Revision-Date: 2022-03-27 18:30+0200\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: cs_CZ\n"
+"PO-Revision-Date: 2023-05-21 11:51+0000\n"
+"Last-Translator: Jan Belohoubek <jan.belohoubek@fit.cvut.cz>\n"
+"Language-Team: Czech <https://hosted.weblate.org/projects/ubports/ubsync/cs/>"
+"\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n>=2 && n<=4 ? 1 : 2);\n"
-"X-Generator: Poedit 2.4.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18-dev\n"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:71
 msgid "No folders, press"
@@ -48,7 +49,7 @@ msgstr "Nový adresář"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:197
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:207
 msgid "Cancel"
@@ -319,7 +320,7 @@ msgid ""
 msgstr ""
 "Pokud odstraníte nastavení účtu z UBsync, příslušné cíle NEBUDOU "
 "synchronizovány. Pokud si přejete pouze dočasně pozastavit cíle sdružené s "
-"určitým účtem, zakažte použití účtu aplikací UBsync  v nastavení systému - "
+"určitým účtem, zakažte použití účtu aplikací UBsync v nastavení systému - "
 "tento krok nepoškodí nastavení provedená v UBsync, ale cíl nebude "
 "synchronizován."
 
@@ -359,7 +360,7 @@ msgstr "Cíl, jehož účet je zakázán nebo není nastaven"
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:17
 #: /home/jan/projects/private/ubports/repos/UBsync/build/aarch64-linux-gnu/app/UBsync-ui/UBsync.desktop.h:1
 msgid "UBsync"
-msgstr ""
+msgstr "UBsync"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:91
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:169
@@ -445,11 +446,11 @@ msgstr "Služba (owncloudsyncd): %1"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:119
 msgid "Service autostart:"
-msgstr "Automatický start služby"
+msgstr "Automatický start služby:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:120
 msgid "Enable/Disable service autostart:"
-msgstr "Povolit/zakázat automatický start služby"
+msgstr "Povolit/zakázat automatický start služby:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:148
 msgid "Never"
