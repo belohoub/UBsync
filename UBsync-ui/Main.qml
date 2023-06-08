@@ -45,7 +45,7 @@ MainView {
     // Note! applicationName needs to match the "name" field of the click manifest
     applicationName: "ubsync"
     applicationVersion: "0.8"
-    applicationPatch: "0" // minor version
+    applicationPatch: "1" // minor version
 
     anchorToKeyboard: true
 
@@ -56,7 +56,7 @@ MainView {
         property string owncloudcmdVersion
         property string owncloudSyncdVersion
         property string ubsyncVersion: "0.8"
-        property string ubsyncVersionPatch: "0"
+        property string ubsyncVersionPatch: "1"
 
         property string color_targetActive: "forestgreen"
         property string color_targetInactive: "silver"

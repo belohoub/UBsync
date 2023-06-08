@@ -1,5 +1,9 @@
 # Changelog
 
+# 0.8.1 (06/2023)
+1. Translation updates
+1. Systemd service installation-related issue fixed (issue #26)
+
 # 0.8.0 (03/2023)
 1. Focal support added
 1. New focal-compatible binaries and libs included
