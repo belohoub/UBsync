@@ -19,13 +19,13 @@ Page {
 
         Button{
             id: addOwnCloudButton
-            text: i18n.tr("Add NextCloud account")
+            text: i18n.tr("Add Nextcloud account")
             anchors {
                 top: parent.top; left: parent.left; right: parent.right; margins: units.gu(2)
             }
 
             onClicked: {
-                console.log("RequestAccountPage :: Add NextCloud account: clicked")
+                console.log("RequestAccountPage :: Add Nextcloud account: clicked")
                 apl.addPageToNextColumn(apl.primaryPage, Qt.resolvedUrl("AccountsPage.qml"), {requestAccount: "nextcloud"})
             }
         }
