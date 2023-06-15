@@ -11,7 +11,7 @@ Page {
 
     property var db
 
-    // accounts may be not ready ...
+    // accounts may be not ready …
     property bool accountsLoaded: false
     
     property bool upMoveDetected: false // detect Up move to update the ListView
@@ -118,11 +118,11 @@ Page {
             // hide back navigation, as this serves as main page in a single-column mode and it is not required in double-column mode
             header.navigationActions[0].visible = false
 
-            // if accounts were not ready update again as soon as possible ...
+            // if accounts were not ready update again as soon as possible …
             if (accountsLoaded === false) {
                 targetsPage.loadDB()
                 if (accountsLoaded === false) {
-                    // if still not ready, wait ...
+                    // if still not ready, wait …
                     return
                 } else {
                     continuousCheck.repeat = false
@@ -242,7 +242,7 @@ Page {
         
         Label{
             wrapMode: Text.Wrap
-            text: i18n.tr("Release to update the list of targets ...")
+            text: i18n.tr("Release to update the list of targets …")
             anchors{left: parent.left; right: parent.right; bottom: targetListModel.top; bottomMargin: units.gu(5); topMargin: units.gu(5)}
             horizontalAlignment: Text.AlignHCenter
         }
@@ -256,7 +256,7 @@ Page {
         visible: targetListModel.count
 
         onMovementStarted: {
-            /* update page when moving ...*/
+            /* update page when moving …*/
         }
         
         onContentYChanged: {
@@ -271,7 +271,7 @@ Page {
         }
         
         onMovementEnded: {
-            /* update page when moving ...*/
+            /* update page when moving …*/
             if ((targetList.atYBeginning === true) && (upMoveDetected === true)) {
                 console.log("TargetsPage :: Page reload forced due to top positioning.")
                 targetsPage.loadDB()
