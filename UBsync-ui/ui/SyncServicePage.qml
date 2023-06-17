@@ -98,7 +98,7 @@ Page {
                     onClicked: daemonController.getOwncloudcmdVersion()
 
                     ListItemLayout {
-                        title.text: i18n.tr("Client : %1").arg(owncloud.settings.owncloudcmdVersion)
+                        title.text: i18n.tr("Client: %1").arg(owncloud.settings.owncloudcmdVersion)
                         anchors{verticalCenter: parent.verticalCenter}
                     }
                 }
@@ -109,7 +109,7 @@ Page {
                     onClicked: daemonController.getOwncloudSyncdVersion()
 
                     ListItemLayout {
-                        title.text: i18n.tr("Service : %1").arg(owncloud.settings.owncloudSyncdVersion)
+                        title.text: i18n.tr("Service: %1").arg(owncloud.settings.owncloudSyncdVersion)
                         anchors{verticalCenter: parent.verticalCenter}
                     }
                 }
