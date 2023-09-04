@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-12 09:09+0000\n"
-"PO-Revision-Date: 2023-06-22 19:41+0000\n"
+"PO-Revision-Date: 2023-09-06 06:09+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/ubports/"
 "ubsync/nb_NO/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.18.1\n"
+"X-Generator: Weblate 5.0.1-dev\n"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:71
 msgid "No folders, press"
@@ -158,7 +158,7 @@ msgstr "Ikke-oppsatt konto"
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:148
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:184
 msgid "related targets will NOT sync"
-msgstr ""
+msgstr "relaterte mål vil IKKE bli synkronisert"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:84
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:184
@@ -215,6 +215,8 @@ msgid ""
 "Synchronization service not running! Please, go to UBsync Settings and start "
 "the sync service, otherwise the target synchronization will not begin."
 msgstr ""
+"Synkroniseringstjenesten kjører ikke. Gå til UBsync-innstillingene og start "
+"den. Ellers vil ikke målsynkroniseringen begynne."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:40
 #, fuzzy
@@ -227,7 +229,7 @@ msgstr "Konto avskrudd"
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:284
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:321
 msgid "target will NOT sync"
-msgstr ""
+msgstr "målet vil IKKE synkroniseres"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:43
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:46
@@ -276,16 +278,22 @@ msgid ""
 "1) go to UBsync \"Online Accounts\", add new account by clicking \"plus\" "
 "icon in the main menu"
 msgstr ""
+"1) Gå til «Nettbaserte kontoer» i UBsync, og legg til ny konto med «+»-"
+"ikonet i hovedmenyen"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:47
+#, fuzzy
 msgid ""
 "2) set-up new \"target\" by clicking  \"new target\" icon in the account "
 "detail page main menu, or in the accounts list accounts' trailer menu"
 msgstr ""
+"2) Sett opp et nytt «mål» ved å klikke «nytt mål»-ikonet i kontodetaljssiden "
+"i hovedmenyen, eller i innholdslisten for kontolisten"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:48
+#, fuzzy
 msgid "3) start the synchronization service from the \"UBsync Settings\""
-msgstr ""
+msgstr "3) Start synkroniseringstjenesten fra «UBsync-innstillinger»"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:59
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:193
@@ -293,20 +301,29 @@ msgid "Accounts"
 msgstr "Kontoer"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:69
+#, fuzzy
 msgid ""
 "The term \"account\" represents in the UBsync context the system online "
 "account, as configured in system settings plus the custom UBsync "
 "configuration maintained by UBsync."
 msgstr ""
+"Begrepet «konto» betyr i UBsync-kontekst systemets nettkonto, som satt opp i "
+"systeminnstillingene, pluss det egendefinerte UBsync-oppsettet vedlikeholdt "
+"av UBsync."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:70
+#, fuzzy
 msgid ""
 "The account might be enabled or disabled independently on UBsync. If an "
 "account cannot be used by UBsync anymore, its configuration persists in "
 "UBsync, however, the related targets will not synchronize."
 msgstr ""
+"Kontoen kan skrus på eller av uavhengig på UBsync- Hvis en konto ikke kan "
+"brukes av UBsync mer vil oppsettet vedvare i UBsync, men relaterte mål vil "
+"ikke synkroniseres."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:71
+#, fuzzy
 msgid ""
 "If you remove the account configuration from UBsync, the related targets "
 "will NOT synchronize until you re-create the account settings. If you wish "
@@ -314,25 +331,33 @@ msgid ""
 "disable this account in system settings temporarily without affecting UBsync "
 "configuration."
 msgstr ""
+"Hvis du fjerner kontooppsettet fra UBsync, vil relaterte mål IKKE "
+"synkroniseres til du gjenoppretter kontoinnstillingene. Hvis du ønsker å "
+"midlertidig pause alle mål relatert til den gitte kontoen kan du skru av "
+"denne kontoen i systeminnstillingene midlertidig uten at det har innvirkning "
+"på UBsync-oppsettet."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:73
 msgid "UBsync uses following account symbols to express account states:"
-msgstr ""
+msgstr "UBsync bruker følgende kontosymboler for å uttrykke kontotilstander:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:199
 msgid "Targets"
 msgstr "Mål"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:210
+#, fuzzy
 msgid ""
 "The term \"target\" represents in the UBsync context the remote/local "
 "directory pair intended for synchronization plus  the set of custom \"target"
 "\" configuration."
 msgstr ""
+"Begrepet «mål° betyr i UBsync-kontakest parret av fjern/lokal -mappe "
+"tiltenkt synkronisering, pluss det egendefinerte «mål»-oppsettet."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:211
 msgid "UBsync uses following target symbols to express target states:"
-msgstr ""
+msgstr "UBsync bruker følgende målsymboler for å uttrykke måltilstander:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:248
 msgid "Active Target"
@@ -443,8 +468,9 @@ msgid "Service autostart:"
 msgstr "Tjeneste-autostart:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:120
+#, fuzzy
 msgid "Enable/Disable service autostart:"
-msgstr ""
+msgstr "Skru på/av automatisk start av tjeneste:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:148
 msgid "Never"
@@ -486,14 +512,18 @@ msgstr "Akkurat nå"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:214
 msgid "No synchronization targets configured, press"
-msgstr ""
+msgstr "Ingen synkroniseringsmål oppsatt, trykk"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:229
+#, fuzzy
 msgid ""
 "in the main panel to enter Account Settings. In Account Settings, create a "
 "new synchronization target from an existing or new account. For explanation, "
 "see the help page."
 msgstr ""
+"i hovedpanelet for å gå til kontoinnstillinger. Der kan du opprette et nytt "
+"synkroniseringsmål fra en eksisterende eller ny konto. Mer info er å finne "
+"på hjelpesiden."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:245
 #, fuzzy
