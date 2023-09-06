@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-12 09:09+0000\n"
-"PO-Revision-Date: 2023-09-06 06:09+0000\n"
-"Last-Translator: Kristoffer Grundström <swedishsailfishosuser@tutanota.com>\n"
+"PO-Revision-Date: 2023-09-07 04:43+0000\n"
+"Last-Translator: bittin1ddc447d824349b2 <bittin@reimu.nl>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/ubports/ubsync/"
 "sv/>\n"
 "Language: sv\n"
@@ -158,9 +158,8 @@ msgstr "relaterade mål kommer INTE synkroniseras"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:84
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:184
-#, fuzzy
 msgid "Disabled Account"
-msgstr "Avstängt konto"
+msgstr "Avaktiverat konto"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:90
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:111
@@ -185,12 +184,10 @@ msgid "Sync on Mobile Data"
 msgstr "Synk på mobildata"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:420
-#, fuzzy
 msgid "Sync hidden files"
 msgstr "Synka dolda filer"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:452
-#, fuzzy
 msgid "Sync Frequency"
 msgstr "Synkroniseringsfrekvens"
 
@@ -206,19 +203,16 @@ msgstr[1] "timmar"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:540
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:598
-#, fuzzy
 msgid ""
 "Synchronization service not running! Please, go to UBsync Settings and start "
 "the sync service, otherwise the target synchronization will not begin."
 msgstr ""
-"Synkroniseringstjänsten körs inte! Vänligen gå till UBsync-inställningarna "
-"och starta synk-tjänsten, annars så kommer målsynkroniseringen inte att "
-"påbörja."
+"Synkroniseringstjänsten körs inte! Vänligen gå till UBsync inställningar och "
+"starta synk-tjänsten, annars så kommer målsynkroniseringen inte att påbörja."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:40
-#, fuzzy
 msgid "Account Disabled"
-msgstr "Kontot är avstängt"
+msgstr "Kontot avaktiverat"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:40
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:46
@@ -256,9 +250,8 @@ msgid "Unknown Account"
 msgstr "Okänt konto"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:541
-#, fuzzy
 msgid "Enable/Disable this Target"
-msgstr "Aktivera/Stäng av det här målet"
+msgstr "Aktivera/Inaktivera det här målet"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:8
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:238
@@ -283,11 +276,12 @@ msgid ""
 "2) set-up new \"target\" by clicking  \"new target\" icon in the account "
 "detail page main menu, or in the accounts list accounts' trailer menu"
 msgstr ""
+"2) ställ in ett nytt \"mål\" genom att klicka på \"nytt mål\" ikonen i "
+"huvudmenyn på kontodetaljsidan, eller på kontolistan i trailermenyn"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:48
-#, fuzzy
 msgid "3) start the synchronization service from the \"UBsync Settings\""
-msgstr "3) påbörja synkroniseringstjänsten från \"Inställningar för UBsync\""
+msgstr "3) starta synkroniseringstjänsten från \"UBsync inställningarna\""
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:59
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:193
@@ -322,6 +316,11 @@ msgid ""
 "disable this account in system settings temporarily without affecting UBsync "
 "configuration."
 msgstr ""
+"Om du tar bort kontots konfiguration från UBsync så kommer de relaterade "
+"målen INTE synkronisera innan du återskapar inställningarna för kontot. Om "
+"du önskar att tillfälligt pausa alla mål som relaterar till det specifika "
+"kontot så kan du inaktivera det här kontot i systeminställningarna "
+"tillfälligt utan att det påverkar UBsync's konfiguration."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:73
 msgid "UBsync uses following account symbols to express account states:"
@@ -337,6 +336,9 @@ msgid ""
 "directory pair intended for synchronization plus  the set of custom \"target"
 "\" configuration."
 msgstr ""
+"Termen \"mål\" representerar i UBsync-sammanhang det fjärr/lokala "
+"katalogparet som är avsett för synkronisering plus uppsättningen av "
+"anpassade \"mål\"-konfigurationer."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:211
 msgid "UBsync uses following target symbols to express target states:"
@@ -352,7 +354,7 @@ msgstr "Inaktivt mål"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:321
 msgid "Target With Disabled/Not Configured Account"
-msgstr ""
+msgstr "Mål med inaktiverat/icke konfigurerat konto"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:17
 #: /home/jan/projects/private/ubports/repos/UBsync/build/aarch64-linux-gnu/app/UBsync-ui/UBsync.desktop.h:1
@@ -446,9 +448,8 @@ msgid "Service autostart:"
 msgstr "Autostart för tjänst:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:120
-#, fuzzy
 msgid "Enable/Disable service autostart:"
-msgstr "Aktivera/Stäng av autostart av tjänsten:"
+msgstr "Aktivera/Inaktivera autostart av tjänsten:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:148
 msgid "Never"
@@ -488,20 +489,18 @@ msgid "Just Now"
 msgstr "Just nu"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:214
-#, fuzzy
 msgid "No synchronization targets configured, press"
-msgstr "Inga synkroniseringsmål inställda, tryck"
+msgstr "Inga synkroniseringsmål är konfigurerade, tryck"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:229
-#, fuzzy
 msgid ""
 "in the main panel to enter Account Settings. In Account Settings, create a "
 "new synchronization target from an existing or new account. For explanation, "
 "see the help page."
 msgstr ""
-"i huvudpanelen för att gå in i Kontoinställningar. Skapa ett nytt "
-"synkroniseringsmål från ett befintligt eller nytt konto. Se hjälpsidan för "
-"förklaring."
+"i huvudpanelen för att ange Kontoinställningar. I Kontoinställningar skapar "
+"du ett nytt synkroniseringsmål från ett befintligt eller nytt konto. För "
+"förklaring, se hjälpsidan."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:245
 msgid "Release to update the list of targets ..."
