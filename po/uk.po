@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-12 09:09+0000\n"
-"PO-Revision-Date: 2023-10-27 09:27+0000\n"
+"PO-Revision-Date: 2023-11-04 01:33+0000\n"
 "Last-Translator: Serhii Horichenko <m@sgg.im>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/ubports/ubsync/"
 "uk/>\n"
@@ -86,15 +86,15 @@ msgstr "Команда UBsync"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:112
 msgid "Please report bugs to the"
-msgstr "Будь ласка, повідомляйте про помилки на адресу"
+msgstr "Будь ласка, повідомте про помилки на адресу"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:113
 msgid "issue tracker"
-msgstr "Відстеження проблем"
+msgstr "обробка проблем"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:129
 msgid "Thanks to"
-msgstr "Дякую"
+msgstr "Дякуючи"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:136
 msgid "Owncloud client:"
@@ -106,7 +106,7 @@ msgstr "Клієнт Nextcloud:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:152
 msgid "This Qt library for WebDAV:"
-msgstr "Це бібліотека Qt для WebDAV:"
+msgstr "Ця бібліотека Qt для WebDAV:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:160
 msgid "Joan CiberSheep for the logo from:"
@@ -143,7 +143,7 @@ msgstr "на панелі, щоб додати новий обліковий з�
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AccountsPage.qml:283
 msgid "Release to update the list of accounts ..."
-msgstr "Реліз для оновлення списку облікових записів ..."
+msgstr "Відпустіть для оновлення списку облікових записів ..."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:79
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:148
@@ -155,22 +155,22 @@ msgstr "Не налаштований обліковий запис"
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:148
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:184
 msgid "related targets will NOT sync"
-msgstr "пов'язані цілі НЕ синхронізуються"
+msgstr "підключені призначення НЕ синхронізуватимуться"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:84
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:184
 msgid "Disabled Account"
-msgstr "Відключений обліковий запис"
+msgstr "Деактивований обліковий запис"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:90
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:111
 msgid "Enabled Account"
-msgstr "Ввімкнений обліковий запис"
+msgstr "Активований обліковий запис"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:90
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:111
 msgid "related targets will sync"
-msgstr "пов'язані цілі синхронізуються"
+msgstr "підключені призначення синхронізуватимуться"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:178
 msgid "Account Settings"
@@ -178,11 +178,11 @@ msgstr "Налаштування облікового запису"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:185
 msgid "New Target"
-msgstr "Нова ціль"
+msgstr "Нове призначення"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:388
 msgid "Sync on Mobile Data"
-msgstr "Синхронізація мобільних даних"
+msgstr "Синхронізація через мобільний зв'язок"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:420
 msgid "Sync hidden files"
@@ -210,8 +210,8 @@ msgid ""
 "the sync service, otherwise the target synchronization will not begin."
 msgstr ""
 "Служба синхронізації не запущена! Будь ласка, перейдіть до налаштувань "
-"UBsync і запустіть службу синхронізації, інакше цільова синхронізація не "
-"почнеться."
+"UBsync і запустіть службу синхронізації, інакше синхронізація з призначенням "
+"не почнеться."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:40
 msgid "Account Disabled"
@@ -223,7 +223,7 @@ msgstr "Обліковий запис деактивований"
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:284
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:321
 msgid "target will NOT sync"
-msgstr "ціль НЕ синхронізується"
+msgstr "призначення НЕ синхронізуватиметься"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:43
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:46
@@ -232,20 +232,20 @@ msgstr "Обліковий запис не налаштовано"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:51
 msgid "Target Disabled"
-msgstr "Ціль вимкнено"
+msgstr "Призначення вимкнено"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:56
 msgid "Target Enabled"
-msgstr "Ціль ввімкнено"
+msgstr "Призначення увімкнено"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:56
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:248
 msgid "target will sync"
-msgstr "ціль синхронізується"
+msgstr "призначення синхронізуватиметься"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:254
 msgid "Target Settings"
-msgstr "Налаштування цілі"
+msgstr "Налаштування призначення"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:418
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:47
@@ -254,7 +254,7 @@ msgstr "Невідомий обліковий запис"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:541
 msgid "Enable/Disable this Target"
-msgstr "Ввімкнути/вимкнути цю ціль"
+msgstr "Увімкнути/вимкнути це призначення"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:8
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:238
@@ -264,14 +264,14 @@ msgstr "Допомога"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:45
 msgid "To set-up synchronization for your folders:"
-msgstr "Для налаштування синхронізації Ваших тек:"
+msgstr "Налаштування синхронізації Ваших тек:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:46
 msgid ""
 "1) go to UBsync \"Online Accounts\", add new account by clicking \"plus\" "
 "icon in the main menu"
 msgstr ""
-"1) перейдіть в UBsync \"Онлайн облікові записи\", додайте новий обліковий "
+"1) перейдіть в \"Онлайн облікові записи\" UBsync, додайте новий обліковий "
 "запис, натиснувши на іконку \"плюс\" у головному меню"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:47
@@ -279,13 +279,13 @@ msgid ""
 "2) set-up new \"target\" by clicking  \"new target\" icon in the account "
 "detail page main menu, or in the accounts list accounts' trailer menu"
 msgstr ""
-"2) встановіть нову «ціль», натиснувши піктограму «нова ціль» в головному "
-"меню сторінки даних облікового запису або в меню трейлера облікових записів "
-"списку облікових записів"
+"2) встановіть нове \"призначення\", натиснувши іконку \"нове призначення\" в "
+"головному меню сторінки даних облікового запису або в списку облікових "
+"записів, провівши пальцем по відповідному обліковому запису"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:48
 msgid "3) start the synchronization service from the \"UBsync Settings\""
-msgstr "3) запустіть службу синхронізації з \"Налаштувань UBsync\""
+msgstr "3) запустіть службу синхронізації в \"Налаштуваннях UBsync\""
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:59
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:193
@@ -298,9 +298,9 @@ msgid ""
 "account, as configured in system settings plus the custom UBsync "
 "configuration maintained by UBsync."
 msgstr ""
-"Термін \"обліковий запис\" у контексті UBsync означає обліковий запис "
-"системи в Інтернеті, як зазначено в налаштуваннях системи, а також "
-"користувацьку конфігурацію UBsync, яку підтримує UBsync."
+"Термін \"обліковий запис\" у контексті UBsync означає обліковий запис в "
+"Інтернеті, як зазначено в налаштуваннях системи, а також користувацьку "
+"конфігурацію UBsync, яку підтримує UBsync."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:70
 msgid ""
@@ -308,9 +308,9 @@ msgid ""
 "account cannot be used by UBsync anymore, its configuration persists in "
 "UBsync, however, the related targets will not synchronize."
 msgstr ""
-"Обліковий запис можна ввімкнути або вимкнути незалежно від UBsync. Якщо "
+"Обліковий запис можна вмикати та вимикати незалежно від UBsync. Якщо "
 "обліковий запис більше не може використовуватися UBsync, його конфігурація "
-"зберігається в UBsync, однак пов'язані з ним цілі не синхронізуються."
+"зберігається в UBsync, однак пов'язані з ним призначення не синхронізуються."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:71
 msgid ""
@@ -321,20 +321,20 @@ msgid ""
 "configuration."
 msgstr ""
 "Якщо Ви видалите конфігурацію облікового запису з UBsync, пов'язані з ним "
-"цілі НЕ синхронізуватимуться, доки Ви не створите налаштування акаунта "
-"заново. Якщо Ви хочете тимчасово призупинити синхронізацію всіх цілей, "
-"пов'язаних з певним обліковим записом, Ви можете тимчасово вимкнути цей "
-"акаунт у системних налаштуваннях, не змінюючи конфігурацію UBsync."
+"призначення НЕ синхронізуватимуться, доки Ви не створите налаштування "
+"акаунта заново. Якщо Ви хочете тимчасово призупинити синхронізацію усіх "
+"призначень, пов'язаних з певним обліковим записом, Ви можете тимчасово "
+"вимкнути цей акаунт у системних налаштуваннях, не змінюючи конфігурації "
+"UBsync."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:73
 msgid "UBsync uses following account symbols to express account states:"
 msgstr ""
-"UBsync використовує такі символи облікового запису для вираження стану "
-"облікового запису:"
+"UBsync використовує такі символи облікового запису для вираження його стану:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:199
 msgid "Targets"
-msgstr "Цілі"
+msgstr "Призначення"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:210
 msgid ""
@@ -342,26 +342,25 @@ msgid ""
 "directory pair intended for synchronization plus  the set of custom \"target"
 "\" configuration."
 msgstr ""
-"Термін \"ціль\" у контексті UBsync означає пару віддалених/локальних "
-"каталогів, призначених для синхронізації, а також набір користувацьких "
-"налаштувань \"цілі\"."
+"Термін \"призначення\" або \"ціль\" у контексті UBsync означає пару "
+"віддалених/локальних каталогів, призначених для синхронізації, а також набір "
+"користувацьких налаштувань \"призначень\"."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:211
 msgid "UBsync uses following target symbols to express target states:"
-msgstr ""
-"UBsync використовує наступні цільові символи для вираження цільових станів:"
+msgstr "UBsync використовує наступні символи призначень для вираження станів:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:248
 msgid "Active Target"
-msgstr "Активна ціль"
+msgstr "Активне призначення"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:284
 msgid "Inactive Target"
-msgstr "Неактивна ціль"
+msgstr "Неактивне призначення"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:321
 msgid "Target With Disabled/Not Configured Account"
-msgstr "Ціль з вимкненим/не налаштованим обліковим записом"
+msgstr "Призначення з вимкненим/не налаштованим обліковим записом"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:17
 #: /home/jan/projects/private/ubports/repos/UBsync/build/aarch64-linux-gnu/app/UBsync-ui/UBsync.desktop.h:1
@@ -394,7 +393,7 @@ msgstr "Додати обліковий запис OwnCloud"
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:53
 #, qt-format
 msgid "Status: %1"
-msgstr "Статус: %1"
+msgstr "Стан: %1"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:53
 msgid "Syncing"
@@ -402,7 +401,7 @@ msgstr "Синхронізація"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:53
 msgid "Idle"
-msgstr "Бездіяльність"
+msgstr "Очікування"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:53
 msgid "Stopped"
@@ -410,11 +409,11 @@ msgstr "Зупинено"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:58
 msgid "Stop"
-msgstr "Стоп"
+msgstr "Зупинити"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:58
 msgid "Start"
-msgstr "Старт"
+msgstr "Запустити"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:64
 msgid "Stop Service"
@@ -438,7 +437,7 @@ msgstr "Синхронізувати"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:88
 msgid "Sync Starting"
-msgstr "Початок синхронізації"
+msgstr "Запустити синхронізацію"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:101
 #, qt-format
@@ -456,7 +455,7 @@ msgstr "Автозапуск служби:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:120
 msgid "Enable/Disable service autostart:"
-msgstr "Включення/відключення автозапуску служби:"
+msgstr "Увімкнення/вимкнення автозапуску служби:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:148
 msgid "Never"
@@ -484,7 +483,7 @@ msgstr "%1 хвилин тому"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:167
 msgid "A Minute Ago"
-msgstr "Хвилину тому"
+msgstr "хвилину тому"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:171
 #, qt-format
@@ -497,7 +496,7 @@ msgstr "Прямо зараз"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:214
 msgid "No synchronization targets configured, press"
-msgstr "Немає налаштованих цілей синхронізації, натисніть"
+msgstr "Немає налаштованих синхронізацій призначень, натисніть"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:229
 msgid ""
@@ -506,12 +505,12 @@ msgid ""
 "see the help page."
 msgstr ""
 "на головній панелі, щоб увійти до Налаштувань акаунта. У Налаштуваннях "
-"акаунта створіть нову ціль синхронізації з наявного або нового акаунта. "
-"Пояснення див. на сторінці довідки."
+"акаунта створіть нове призначення синхронізації з наявного або нового "
+"акаунта. Пояснення див. на сторінці довідки."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:245
 msgid "Release to update the list of targets ..."
-msgstr "Реліз для оновлення списку цілей ..."
+msgstr "Відпустіть для оновлення списку цілей ..."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/WebdavFileBrowser.qml:34
 msgid "Loading"
