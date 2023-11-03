@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-12 09:09+0000\n"
-"PO-Revision-Date: 2023-06-22 19:41+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"PO-Revision-Date: 2023-11-04 01:33+0000\n"
+"Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/ubports/ubsync/"
 "es/>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.18.1\n"
+"X-Generator: Weblate 5.2-dev\n"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:71
 msgid "No folders, press"
@@ -33,11 +33,11 @@ msgstr "para crear una nueva carpeta."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:154
 msgid "Error occured!"
-msgstr ""
+msgstr "¡Se ha producido un error!"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:170
 msgid "Go Back"
-msgstr ""
+msgstr "Volver atrás"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:185
 msgid "Create New Folder"
@@ -142,7 +142,7 @@ msgstr "en el panel para añadir una nueva cuenta"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AccountsPage.qml:283
 msgid "Release to update the list of accounts ..."
-msgstr ""
+msgstr "Liberación para actualizar la lista de las cuentas ..."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:79
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:148
@@ -451,16 +451,12 @@ msgid "Service : %1"
 msgstr "Servicio: %1"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:119
-#, fuzzy
-#| msgid "Service : %1"
 msgid "Service autostart:"
-msgstr "Servicio: %1"
+msgstr "Servicio de autoarranque:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:120
-#, fuzzy
-#| msgid "Enable/Disable this Target"
 msgid "Enable/Disable service autostart:"
-msgstr "Habilitar/Deshabilitar este objetivo"
+msgstr "Activar/Desactivar el autoarranque del servicio:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:148
 msgid "Never"
@@ -515,7 +511,7 @@ msgstr ""
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:245
 msgid "Release to update the list of targets ..."
-msgstr ""
+msgstr "Liberación para actualizar la lista de los objetivos ..."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/WebdavFileBrowser.qml:34
 msgid "Loading"
@@ -523,7 +519,7 @@ msgstr "Cargando"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/WebdavFileBrowser.qml:46
 msgid "Check your connection or try again!"
-msgstr ""
+msgstr "¡Compruebe su conexión o inténtelo de nuevo!"
 
 #~ msgid "Sync Service"
 #~ msgstr "Servicio de sincronización"
