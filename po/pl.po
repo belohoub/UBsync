@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-12 09:09+0000\n"
-"PO-Revision-Date: 2023-07-24 22:07+0000\n"
-"Last-Translator: Maciej Sopyło <me@klh.io>\n"
+"PO-Revision-Date: 2023-11-15 15:04+0000\n"
+"Last-Translator: marcin mikołajczak <me@mkljczk.pl>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/ubports/ubsync/pl/"
 ">\n"
 "Language: pl\n"
@@ -18,39 +18,39 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.0-dev\n"
+"X-Generator: Weblate 5.2-dev\n"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:71
 msgid "No folders, press"
-msgstr ""
+msgstr "Brak katalogów, naciśnij"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:85
 msgid "on the panel to select this folder, or press"
-msgstr ""
+msgstr "na panelu aby wybrać ten folder lub naciśnij"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:100
 msgid "to create a new folder."
-msgstr ""
+msgstr "aby utworzyć nowy katalog."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:154
 msgid "Error occured!"
-msgstr ""
+msgstr "Wystąpił błąd!"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:170
 msgid "Go Back"
-msgstr ""
+msgstr "Wstecz"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:185
 msgid "Create New Folder"
-msgstr ""
+msgstr "Utwórz nowy katalog"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:189
 msgid "New Folder"
-msgstr ""
+msgstr "Nowy katalog"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:197
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:207
 msgid "Cancel"
@@ -66,19 +66,19 @@ msgstr "O programie"
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:78
 #, qt-format
 msgid "App Version %1"
-msgstr ""
+msgstr "Wersja aplikacji %1"
 
 #. TRANSLATORS: Nextcloudcmd binary version number e.g Version 1.8.1
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:85
 #, qt-format
 msgid "Client: %1"
-msgstr ""
+msgstr "Klient: %1"
 
 #. TRANSLATORS: %1 is the maintainers name, %2 is the link text to the UBsync contributors teams page
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:99
 #, qt-format
 msgid "Maintained by %1 and the"
-msgstr ""
+msgstr "Rozwijana przez %1 i"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:100
 msgid "UBsync team"
@@ -256,7 +256,7 @@ msgstr ""
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:238
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:181
 msgid "Help"
-msgstr ""
+msgstr "Pomoc"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:45
 msgid "To set-up synchronization for your folders:"
