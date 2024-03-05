@@ -446,23 +446,24 @@ void OwncloudSyncd::syncDir(const int targetID){
     QString owncloudcmd = getOwncloudCmd();
     QStringList arguments;
     if (m_accountSyncHidden[m_targetAccount.value(targetID)] == true) {
-       arguments << "--user" << m_accountUser[m_targetAccount.value(targetID)] << "--password" << m_accountPass[m_targetAccount.value(targetID)] << "--silent" << "--non-interactive" << "-h" << localPath << remotePath;
+       arguments << "--user" << m_accountUser[m_targetAccount.value(targetID)] << "--password" << m_accountPass[m_targetAccount.value(targetID)] << "--non-interactive" << "-h" << localPath << remotePath;
        qDebug() << "Hidden files synchronisation set";
     } else{
-       arguments << "--user" << m_accountUser[m_targetAccount.value(targetID)] << "--password" << m_accountPass[m_targetAccount.value(targetID)] << "--silent" << "--non-interactive" << localPath << remotePath;
+       arguments << "--user" << m_accountUser[m_targetAccount.value(targetID)] << "--password" << m_accountPass[m_targetAccount.value(targetID)] << "--non-interactive" << localPath << remotePath;
     }
 
     /* The following debug msg contains username/password ! */
     //qDebug() << "Arguments: " << arguments;
 
-    
     QProcess *owncloudsync = new QProcess();
     //Retrieve all debug from process
     owncloudsync->setProcessChannelMode(QProcess::ForwardedChannels);
     owncloudsync->start(owncloudcmd, arguments);
     //Wait for the sync to complete. Dont time out.
     owncloudsync->waitForFinished(-1);
-    
+
+    qDebug() << owncloudsync->exitCode() << owncloudsync->readAll();
+
     // TODO: Inotify if sync was in media directories
     if (QString::compare(QString(QString(QDir(localPath).absolutePath())).left(QString(QDir("~/Music").absolutePath()).length()), (QString(QDir("~/Music").absolutePath())), Qt::CaseSensitive) == 0) {
         qDebug() << "~/Music subpath synchronized";
