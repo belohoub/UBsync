@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-12 09:09+0000\n"
-"PO-Revision-Date: 2023-11-15 15:04+0000\n"
+"PO-Revision-Date: 2024-03-27 06:53+0000\n"
 "Last-Translator: marcin mikołajczak <me@mkljczk.pl>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/ubports/ubsync/pl/"
 ">\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.2-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:71
 msgid "No folders, press"
@@ -82,7 +82,7 @@ msgstr "Rozwijana przez %1 i"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:100
 msgid "UBsync team"
-msgstr ""
+msgstr "Zespół UBsync"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:112
 msgid "Please report bugs to the"
@@ -94,15 +94,15 @@ msgstr ""
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:129
 msgid "Thanks to"
-msgstr ""
+msgstr "Podziękowania dla"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:136
 msgid "Owncloud client:"
-msgstr ""
+msgstr "Klient Owncloud:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:144
 msgid "Nextcloud client:"
-msgstr ""
+msgstr "Klient Nextcloud:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:152
 msgid "This Qt library for WebDAV:"
@@ -126,7 +126,7 @@ msgstr ""
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:192
 msgid "Source code available on:"
-msgstr ""
+msgstr "Kod źródłowy jest dostępny na:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AccountsPage.qml:129
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:140
