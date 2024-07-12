@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-12 09:09+0000\n"
-"PO-Revision-Date: 2024-04-04 12:58+0000\n"
-"Last-Translator: marcin mikołajczak <me@mkljczk.pl>\n"
+"PO-Revision-Date: 2024-07-19 01:31+0000\n"
+"Last-Translator: Monika <adamdomenek@protonmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/ubports/ubsync/pl/"
 ">\n"
 "Language: pl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.7-dev\n"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:71
 msgid "No folders, press"
@@ -86,7 +86,7 @@ msgstr "Zespół UBsync"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:112
 msgid "Please report bugs to the"
-msgstr ""
+msgstr "Proszę zgłaszać błędy do"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:113
 msgid "issue tracker"
@@ -118,7 +118,7 @@ msgstr ""
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:178
 msgid "Released under the terms of the GNU GPL v3"
-msgstr ""
+msgstr "Wydano na warunkach licencji GNU GPL v3"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:184
 msgid "Fork of:"
@@ -131,7 +131,7 @@ msgstr "Kod źródłowy jest dostępny na:"
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AccountsPage.qml:129
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:140
 msgid "Online Accounts"
-msgstr ""
+msgstr "Online Konta"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AccountsPage.qml:253
 msgid "No accounts, press"
@@ -148,7 +148,7 @@ msgstr ""
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:79
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:148
 msgid "Not Configured Account"
-msgstr ""
+msgstr "Nie Skonfigurowano Konta"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:79
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:84
@@ -160,12 +160,12 @@ msgstr ""
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:84
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:184
 msgid "Disabled Account"
-msgstr ""
+msgstr "Wyłączone Konto"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:90
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:111
 msgid "Enabled Account"
-msgstr ""
+msgstr "Aktywne Konto"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:90
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:111
