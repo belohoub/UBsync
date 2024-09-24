@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-12 09:09+0000\n"
-"PO-Revision-Date: 2024-08-23 12:09+0000\n"
-"Last-Translator: umesaburo sagawa <atowa-notonare-yamatonare427@pm.me>\n"
+"PO-Revision-Date: 2024-09-29 09:50+0000\n"
+"Last-Translator: \"M.Sugahara\" <equaaqua@hotmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/ubports/ubsync/"
 "ja/>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.7.1-dev\n"
+"X-Generator: Weblate 5.8-dev\n"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:71
 msgid "No folders, press"
@@ -350,7 +350,7 @@ msgstr ""
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:10
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:187
 msgid "Settings"
-msgstr ""
+msgstr "設定"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/RequestAccountPage.qml:13
 msgid "Add Online Account"
