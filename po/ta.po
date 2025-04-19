@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-12 09:09+0000\n"
-"PO-Revision-Date: 2025-03-14 21:44+0000\n"
+"PO-Revision-Date: 2025-04-20 02:21+0000\n"
 "Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/ubports/ubsync/ta/>"
 "\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.11-dev\n"
+"X-Generator: Weblate 5.11.1-dev\n"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:71
 msgid "No folders, press"
@@ -199,7 +199,7 @@ msgstr "ஒத்திசைவு இல்லை"
 msgid "hour"
 msgid_plural "hours"
 msgstr[0] "மணி"
-msgstr[1] "மணி"
+msgstr[1] "மணிகள்"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:540
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:598
@@ -482,7 +482,7 @@ msgstr "ஒரு மணித்துளி முன்பு"
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:171
 #, qt-format
 msgid "%1 Seconds Ago"
-msgstr "1 விநாடிகளுக்கு முன்பு"
+msgstr "%1 நொடிகளுக்கு முன்பு"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:174
 msgid "Just Now"
