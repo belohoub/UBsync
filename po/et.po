@@ -8,122 +8,124 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-12 09:09+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-05-10 02:21+0000\n"
+"Last-Translator: Priit Jõerüüt <hwlate@joeruut.com>\n"
+"Language-Team: Estonian <https://hosted.weblate.org/projects/ubports/ubsync/"
+"et/>\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.12-dev\n"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:71
 msgid "No folders, press"
-msgstr ""
+msgstr "Kaustu pole, selle kausta"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:85
 msgid "on the panel to select this folder, or press"
-msgstr ""
+msgstr "valimiseks vajuta ribal"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:100
 msgid "to create a new folder."
-msgstr ""
+msgstr "või vajuta uue kausta loomiseks."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:154
 msgid "Error occured!"
-msgstr ""
+msgstr "Tekkis viga!"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:170
 msgid "Go Back"
-msgstr ""
+msgstr "Mine tagasi"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:185
 msgid "Create New Folder"
-msgstr ""
+msgstr "Loo uus kaust"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:189
 msgid "New Folder"
-msgstr ""
+msgstr "Uus kaust"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:197
 msgid "OK"
-msgstr ""
+msgstr "Sobib"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:207
 msgid "Cancel"
-msgstr ""
+msgstr "Katkesta"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:11
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:288
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:175
 msgid "About"
-msgstr ""
+msgstr "Rakenduse teave"
 
 #. TRANSLATORS: Owncloud Sync version number e.g Version 0.1
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:78
 #, qt-format
 msgid "App Version %1"
-msgstr ""
+msgstr "Rakenduse versioon: %1"
 
 #. TRANSLATORS: Nextcloudcmd binary version number e.g Version 1.8.1
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:85
 #, qt-format
 msgid "Client: %1"
-msgstr ""
+msgstr "Klient: %1"
 
 #. TRANSLATORS: %1 is the maintainers name, %2 is the link text to the UBsync contributors teams page
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:99
 #, qt-format
 msgid "Maintained by %1 and the"
-msgstr ""
+msgstr "Rakendust haldab %1"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:100
 msgid "UBsync team"
-msgstr ""
+msgstr "ja UBsynci tiim"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:112
 msgid "Please report bugs to the"
-msgstr ""
+msgstr "Palun teata vigadest"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:113
 msgid "issue tracker"
-msgstr ""
+msgstr "meie veahalduses"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:129
 msgid "Thanks to"
-msgstr ""
+msgstr "Suur tänu"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:136
 msgid "Owncloud client:"
-msgstr ""
+msgstr "Owncloudi klient:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:144
 msgid "Nextcloud client:"
-msgstr ""
+msgstr "Nextcloudi klient:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:152
 msgid "This Qt library for WebDAV:"
-msgstr ""
+msgstr "See Qt teek WebDAV-i jaoks:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:160
 msgid "Joan CiberSheep for the logo from:"
-msgstr ""
+msgstr "Joan CiberSheepile logo eest:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:168
 msgid "Lukas to enable the application with:"
-msgstr ""
+msgstr "Lukasele, kes liidestas rakenduse:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:178
 msgid "Released under the terms of the GNU GPL v3"
-msgstr ""
+msgstr "Avaldatud GNU GPL v3 alusel"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:184
 msgid "Fork of:"
-msgstr ""
+msgstr "Varasema rakenduse edasiarendus:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:192
 msgid "Source code available on:"
-msgstr ""
+msgstr "Lähtekood on leitav:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AccountsPage.qml:129
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:140
