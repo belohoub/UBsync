@@ -1,5 +1,11 @@
 # Changelog
 
+
+# 0.8.2 (05/2025)
+1. Translation updates
+1. Owncloud client binaries update: nextcloudcmd used as a replacement of owncloudcmd, newer client version required to support new releases of the NextCloud HUB
+1. Xenial support dropped
+
 # 0.8.1 (06/2023)
 1. Translation updates
 1. Systemd service installation-related issue fixed (issue #26)

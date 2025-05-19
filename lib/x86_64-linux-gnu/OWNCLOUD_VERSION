@@ -1,10 +1,5 @@
-Source binary package: owncloud-client-cmd_2.5.1.10973+dfsg-1ubuntu4_amd64.deb
-Source binary package: libowncloudsync0_2.5.1.10973+dfsg-1ubuntu4_amd64.deb
+Source binary packages:
+libnextcloudsync0_3.5.4-20220806.084713.fea986309-1.0~focal1_amd64.deb
+nextcloud-desktop-cmd_3.5.4-20220806.084713.fea986309-1.0~focal1_amd64.deb
 
-Source: http://ports.ubuntu.com/pool/universe/o/owncloud-client/
-
----
-
-Source package: libqt5keychain1_0.10.0-1build1_amd64.deb
-
-Source: http://old-releases.ubuntu.com/ubuntu/pool/universe/q/qtkeychain/
+Source: https://launchpad.net/~nextcloud-devs/+archive/ubuntu/client/+packages

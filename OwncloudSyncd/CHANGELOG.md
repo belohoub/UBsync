@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.8.2 Changelog
+1. migration to Focal; nextcloudcmd binary with new arguments used
+
 ## 0.8 Changelog
 1. migration to Focal
 1. minor fixes related to reported issues

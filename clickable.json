@@ -6,12 +6,14 @@
        "libsignon-qt5-dev"
     ],
     "install_lib": [
-         "${ROOT}/lib/${ARCH_TRIPLET}/lib/libowncloud_csync.so*",
-         "${ROOT}/lib/${ARCH_TRIPLET}/lib/libowncloudsync.so*",
-         "${ROOT}/lib/${ARCH_TRIPLET}/lib/libqt5keychain.so*"
+         "${ROOT}/lib/${ARCH_TRIPLET}/lib/libnextcloud_csync.so*",
+         "${ROOT}/lib/${ARCH_TRIPLET}/lib/libnextcloudsync.so*",
+         "${ROOT}/lib/${ARCH_TRIPLET}/lib/libqt5keychain.so*",
+         "${ROOT}/lib/${ARCH_TRIPLET}/lib/qt5"
     ],
     "install_bin": [
          "${ROOT}/lib/${ARCH_TRIPLET}/bin/owncloudcmd",
+         "${ROOT}/lib/${ARCH_TRIPLET}/bin/nextcloudcmd",
          "${ROOT}/lib/${ARCH_TRIPLET}/bin/sync-exclude.lst"
     ]
 }

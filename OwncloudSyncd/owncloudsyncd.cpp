@@ -440,16 +440,17 @@ void OwncloudSyncd::syncDir(const int targetID){
     }
 
     QString localPath = m_targetLocal[targetID];
-    QString remotePath = m_accountAddr[m_targetAccount.value(targetID)] + QStringLiteral("/remote.php/webdav") + m_targetRemote[targetID];
+    QString remotePath = m_targetRemote[targetID];
+    QString remoteServer = m_accountAddr[m_targetAccount.value(targetID)];
     qDebug() << "Starting Owncloud Sync from " << localPath << " to " << remotePath;
 
     QString owncloudcmd = getOwncloudCmd();
     QStringList arguments;
     if (m_accountSyncHidden[m_targetAccount.value(targetID)] == true) {
-       arguments << "--user" << m_accountUser[m_targetAccount.value(targetID)] << "--password" << m_accountPass[m_targetAccount.value(targetID)] << "--silent" << "--non-interactive" << "-h" << localPath << remotePath;
+       arguments << "--user" << m_accountUser[m_targetAccount.value(targetID)] << "--password" << m_accountPass[m_targetAccount.value(targetID)] << "--path" << remotePath << "--silent" << "--non-interactive" << "-h" << localPath << remoteServer;
        qDebug() << "Hidden files synchronisation set";
     } else{
-       arguments << "--user" << m_accountUser[m_targetAccount.value(targetID)] << "--password" << m_accountPass[m_targetAccount.value(targetID)] << "--silent" << "--non-interactive" << localPath << remotePath;
+       arguments << "--user" << m_accountUser[m_targetAccount.value(targetID)] << "--password" << m_accountPass[m_targetAccount.value(targetID)] << "--path" << remotePath << "--silent" << "--non-interactive" << localPath << remoteServer;
     }
 
     /* The following debug msg contains username/password ! */
