@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-12 09:09+0000\n"
-"PO-Revision-Date: 2023-09-06 06:09+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"PO-Revision-Date: 2025-06-28 18:49+0000\n"
+"Last-Translator: Ida Brenna <ida@larald.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/ubports/"
 "ubsync/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0.1-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:71
 msgid "No folders, press"
@@ -36,7 +36,6 @@ msgid "Error occured!"
 msgstr "En feil inntraff."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:170
-#, fuzzy
 msgid "Go Back"
 msgstr "Gå tilbake"
 
@@ -97,9 +96,8 @@ msgid "Thanks to"
 msgstr "Takk til"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:136
-#, fuzzy
 msgid "Owncloud client:"
-msgstr "ownCloud-klient"
+msgstr "Owncloud-klient:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:144
 msgid "Nextcloud client:"
@@ -114,9 +112,8 @@ msgid "Joan CiberSheep for the logo from:"
 msgstr "Joan CiberSheep for logoen fra:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:168
-#, fuzzy
 msgid "Lukas to enable the application with:"
-msgstr "Lukas for å hjelpe programmet med:"
+msgstr "Lukas for å aktivere programmet med:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:178
 msgid "Released under the terms of the GNU GPL v3"
@@ -136,7 +133,6 @@ msgid "Online Accounts"
 msgstr "Nettbaserte kontoer"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AccountsPage.qml:253
-#, fuzzy
 msgid "No accounts, press"
 msgstr "Ingen kontoer, trykk"
 
@@ -172,9 +168,8 @@ msgstr "Påskrudd konto"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:90
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:111
-#, fuzzy
 msgid "related targets will sync"
-msgstr "relaterte mål vil synkroniseres"
+msgstr "tilknyttede mål vil synkroniseres"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:178
 msgid "Account Settings"
@@ -185,7 +180,6 @@ msgid "New Target"
 msgstr "Nytt mål"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:388
-#, fuzzy
 msgid "Sync on Mobile Data"
 msgstr "Synkroniser også med mobildata"
 
@@ -194,12 +188,10 @@ msgid "Sync hidden files"
 msgstr "Synkroniser skjulte filer"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:452
-#, fuzzy
 msgid "Sync Frequency"
 msgstr "Synkroniseringsfrekvens"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:473
-#, fuzzy
 msgid "No Sync"
 msgstr "Ingen synkronisering"
 
@@ -219,9 +211,8 @@ msgstr ""
 "den. Ellers vil ikke målsynkroniseringen begynne."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:40
-#, fuzzy
 msgid "Account Disabled"
-msgstr "Konto avskrudd"
+msgstr "Konto deaktivert"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:40
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:46
@@ -246,7 +237,6 @@ msgstr "Mål påskrudd"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:56
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:248
-#, fuzzy
 msgid "target will sync"
 msgstr "målet vil synkroniseres"
 
@@ -282,12 +272,11 @@ msgstr ""
 "ikonet i hovedmenyen"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:47
-#, fuzzy
 msgid ""
 "2) set-up new \"target\" by clicking  \"new target\" icon in the account "
 "detail page main menu, or in the accounts list accounts' trailer menu"
 msgstr ""
-"2) Sett opp et nytt «mål» ved å klikke «nytt mål»-ikonet i kontodetaljssiden "
+"2) Sett opp et nytt «mål» ved å klikke «nytt mål»-ikonet i kontodetaljsiden "
 "i hovedmenyen, eller i innholdslisten for kontolisten"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:48
