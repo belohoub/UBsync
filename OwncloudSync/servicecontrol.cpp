@@ -74,7 +74,7 @@ bool ServiceControl::installServiceFile()
 #endif
     f.write("\n");
     f.write("[Install]\n");
-    f.write("WantedBy=default.target\n");
+    f.write("WantedBy=graphical-session.target\n");
 
     f.close();
     
