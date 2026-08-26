@@ -8,15 +8,17 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-12 09:09+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-05-04 01:37+0000\n"
+"Last-Translator: windowskey02 <windowskey02@gmail.com>\n"
+"Language-Team: Romanian <https://hosted.weblate.org/projects/ubports/ubsync/"
+"ro/>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
+"X-Generator: Weblate 5.17.1\n"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:71
 msgid "No folders, press"
@@ -44,21 +46,21 @@ msgstr ""
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:189
 msgid "New Folder"
-msgstr ""
+msgstr "Folder Nou"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:197
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:207
 msgid "Cancel"
-msgstr ""
+msgstr "Anulare"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:11
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:288
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:175
 msgid "About"
-msgstr ""
+msgstr "Despre"
 
 #. TRANSLATORS: Owncloud Sync version number e.g Version 0.1
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:78

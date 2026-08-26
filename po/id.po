@@ -8,196 +8,197 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-12 09:09+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-12-04 16:00+0000\n"
+"Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/ubports/"
+"ubsync/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:71
 msgid "No folders, press"
-msgstr ""
+msgstr "Tidak ada folder, tekan"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:85
 msgid "on the panel to select this folder, or press"
-msgstr ""
+msgstr "pada panel untuk memilih folder ini, atau tekan"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:100
 msgid "to create a new folder."
-msgstr ""
+msgstr "untuk membuat folder baru."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:154
 msgid "Error occured!"
-msgstr ""
+msgstr "Terjadi kesalahan!"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:170
 msgid "Go Back"
-msgstr ""
+msgstr "Kembali"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:185
 msgid "Create New Folder"
-msgstr ""
+msgstr "Buat Folder Baru"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:189
 msgid "New Folder"
-msgstr ""
+msgstr "Folder Baru"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:197
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:207
 msgid "Cancel"
-msgstr ""
+msgstr "Batal"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:11
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:288
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:175
 msgid "About"
-msgstr ""
+msgstr "Tentang"
 
 #. TRANSLATORS: Owncloud Sync version number e.g Version 0.1
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:78
 #, qt-format
 msgid "App Version %1"
-msgstr ""
+msgstr "Versi Aplikasi %1"
 
 #. TRANSLATORS: Nextcloudcmd binary version number e.g Version 1.8.1
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:85
 #, qt-format
 msgid "Client: %1"
-msgstr ""
+msgstr "Klien: %1"
 
 #. TRANSLATORS: %1 is the maintainers name, %2 is the link text to the UBsync contributors teams page
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:99
 #, qt-format
 msgid "Maintained by %1 and the"
-msgstr ""
+msgstr "Dikelola oleh %1 dan"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:100
 msgid "UBsync team"
-msgstr ""
+msgstr "tim UBsync"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:112
 msgid "Please report bugs to the"
-msgstr ""
+msgstr "Harap laporkan bug ke"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:113
 msgid "issue tracker"
-msgstr ""
+msgstr "pelacak masalah"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:129
 msgid "Thanks to"
-msgstr ""
+msgstr "Terima kasih kepada"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:136
 msgid "Owncloud client:"
-msgstr ""
+msgstr "Klien Owncloud:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:144
 msgid "Nextcloud client:"
-msgstr ""
+msgstr "Klien Nextcloud:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:152
 msgid "This Qt library for WebDAV:"
-msgstr ""
+msgstr "Pustaka Qt untuk WebDAV ini:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:160
 msgid "Joan CiberSheep for the logo from:"
-msgstr ""
+msgstr "Joan CiberSheep untuk logo dari:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:168
 msgid "Lukas to enable the application with:"
-msgstr ""
+msgstr "Lukas yang memungkinkan aplikasi dengan:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:178
 msgid "Released under the terms of the GNU GPL v3"
-msgstr ""
+msgstr "Dirilis di bawah ketentuan GNU GPL v3"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:184
 msgid "Fork of:"
-msgstr ""
+msgstr "Turunan dari:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:192
 msgid "Source code available on:"
-msgstr ""
+msgstr "Kode sumber tersedia di:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AccountsPage.qml:129
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:140
 msgid "Online Accounts"
-msgstr ""
+msgstr "Akun Daring"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AccountsPage.qml:253
 msgid "No accounts, press"
-msgstr ""
+msgstr "Tidak ada akun, tekan"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AccountsPage.qml:268
 msgid "on the panel to add a new account"
-msgstr ""
+msgstr "pada panel untuk menambahkan akun baru"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AccountsPage.qml:283
 msgid "Release to update the list of accounts ..."
-msgstr ""
+msgstr "Lepaskan untuk memperbarui daftar akun ..."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:79
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:148
 msgid "Not Configured Account"
-msgstr ""
+msgstr "Akun Belum Dikonfigurasi"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:79
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:84
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:148
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:184
 msgid "related targets will NOT sync"
-msgstr ""
+msgstr "target terkait TIDAK akan disinkronkan"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:84
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:184
 msgid "Disabled Account"
-msgstr ""
+msgstr "Akun Dinonaktifkan"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:90
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:111
 msgid "Enabled Account"
-msgstr ""
+msgstr "Akun Diaktifkan"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:90
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:111
 msgid "related targets will sync"
-msgstr ""
+msgstr "target terkait akan disinkronkan"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:178
 msgid "Account Settings"
-msgstr ""
+msgstr "Pengaturan Akun"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:185
 msgid "New Target"
-msgstr ""
+msgstr "Target Baru"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:388
 msgid "Sync on Mobile Data"
-msgstr ""
+msgstr "Sinkronisasi dengan Data Seluler"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:420
 msgid "Sync hidden files"
-msgstr ""
+msgstr "Sinkronkan file tersembunyi"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:452
 msgid "Sync Frequency"
-msgstr ""
+msgstr "Frekuensi Sinkronisasi"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:473
 msgid "No Sync"
-msgstr ""
+msgstr "Tidak Ada Sinkronisasi"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:473
 msgid "hour"
 msgid_plural "hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "jam"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:540
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:598
@@ -205,10 +206,13 @@ msgid ""
 "Synchronization service not running! Please, go to UBsync Settings and start "
 "the sync service, otherwise the target synchronization will not begin."
 msgstr ""
+"Layanan sinkronisasi tidak berjalan! Silakan buka Pengaturan UBsync dan "
+"mulai layanan sinkronisasi, jika tidak maka sinkronisasi target tidak akan "
+"dimulai."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:40
 msgid "Account Disabled"
-msgstr ""
+msgstr "Akun Dinonaktifkan"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:40
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:46
@@ -216,69 +220,73 @@ msgstr ""
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:284
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:321
 msgid "target will NOT sync"
-msgstr ""
+msgstr "target TIDAK akan disinkronkan"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:43
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:46
 msgid "Account Not Configured"
-msgstr ""
+msgstr "Akun Belum Dikonfigurasi"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:51
 msgid "Target Disabled"
-msgstr ""
+msgstr "Target Dinonaktifkan"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:56
 msgid "Target Enabled"
-msgstr ""
+msgstr "Target Diaktifkan"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:56
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:248
 msgid "target will sync"
-msgstr ""
+msgstr "target akan disinkronkan"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:254
 msgid "Target Settings"
-msgstr ""
+msgstr "Pengaturan Target"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:418
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:47
 msgid "Unknown Account"
-msgstr ""
+msgstr "Akun Tidak Dikenal"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:541
 msgid "Enable/Disable this Target"
-msgstr ""
+msgstr "Aktifkan/Nonaktifkan Target ini"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:8
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:238
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:181
 msgid "Help"
-msgstr ""
+msgstr "Bantuan"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:45
 msgid "To set-up synchronization for your folders:"
-msgstr ""
+msgstr "Untuk menyiapkan sinkronisasi folder Anda:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:46
 msgid ""
 "1) go to UBsync \"Online Accounts\", add new account by clicking \"plus\" "
 "icon in the main menu"
 msgstr ""
+"1) buka \"Akun Daring\" UBsync, tambahkan akun baru dengan mengklik ikon "
+"\"plus\" di menu utama"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:47
 msgid ""
 "2) set-up new \"target\" by clicking  \"new target\" icon in the account "
 "detail page main menu, or in the accounts list accounts' trailer menu"
 msgstr ""
+"2) buat \"target\" baru dengan mengklik ikon \"target baru\" di menu utama "
+"halaman detail akun, atau di menu tambahan daftar akun"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:48
 msgid "3) start the synchronization service from the \"UBsync Settings\""
-msgstr ""
+msgstr "3) mulai layanan sinkronisasi dari \"Pengaturan UBsync\""
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:59
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:193
 msgid "Accounts"
-msgstr ""
+msgstr "Akun"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:69
 msgid ""
@@ -286,6 +294,9 @@ msgid ""
 "account, as configured in system settings plus the custom UBsync "
 "configuration maintained by UBsync."
 msgstr ""
+"Istilah \"akun\" dalam konteks UBsync mewakili akun daring sistem "
+"sebagaimana dikonfigurasi dalam pengaturan sistem beserta konfigurasi khusus "
+"UBsync yang dipertahankan oleh UBsync."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:70
 msgid ""
@@ -293,6 +304,9 @@ msgid ""
 "account cannot be used by UBsync anymore, its configuration persists in "
 "UBsync, however, the related targets will not synchronize."
 msgstr ""
+"Akun dapat diaktifkan atau dinonaktifkan secara independen dalam UBsync. "
+"Jika sebuah akun tidak dapat lagi digunakan oleh UBsync, konfigurasinya "
+"tetap tersimpan di UBsync, namun target terkait tidak akan disinkronkan."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:71
 msgid ""
@@ -302,14 +316,19 @@ msgid ""
 "disable this account in system settings temporarily without affecting UBsync "
 "configuration."
 msgstr ""
+"Jika Anda menghapus konfigurasi akun dari UBsync, target terkait TIDAK akan "
+"disinkronkan sampai Anda membuat ulang pengaturan akun tersebut. Jika Anda "
+"ingin menghentikan sementara semua target terkait dengan akun tertentu, Anda "
+"dapat menonaktifkan akun ini di pengaturan sistem sementara tanpa "
+"memengaruhi konfigurasi UBsync."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:73
 msgid "UBsync uses following account symbols to express account states:"
-msgstr ""
+msgstr "UBsync menggunakan simbol akun berikut untuk menunjukkan status akun:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:199
 msgid "Targets"
-msgstr ""
+msgstr "Target"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:210
 msgid ""
@@ -317,158 +336,162 @@ msgid ""
 "directory pair intended for synchronization plus  the set of custom \"target"
 "\" configuration."
 msgstr ""
+"Istilah \"target\" dalam konteks UBsync mewakili pasangan direktori jarak "
+"jauh/lokal yang dimaksudkan untuk sinkronisasi beserta serangkaian "
+"konfigurasi \"target\" khusus."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:211
 msgid "UBsync uses following target symbols to express target states:"
 msgstr ""
+"UBsync menggunakan simbol target berikut untuk menunjukkan status target:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:248
 msgid "Active Target"
-msgstr ""
+msgstr "Target Aktif"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:284
 msgid "Inactive Target"
-msgstr ""
+msgstr "Target Tidak Aktif"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:321
 msgid "Target With Disabled/Not Configured Account"
-msgstr ""
+msgstr "Target dengan Akun Dinonaktifkan/Tidak Dikonfigurasi"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:17
 #: /home/jan/projects/private/ubports/repos/UBsync/build/aarch64-linux-gnu/app/UBsync-ui/UBsync.desktop.h:1
 msgid "UBsync"
-msgstr ""
+msgstr "UBsync"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:91
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:169
 msgid "Sync Targets"
-msgstr ""
+msgstr "Target Sinkronisasi"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:189
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:10
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:187
 msgid "Settings"
-msgstr ""
+msgstr "Pengaturan"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/RequestAccountPage.qml:13
 msgid "Add Online Account"
-msgstr ""
+msgstr "Tambahkan Akun Daring"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/RequestAccountPage.qml:22
 msgid "Add NextCloud account"
-msgstr ""
+msgstr "Tambahkan akun NextCloud"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/RequestAccountPage.qml:35
 msgid "Add OwnCloud account"
-msgstr ""
+msgstr "Tambahkan akun OwnCloud"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:53
 #, qt-format
 msgid "Status: %1"
-msgstr ""
+msgstr "Status: %1"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:53
 msgid "Syncing"
-msgstr ""
+msgstr "Sedang Sinkronisasi"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:53
 msgid "Idle"
-msgstr ""
+msgstr "Diam"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:53
 msgid "Stopped"
-msgstr ""
+msgstr "Dihentikan"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:58
 msgid "Stop"
-msgstr ""
+msgstr "Hentikan"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:58
 msgid "Start"
-msgstr ""
+msgstr "Mulai"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:64
 msgid "Stop Service"
-msgstr ""
+msgstr "Hentikan Layanan"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:64
 msgid "Start Service"
-msgstr ""
+msgstr "Mulai Layanan"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:74
 msgid "Sync Required"
-msgstr ""
+msgstr "Sinkronisasi Diperlukan"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:75
 msgid "Last Sync:"
-msgstr ""
+msgstr "Sinkronisasi Terakhir:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:80
 msgid "Sync"
-msgstr ""
+msgstr "Sinkronisasi"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:88
 msgid "Sync Starting"
-msgstr ""
+msgstr "Memulai Sinkronisasi"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:101
 #, qt-format
 msgid "Client : %1"
-msgstr ""
+msgstr "Klien : %1"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:112
 #, qt-format
 msgid "Service : %1"
-msgstr ""
+msgstr "Layanan : %1"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:119
 msgid "Service autostart:"
-msgstr ""
+msgstr "Mulai otomatis layanan:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:120
 msgid "Enable/Disable service autostart:"
-msgstr ""
+msgstr "Aktifkan/Nonaktifkan mulai otomatis layanan:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:148
 msgid "Never"
-msgstr ""
+msgstr "Tidak Pernah"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:152
 #, qt-format
 msgid "%1 Months Ago"
-msgstr ""
+msgstr "%1 Bulan Lalu"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:156
 #, qt-format
 msgid "%1 Days Ago"
-msgstr ""
+msgstr "%1 Hari Lalu"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:160
 #, qt-format
 msgid "%1  Hours Ago"
-msgstr ""
+msgstr "%1 Jam Lalu"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:164
 #, qt-format
 msgid "%1 Minutes Ago"
-msgstr ""
+msgstr "%1 Menit Lalu"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:167
 msgid "A Minute Ago"
-msgstr ""
+msgstr "Semenit Lalu"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:171
 #, qt-format
 msgid "%1 Seconds Ago"
-msgstr ""
+msgstr "%1 Detik Lalu"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:174
 msgid "Just Now"
-msgstr ""
+msgstr "Baru Saja"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:214
 msgid "No synchronization targets configured, press"
-msgstr ""
+msgstr "Tidak ada target sinkronisasi yang dikonfigurasi, tekan"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:229
 msgid ""
@@ -476,15 +499,18 @@ msgid ""
 "new synchronization target from an existing or new account. For explanation, "
 "see the help page."
 msgstr ""
+"di panel utama untuk masuk ke Pengaturan Akun. Di Pengaturan Akun, buat "
+"target sinkronisasi baru dari akun yang sudah ada atau akun baru. Untuk "
+"penjelasan, lihat halaman bantuan."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:245
 msgid "Release to update the list of targets ..."
-msgstr ""
+msgstr "Lepaskan untuk memperbarui daftar target ..."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/WebdavFileBrowser.qml:34
 msgid "Loading"
-msgstr ""
+msgstr "Memuat"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/WebdavFileBrowser.qml:46
 msgid "Check your connection or try again!"
-msgstr ""
+msgstr "Periksa koneksi Anda atau coba lagi!"

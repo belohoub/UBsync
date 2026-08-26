@@ -8,196 +8,198 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-12 09:09+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-05-04 01:37+0000\n"
+"Last-Translator: Walter Garcia-Fontes <walter.garcia@upf.edu>\n"
+"Language-Team: Catalan <https://hosted.weblate.org/projects/ubports/ubsync/"
+"ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.17.1\n"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:71
 msgid "No folders, press"
-msgstr ""
+msgstr "No hi ha carpetes, premeu"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:85
 msgid "on the panel to select this folder, or press"
-msgstr ""
+msgstr "al plafó per seleccionar aquesta carpeta, o premeu"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:100
 msgid "to create a new folder."
-msgstr ""
+msgstr "per crear una nova carpeta."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:154
 msgid "Error occured!"
-msgstr ""
+msgstr "S'ha produït un error."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:170
 msgid "Go Back"
-msgstr ""
+msgstr "Enrere"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:185
 msgid "Create New Folder"
-msgstr ""
+msgstr "Crea una carpeta nova"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:189
 msgid "New Folder"
-msgstr ""
+msgstr "Nova carpeta"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:197
 msgid "OK"
-msgstr ""
+msgstr "D'acord"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:207
 msgid "Cancel"
-msgstr ""
+msgstr "Cancel·la"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:11
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:288
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:175
 msgid "About"
-msgstr ""
+msgstr "Quant a"
 
 #. TRANSLATORS: Owncloud Sync version number e.g Version 0.1
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:78
 #, qt-format
 msgid "App Version %1"
-msgstr ""
+msgstr "Versió de l'aplicació %1"
 
 #. TRANSLATORS: Nextcloudcmd binary version number e.g Version 1.8.1
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:85
 #, qt-format
 msgid "Client: %1"
-msgstr ""
+msgstr "Client: %1"
 
 #. TRANSLATORS: %1 is the maintainers name, %2 is the link text to the UBsync contributors teams page
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:99
 #, qt-format
 msgid "Maintained by %1 and the"
-msgstr ""
+msgstr "Mantingut per %1 i el"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:100
 msgid "UBsync team"
-msgstr ""
+msgstr "Equip UBsync"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:112
 msgid "Please report bugs to the"
-msgstr ""
+msgstr "Informeu d'errors a"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:113
 msgid "issue tracker"
-msgstr ""
+msgstr "rastrejador d'errors"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:129
 msgid "Thanks to"
-msgstr ""
+msgstr "Gràcies a"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:136
 msgid "Owncloud client:"
-msgstr ""
+msgstr "Client d'Owncloud:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:144
 msgid "Nextcloud client:"
-msgstr ""
+msgstr "Client de Nextcloud:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:152
 msgid "This Qt library for WebDAV:"
-msgstr ""
+msgstr "Aquesta biblioteca Qt per a WebDAV:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:160
 msgid "Joan CiberSheep for the logo from:"
-msgstr ""
+msgstr "Joan CiberSheep per al logotip de:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:168
 msgid "Lukas to enable the application with:"
-msgstr ""
+msgstr "Lukas per a habilitar l'aplicació amb:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:178
 msgid "Released under the terms of the GNU GPL v3"
-msgstr ""
+msgstr "Publicat sota els termes de la GNU GPL v3"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:184
 msgid "Fork of:"
-msgstr ""
+msgstr "Bifurcació de:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:192
 msgid "Source code available on:"
-msgstr ""
+msgstr "Codi font disponible a:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AccountsPage.qml:129
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:140
 msgid "Online Accounts"
-msgstr ""
+msgstr "Comptes en línia"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AccountsPage.qml:253
 msgid "No accounts, press"
-msgstr ""
+msgstr "Sense comptes, premeu"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AccountsPage.qml:268
 msgid "on the panel to add a new account"
-msgstr ""
+msgstr "al plafó per a afegir un compte nou"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AccountsPage.qml:283
 msgid "Release to update the list of accounts ..."
-msgstr ""
+msgstr "Llança per actualitzar la llista de comptes..."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:79
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:148
 msgid "Not Configured Account"
-msgstr ""
+msgstr "Compte no configurat"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:79
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:84
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:148
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:184
 msgid "related targets will NOT sync"
-msgstr ""
+msgstr "els objectius relacionats no se sincronitzaran"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:84
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:184
 msgid "Disabled Account"
-msgstr ""
+msgstr "Compte desactivat"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:90
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:111
 msgid "Enabled Account"
-msgstr ""
+msgstr "Compte habilitat"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:90
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:111
 msgid "related targets will sync"
-msgstr ""
+msgstr "se sincronitzaran els objectius relacionats"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:178
 msgid "Account Settings"
-msgstr ""
+msgstr "Configuració del compte"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:185
 msgid "New Target"
-msgstr ""
+msgstr "Objectiu nou"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:388
 msgid "Sync on Mobile Data"
-msgstr ""
+msgstr "Sincronització amb dades mòbils"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:420
 msgid "Sync hidden files"
-msgstr ""
+msgstr "Sincronitza els fitxers ocults"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:452
 msgid "Sync Frequency"
-msgstr ""
+msgstr "Freqüència de sincronització"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:473
 msgid "No Sync"
-msgstr ""
+msgstr "Sense sincronització"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:473
 msgid "hour"
 msgid_plural "hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "hora"
+msgstr[1] "hores"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:540
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:598
@@ -205,10 +207,13 @@ msgid ""
 "Synchronization service not running! Please, go to UBsync Settings and start "
 "the sync service, otherwise the target synchronization will not begin."
 msgstr ""
+"El servei de sincronització no s'està executant! Si us plau, aneu a "
+"Configuració de l'UBsync i inicieu el servei de sincronització, en cas "
+"contrari la sincronització de destinació no començarà."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:40
 msgid "Account Disabled"
-msgstr ""
+msgstr "Compte desactivat"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:40
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:46
@@ -216,69 +221,75 @@ msgstr ""
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:284
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:321
 msgid "target will NOT sync"
-msgstr ""
+msgstr "l'objectiu NO se sincronitzarà"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:43
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:46
 msgid "Account Not Configured"
-msgstr ""
+msgstr "Compte no configurat"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:51
 msgid "Target Disabled"
-msgstr ""
+msgstr "Objectiu desactivat"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:56
 msgid "Target Enabled"
-msgstr ""
+msgstr "Objectiu activat"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:56
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:248
 msgid "target will sync"
-msgstr ""
+msgstr "l'objectiu se sincronitzarà"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:254
 msgid "Target Settings"
-msgstr ""
+msgstr "Configuració de l'objectiu"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:418
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:47
 msgid "Unknown Account"
-msgstr ""
+msgstr "Compte desconegut"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:541
 msgid "Enable/Disable this Target"
-msgstr ""
+msgstr "Habilita/desactiva aquest objectiu"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:8
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:238
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:181
 msgid "Help"
-msgstr ""
+msgstr "Ajuda"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:45
 msgid "To set-up synchronization for your folders:"
-msgstr ""
+msgstr "Per a configurar la sincronització de les carpetes:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:46
 msgid ""
 "1) go to UBsync \"Online Accounts\", add new account by clicking \"plus\" "
 "icon in the main menu"
 msgstr ""
+"1) aneu a UBsync \"Comptes en línia\", afegiu un compte nou fent clic a la "
+"icona \"més\" al menú principal"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:47
 msgid ""
 "2) set-up new \"target\" by clicking  \"new target\" icon in the account "
 "detail page main menu, or in the accounts list accounts' trailer menu"
 msgstr ""
+"2) establiu un nou \"objectiu\" fent clic a la icona  \"objectiu nou\" al "
+"menú principal de la pàgina de detall del compte o al menú del tràiler de "
+"comptes de la llista de comptes"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:48
 msgid "3) start the synchronization service from the \"UBsync Settings\""
 msgstr ""
+"3) inicieu el servei de sincronització des de la \"Configuració d'UBsync\""
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:59
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:193
 msgid "Accounts"
-msgstr ""
+msgstr "Comptes"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:69
 msgid ""
@@ -286,6 +297,9 @@ msgid ""
 "account, as configured in system settings plus the custom UBsync "
 "configuration maintained by UBsync."
 msgstr ""
+"El terme \"compte\" representa en el context UBsync el compte en línia del "
+"sistema, tal com es configura a la configuració del sistema més la "
+"configuració personalitzada UBsync mantinguda per UBsync."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:70
 msgid ""
@@ -293,6 +307,9 @@ msgid ""
 "account cannot be used by UBsync anymore, its configuration persists in "
 "UBsync, however, the related targets will not synchronize."
 msgstr ""
+"El compte es pot activar o desactivar independentment a UBsync. Si un compte "
+"ja no pot ser utilitzat per UBsync, la seva configuració persisteix a "
+"UBsync, però, els objectius relacionats no se sincronitzaran."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:71
 msgid ""
@@ -302,14 +319,21 @@ msgid ""
 "disable this account in system settings temporarily without affecting UBsync "
 "configuration."
 msgstr ""
+"Si suprimiu la configuració del compte d'UBsync, els objectius relacionats "
+"NO se sincronitzaran fins que torneu a crear la configuració del compte. Si "
+"voleu fer una pausa temporal a tots els objectius relacionats amb el compte "
+"en particular, podeu desactivar aquest compte a la configuració del sistema "
+"temporalment sense afectar la configuració UBsync."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:73
 msgid "UBsync uses following account symbols to express account states:"
 msgstr ""
+"UBsync utilitza els següents símbols de compte per a expressar els estats "
+"del compte:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:199
 msgid "Targets"
-msgstr ""
+msgstr "Objectius"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:210
 msgid ""
@@ -317,158 +341,163 @@ msgid ""
 "directory pair intended for synchronization plus  the set of custom \"target"
 "\" configuration."
 msgstr ""
+"El terme \"objectiu\" representa en el context UBsync el parell de "
+"directoris remot/local destinat a la sincronització més el conjunt de "
+"configuració personalitzada \"objectiu\"."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:211
 msgid "UBsync uses following target symbols to express target states:"
 msgstr ""
+"UBsync utilitza els següents símbols de destinació per expressar els estats "
+"de destinació:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:248
 msgid "Active Target"
-msgstr ""
+msgstr "Objectiu actiu"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:284
 msgid "Inactive Target"
-msgstr ""
+msgstr "Objectiu inactiu"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:321
 msgid "Target With Disabled/Not Configured Account"
-msgstr ""
+msgstr "Objectiu amb un compte inhabilitat/no configurat"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:17
 #: /home/jan/projects/private/ubports/repos/UBsync/build/aarch64-linux-gnu/app/UBsync-ui/UBsync.desktop.h:1
 msgid "UBsync"
-msgstr ""
+msgstr "UBsync"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:91
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:169
 msgid "Sync Targets"
-msgstr ""
+msgstr "Sincronitza els objectius"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:189
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:10
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:187
 msgid "Settings"
-msgstr ""
+msgstr "Configuració"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/RequestAccountPage.qml:13
 msgid "Add Online Account"
-msgstr ""
+msgstr "Afegeix un compte en línia"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/RequestAccountPage.qml:22
 msgid "Add NextCloud account"
-msgstr ""
+msgstr "Afegeix un compte NextCloud"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/RequestAccountPage.qml:35
 msgid "Add OwnCloud account"
-msgstr ""
+msgstr "Afegeix un compte d'OwnCloud"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:53
 #, qt-format
 msgid "Status: %1"
-msgstr ""
+msgstr "Estat: %1"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:53
 msgid "Syncing"
-msgstr ""
+msgstr "Sincronització"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:53
 msgid "Idle"
-msgstr ""
+msgstr "Inactiu"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:53
 msgid "Stopped"
-msgstr ""
+msgstr "Aturat"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:58
 msgid "Stop"
-msgstr ""
+msgstr "Atura"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:58
 msgid "Start"
-msgstr ""
+msgstr "Inici"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:64
 msgid "Stop Service"
-msgstr ""
+msgstr "Atura el servei"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:64
 msgid "Start Service"
-msgstr ""
+msgstr "Inicia el servei"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:74
 msgid "Sync Required"
-msgstr ""
+msgstr "Cal sincronitzar"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:75
 msgid "Last Sync:"
-msgstr ""
+msgstr "Última sincronització:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:80
 msgid "Sync"
-msgstr ""
+msgstr "Sincronitza"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:88
 msgid "Sync Starting"
-msgstr ""
+msgstr "Sincronització"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:101
 #, qt-format
 msgid "Client : %1"
-msgstr ""
+msgstr "Client: %1"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:112
 #, qt-format
 msgid "Service : %1"
-msgstr ""
+msgstr "Servei: %1"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:119
 msgid "Service autostart:"
-msgstr ""
+msgstr "Inici automàtic del servei:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:120
 msgid "Enable/Disable service autostart:"
-msgstr ""
+msgstr "Activa/desactiva l'inici automàtic del servei:"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:148
 msgid "Never"
-msgstr ""
+msgstr "Mai"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:152
 #, qt-format
 msgid "%1 Months Ago"
-msgstr ""
+msgstr "Fa %1 mesos"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:156
 #, qt-format
 msgid "%1 Days Ago"
-msgstr ""
+msgstr "Fa %1 dies"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:160
 #, qt-format
 msgid "%1  Hours Ago"
-msgstr ""
+msgstr "Fa %1 hores"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:164
 #, qt-format
 msgid "%1 Minutes Ago"
-msgstr ""
+msgstr "Fa %1 minuts"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:167
 msgid "A Minute Ago"
-msgstr ""
+msgstr "Un minut"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:171
 #, qt-format
 msgid "%1 Seconds Ago"
-msgstr ""
+msgstr "Fa %1 segons"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:174
 msgid "Just Now"
-msgstr ""
+msgstr "Ara mateix"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:214
 msgid "No synchronization targets configured, press"
-msgstr ""
+msgstr "No s'ha configurat cap objectiu de sincronització, premeu"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:229
 msgid ""
@@ -476,15 +505,18 @@ msgid ""
 "new synchronization target from an existing or new account. For explanation, "
 "see the help page."
 msgstr ""
+"al plafó principal per a introduir la configuració del compte. A la "
+"configuració del compte, creeu un objectiu de sincronització nou a partir "
+"d'un compte existent o nou. Per a una explicació, vegeu la pàgina d'ajuda."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:245
 msgid "Release to update the list of targets ..."
-msgstr ""
+msgstr "Llança per actualitzar la llista d'objectius..."
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/WebdavFileBrowser.qml:34
 msgid "Loading"
-msgstr ""
+msgstr "S'està carregant"
 
 #: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/WebdavFileBrowser.qml:46
 msgid "Check your connection or try again!"
-msgstr ""
+msgstr "Comproveu la vostra connexió o torneu-ho a provar!"

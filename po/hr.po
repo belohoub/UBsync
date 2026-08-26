@@ -1,0 +1,516 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-12 09:09+0000\n"
+"PO-Revision-Date: 2025-09-27 10:02+0000\n"
+"Last-Translator: Milo Ivir <mail@milotype.de>\n"
+"Language-Team: Croatian <https://hosted.weblate.org/projects/ubports/ubsync/"
+"hr/>\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.14-dev\n"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:71
+msgid "No folders, press"
+msgstr "Nijedna mapa, pritisni"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:85
+msgid "on the panel to select this folder, or press"
+msgstr "na ploči za biranje ove mape ili pritisni"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:100
+msgid "to create a new folder."
+msgstr "za stvaranje nove mape."
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:154
+msgid "Error occured!"
+msgstr "Dogodila se greška!"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:170
+msgid "Go Back"
+msgstr "Idi natrag"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:185
+msgid "Create New Folder"
+msgstr "Stvori novu mapu"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:189
+msgid "New Folder"
+msgstr "Nova mapa"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:197
+msgid "OK"
+msgstr "U redu"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/components/FileBrowser.qml:207
+msgid "Cancel"
+msgstr "Odustani"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:11
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:288
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:175
+msgid "About"
+msgstr "O aplikaciji"
+
+#. TRANSLATORS: Owncloud Sync version number e.g Version 0.1
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:78
+#, qt-format
+msgid "App Version %1"
+msgstr "Verzija aplikacije %1"
+
+#. TRANSLATORS: Nextcloudcmd binary version number e.g Version 1.8.1
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:85
+#, qt-format
+msgid "Client: %1"
+msgstr "Klijent: %1"
+
+#. TRANSLATORS: %1 is the maintainers name, %2 is the link text to the UBsync contributors teams page
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:99
+#, qt-format
+msgid "Maintained by %1 and the"
+msgstr "Održava %1 i"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:100
+msgid "UBsync team"
+msgstr "UBsync tim"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:112
+msgid "Please report bugs to the"
+msgstr "Prijavi grešku u"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:113
+msgid "issue tracker"
+msgstr "sustav za praćenje problema"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:129
+msgid "Thanks to"
+msgstr "Zahvale:"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:136
+msgid "Owncloud client:"
+msgstr "Owncloud klijent:"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:144
+msgid "Nextcloud client:"
+msgstr "Nextcloud klijent:"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:152
+msgid "This Qt library for WebDAV:"
+msgstr "Ova Qt biblioteka za WebDAV:"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:160
+msgid "Joan CiberSheep for the logo from:"
+msgstr "Joan CiberSheep za logotip od:"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:168
+msgid "Lukas to enable the application with:"
+msgstr "Lukas za pripremu aplikacije sa:"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:178
+msgid "Released under the terms of the GNU GPL v3"
+msgstr "Izdano pod uvjetima GNU GPL v3"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:184
+msgid "Fork of:"
+msgstr "Kopija od:"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AboutPage.qml:192
+msgid "Source code available on:"
+msgstr "Izvorni kod je dostupan na:"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AccountsPage.qml:129
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:140
+msgid "Online Accounts"
+msgstr "Online računi"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AccountsPage.qml:253
+msgid "No accounts, press"
+msgstr "Bez računa, pritisni"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AccountsPage.qml:268
+msgid "on the panel to add a new account"
+msgstr "na ploči za dodavanje računa"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/AccountsPage.qml:283
+msgid "Release to update the list of accounts ..."
+msgstr "Otpusti za aktualiziranje popisa računa ..."
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:79
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:148
+msgid "Not Configured Account"
+msgstr "Nekonfigurirani račun"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:79
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:84
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:148
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:184
+msgid "related targets will NOT sync"
+msgstr "povezani ciljevi se NEĆE sinkronizirati"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:84
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:184
+msgid "Disabled Account"
+msgstr "Deaktivirani račun"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:90
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:111
+msgid "Enabled Account"
+msgstr "Aktivirani račun"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:90
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:111
+msgid "related targets will sync"
+msgstr "povezani ciljevi će se sinkronizirati"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:178
+msgid "Account Settings"
+msgstr "Postavke računa"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:185
+msgid "New Target"
+msgstr "Novi cilj"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:388
+msgid "Sync on Mobile Data"
+msgstr "Sinkronizacija s mobilnim podacima"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:420
+msgid "Sync hidden files"
+msgstr "Sinkroniziraj skrivene datoteke"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:452
+msgid "Sync Frequency"
+msgstr "Učestalost sinkronizacije"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:473
+msgid "No Sync"
+msgstr "Bez sinkronizacije"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:473
+msgid "hour"
+msgid_plural "hours"
+msgstr[0] "sat"
+msgstr[1] "sata"
+msgstr[2] "sati"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditAccount.qml:540
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:598
+msgid ""
+"Synchronization service not running! Please, go to UBsync Settings and start "
+"the sync service, otherwise the target synchronization will not begin."
+msgstr ""
+"Usluga sinkronizacije nije pokrenuta! Idi na UBsync postavke i pokreni "
+"uslugu sinkronizacije, inače sinkronizacija sa ciljem neće započeti."
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:40
+msgid "Account Disabled"
+msgstr "Račun deaktiviran"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:40
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:46
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:51
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:284
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:321
+msgid "target will NOT sync"
+msgstr "cilj se NEĆE sinkronizirati"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:43
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:46
+msgid "Account Not Configured"
+msgstr "Račun nije konfiguriran"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:51
+msgid "Target Disabled"
+msgstr "Cilj deaktiviran"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:56
+msgid "Target Enabled"
+msgstr "Cilj aktiviran"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:56
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:248
+msgid "target will sync"
+msgstr "cilj će se sinkronizirati"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:254
+msgid "Target Settings"
+msgstr "Postavke cilja"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:418
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:47
+msgid "Unknown Account"
+msgstr "Nepoznat račun"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/EditTarget.qml:541
+msgid "Enable/Disable this Target"
+msgstr "Aktiviraj/Deaktiviraj ovaj cilj"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:8
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:238
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:181
+msgid "Help"
+msgstr "Pomoć"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:45
+msgid "To set-up synchronization for your folders:"
+msgstr "Postavljanje sinkronizacije za tvoje mape:"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:46
+msgid ""
+"1) go to UBsync \"Online Accounts\", add new account by clicking \"plus\" "
+"icon in the main menu"
+msgstr ""
+"1) idi na UBsync „Online računi”, dodaj novi račun pritiskom ikone + u "
+"glavnom izborniku"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:47
+msgid ""
+"2) set-up new \"target\" by clicking  \"new target\" icon in the account "
+"detail page main menu, or in the accounts list accounts' trailer menu"
+msgstr ""
+"2) postavi novi „Cilj” pritiskom ikone „Novi cilj” u glavnom izborniku "
+"stranice s detaljima računa ili u popisu računa povlačenjem računa"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:48
+msgid "3) start the synchronization service from the \"UBsync Settings\""
+msgstr "3) pokreni uslugu sinkronizacije u „UBsync postavke”"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:59
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:193
+msgid "Accounts"
+msgstr "Računi"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:69
+msgid ""
+"The term \"account\" represents in the UBsync context the system online "
+"account, as configured in system settings plus the custom UBsync "
+"configuration maintained by UBsync."
+msgstr ""
+"U UBsync-u pojam „račun” predstavlja online račun kako je konfiguriran u "
+"postavkama sustava kao i prilagođenu UBsync konfiguraciju koju održava "
+"UBsync."
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:70
+msgid ""
+"The account might be enabled or disabled independently on UBsync. If an "
+"account cannot be used by UBsync anymore, its configuration persists in "
+"UBsync, however, the related targets will not synchronize."
+msgstr ""
+"Račun se može aktivirati ili deaktivirati u UBsync-u. Ako UBsync više ne "
+"može koristiti račun, njegova konfiguracija ostaje u UBsync-u, međutim, "
+"povezani ciljevi se neće sinkronizirati."
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:71
+msgid ""
+"If you remove the account configuration from UBsync, the related targets "
+"will NOT synchronize until you re-create the account settings. If you wish "
+"to temporarily pause all targets related to the particular account, you can "
+"disable this account in system settings temporarily without affecting UBsync "
+"configuration."
+msgstr ""
+"Ako ukloniš konfiguraciju računa iz UBsync-a, povezani ciljevi se NEĆE "
+"sinkronizirati sve dok ponovo ne stvoriš postavke računa. Ako želiš "
+"privremeno pauzirati sve ciljeve povezane s određenim računom, račun možeš "
+"privremeno deaktivirati u postavkama sustava bez utjecaja na UBsync "
+"konfiguraciju."
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:73
+msgid "UBsync uses following account symbols to express account states:"
+msgstr "UBsync koristi sljedeće simbole računa za prikaz stanja računa:"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:199
+msgid "Targets"
+msgstr "Ciljevi"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:210
+msgid ""
+"The term \"target\" represents in the UBsync context the remote/local "
+"directory pair intended for synchronization plus  the set of custom \"target"
+"\" configuration."
+msgstr ""
+"U UBsync kontekstu, pojam „Cilj” predstavlja par udaljenih/lokalnih "
+"direktorija za sinkronizaciju, te skup prilagođene konfiguracije za „Cilj”."
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:211
+msgid "UBsync uses following target symbols to express target states:"
+msgstr "UBsync koristi sljedeće simbole za prikaz stanja ciljeva:"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:248
+msgid "Active Target"
+msgstr "Aktivni cilj"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:284
+msgid "Inactive Target"
+msgstr "Neaktivni cilj"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/HelpPage.qml:321
+msgid "Target With Disabled/Not Configured Account"
+msgstr "Cilj s deaktiviranim/nekonfiguriranim računom"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:17
+#: /home/jan/projects/private/ubports/repos/UBsync/build/aarch64-linux-gnu/app/UBsync-ui/UBsync.desktop.h:1
+msgid "UBsync"
+msgstr "UBsync"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:91
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:169
+msgid "Sync Targets"
+msgstr "Ciljevi sinkronizacije"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/MenuPage.qml:189
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:10
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:187
+msgid "Settings"
+msgstr "Postavke"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/RequestAccountPage.qml:13
+msgid "Add Online Account"
+msgstr "Dodaj online račun"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/RequestAccountPage.qml:22
+msgid "Add NextCloud account"
+msgstr "Dodaj NextCloud račun"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/RequestAccountPage.qml:35
+msgid "Add OwnCloud account"
+msgstr "Dodaj OwnCloud račun"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:53
+#, qt-format
+msgid "Status: %1"
+msgstr "Stanje: %1"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:53
+msgid "Syncing"
+msgstr "Sinkroniziranje"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:53
+msgid "Idle"
+msgstr "Neaktivno"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:53
+msgid "Stopped"
+msgstr "Zaustavljeno"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:58
+msgid "Stop"
+msgstr "Zaustavi"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:58
+msgid "Start"
+msgstr "Pokreni"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:64
+msgid "Stop Service"
+msgstr "Zaustavi uslugu"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:64
+msgid "Start Service"
+msgstr "Pokreni uslugu"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:74
+msgid "Sync Required"
+msgstr "Potrebna je sinkronizacija"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:75
+msgid "Last Sync:"
+msgstr "Zadnja sinkronizacija:"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:80
+msgid "Sync"
+msgstr "Sinkroniziraj"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:88
+msgid "Sync Starting"
+msgstr "Pokretanje sinkronizacije"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:101
+#, qt-format
+msgid "Client : %1"
+msgstr "Klijent: %1"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:112
+#, qt-format
+msgid "Service : %1"
+msgstr "Usluga: %1"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:119
+msgid "Service autostart:"
+msgstr "Automatsko pokretanje usluge:"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:120
+msgid "Enable/Disable service autostart:"
+msgstr "Uključi/Isključi automatsko pokretanje usluge:"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:148
+msgid "Never"
+msgstr "Nikada"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:152
+#, qt-format
+msgid "%1 Months Ago"
+msgstr "prije %1 mjeseca"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:156
+#, qt-format
+msgid "%1 Days Ago"
+msgstr "prije %1 dana"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:160
+#, qt-format
+msgid "%1  Hours Ago"
+msgstr "prije %1 sata"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:164
+#, qt-format
+msgid "%1 Minutes Ago"
+msgstr "prije %1 minute"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:167
+msgid "A Minute Ago"
+msgstr "Prije jedne minute"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:171
+#, qt-format
+msgid "%1 Seconds Ago"
+msgstr "prije %1 sekunde"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/SyncServicePage.qml:174
+msgid "Just Now"
+msgstr "Upravo sada"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:214
+msgid "No synchronization targets configured, press"
+msgstr "Nema konfiguriranih ciljeva sinkronizacije, pritisni"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:229
+msgid ""
+"in the main panel to enter Account Settings. In Account Settings, create a "
+"new synchronization target from an existing or new account. For explanation, "
+"see the help page."
+msgstr ""
+"na glavnoj ploči za ulazak u postavke računa. U postavkama računa stvori "
+"novi cilj sinkronizacije iz postojećeg ili novog računa. Za objašnjenje "
+"pogledaj stranicu pomoći."
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/TargetsPage.qml:245
+msgid "Release to update the list of targets ..."
+msgstr "Otpusti za aktualiziranje popisa ciljeva ..."
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/WebdavFileBrowser.qml:34
+msgid "Loading"
+msgstr "Učitavanje"
+
+#: /home/jan/projects/private/ubports/repos/UBsync/UBsync-ui/ui/WebdavFileBrowser.qml:46
+msgid "Check your connection or try again!"
+msgstr "Provjeri vezu ili pokušaj ponovo!"
